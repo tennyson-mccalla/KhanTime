@@ -19,6 +19,11 @@
 		6F797AA82E300B9B00EC16E9 /* CourseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797A902E300B9B00EC16E9 /* CourseService.swift */; };
 		6F797AA92E300B9B00EC16E9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797A8F2E300B9B00EC16E9 /* AuthService.swift */; };
 		6F797AAA2E300B9B00EC16E9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797A9A2E300B9B00EC16E9 /* LoginView.swift */; };
+		6F797AB82E300B9B00EC16E9 /* ContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797AB62E300B9B00EC16E9 /* ContentProvider.swift */; };
+		6F797AB92E300B9B00EC16E9 /* ThemeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797AB72E300B9B00EC16E9 /* ThemeProvider.swift */; };
+		6F797ABA2E300B9B00EC16E9 /* ProgressTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797AB82E300B9B00EC16E9 /* ProgressTracker.swift */; };
+		6F797ABB2E300B9B00EC16E9 /* GraphQLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797AB92E300B9B00EC16E9 /* GraphQLService.swift */; };
+		6F797ABC2E300B9B00EC16E9 /* TimeBackContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797ABA2E300B9B00EC16E9 /* TimeBackContentProvider.swift */; };
 		6F797AAB2E300B9B00EC16E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797A982E300B9B00EC16E9 /* ContentView.swift */; };
 		6F797AAC2E300B9B00EC16E9 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797A8D2E300B9B00EC16E9 /* APIConstants.swift */; };
 		6F797AAD2E300B9B00EC16E9 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797A8B2E300B9B00EC16E9 /* Course.swift */; };

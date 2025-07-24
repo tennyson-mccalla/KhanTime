@@ -49,9 +49,19 @@ struct DashboardView: View {
             .navigationTitle("Courses")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button(action: {
-                        viewModel.createTestCourse()
-                    }) {
+                    Menu {
+                        Button(action: {
+                            viewModel.createTestCourse()
+                        }) {
+                            Label("Create Test Course", systemImage: "plus.circle")
+                        }
+                        NavigationLink(destination: APIExplorerView()) {
+                            Label("API Explorer", systemImage: "server.rack")
+                        }
+                        NavigationLink(destination: ContentView()) {
+                            Label("Content Creator", systemImage: "doc.badge.plus")
+                        }
+                    } label: {
                         Image(systemName: "plus.circle.fill")
                     }
                 }
