@@ -63,6 +63,18 @@ class TimeBackContentProvider: ContentProvider {
                         }
                     }
                 }
+                // Also process sub-components recursively
+                if let subComponents = component.subComponents {
+                    for subComponent in subComponents {
+                        if let resources = subComponent.resources {
+                            for resource in resources {
+                                if let lessonComponent = try? mapComponentResourceToLessonComponent(resource) {
+                                    components.append(lessonComponent)
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -70,7 +82,7 @@ class TimeBackContentProvider: ContentProvider {
         let ageGroup = determineAgeGroup(from: syllabus.courseGrades ?? [])
 
         return Lesson(
-            id: courseId,
+            id: syllabus.courseSourcedId ?? courseId,
             title: syllabus.courseTitle,
             duration: estimateDuration(for: components),
             ageGroup: ageGroup,
@@ -261,21 +273,5 @@ enum ContentProviderError: LocalizedError {
         case .decodingError(let error):
             return "Failed to decode response: \(error.localizedDescription)"
         }
-    }
-}
-
-// MARK: - Resource Model (if not already defined)
-
-struct Resource: Decodable {
-    let sourcedId: String
-    let status: String
-    let title: String
-    let vendorResourceId: String?
-    let metadata: ResourceMetadata?
-
-    struct ResourceMetadata: Decodable {
-        let type: String?
-        let subType: String?
-        let url: String?
     }
 }

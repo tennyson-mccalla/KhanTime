@@ -55,15 +55,19 @@ struct SyllabusComponentView: View {
     var body: some View {
         DisclosureGroup {
             // Display sub-components recursively by calling this same view
-            ForEach(component.subComponents) { subComponent in
-                SyllabusComponentView(component: subComponent)
-                    .padding(.leading)
+            if let subComponents = component.subComponents {
+                ForEach(subComponents) { subComponent in
+                    SyllabusComponentView(component: subComponent)
+                        .padding(.leading)
+                }
             }
 
             // Display the resources within this component
-            ForEach(component.componentResources) { resource in
-                SyllabusResourceView(resource: resource)
-                    .padding(.leading)
+            if let resources = component.componentResources {
+                ForEach(resources) { resource in
+                    SyllabusResourceView(resource: resource)
+                        .padding(.leading)
+                }
             }
         } label: {
             Text(component.title)

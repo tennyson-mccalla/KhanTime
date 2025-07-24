@@ -14,6 +14,8 @@ class DashboardViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: String?
     @Published var sortOption: SortOption = .alphabetical
+    @Published var showAPIExplorer = false
+    @Published var showContentCreator = false
 
     private var allCourses: [Course] = []
     private var cancellables = Set<AnyCancellable>()
@@ -57,7 +59,21 @@ class DashboardViewModel: ObservableObject {
                 self.allCourses = response
                 self.sortCourses()
             } catch {
-                self.errorMessage = "Failed to load courses. Please try again. \nError: \(error.localizedDescription)"
+                print("❌ Failed to load courses: \(error)")
+
+                // Provide more helpful error message for known issues
+                if let apiError = error as? APIError,
+                   case .custom(let message) = apiError {
+                    self.errorMessage = message
+                } else if error.localizedDescription.contains("Invalid enum value") {
+                    self.errorMessage = "The course data contains invalid grade formats. Try creating a new test course instead."
+                } else {
+                    self.errorMessage = "Failed to load courses. Please try again. \nError: \(error.localizedDescription)"
+                }
+
+                // Show empty state
+                self.allCourses = []
+                self.sortCourses()
             }
             self.isLoading = false
         }
@@ -78,25 +94,28 @@ class DashboardViewModel: ObservableObject {
     }
 
     func createTestCourse() {
-        // Instead of creating a new course, let's add content to an existing one
-        // Pick a course from our org that we know exists
-        guard let targetCourse = courses.first(where: {
+        // Try to find a suitable course or use the first available one
+        let targetCourse = courses.first(where: {
             $0.org.sourcedId == "827d69dc-1312-4b07-89e3-c2e2d9822fb1" &&
             ($0.title == "Math" || $0.title == "Chemistry" || $0.title == "Test Course")
-        }) else {
-            errorMessage = "No suitable existing course found to add content to"
+        }) ?? courses.first // Use any course if no specific match
+
+        guard let course = targetCourse else {
+            errorMessage = "No courses available. Please ensure courses are loaded first."
             return
         }
+
+        print("📚 Creating test content for course: \(course.title) (ID: \(course.sourcedId))")
 
         isLoading = true
         errorMessage = nil
 
         Task {
             do {
-                print("🎯 Selected existing course: \(targetCourse.title) (ID: \(targetCourse.sourcedId))")
+                print("🎯 Selected existing course: \(course.title) (ID: \(course.sourcedId))")
                 try await creationService.addContentToExistingCourse(
-                    courseId: targetCourse.sourcedId,
-                    courseTitle: targetCourse.title
+                    courseId: course.sourcedId,
+                    courseTitle: course.title
                 )
 
                 // Refresh to see if the content appears
@@ -109,7 +128,7 @@ class DashboardViewModel: ObservableObject {
                 self.loadCourses()
 
                 // Check if the course now has content
-                await verifySpecificCourseContent(courseId: targetCourse.sourcedId, courseTitle: targetCourse.title)
+                await verifySpecificCourseContent(courseId: course.sourcedId, courseTitle: course.title)
             } catch {
                 self.errorMessage = "Failed to add content to course: \(error.localizedDescription)"
                 self.isLoading = false
@@ -125,9 +144,11 @@ class DashboardViewModel: ObservableObject {
                 print("✅ Course now has \(components.count) component(s)")
                 for component in components {
                     print("  - Component: \(component.title)")
-                    print("    Resources: \(component.componentResources.count)")
-                    for resource in component.componentResources {
-                        print("      - \(resource.title)")
+                    print("    Resources: \(component.componentResources?.count ?? 0)")
+                    if let resources = component.componentResources {
+                        for resource in resources {
+                            print("      - \(resource.title)")
+                        }
                     }
                 }
             } else {

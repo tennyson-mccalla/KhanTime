@@ -5,7 +5,7 @@ struct DashboardView: View {
     @StateObject private var viewModel = DashboardViewModel()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 if viewModel.isLoading {
                     ProgressView("Loading Courses...")
@@ -51,14 +51,21 @@ struct DashboardView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Menu {
                         Button(action: {
+                            print("Creating test course...")
                             viewModel.createTestCourse()
                         }) {
                             Label("Create Test Course", systemImage: "plus.circle")
                         }
-                        NavigationLink(destination: APIExplorerView()) {
+                        Button(action: {
+                            print("Navigate to API Explorer tapped")
+                            viewModel.showAPIExplorer = true
+                        }) {
                             Label("API Explorer", systemImage: "server.rack")
                         }
-                        NavigationLink(destination: ContentView()) {
+                        Button(action: {
+                            print("Navigate to Content Creator tapped")
+                            viewModel.showContentCreator = true
+                        }) {
                             Label("Content Creator", systemImage: "doc.badge.plus")
                         }
                     } label: {
@@ -82,6 +89,12 @@ struct DashboardView: View {
                 if viewModel.courses.isEmpty {
                     viewModel.loadCourses()
                 }
+            }
+            .navigationDestination(isPresented: $viewModel.showAPIExplorer) {
+                APIExplorerView()
+            }
+            .navigationDestination(isPresented: $viewModel.showContentCreator) {
+                ContentView()
             }
         }
     }

@@ -8,21 +8,91 @@ class CourseService {
         self.apiService = apiService
     }
 
-    /// Fetches all courses from the OneRoster API.
+            /// Fetches all courses from the OneRoster API.
     func fetchAllCourses() async throws -> [Course] {
-        let endpoint = "/ims/oneroster/rostering/v1p2/courses?limit=3000"
+        // Try to fetch all courses, starting with smaller batches
+        var allCourses: [Course] = []
+        let limits = [100, 500, 1000, 3000] // Try progressively larger limits
 
-        do {
-            let response: CourseListResponse = try await apiService.request(
-                baseURL: APIConstants.apiBaseURL,
-                endpoint: endpoint,
-                method: "GET"
-            )
-            return response.courses
-        } catch {
-            print("Error fetching courses: \(error)")
-            throw error
+        for limit in limits {
+            do {
+                print("🔍 Trying to fetch \(limit) courses...")
+                let endpoint = "/ims/oneroster/rostering/v1p2/courses?limit=\(limit)"
+
+                // First, let's see what the raw response looks like
+                let url = URL(string: APIConstants.apiBaseURL + endpoint)!
+                var request = URLRequest(url: url)
+                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+                if let accessToken = try await AuthService.shared.getValidAccessToken() {
+                    request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+                }
+
+                let (data, httpResponse) = try await URLSession.shared.data(for: request)
+
+                guard let httpResponse = httpResponse as? HTTPURLResponse,
+                      (200...299).contains(httpResponse.statusCode) else {
+                    print("❌ HTTP error for limit \(limit)")
+                    continue
+                }
+
+                // Try to decode, but handle errors gracefully
+                let decoder = JSONDecoder()
+
+                // First try normal decoding
+                if let response = try? decoder.decode(CourseListResponse.self, from: data) {
+                    print("✅ Successfully decoded \(response.courses.count) courses")
+                    return response.courses
+                } else {
+                    // If that fails, log the error and try to parse what we can
+                    print("⚠️ Decoding failed, attempting manual parsing...")
+
+                    if let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+                       let coursesArray = json["courses"] as? [[String: Any]] {
+
+                        // Manually parse courses, skipping ones with bad data
+                        for courseDict in coursesArray {
+                            if let sourcedId = courseDict["sourcedId"] as? String,
+                               let title = courseDict["title"] as? String,
+                               let dateLastModified = courseDict["dateLastModified"] as? String,
+                               let orgDict = courseDict["org"] as? [String: String],
+                               let orgSourcedId = orgDict["sourcedId"] {
+
+                                // Create a minimal course object
+                                let course = Course(
+                                    sourcedId: sourcedId,
+                                    title: title,
+                                    courseCode: courseDict["courseCode"] as? String,
+                                    grades: nil, // Skip grades to avoid validation issues
+                                    dateLastModified: dateLastModified,
+                                    org: OrgRef(sourcedId: orgSourcedId)
+                                )
+                                allCourses.append(course)
+                            }
+                        }
+
+                        if !allCourses.isEmpty {
+                            print("✅ Manually parsed \(allCourses.count) courses")
+                            return allCourses
+                        }
+                    }
+                }
+            } catch {
+                print("❌ Failed to fetch \(limit) courses: \(error)")
+                if limit == 100 && allCourses.isEmpty {
+                    // If even 100 fails, something is seriously wrong
+                    throw error
+                }
+            }
         }
+
+        // Return whatever we got, even if it's partial
+        if !allCourses.isEmpty {
+            return allCourses
+        }
+
+        // If we got nothing, throw an error
+        throw APIError.custom("Unable to fetch courses. The API may have data validation issues.")
     }
 
     /// Fetches a specific course by ID from the OneRoster API.
@@ -51,6 +121,23 @@ class CourseService {
         let endpoint = "/powerpath/syllabus/\(courseId)"
 
         do {
+            // First try to get raw data to see what the API returns
+            let url = URL(string: APIConstants.apiBaseURL + endpoint)!
+            var request = URLRequest(url: url)
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+            if let accessToken = try await AuthService.shared.getValidAccessToken() {
+                request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+            }
+
+            let (data, _) = try await URLSession.shared.data(for: request)
+
+            // Log the raw response to understand the structure
+            if let jsonString = String(data: data, encoding: .utf8) {
+                print("📋 Raw syllabus response for \(courseId):")
+                print(jsonString.prefix(500)) // Print first 500 chars
+            }
+
             let response: SyllabusResponse = try await apiService.request(
                 baseURL: APIConstants.apiBaseURL,
                 endpoint: endpoint,

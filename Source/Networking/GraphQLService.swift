@@ -19,6 +19,11 @@ class GraphQLService {
     func query<T: Decodable>(_ query: String, variables: [String: Any]? = nil) async throws -> T {
         let body = try buildRequestBody(query: query, variables: variables)
 
+        // Note: Alpha 1EdTech might not have a GraphQL endpoint yet
+        // This is experimental - they may only support REST APIs
+        print("⚠️ Attempting GraphQL query to: \(APIConstants.apiBaseURL)/graphql")
+        print("Note: Alpha 1EdTech may only support REST APIs currently")
+
         return try await apiService.request(
             baseURL: APIConstants.apiBaseURL,
             endpoint: "/graphql",
@@ -89,7 +94,7 @@ extension GraphQLService {
             "offset": 0
         ]
 
-        return try await query(query, variables: variables)
+        return try await self.query(query, variables: variables)
     }
 
     /// Fetch course details with components
@@ -127,7 +132,7 @@ extension GraphQLService {
 
         let variables: [String: Any] = ["courseId": courseId]
 
-        return try await query(query, variables: variables)
+        return try await self.query(query, variables: variables)
     }
 
     /// Fetch QTI assessments
@@ -153,7 +158,7 @@ extension GraphQLService {
 
         let variables: [String: Any] = ["type": "qti"]
 
-        return try await query(query, variables: variables)
+        return try await self.query(query, variables: variables)
     }
 }
 
@@ -242,13 +247,8 @@ struct GraphQLResource: Decodable {
     let sourcedId: String
     let title: String
     let type: String?
+    let vendorResourceId: String?
     let metadata: ResourceMetadata?
-}
-
-struct ResourceMetadata: Decodable {
-    let type: String?
-    let subType: String?
-    let url: String?
 }
 
 struct GraphQLQTIResponse: Decodable {

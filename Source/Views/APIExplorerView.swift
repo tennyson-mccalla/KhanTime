@@ -102,13 +102,18 @@ struct GraphQLExplorerView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Text("GraphQL API")
+                        Text("GraphQL API")
                 .font(.title2)
                 .bold()
 
             Text("Endpoint: \(APIConstants.scalarEndpoint)")
                 .font(.caption)
                 .foregroundColor(.gray)
+
+            Text("⚠️ Note: Alpha 1EdTech may only support REST APIs currently")
+                .font(.caption)
+                .foregroundColor(.orange)
+                .padding(.horizontal)
 
             Button("Fetch Courses (GraphQL)") {
                 viewModel.fetchCoursesGraphQL()
@@ -179,13 +184,14 @@ struct QTIExplorerView: View {
         .sheet(item: $selectedQTI) { item in
             QTIView(resource: ComponentResource(
                 sourcedId: item.id,
-                status: "active",
                 title: item.title,
                 sortOrder: 1,
-                resource: SharedResource(
+                resource: Resource(
                     sourcedId: item.id,
-                    href: item.url,
-                    metadata: SharedResourceMetadata(
+                    status: "active",
+                    title: item.title,
+                    vendorResourceId: nil,
+                    metadata: ResourceMetadata(
                         type: "qti",
                         subType: "qti-test",
                         url: item.url

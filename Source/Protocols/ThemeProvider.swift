@@ -60,6 +60,15 @@ struct AnyButtonStyle: ButtonStyle {
     }
 }
 
+// Default button style implementation
+struct DefaultButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
+            .animation(.easeInOut(duration: 0.1), value: configuration.isPressed)
+    }
+}
+
 // MARK: - Type-erased text field style
 struct AnyTextFieldStyle {
     let apply: (TextField<Text>) -> AnyView
@@ -68,6 +77,16 @@ struct AnyTextFieldStyle {
         self.apply = { textField in
             AnyView(textField.textFieldStyle(style))
         }
+    }
+}
+
+// Default text field style implementation
+struct DefaultTextFieldStyle: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+            .padding(8)
+            .background(Color.gray.opacity(0.1))
+            .cornerRadius(8)
     }
 }
 
@@ -159,8 +178,8 @@ struct KidsTheme: ThemeProvider {
     var feedbackAnimation: Animation { .spring(response: 0.3, dampingFraction: 0.6) }
     var loadingAnimation: Animation { .easeInOut(duration: 1).repeatForever() }
 
-    var buttonStyle: AnyButtonStyle { AnyButtonStyle(PlainButtonStyle()) }
-    var textFieldStyle: AnyTextFieldStyle { AnyTextFieldStyle(RoundedBorderTextFieldStyle()) }
+    var buttonStyle: AnyButtonStyle { AnyButtonStyle(DefaultButtonStyle()) }
+    var textFieldStyle: AnyTextFieldStyle { AnyTextFieldStyle(DefaultTextFieldStyle()) }
 
     var themeName: String { "Kids Theme" }
     var targetAgeGroup: AgeGroup { .k2 }

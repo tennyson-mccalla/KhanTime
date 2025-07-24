@@ -31,8 +31,8 @@ class SyllabusViewModel: ObservableObject {
                     if let components = syllabus.components {
                         for component in components {
                             print("  - Component: \(component.title)")
-                            print("    Sub-components: \(component.subComponents.count)")
-                            print("    Resources: \(component.componentResources.count)")
+                            print("    Sub-components: \(component.subComponents?.count ?? 0)")
+                            print("    Resources: \(component.componentResources?.count ?? 0)")
                         }
                     }
                 } else {
