@@ -80,15 +80,20 @@ class DashboardViewModel: ObservableObject {
     }
 
     private func sortCourses() {
+        print("🔄 Sorting courses by: \(sortOption.rawValue)")
         switch sortOption {
         case .alphabetical:
             courses = allCourses.sorted { $0.title.lowercased() < $1.title.lowercased() }
+            print("  ✅ Sorted alphabetically, first course: \(courses.first?.title ?? "none")")
         case .byDate:
             let formatter = ISO8601DateFormatter()
             courses = allCourses.sorted {
                 let date1 = formatter.date(from: $0.dateLastModified) ?? Date.distantPast
                 let date2 = formatter.date(from: $1.dateLastModified) ?? Date.distantPast
                 return date1 > date2 // Descending for newest first
+            }
+            if let first = courses.first {
+                print("  ✅ Sorted by date, newest course: \(first.title) (\(first.dateLastModified))")
             }
         }
     }

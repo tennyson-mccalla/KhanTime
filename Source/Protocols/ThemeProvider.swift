@@ -92,11 +92,12 @@ struct DefaultTextFieldStyle: TextFieldStyle {
 
 // MARK: - Environment key for theme injection
 private struct ThemeKey: EnvironmentKey {
-    static let defaultValue: ThemeProvider = KidsTheme()
+    // Default will be set in AppContainer
+    static let defaultValue: ThemeProvider? = nil
 }
 
 extension EnvironmentValues {
-    var theme: ThemeProvider {
+    var theme: ThemeProvider? {
         get { self[ThemeKey.self] }
         set { self[ThemeKey.self] = newValue }
     }
@@ -125,7 +126,7 @@ struct ThemePreview<Content: View>: View {
     let content: () -> Content
     let themes: [ThemeProvider]
 
-    init(themes: [ThemeProvider] = [KidsTheme()], @ViewBuilder content: @escaping () -> Content) {
+    init(themes: [ThemeProvider] = [], @ViewBuilder content: @escaping () -> Content) {
         self.themes = themes
         self.content = content
     }
@@ -147,42 +148,4 @@ struct ThemePreview<Content: View>: View {
         }
         .padding()
     }
-}
-
-// MARK: - Placeholder theme (will be implemented separately)
-struct KidsTheme: ThemeProvider {
-    var primaryColor: Color { .blue }
-    var secondaryColor: Color { .purple }
-    var accentColor: Color { .orange }
-    var backgroundColor: Color { Color(.systemBackground) }
-    var surfaceColor: Color { Color(.secondarySystemBackground) }
-    var errorColor: Color { .red }
-    var successColor: Color { .green }
-    var warningColor: Color { .yellow }
-
-    var titleFont: Font { .largeTitle.bold() }
-    var headingFont: Font { .title2.bold() }
-    var bodyFont: Font { .body }
-    var captionFont: Font { .caption }
-    var buttonFont: Font { .headline }
-
-    var smallSpacing: CGFloat { 8 }
-    var standardSpacing: CGFloat { 16 }
-    var largeSpacing: CGFloat { 24 }
-    var cardCornerRadius: CGFloat { 20 }
-    var buttonCornerRadius: CGFloat { 15 }
-    var buttonHeight: CGFloat { 56 }
-
-    var defaultAnimation: Animation { .spring() }
-    var transitionStyle: AnyTransition { .scale.combined(with: .opacity) }
-    var feedbackAnimation: Animation { .spring(response: 0.3, dampingFraction: 0.6) }
-    var loadingAnimation: Animation { .easeInOut(duration: 1).repeatForever() }
-
-    var buttonStyle: AnyButtonStyle { AnyButtonStyle(DefaultButtonStyle()) }
-    var textFieldStyle: AnyTextFieldStyle { AnyTextFieldStyle(DefaultTextFieldStyle()) }
-
-    var themeName: String { "Kids Theme" }
-    var targetAgeGroup: AgeGroup { .k2 }
-    var supportsHighContrast: Bool { true }
-    var supportsDarkMode: Bool { true }
 }
