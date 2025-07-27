@@ -42,7 +42,7 @@ struct LessonStep: Identifiable, Codable {
 
 enum StepContent: Codable {
     case textContent(TextContent)
-    case videoContent(VideoContent)
+    case videoContent(InteractiveVideoContent)
     case interactiveQuestion(InteractiveQuestion)
     case multiStepProblem(MultiStepProblem)
 }
@@ -52,7 +52,7 @@ struct TextContent: Codable {
     let images: [String] // Image URLs or asset names
 }
 
-struct VideoContent: Codable {
+struct InteractiveVideoContent: Codable {
     let videoURL: String
     let thumbnailURL: String
     let transcript: String?

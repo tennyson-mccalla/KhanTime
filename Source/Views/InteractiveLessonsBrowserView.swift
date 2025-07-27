@@ -3,6 +3,7 @@ import SwiftUI
 struct InteractiveLessonsBrowserView: View {
     @Environment(\.theme) var theme
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var themePreference: ThemePreference
     @State private var selectedSubject: InteractiveLesson.Subject = .algebra
     @State private var selectedLesson: InteractiveLesson?
     @State private var showLessonView = false
@@ -20,8 +21,10 @@ struct InteractiveLessonsBrowserView: View {
                     LazyVStack(spacing: theme?.standardSpacing ?? 16) {
                         ForEach(filteredLessons) { lesson in
                             LessonPreviewCard(lesson: lesson) {
+                                print("🎯 Selected lesson: \(lesson.title)")
                                 selectedLesson = lesson
                                 showLessonView = true
+                                print("🎯 showLessonView set to true")
                             }
                         }
                     }
@@ -42,6 +45,8 @@ struct InteractiveLessonsBrowserView: View {
         .fullScreenCover(isPresented: $showLessonView) {
             if let lesson = selectedLesson {
                 InteractiveLessonView(lesson: lesson)
+                    .environmentObject(themePreference)
+                    .themedWithPreference(themePreference)
             }
         }
     }

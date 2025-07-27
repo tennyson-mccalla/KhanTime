@@ -51,6 +51,8 @@ struct InteractiveLessonView: View {
             }
         }
         .onAppear {
+            print("🎓 InteractiveLessonView appeared for lesson: \(lesson.title)")
+            print("🎓 Lesson has \(lesson.content.count) steps")
             progressManager.startLesson(lesson)
         }
     }
@@ -137,7 +139,7 @@ struct InteractiveLessonView: View {
                 .themed(with: theme!)
             
         case .videoContent(let videoContent):
-            VideoContentView(content: videoContent)
+            InteractiveVideoContentView(content: videoContent)
                 .themed(with: theme!)
             
         case .interactiveQuestion(let question):
@@ -272,8 +274,8 @@ struct TextContentView: View {
     }
 }
 
-struct VideoContentView: View {
-    let content: VideoContent
+struct InteractiveVideoContentView: View {
+    let content: InteractiveVideoContent
     @Environment(\.theme) var theme
     
     var body: some View {
@@ -373,6 +375,7 @@ class LessonProgressManager: ObservableObject {
     }
     
     func startLesson(_ lesson: InteractiveLesson) {
+        print("📚 ProgressManager starting lesson: \(lesson.title)")
         self.lesson = lesson
         self.startTime = Date()
         
@@ -382,6 +385,7 @@ class LessonProgressManager: ObservableObject {
                 self.elapsedTime = Date().timeIntervalSince(startTime)
             }
         }
+        print("📚 ProgressManager lesson started successfully")
     }
     
     func nextStep() {

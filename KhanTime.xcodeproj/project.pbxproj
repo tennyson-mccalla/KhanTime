@@ -48,6 +48,10 @@
 		6FC42AD52E33260E00FE39A8 /* MiddleTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC42ACC2E33260E00FE39A8 /* MiddleTheme.swift */; };
 		6FC42AD72E33D8B600FE39A8 /* ElementaryTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC42AD62E33D8B600FE39A8 /* ElementaryTheme.swift */; };
 		6FC42AD92E34445800FE39A8 /* HeroLandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC42AD82E34445800FE39A8 /* HeroLandingView.swift */; };
+		6FC42ADB2E35BE6E00FE39A8 /* InteractiveLessonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC42ADA2E35BE6E00FE39A8 /* InteractiveLessonModels.swift */; };
+		6FC42ADE2E35BE8300FE39A8 /* InteractiveLessonsBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC42ADC2E35BE8300FE39A8 /* InteractiveLessonsBrowserView.swift */; };
+		6FC42ADF2E35BE8300FE39A8 /* InteractiveLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC42ADD2E35BE8300FE39A8 /* InteractiveLessonView.swift */; };
+		6FC42AE12E35BED100FE39A8 /* InteractiveQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC42AE02E35BED100FE39A8 /* InteractiveQuestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +97,10 @@
 		6FC42ACD2E33260E00FE39A8 /* ThemeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFactory.swift; sourceTree = "<group>"; };
 		6FC42AD62E33D8B600FE39A8 /* ElementaryTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementaryTheme.swift; sourceTree = "<group>"; };
 		6FC42AD82E34445800FE39A8 /* HeroLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLandingView.swift; sourceTree = "<group>"; };
+		6FC42ADA2E35BE6E00FE39A8 /* InteractiveLessonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveLessonModels.swift; sourceTree = "<group>"; };
+		6FC42ADC2E35BE8300FE39A8 /* InteractiveLessonsBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveLessonsBrowserView.swift; sourceTree = "<group>"; };
+		6FC42ADD2E35BE8300FE39A8 /* InteractiveLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveLessonView.swift; sourceTree = "<group>"; };
+		6FC42AE02E35BED100FE39A8 /* InteractiveQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveQuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,7 @@
 		6F797A8C2E300B9B00EC16E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6FC42ADA2E35BE6E00FE39A8 /* InteractiveLessonModels.swift */,
 				6F96440A2E30500E005A4354 /* SharedModels.swift */,
 				6F9644042E304ED8005A4354 /* CreationModels.swift */,
 				6F9644052E304ED8005A4354 /* User.swift */,
@@ -172,6 +181,8 @@
 		6F797A9B2E300B9B00EC16E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6FC42ADC2E35BE8300FE39A8 /* InteractiveLessonsBrowserView.swift */,
+				6FC42ADD2E35BE8300FE39A8 /* InteractiveLessonView.swift */,
 				6FC42AD82E34445800FE39A8 /* HeroLandingView.swift */,
 				6FC42AB42E328E0C00FE39A8 /* APIExplorerView.swift */,
 				6F797AB02E302A1600EC16E9 /* QTIView.swift */,
@@ -223,6 +234,7 @@
 		6FC42AC82E33260E00FE39A8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6FC42AE02E35BED100FE39A8 /* InteractiveQuestionView.swift */,
 				6FC42AC62E33260E00FE39A8 /* CourseCard.swift */,
 				6FC42AC72E33260E00FE39A8 /* ThemeSettingsView.swift */,
 			);
@@ -345,6 +357,7 @@
 				6F9644092E304EE6005A4354 /* ContentCreationService.swift in Sources */,
 				6F797AA22E300B9B00EC16E9 /* APIService.swift in Sources */,
 				6F797AA32E300B9B00EC16E9 /* ContentViewModel.swift in Sources */,
+				6FC42ADB2E35BE6E00FE39A8 /* InteractiveLessonModels.swift in Sources */,
 				6F797AA42E300B9B00EC16E9 /* KhanTimeApp.swift in Sources */,
 				6FC42ABD2E328E4600FE39A8 /* SharedProtocolTypes.swift in Sources */,
 				6FC42ABE2E328E4600FE39A8 /* ThemeProvider.swift in Sources */,
@@ -353,6 +366,7 @@
 				6FC42AC12E328E4600FE39A8 /* ProgressTracker.swift in Sources */,
 				6F797AA52E300B9B00EC16E9 /* LoginViewModel.swift in Sources */,
 				6F9644022E303437005A4354 /* SyllabusViewModel.swift in Sources */,
+				6FC42AE12E35BED100FE39A8 /* InteractiveQuestionView.swift in Sources */,
 				6F9644032E303437005A4354 /* QTIViewModel.swift in Sources */,
 				6F797AA62E300B9B00EC16E9 /* AuthTokenResponse.swift in Sources */,
 				6F797AA72E300B9B00EC16E9 /* DashboardViewModel.swift in Sources */,
@@ -370,6 +384,8 @@
 				6F9644062E304ED8005A4354 /* User.swift in Sources */,
 				6F9644072E304ED8005A4354 /* CreationModels.swift in Sources */,
 				6F797AAD2E300B9B00EC16E9 /* Course.swift in Sources */,
+				6FC42ADE2E35BE8300FE39A8 /* InteractiveLessonsBrowserView.swift in Sources */,
+				6FC42ADF2E35BE8300FE39A8 /* InteractiveLessonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

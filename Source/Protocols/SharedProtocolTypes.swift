@@ -1,7 +1,7 @@
 import Foundation
 
 /// Age groups for content filtering and theme selection
-enum AgeGroup: String, CaseIterable {
+enum AgeGroup: String, CaseIterable, Codable {
     case k2 = "K-2"
     case g35 = "3-5"
     case g68 = "6-8"
