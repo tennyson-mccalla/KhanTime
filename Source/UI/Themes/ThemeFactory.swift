@@ -56,6 +56,8 @@ class ThemePreference: ObservableObject {
     @Published var selectedAgeGroup: AgeGroup {
         didSet {
             UserDefaults.standard.set(selectedAgeGroup.rawValue, forKey: "selectedAgeGroup")
+            // Update the current theme when age group changes
+            currentTheme = ThemeFactory.theme(for: selectedAgeGroup)
         }
     }
 

@@ -41,20 +41,8 @@ class DashboardViewModel: ObservableObject {
         Task {
             do {
                 let response = try await courseService.fetchAllCourses()
-                print("--- Fetched Courses ---")
-                response.forEach { course in
-                    print("Title: \(course.title), Org ID: \(course.org.sourcedId)")
-                }
-                print("-----------------------")
 
-                // Check if we have any "Arcane Studies" courses
-                let arcaneCourses = response.filter { $0.title.contains("Arcane") }
-                if !arcaneCourses.isEmpty {
-                    print("Found \(arcaneCourses.count) Arcane Studies course(s):")
-                    arcaneCourses.forEach { course in
-                        print("  - ID: \(course.sourcedId), Title: \(course.title)")
-                    }
-                }
+                // Removed excessive course listing logs
 
                 self.allCourses = response
                 self.sortCourses()
@@ -80,20 +68,15 @@ class DashboardViewModel: ObservableObject {
     }
 
     private func sortCourses() {
-        print("🔄 Sorting courses by: \(sortOption.rawValue)")
         switch sortOption {
         case .alphabetical:
             courses = allCourses.sorted { $0.title.lowercased() < $1.title.lowercased() }
-            print("  ✅ Sorted alphabetically, first course: \(courses.first?.title ?? "none")")
         case .byDate:
             let formatter = ISO8601DateFormatter()
             courses = allCourses.sorted {
                 let date1 = formatter.date(from: $0.dateLastModified) ?? Date.distantPast
                 let date2 = formatter.date(from: $1.dateLastModified) ?? Date.distantPast
                 return date1 > date2 // Descending for newest first
-            }
-            if let first = courses.first {
-                print("  ✅ Sorted by date, newest course: \(first.title) (\(first.dateLastModified))")
             }
         }
     }
@@ -140,6 +123,7 @@ class DashboardViewModel: ObservableObject {
             }
         }
     }
+
 
     private func verifySpecificCourseContent(courseId: String, courseTitle: String) async {
         print("\n🔍 Verifying content for course: \(courseTitle)")

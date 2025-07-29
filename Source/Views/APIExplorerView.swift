@@ -91,6 +91,23 @@ struct RESTExplorerView: View {
                 viewModel.fetchQTIResources()
             }
             .buttonStyle(.bordered)
+            
+            Divider()
+            
+            Text("ae.studio Content Search")
+                .font(.headline)
+                .foregroundColor(.blue)
+            
+            Button("🔍 Search ae.studio Language Content") {
+                viewModel.searchAEStudioContent()
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(.blue)
+            
+            Button("🏢 Find ae.studio Organization") {
+                viewModel.findAEStudioOrg()
+            }
+            .buttonStyle(.bordered)
         }
         .padding()
     }
@@ -429,6 +446,84 @@ class APIExplorerViewModel: ObservableObject {
     func listQTIAssessments() {
         // This combines both REST and GraphQL to find QTI items
         fetchQTIResources()
+    }
+    
+    // MARK: - ae.studio Content Search
+    
+    func searchAEStudioContent() {
+        Task {
+            isLoading = true
+            errorMessage = nil
+            
+            do {
+                let languageCourses = try await courseService.searchAEStudioLanguageContent()
+                
+                results = "🔍 ae.studio Language Content Search Results:\n\n"
+                
+                if languageCourses.isEmpty {
+                    results += "❌ No language-related courses found.\n"
+                    results += "This suggests either:\n"
+                    results += "• ae.studio content isn't in staging environment\n"
+                    results += "• Content uses different naming conventions\n"
+                    results += "• Need specific course IDs from Andy Montgomery\n"
+                } else {
+                    results += "✅ Found \(languageCourses.count) potentially relevant courses:\n\n"
+                    
+                    for (index, course) in languageCourses.enumerated() {
+                        results += "\(index + 1). \(course.title)\n"
+                        results += "   ID: \(course.sourcedId)\n"
+                        results += "   Code: \(course.courseCode ?? "N/A")\n"
+                        results += "   Org ID: \(course.org.sourcedId)\n"
+                        results += "\n"
+                    }
+                    
+                    // Try to get syllabus for first course
+                    if let firstCourse = languageCourses.first {
+                        results += "📋 Examining first course syllabus...\n"
+                        do {
+                            let syllabus = try await courseService.fetchSyllabus(for: firstCourse.sourcedId)
+                            results += "✅ Syllabus found with \(syllabus.components?.count ?? 0) components\n"
+                        } catch {
+                            results += "⚠️ Could not fetch syllabus: \(error.localizedDescription)\n"
+                        }
+                    }
+                }
+            } catch {
+                errorMessage = "Search failed: \(error.localizedDescription)"
+            }
+            
+            isLoading = false
+        }
+    }
+    
+    func findAEStudioOrg() {
+        Task {
+            isLoading = true
+            errorMessage = nil
+            
+            do {
+                if let org = try await courseService.findAEStudioOrganization() {
+                    results = "🏢 ae.studio Organization Found!\n\n"
+                    results += "Name: \(org["name"] as? String ?? "Unknown")\n"
+                    results += "ID: \(org["sourcedId"] as? String ?? "Unknown")\n"
+                    
+                    if org["sourcedId"] as? String != nil {
+                        results += "\n🔍 Organization ID available for course filtering\n"
+                        // Could add organization-specific course search here
+                    }
+                } else {
+                    results = "❌ ae.studio organization not found\n\n"
+                    results += "This could mean:\n"
+                    results += "• Different organization name in TimeBack\n"
+                    results += "• Content is in production, not staging\n"
+                    results += "• Need to ask Andy Montgomery for exact org details\n"
+                }
+            } catch {
+                errorMessage = "Organization search failed: \(error.localizedDescription)"
+            }
+            
+            isLoading = false
+        }
     }
 }
 

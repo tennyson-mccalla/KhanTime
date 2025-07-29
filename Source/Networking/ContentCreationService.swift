@@ -79,6 +79,7 @@ class ContentCreationService {
         await verifyContentCreation(courseId: courseId)
     }
 
+
     // New method to add content to an existing course
     func addContentToExistingCourse(courseId: String, courseTitle: String) async throws {
         let timestamp = Int(Date().timeIntervalSince1970)
@@ -226,6 +227,7 @@ class ContentCreationService {
         try await makePostRequest(endpoint: endpoint, payload: payload, description: "Student")
     }
 
+
     private func createCourse(courseId: String) async throws {
         let endpoint = "/ims/oneroster/rostering/v1p2/courses"
         let courseTitle = "Advanced Arcane Studies"
@@ -309,7 +311,8 @@ class ContentCreationService {
                 metadata: ResourceMetadataPayload(
                     type: "qti",
                     subType: "qti-test",
-                    url: sampleQtiTestUrl
+                    url: sampleQtiTestUrl,
+                    format: "application/xml"
                 )
             )
         )

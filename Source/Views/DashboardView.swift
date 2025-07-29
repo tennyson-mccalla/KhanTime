@@ -92,16 +92,58 @@ struct DashboardView: View {
         VStack {
             if viewModel.isLoading {
                 if let theme = theme {
-                    // Use theme-specific loading indicator
-                    VStack {
+                    // Use theme-specific loading indicator with bypass option
+                    VStack(spacing: theme.standardSpacing) {
                         loadingIndicator(for: theme)
                         Text("Loading Courses...")
                             .font(theme.bodyFont)
                             .foregroundColor(theme.primaryColor)
                             .padding(.top, theme.smallSpacing)
+                        
+                        Text("TimeBack staging API is slow...")
+                            .font(theme.captionFont)
+                            .foregroundColor(theme.secondaryColor)
+                            .padding(.top, 4)
+                        
+                        // Bypass button to go directly to Interactive Lessons
+                        Button(action: {
+                            showInteractiveLessons = true
+                        }) {
+                            HStack {
+                                Image(systemName: "brain.head.profile")
+                                Text("Skip to Khan Academy Content")
+                            }
+                            .font(theme.buttonFont)
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 12)
+                            .background(theme.accentColor)
+                            .cornerRadius(theme.buttonCornerRadius)
+                        }
+                        .padding(.top, theme.standardSpacing)
                     }
                 } else {
-                    ProgressView("Loading Courses...")
+                    VStack(spacing: 16) {
+                        ProgressView("Loading Courses...")
+                        
+                        Text("API is slow...")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                        
+                        Button(action: {
+                            showInteractiveLessons = true
+                        }) {
+                            HStack {
+                                Image(systemName: "brain.head.profile")
+                                Text("Skip to Khan Academy Content")
+                            }
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 12)
+                            .background(.blue)
+                            .cornerRadius(10)
+                        }
+                    }
                 }
             } else if let errorMessage = viewModel.errorMessage {
                 VStack(spacing: theme?.standardSpacing ?? 16) {
@@ -113,13 +155,35 @@ struct DashboardView: View {
                         .font(theme?.bodyFont ?? .body)
                         .foregroundColor(theme?.errorColor ?? .red)
                         .multilineTextAlignment(.center)
+                    
+                    Text("TimeBack staging API is experiencing issues")
+                        .font(theme?.captionFont ?? .caption)
+                        .foregroundColor(theme?.secondaryColor ?? .secondary)
+                        .multilineTextAlignment(.center)
 
-                    Button(action: { viewModel.loadCourses() }) {
-                        Text("Retry")
+                    HStack(spacing: 12) {
+                        Button(action: { viewModel.loadCourses() }) {
+                            Text("Retry")
+                                .font(theme?.buttonFont ?? .headline)
+                        }
+                        .buttonStyle(theme?.buttonStyle ?? AnyButtonStyle(DefaultButtonStyle()))
+                        .frame(maxWidth: 120)
+                        
+                        Button(action: {
+                            showInteractiveLessons = true
+                        }) {
+                            HStack {
+                                Image(systemName: "brain.head.profile")
+                                Text("Khan Academy")
+                            }
                             .font(theme?.buttonFont ?? .headline)
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 8)
+                            .background(theme?.accentColor ?? .blue)
+                            .cornerRadius(theme?.buttonCornerRadius ?? 8)
+                        }
                     }
-                    .buttonStyle(theme?.buttonStyle ?? AnyButtonStyle(DefaultButtonStyle()))
-                    .frame(maxWidth: 200)
                 }
                 .padding()
             } else {

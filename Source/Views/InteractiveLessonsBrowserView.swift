@@ -7,49 +7,81 @@ struct InteractiveLessonsBrowserView: View {
     @State private var selectedSubject: InteractiveLesson.Subject = .algebra
     @State private var selectedLesson: InteractiveLesson?
     @State private var showLessonView = false
+    @State private var lessonToPresent: InteractiveLesson?
+    @State private var allLessons: [InteractiveLesson] = []
+    @State private var isLoadingTimeBack = false
+    @State private var timeBackError: String?
     
-    private let mockLessons = MockLessonProvider.getBasicAlgebraLessons()
+    private let aeProvider = AEStudioContentProvider()
+    
+    private var loadingMessage: String {
+        return "Loading Khan Academy Content..."
+    }
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 0) {
-                // Subject selector
-                subjectSelector
-                
-                // Lessons list
-                ScrollView {
-                    LazyVStack(spacing: theme?.standardSpacing ?? 16) {
-                        ForEach(filteredLessons) { lesson in
-                            LessonPreviewCard(lesson: lesson) {
-                                print("🎯 Selected lesson: \(lesson.title)")
-                                selectedLesson = lesson
-                                showLessonView = true
-                                print("🎯 showLessonView set to true")
+        NavigationStack {
+            mainContent
+                .navigationTitle("Interactive Lessons")
+                .navigationBarTitleDisplayMode(.large)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action: {
+                            dismiss()
+                        }) {
+                            HStack {
+                                Image(systemName: "chevron.left")
+                                Text("Dashboard")
                             }
+                            .foregroundColor(theme?.accentColor ?? .blue)
                         }
                     }
-                    .padding(theme?.standardSpacing ?? 16)
                 }
-                .background(theme?.backgroundColor ?? Color(.systemGroupedBackground))
+        }
+    }
+    
+    private var mainContent: some View {
+        VStack(spacing: 0) {
+            subjectSelector
+            
+            if isLoadingTimeBack {
+                loadingView
+            } else if let error = timeBackError {
+                errorView(error)
+            } else {
+                lessonsList
             }
-            .navigationTitle("Interactive Lessons")
-            .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Close") {
-                        dismiss()
+        }
+        .fullScreenCover(item: $lessonToPresent) { lesson in
+            let _ = print("🚀 fullScreenCover presenting lesson: \(lesson.title)")
+            InteractiveLessonView(lesson: lesson)
+                .environmentObject(themePreference)
+        }
+        .onAppear {
+            loadLessons()
+        }
+    }
+    
+    private var lessonsList: some View {
+        ScrollView {
+            LazyVStack(spacing: theme?.standardSpacing ?? 16) {
+                ForEach(filteredLessons) { lesson in
+                    LessonPreviewCard(lesson: lesson) {
+                        // Immediate haptic feedback for responsiveness
+                        let impactFeedback = UIImpactFeedbackGenerator(style: .light)
+                        impactFeedback.impactOccurred()
+                        
+                        let _ = print("🎯 Selected lesson: \(lesson.title)")
+                        let _ = print("🎯 Setting lessonToPresent to: \(lesson.title)")
+                        lessonToPresent = lesson
+                        let _ = print("🎯 lessonToPresent set successfully")
                     }
                 }
             }
+            .padding(theme?.standardSpacing ?? 16)
         }
-        .fullScreenCover(isPresented: $showLessonView) {
-            if let lesson = selectedLesson {
-                InteractiveLessonView(lesson: lesson)
-                    .environmentObject(themePreference)
-                    .themedWithPreference(themePreference)
-            }
-        }
+        .background(theme?.backgroundColor ?? Color(.systemGroupedBackground))
     }
+    
     
     // MARK: - Subject Selector
     private var subjectSelector: some View {
@@ -95,9 +127,99 @@ struct InteractiveLessonsBrowserView: View {
         .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
     }
     
+    // MARK: - Loading Views
+    
+    private var loadingView: some View {
+        VStack(spacing: 20) {
+            ProgressView()
+                .scaleEffect(1.5)
+                .progressViewStyle(CircularProgressViewStyle(tint: theme?.accentColor ?? .blue))
+            
+            Text(loadingMessage)
+                .font(theme?.bodyFont ?? .body)
+                .foregroundColor(theme?.secondaryColor ?? .secondary)
+            
+            Text("Loading from local content...")
+                .font(theme?.captionFont ?? .caption)
+                .foregroundColor(theme?.secondaryColor ?? .secondary)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(theme?.backgroundColor ?? Color(.systemGroupedBackground))
+    }
+    
+    private func errorView(_ error: String) -> some View {
+        VStack(spacing: 16) {
+            Image(systemName: "exclamationmark.triangle")
+                .font(.system(size: 48))
+                .foregroundColor(.red)
+            
+            Text("Failed to Load Content")
+                .font(theme?.headingFont ?? .headline)
+                .foregroundColor(theme?.primaryColor ?? .primary)
+            
+            Text(error)
+                .font(theme?.bodyFont ?? .body)
+                .foregroundColor(theme?.secondaryColor ?? .secondary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+            
+            Button("Retry") {
+                loadLessons()
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(theme?.accentColor ?? .blue)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(theme?.backgroundColor ?? Color(.systemGroupedBackground))
+    }
+    
+    // MARK: - Data Loading
+    
+    private func loadLessons() {
+        guard !isLoadingTimeBack else { return }
+        
+        isLoadingTimeBack = true
+        timeBackError = nil
+        
+        Task {
+            do {
+                print("📡 Loading lessons from local content (TimeBack API bypassed)...")
+                
+                // Load static lessons first
+                var lessons = LessonProvider.getOriginalDemoLessons()
+                lessons.append(contentsOf: KhanAcademyContentProvider.loadKhanAcademyLessons())
+                
+                // Load Khan Academy pre-algebra content from local fallback (no API calls)
+                let khanLessons = try await KhanAcademyContentProvider.loadTimeBackKhanAcademyLessons()
+                lessons.append(contentsOf: khanLessons)
+                
+                // Skip ae.studio content loading - TimeBack API is unreliable
+                // let aeStudioLessons = try await aeProvider.loadAEStudioLessons()
+                // lessons.append(contentsOf: aeStudioLessons)
+                
+                await MainActor.run {
+                    self.allLessons = lessons
+                    self.isLoadingTimeBack = false
+                    print("✅ Loaded \(lessons.count) lessons from local content (TimeBack bypassed)")
+                }
+            } catch {
+                await MainActor.run {
+                    self.timeBackError = "Error loading local content: \(error.localizedDescription)"
+                    self.isLoadingTimeBack = false
+                    print("❌ Local content loading failed: \(error)")
+                    
+                    // Emergency fallback to just static content
+                    var lessons = LessonProvider.getOriginalDemoLessons()
+                    lessons.append(contentsOf: KhanAcademyContentProvider.loadKhanAcademyLessons())
+                    self.allLessons = lessons
+                }
+            }
+        }
+    }
+    
     // MARK: - Filtered Lessons
     private var filteredLessons: [InteractiveLesson] {
-        mockLessons.filter { $0.subject == selectedSubject }
+        allLessons.filter { $0.subject == selectedSubject }
     }
 }
 

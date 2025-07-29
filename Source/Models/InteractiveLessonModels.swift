@@ -15,12 +15,14 @@ struct InteractiveLesson: Identifiable, Codable {
     let content: [LessonStep]
     
     enum Subject: String, CaseIterable, Codable {
+        case preAlgebra = "Pre-Algebra"
         case algebra = "Algebra"
         case geometry = "Geometry"
         case statistics = "Statistics"
         case calculus = "Calculus"
         case physics = "Physics"
         case chemistry = "Chemistry"
+        case english = "English"
     }
 }
 
@@ -105,9 +107,23 @@ struct MultiStepProblem: Identifiable, Codable {
     let finalAnswer: AnswerValue
 }
 
-// MARK: - Mock Data Generator
-class MockLessonProvider {
-    static func getBasicAlgebraLessons() -> [InteractiveLesson] {
+// MARK: - Lesson Provider
+class LessonProvider {
+    static func getAllLessons() -> [InteractiveLesson] {
+        var allLessons: [InteractiveLesson] = []
+        
+        // Add original demo lesson (keep as requested)
+        allLessons.append(contentsOf: getOriginalDemoLessons())
+        
+        // Add Khan Academy scraped content (as backup/additional content)
+        allLessons.append(contentsOf: KhanAcademyContentProvider.loadKhanAcademyLessons())
+        
+        // Note: ae.studio content is now loaded asynchronously in InteractiveLessonsBrowserView
+        
+        return allLessons
+    }
+    
+    static func getOriginalDemoLessons() -> [InteractiveLesson] {
         return [
             createSolvingLinearEquationsLesson(),
             createQuadraticEquationsLesson(),
@@ -115,6 +131,12 @@ class MockLessonProvider {
         ]
     }
     
+    // Legacy method for backward compatibility
+    static func getBasicAlgebraLessons() -> [InteractiveLesson] {
+        return getAllLessons()
+    }
+    
+    // Renamed class for clarity
     private static func createSolvingLinearEquationsLesson() -> InteractiveLesson {
         return InteractiveLesson(
             id: "linear-equations-101",

@@ -26,6 +26,9 @@ struct HeroLandingView: View {
             }
             .ignoresSafeArea(.all)
             .onAppear {
+                // Initialize selectedAge from saved preference
+                selectedAge = themePreference.selectedAgeGroup
+                
                 withAnimation(.easeOut(duration: 1.0).delay(0.5)) {
                     animateContent = true
                 }
@@ -257,6 +260,7 @@ struct HeroLandingView: View {
                     .default(Text(age.displayName)) {
                         selectedAge = age
                         themePreference.selectedAgeGroup = age
+                        print("🎨 Theme updated to: \(age.displayName)")
                     }
                 } + [.cancel()]
             )

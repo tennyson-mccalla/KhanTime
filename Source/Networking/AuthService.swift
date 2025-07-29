@@ -11,9 +11,31 @@ class AuthService {
 
     /// Get the current access token if valid
     func getValidAccessToken() async throws -> String? {
-        if !isTokenValid() {
-            try await authenticate()
+        print("🔐 AuthService: Checking token validity...")
+        
+        if let token = accessToken {
+            print("🔐 Current token exists: \(String(token.prefix(20)))...")
+        } else {
+            print("🔐 No current token stored")
         }
+        
+        if let expiration = tokenExpirationDate {
+            print("🔐 Token expires at: \(expiration)")
+            print("🔐 Current time: \(Date())")
+        } else {
+            print("🔐 No expiration date stored")
+        }
+        
+        let tokenIsValid = isTokenValid()
+        print("🔐 Token is valid: \(tokenIsValid)")
+        
+        if !tokenIsValid {
+            print("🔐 Token invalid, authenticating...")
+            try await authenticate()
+        } else {
+            print("🔐 Using existing valid token")
+        }
+        
         return accessToken
     }
 
@@ -27,6 +49,12 @@ class AuthService {
     /// Authenticates with the backend to get a machine-to-machine access token.
     func authenticate() async throws {
         let endpoint = APIConstants.oauthTokenEndpoint
+        let fullAuthUrl = APIConstants.authBaseURL + endpoint
+        
+        print("🔐 AuthService: Starting authentication...")
+        print("🔐 Auth URL: \(fullAuthUrl)")
+        print("🔐 Client ID: \(Credentials.clientID)")
+        print("🔐 Environment: \(Credentials.environment)")
 
         var components = URLComponents()
         components.queryItems = [
@@ -38,17 +66,25 @@ class AuthService {
         // The body needs to be x-www-form-urlencoded
         let body = components.query?.data(using: .utf8)
 
-        var request = URLRequest(url: URL(string: APIConstants.authBaseURL + endpoint)!)
+        var request = URLRequest(url: URL(string: fullAuthUrl)!)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpBody = body
 
         do {
+            print("🔐 Making auth request...")
             let (data, response) = try await URLSession.shared.data(for: request)
 
-            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+            guard let httpResponse = response as? HTTPURLResponse else {
+                print("❌ No HTTP response")
+                throw APIError.invalidResponse
+            }
+            
+            print("🔐 Auth response status: \(httpResponse.statusCode)")
+
+            guard (200...299).contains(httpResponse.statusCode) else {
                 let errorData = String(data: data, encoding: .utf8) ?? "No error data"
-                print("Auth Error Response: \(errorData)")
+                print("❌ Auth Error Response: \(errorData)")
                 throw APIError.invalidResponse
             }
 
@@ -58,10 +94,11 @@ class AuthService {
             self.accessToken = tokenResponse.accessToken
             self.tokenExpirationDate = Date().addingTimeInterval(TimeInterval(tokenResponse.expiresIn))
 
-            print("Successfully authenticated. Token expires at: \(tokenExpirationDate!)")
+            print("✅ Successfully authenticated. Token expires at: \(tokenExpirationDate!)")
+            print("🔐 Token preview: \(String(tokenResponse.accessToken.prefix(20)))...")
 
         } catch {
-            print("Authentication failed: \(error)")
+            print("❌ Authentication failed: \(error)")
             throw error
         }
     }

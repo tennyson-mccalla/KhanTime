@@ -170,4 +170,77 @@ class CourseService {
             throw error
         }
     }
+    
+    /// Searches for ae.studio 3rd grade language content in TimeBack
+    func searchAEStudioLanguageContent() async throws -> [Course] {
+        print("🔍 Searching for ae.studio 3rd grade language content...")
+        
+        // First, get all courses and filter for relevant content
+        let allCourses = try await fetchAllCourses()
+        
+        // Filter for language/grade-related courses
+        let languageCourses = allCourses.filter { course in
+            let titleLower = course.title.lowercased()
+            return titleLower.contains("language") ||
+                   titleLower.contains("english") ||
+                   titleLower.contains("reading") ||
+                   titleLower.contains("grade") ||
+                   titleLower.contains("3rd") ||
+                   titleLower.contains("elementary")
+        }
+        
+        print("📚 Found \(languageCourses.count) potentially relevant courses:")
+        for course in languageCourses.prefix(10) {
+            print("  - \(course.title) (ID: \(course.sourcedId))")
+        }
+        
+        if languageCourses.isEmpty {
+            print("⚠️ No language-related courses found. Sample course titles:")
+            for course in allCourses.prefix(5) {
+                print("  - \(course.title)")
+            }
+        }
+        
+        return languageCourses
+    }
+    
+    /// Fetches organizations to find ae.studio
+    func findAEStudioOrganization() async throws -> [String: Any]? {
+        let endpoint = "/ims/oneroster/rostering/v1p2/orgs"
+        
+        do {
+            let url = URL(string: APIConstants.apiBaseURL + endpoint)!
+            var request = URLRequest(url: url)
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            if let accessToken = try await AuthService.shared.getValidAccessToken() {
+                request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+            }
+            
+            let (data, _) = try await URLSession.shared.data(for: request)
+            
+            if let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+               let orgs = json["orgs"] as? [[String: Any]] {
+                
+                print("🏢 Found \(orgs.count) organizations:")
+                for org in orgs {
+                    if let name = org["name"] as? String,
+                       let sourcedId = org["sourcedId"] as? String {
+                        print("  - \(name) (ID: \(sourcedId))")
+                        
+                        if name.lowercased().contains("ae.studio") || 
+                           name.lowercased().contains("aestudio") ||
+                           name.lowercased().contains("ae studio") {
+                            print("    ⭐ FOUND ae.studio organization!")
+                            return org
+                        }
+                    }
+                }
+            }
+        } catch {
+            print("❌ Error fetching organizations: \(error)")
+        }
+        
+        return nil
+    }
 }

@@ -1,4 +1,5 @@
 import SwiftUI
+import Combine
 
 struct InteractiveQuestionView: View {
     let question: InteractiveQuestion
@@ -12,6 +13,10 @@ struct InteractiveQuestionView: View {
     @State private var textInput = ""
     @State private var showHint = false
     @State private var currentHintIndex = 0
+    @FocusState private var isTextFieldFocused: Bool
+    
+    // Force view recreation when question changes
+    private var questionId: String { question.id }
     
     var isAnswered: Bool {
         userAnswer != nil && showFeedback
@@ -37,6 +42,14 @@ struct InteractiveQuestionView: View {
         .background(theme?.surfaceColor ?? Color(.systemBackground))
         .cornerRadius(theme?.cardCornerRadius ?? 12)
         .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
+        .onAppear {
+            // Auto-focus text fields for immediate typing
+            if question.type == .fillInBlank || question.type == .equation {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    isTextFieldFocused = true
+                }
+            }
+        }
     }
     
     // MARK: - Question Header
@@ -77,22 +90,25 @@ struct InteractiveQuestionView: View {
         VStack(spacing: theme?.smallSpacing ?? 8) {
             ForEach(Array((question.options ?? []).enumerated()), id: \.offset) { index, option in
                 Button(action: {
+                    // Use haptic feedback for immediate tactile response
+                    let impactFeedback = UIImpactFeedbackGenerator(style: .light)
+                    impactFeedback.impactOccurred()
+                    
+                    // Update state immediately 
                     selectedChoiceIndex = index
                     userAnswer = .multipleChoice(index)
                 }) {
                     HStack {
-                        // Choice indicator
+                        // Choice indicator - optimized for performance
                         ZStack {
+                            let isSelected = selectedChoiceIndex == index
+                            let strokeColor = isSelected ? (theme?.accentColor ?? .blue) : (theme?.secondaryColor ?? .gray)
+                            
                             Circle()
-                                .stroke(
-                                    selectedChoiceIndex == index ? 
-                                    (theme?.accentColor ?? .blue) : 
-                                    (theme?.secondaryColor ?? .gray),
-                                    lineWidth: 2
-                                )
+                                .stroke(strokeColor, lineWidth: 2)
                                 .frame(width: 24, height: 24)
                             
-                            if selectedChoiceIndex == index {
+                            if isSelected {
                                 Circle()
                                     .fill(theme?.accentColor ?? .blue)
                                     .frame(width: 12, height: 12)
@@ -109,21 +125,8 @@ struct InteractiveQuestionView: View {
                     }
                     .padding(theme?.smallSpacing ?? 12)
                     .background(
-                        RoundedRectangle(cornerRadius: theme?.cardCornerRadius ?? 8)
-                            .fill(
-                                selectedChoiceIndex == index ?
-                                (theme?.accentColor.opacity(0.1) ?? Color.blue.opacity(0.1)) :
-                                Color.clear
-                            )
-                            .overlay(
-                                RoundedRectangle(cornerRadius: theme?.cardCornerRadius ?? 8)
-                                    .stroke(
-                                        selectedChoiceIndex == index ?
-                                        (theme?.accentColor ?? .blue) :
-                                        Color.gray.opacity(0.3),
-                                        lineWidth: selectedChoiceIndex == index ? 2 : 1
-                                    )
-                            )
+                        // Optimized background - pre-calculate values
+                        choiceBackground(for: index)
                     )
                 }
                 .buttonStyle(PlainButtonStyle())
@@ -144,8 +147,22 @@ struct InteractiveQuestionView: View {
                 .font(theme?.bodyFont ?? .body)
                 .keyboardType(isNumericQuestion ? .numbersAndPunctuation : .default)
                 .disabled(isAnswered)
+                .autocorrectionDisabled(true)
+                .textInputAutocapitalization(.never)
+                .focused($isTextFieldFocused)
                 .onChange(of: textInput) { _, newValue in
-                    updateTextAnswer(newValue)
+                    // Immediate update without extra processing
+                    if isNumericQuestion {
+                        if let number = Double(newValue) {
+                            userAnswer = .number(number)
+                        } else if !newValue.isEmpty {
+                            userAnswer = .text(newValue)
+                        } else {
+                            userAnswer = nil
+                        }
+                    } else {
+                        userAnswer = newValue.isEmpty ? nil : .text(newValue)
+                    }
                 }
                 .submitLabel(.done)
                 .onSubmit {
@@ -167,8 +184,11 @@ struct InteractiveQuestionView: View {
                 .textFieldStyle(.roundedBorder)
                 .font(.system(.body, design: .monospaced))
                 .disabled(isAnswered)
+                .autocorrectionDisabled(true)
+                .textInputAutocapitalization(.never)
+                .focused($isTextFieldFocused)
                 .onChange(of: textInput) { _, newValue in
-                    userAnswer = .equation(newValue)
+                    userAnswer = newValue.isEmpty ? nil : .equation(newValue)
                 }
         }
     }
@@ -256,51 +276,80 @@ struct InteractiveQuestionView: View {
     
     // MARK: - Action Buttons
     private var actionButtons: some View {
-        HStack(spacing: theme?.smallSpacing ?? 12) {
+        VStack(spacing: theme?.smallSpacing ?? 12) {
             if !isAnswered {
-                // Hint button
-                Button(action: {
-                    showHint = true
-                }) {
-                    HStack {
-                        Image(systemName: "lightbulb")
-                        Text("Hint")
-                    }
-                    .font(theme?.buttonFont ?? .headline)
-                    .foregroundColor(theme?.secondaryColor ?? .secondary)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                    .background(
-                        RoundedRectangle(cornerRadius: theme?.buttonCornerRadius ?? 8)
-                            .stroke(theme?.secondaryColor ?? .gray, lineWidth: 1)
-                    )
-                }
-                .alert("Hint", isPresented: $showHint) {
-                    Button("OK") { }
-                } message: {
-                    Text(question.feedback.hint)
-                }
-                
-                Spacer()
-                
-                // Submit button
-                Button(action: submitAnswer) {
-                    Text("Submit")
+                HStack(spacing: theme?.smallSpacing ?? 12) {
+                    // Hint button
+                    Button(action: {
+                        showHint = true
+                    }) {
+                        HStack {
+                            Image(systemName: "lightbulb")
+                            Text("Hint")
+                        }
                         .font(theme?.buttonFont ?? .headline)
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 24)
-                        .padding(.vertical, 12)
+                        .foregroundColor(theme?.secondaryColor ?? .secondary)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
                         .background(
                             RoundedRectangle(cornerRadius: theme?.buttonCornerRadius ?? 8)
-                                .fill(canSubmit ? (theme?.accentColor ?? .blue) : Color.gray)
+                                .stroke(theme?.secondaryColor ?? .gray, lineWidth: 1)
                         )
+                    }
+                    .alert("Hint", isPresented: $showHint) {
+                        Button("OK") { }
+                    } message: {
+                        Text(question.feedback.hint)
+                    }
+                    
+                    Spacer()
+                    
+                    // Submit button - make it more prominent
+                    Button(action: {
+                        // Immediate haptic feedback
+                        let impactFeedback = UIImpactFeedbackGenerator(style: .medium)
+                        impactFeedback.impactOccurred()
+                        
+                        submitAnswer()
+                    }) {
+                        Text("Check Answer")
+                            .font(theme?.buttonFont ?? .headline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 32)
+                            .padding(.vertical, 16)
+                            .background(
+                                RoundedRectangle(cornerRadius: theme?.buttonCornerRadius ?? 12)
+                                    .fill(canSubmit ? (theme?.accentColor ?? .blue) : Color.gray)
+                            )
+                            .shadow(color: canSubmit ? .blue.opacity(0.3) : .clear, radius: 4)
+                    }
+                    .disabled(!canSubmit)
                 }
-                .disabled(!canSubmit)
+                
             }
         }
+        .padding(.top, theme?.standardSpacing ?? 16)
     }
     
     // MARK: - Helper Properties & Methods
+    
+    @ViewBuilder
+    private func choiceBackground(for index: Int) -> some View {
+        let isSelected = selectedChoiceIndex == index
+        let cornerRadius = theme?.cardCornerRadius ?? 8
+        let fillColor = isSelected ? (theme?.accentColor.opacity(0.1) ?? Color.blue.opacity(0.1)) : Color.clear
+        let strokeColor = isSelected ? (theme?.accentColor ?? .blue) : Color.gray.opacity(0.3)
+        let lineWidth: CGFloat = isSelected ? 2 : 1
+        
+        RoundedRectangle(cornerRadius: cornerRadius)
+            .fill(fillColor)
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRadius)
+                    .stroke(strokeColor, lineWidth: lineWidth)
+            )
+    }
+    
     private var isNumericQuestion: Bool {
         switch question.correctAnswer {
         case .number(_):
@@ -314,17 +363,6 @@ struct InteractiveQuestionView: View {
         userAnswer != nil
     }
     
-    private func updateTextAnswer(_ text: String) {
-        if isNumericQuestion {
-            if let number = Double(text) {
-                userAnswer = .number(number)
-            } else {
-                userAnswer = nil
-            }
-        } else {
-            userAnswer = .text(text)
-        }
-    }
     
     private func submitAnswer() {
         guard let answer = userAnswer else { return }

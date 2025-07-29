@@ -1,11 +1,27 @@
 import SwiftUI
 import WebKit
 
-struct InteractiveVideoContentView: View {
+// Observable class to hold video content
+class VideoContentModel: ObservableObject {
     let content: InteractiveVideoContent
+    @Published var isLoading = true
+    @Published var hasError = false
+    @Published var hasInitialized = false
+    
+    init(content: InteractiveVideoContent) {
+        self.content = content
+    }
+}
+
+struct InteractiveVideoContentView: View {
+    @StateObject private var videoModel: VideoContentModel
     @Environment(\.theme) var theme
-    @State private var isLoading = true
-    @State private var hasError = false
+    
+    init(content: InteractiveVideoContent) {
+        // Create stable StateObject
+        self._videoModel = StateObject(wrappedValue: VideoContentModel(content: content))
+        // Removed excessive logging
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: theme?.standardSpacing ?? 16) {
@@ -16,15 +32,39 @@ struct InteractiveVideoContentView: View {
             
             // YouTube Video Player
             ZStack {
-                YouTubePlayerView(videoURL: content.videoURL) { loading, error in
-                    isLoading = loading
-                    hasError = error
+                if !videoModel.hasInitialized {
+                    Rectangle()
+                        .fill(Color.black)
+                        .frame(height: 250)
+                        .cornerRadius(theme?.cardCornerRadius ?? 12)
+                        .overlay(
+                            VStack {
+                                ProgressView()
+                                    .scaleEffect(1.2)
+                                Text("Initializing video player...")
+                                    .font(theme?.captionFont ?? .caption)
+                                    .foregroundColor(.white)
+                            }
+                        )
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                videoModel.hasInitialized = true
+                            }
+                        }
+                } else {
+                    YouTubePlayerView(videoURL: videoModel.content.videoURL) { loading, error in
+                        DispatchQueue.main.async {
+                            videoModel.isLoading = loading
+                            videoModel.hasError = error
+                        }
+                    }
+                    .frame(height: 250)
+                    .cornerRadius(theme?.cardCornerRadius ?? 12)
+                    .id("youtube-player-\(videoModel.content.videoURL.hashValue)") // Stable ID
                 }
-                .frame(height: 250)
-                .cornerRadius(theme?.cardCornerRadius ?? 12)
                 
                 // Loading/Error Overlay
-                if isLoading {
+                if videoModel.isLoading {
                     VStack(spacing: 12) {
                         ProgressView()
                             .scaleEffect(1.2)
@@ -35,7 +75,7 @@ struct InteractiveVideoContentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.black.opacity(0.7))
                     .cornerRadius(theme?.cardCornerRadius ?? 12)
-                } else if hasError {
+                } else if videoModel.hasError {
                     VStack(spacing: 12) {
                         Image(systemName: "exclamationmark.triangle")
                             .font(.system(size: 32))
@@ -54,7 +94,7 @@ struct InteractiveVideoContentView: View {
             }
             
             // Video Information
-            if !content.videoURL.isEmpty {
+            if !videoModel.content.videoURL.isEmpty {
                 VStack(alignment: .leading, spacing: 8) {
                     HStack {
                         Image(systemName: "play.circle.fill")
@@ -92,49 +132,75 @@ struct YouTubePlayerView: UIViewRepresentable {
         let configuration = WKWebViewConfiguration()
         configuration.allowsInlineMediaPlayback = true
         configuration.mediaTypesRequiringUserActionForPlayback = []
+        configuration.allowsAirPlayForMediaPlayback = true
+        configuration.allowsPictureInPictureMediaPlayback = true
+        
+        // Add user content controller for better iframe support
+        let userContentController = WKUserContentController()
+        configuration.userContentController = userContentController
         
         let webView = WKWebView(frame: .zero, configuration: configuration)
         webView.navigationDelegate = context.coordinator
         webView.backgroundColor = UIColor.black
+        webView.isOpaque = false
+        webView.scrollView.isScrollEnabled = false
+        webView.scrollView.bounces = false
+        
+        // Removed excessive logging
         
         return webView
     }
     
     func updateUIView(_ webView: WKWebView, context: Context) {
-        // Create embedded YouTube player HTML
-        let embedHTML = """
+        // Only load once to prevent infinite reloading
+        if webView.url == nil {
+            // Create embedded YouTube player HTML
+            let embedHTML = """
         <!DOCTYPE html>
         <html>
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
             <style>
                 body { 
                     margin: 0; 
                     padding: 0; 
-                    background-color: black;
+                    background-color: #000;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     height: 100vh;
+                    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
                 }
                 iframe { 
                     width: 100%; 
                     height: 100%; 
                     border: none;
+                    border-radius: 8px;
+                }
+                .loading {
+                    color: white;
+                    text-align: center;
                 }
             </style>
         </head>
         <body>
-            <iframe src="\(videoURL)?autoplay=0&controls=1&modestbranding=1&rel=0&showinfo=0"
+            <div class="loading" id="loading">Loading Khan Academy video...</div>
+            <iframe id="videoFrame" 
+                    src="\(videoURL)?autoplay=0&controls=1&modestbranding=1&rel=0&showinfo=0&origin=\(Bundle.main.bundleIdentifier ?? "com.khantime.app")" 
                     frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen
+                    style="display:none;"
+                    onload="document.getElementById('loading').style.display='none'; this.style.display='block';">
             </iframe>
         </body>
         </html>
         """
-        
-        webView.loadHTMLString(embedHTML, baseURL: nil)
+            
+            webView.loadHTMLString(embedHTML, baseURL: nil)
+        }
+        // Removed "already loaded" logging
     }
     
     func makeCoordinator() -> Coordinator {
@@ -149,14 +215,23 @@ struct YouTubePlayerView: UIViewRepresentable {
         }
         
         func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-            parent.onStatusChange(true, false)
+            if navigation != nil {
+                parent.onStatusChange(true, false)
+            }
         }
         
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            parent.onStatusChange(false, false)
+            if navigation != nil {
+                parent.onStatusChange(false, false)
+            }
         }
         
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+            parent.onStatusChange(false, true)
+        }
+        
+        func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+            // Silently handle navigation failures to reduce log spam
             parent.onStatusChange(false, true)
         }
     }

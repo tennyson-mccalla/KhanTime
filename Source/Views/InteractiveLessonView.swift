@@ -1,13 +1,21 @@
 import SwiftUI
+import WebKit
 
 struct InteractiveLessonView: View {
     let lesson: InteractiveLesson
     @Environment(\.theme) var theme
     @Environment(\.dismiss) var dismiss
-    @StateObject private var progressManager = LessonProgressManager()
+    @StateObject private var lessonProgressManager = LessonProgressManager()
+    @StateObject private var userProgressManager = ProgressManager()
+    @State private var showCompletionCelebration = false
+    
+    init(lesson: InteractiveLesson) {
+        self.lesson = lesson
+        print("🏗️ InteractiveLessonView init with lesson: \(lesson.title)")
+    }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(spacing: 0) {
                 // Progress bar
                 progressBar
@@ -30,30 +38,52 @@ struct InteractiveLessonView: View {
             }
             .navigationTitle(lesson.title)
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(false)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Close") {
+                    Button(action: {
                         dismiss()
+                    }) {
+                        HStack {
+                            Image(systemName: "chevron.left")
+                            Text("Lessons")
+                        }
+                        .foregroundColor(theme?.accentColor ?? .blue)
                     }
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    HStack {
-                        // Score display
-                        Text("\(progressManager.totalScore)")
-                            .font(theme?.buttonFont ?? .headline)
-                            .foregroundColor(theme?.successColor ?? .green)
-                        
-                        Image(systemName: "star.fill")
-                            .foregroundColor(theme?.successColor ?? .green)
+                    Button(action: {
+                        // Add lesson menu options
+                    }) {
+                        Image(systemName: "ellipsis.circle")
+                            .foregroundColor(theme?.accentColor ?? .blue)
                     }
                 }
             }
         }
+        .fullScreenCover(isPresented: $showCompletionCelebration) {
+            LessonCompletionView(
+                lesson: lesson,
+                score: lessonProgressManager.totalScore,
+                totalPossible: lesson.content.compactMap { step in
+                    if case .interactiveQuestion(let question) = step.content {
+                        return question.points
+                    }
+                    return nil
+                }.reduce(0, +),
+                timeElapsed: lessonProgressManager.elapsedTime,
+                userProfile: userProgressManager.userProfile
+            ) {
+                showCompletionCelebration = false
+                dismiss()
+            }
+            .environmentObject(userProgressManager)
+        }
         .onAppear {
             print("🎓 InteractiveLessonView appeared for lesson: \(lesson.title)")
             print("🎓 Lesson has \(lesson.content.count) steps")
-            progressManager.startLesson(lesson)
+            lessonProgressManager.startLesson(lesson)
         }
     }
     
@@ -61,19 +91,19 @@ struct InteractiveLessonView: View {
     private var progressBar: some View {
         VStack(spacing: 4) {
             HStack {
-                Text("Step \(progressManager.currentStepIndex + 1) of \(lesson.content.count)")
+                Text("Step \(lessonProgressManager.currentStepIndex + 1) of \(lesson.content.count)")
                     .font(theme?.captionFont ?? .caption)
                     .foregroundColor(theme?.secondaryColor ?? .secondary)
                 
                 Spacer()
                 
-                Text(formatDuration(progressManager.elapsedTime))
+                Text(formatDuration(lessonProgressManager.elapsedTime))
                     .font(theme?.captionFont ?? .caption)
                     .foregroundColor(theme?.secondaryColor ?? .secondary)
             }
             .padding(.horizontal, theme?.standardSpacing ?? 16)
             
-            ProgressView(value: progressManager.progress, total: 1.0)
+            ProgressView(value: lessonProgressManager.progress, total: 1.0)
                 .progressViewStyle(LinearProgressViewStyle(tint: theme?.accentColor ?? .blue))
                 .padding(.horizontal, theme?.standardSpacing ?? 16)
         }
@@ -141,15 +171,20 @@ struct InteractiveLessonView: View {
         case .videoContent(let videoContent):
             InteractiveVideoContentView(content: videoContent)
                 .themed(with: theme!)
+                .id("video-step-\(currentStep.id)")
+                .onAppear {
+                    print("🎞️ Rendering video content step with URL: '\(videoContent.videoURL)'")
+                }
             
         case .interactiveQuestion(let question):
             InteractiveQuestionView(question: question) { answer, isCorrect in
-                progressManager.answerQuestion(answer: answer, isCorrect: isCorrect, points: question.points)
+                lessonProgressManager.answerQuestion(answer: answer, isCorrect: isCorrect, points: question.points)
             }
+            .id("question-\(question.id)")  // Force recreation when question changes
             
         case .multiStepProblem(let problem):
             MultiStepProblemView(problem: problem) { answers, totalScore in
-                progressManager.completeMultiStepProblem(totalScore: totalScore)
+                lessonProgressManager.completeMultiStepProblem(totalScore: totalScore)
             }
             .themed(with: theme!)
         }
@@ -159,9 +194,13 @@ struct InteractiveLessonView: View {
     private var navigationButtons: some View {
         HStack(spacing: theme?.standardSpacing ?? 16) {
             // Previous button
-            if progressManager.canGoPrevious {
+            if lessonProgressManager.canGoPrevious {
                 Button(action: {
-                    progressManager.previousStep()
+                    // Immediate haptic feedback
+                    let impactFeedback = UIImpactFeedbackGenerator(style: .light)
+                    impactFeedback.impactOccurred()
+                    
+                    lessonProgressManager.previousStep()
                 }) {
                     HStack {
                         Image(systemName: "chevron.left")
@@ -181,20 +220,41 @@ struct InteractiveLessonView: View {
             Spacer()
             
             // Next/Finish button
-            if progressManager.canGoNext {
+            if lessonProgressManager.canGoNext {
                 Button(action: {
-                    if progressManager.isLastStep {
-                        // Complete lesson
-                        progressManager.completeLesson()
-                        dismiss()
+                    // Immediate haptic feedback
+                    let impactFeedback = UIImpactFeedbackGenerator(style: .medium)
+                    impactFeedback.impactOccurred()
+                    
+                    if lessonProgressManager.isLastStep {
+                        // Complete lesson, save progress, and show celebration
+                        lessonProgressManager.completeLesson()
+                        
+                        // Calculate total possible points
+                        let totalPossible = lesson.content.compactMap { step in
+                            if case .interactiveQuestion(let question) = step.content {
+                                return question.points
+                            }
+                            return nil
+                        }.reduce(0, +)
+                        
+                        // Save to user progress system
+                        userProgressManager.completeLesson(
+                            lesson,
+                            score: lessonProgressManager.totalScore,
+                            totalPossible: totalPossible,
+                            timeSpent: lessonProgressManager.elapsedTime
+                        )
+                        
+                        showCompletionCelebration = true
                     } else {
-                        progressManager.nextStep()
+                        lessonProgressManager.nextStep()
                     }
                 }) {
                     HStack {
-                        Text(progressManager.isLastStep ? "Finish Lesson" : "Continue")
+                        Text(lessonProgressManager.isLastStep ? "Finish Lesson" : "Continue")
                         
-                        if !progressManager.isLastStep {
+                        if !lessonProgressManager.isLastStep {
                             Image(systemName: "chevron.right")
                         }
                     }
@@ -216,7 +276,7 @@ struct InteractiveLessonView: View {
     
     // MARK: - Helper Properties
     private var currentStep: LessonStep {
-        lesson.content[progressManager.currentStepIndex]
+        lesson.content[lessonProgressManager.currentStepIndex]
     }
     
     private func formatDuration(_ duration: TimeInterval) -> String {
@@ -274,46 +334,7 @@ struct TextContentView: View {
     }
 }
 
-struct InteractiveVideoContentView: View {
-    let content: InteractiveVideoContent
-    @Environment(\.theme) var theme
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: theme?.standardSpacing ?? 16) {
-            Text("Video Lesson")
-                .font(theme?.headingFont ?? .headline)
-                .foregroundColor(theme?.primaryColor ?? .primary)
-            
-            RoundedRectangle(cornerRadius: theme?.cardCornerRadius ?? 12)
-                .fill(Color.gray.opacity(0.3))
-                .frame(height: 200)
-                .overlay(
-                    VStack {
-                        Image(systemName: "play.circle.fill")
-                            .font(.system(size: 50))
-                            .foregroundColor(theme?.accentColor ?? .blue)
-                        
-                        Text("Video Player")
-                            .font(theme?.bodyFont ?? .body)
-                            .foregroundColor(theme?.secondaryColor ?? .secondary)
-                        
-                        Text("(Feature coming soon)")
-                            .font(theme?.captionFont ?? .caption)
-                            .foregroundColor(theme?.secondaryColor ?? .secondary)
-                    }
-                )
-            
-            if let transcript = content.transcript {
-                Text("Transcript: \(transcript)")
-                    .font(theme?.captionFont ?? .caption)
-                    .foregroundColor(theme?.secondaryColor ?? .secondary)
-            }
-        }
-        .padding()
-        .background(theme?.surfaceColor ?? Color(.systemBackground))
-        .cornerRadius(theme?.cardCornerRadius ?? 12)
-    }
-}
+// Removed old placeholder - using real InteractiveVideoContentView from Components folder
 
 struct MultiStepProblemView: View {
     let problem: MultiStepProblem
@@ -376,12 +397,19 @@ class LessonProgressManager: ObservableObject {
     
     func startLesson(_ lesson: InteractiveLesson) {
         print("📚 ProgressManager starting lesson: \(lesson.title)")
+        
+        // Reset all state for new lesson
         self.lesson = lesson
+        self.currentStepIndex = 0
+        self.totalScore = 0
+        self.elapsedTime = 0
+        self.stepAnswers = [:] // Clear previous answers
         self.startTime = Date()
         
-        // Start timer for elapsed time tracking
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            if let startTime = self.startTime {
+        // Start timer for elapsed time tracking - reduced frequency for better performance
+        timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { [weak self] _ in
+            guard let self = self, let startTime = self.startTime else { return }
+            DispatchQueue.main.async {
                 self.elapsedTime = Date().timeIntervalSince(startTime)
             }
         }
@@ -435,7 +463,7 @@ class LessonProgressManager: ObservableObject {
 }
 
 #Preview {
-    let sampleLesson = MockLessonProvider.getBasicAlgebraLessons()[0]
+    let sampleLesson = LessonProvider.getBasicAlgebraLessons()[0]
     
     InteractiveLessonView(lesson: sampleLesson)
         .environmentObject(ThemePreference())

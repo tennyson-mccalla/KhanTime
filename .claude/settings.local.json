@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(swift:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:api.alpha-1edtech.com)"
+    ],
+    "deny": []
+  }
+}

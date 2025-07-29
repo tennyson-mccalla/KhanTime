@@ -56,6 +56,7 @@ struct ResourceMetadataPayload: Encodable {
     let type: String
     let subType: String
     let url: String
+    let format: String  // Required field that was missing
 }
 
 // MARK: - Component-Resource Association

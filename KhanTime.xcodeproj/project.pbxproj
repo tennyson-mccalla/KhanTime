@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F2A7F722E35D457004F3D42 /* LessonCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A7F712E35D457004F3D42 /* LessonCompletionView.swift */; };
+		6F2A7F742E35D461004F3D42 /* UserProgressModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A7F732E35D461004F3D42 /* UserProgressModels.swift */; };
+		6F2A7F7F2E368893004F3D42 /* timeback_logo.svg in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F7A2E368893004F3D42 /* timeback_logo.svg */; };
+		6F2A7F802E368893004F3D42 /* timeback_text.svg in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F7B2E368893004F3D42 /* timeback_text.svg */; };
+		6F2A7F882E37CC9F004F3D42 /* algebra_1753715191.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F812E37CC9F004F3D42 /* algebra_1753715191.json */; };
+		6F2A7F892E37CC9F004F3D42 /* algebra2_1753715193.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F832E37CC9F004F3D42 /* algebra2_1753715193.json */; };
+		6F2A7F8A2E37CC9F004F3D42 /* physics-essentials_1753715198.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F852E37CC9F004F3D42 /* physics-essentials_1753715198.json */; };
+		6F2A7F8B2E37CC9F004F3D42 /* physics_1753715200.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F842E37CC9F004F3D42 /* physics_1753715200.json */; };
+		6F2A7F8C2E37CC9F004F3D42 /* pre-algebra_1753715196.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F862E37CC9F004F3D42 /* pre-algebra_1753715196.json */; };
+		6F2A7F8D2E37CC9F004F3D42 /* algebra-basics_1753715189.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F822E37CC9F004F3D42 /* algebra-basics_1753715189.json */; };
+		6F2A7F8F2E37CCB8004F3D42 /* KhanAcademyContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A7F8E2E37CCB8004F3D42 /* KhanAcademyContentProvider.swift */; };
+		6F2A7F9E2E37D515004F3D42 /* algebra-basics_brainlift_1753717867.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F952E37D515004F3D42 /* algebra-basics_brainlift_1753717867.json */; };
+		6F2A7FA02E37D515004F3D42 /* physics_brainlift_1753717878.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F992E37D515004F3D42 /* physics_brainlift_1753717878.json */; };
+		6F2A7FA52E37D515004F3D42 /* algebra2_brainlift_1753717874.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F972E37D515004F3D42 /* algebra2_brainlift_1753717874.json */; };
+		6F2A7FA62E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F9C2E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json */; };
+		6F2A7FA82E37D515004F3D42 /* algebra_brainlift_1753717870.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F932E37D515004F3D42 /* algebra_brainlift_1753717870.json */; };
+		6F2A7FAB2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753722260.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FAA2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753722260.json */; };
+		6F2A7FAC2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FA92E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json */; };
+		6F2A7FAE2E38120D004F3D42 /* AEStudioContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A7FAD2E38120D004F3D42 /* AEStudioContentProvider.swift */; };
+		6F2A7FB12E38138D004F3D42 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FB02E38137A004F3D42 /* .swiftlint.yml */; };
+		6F2A7FB32E39448F004F3D42 /* InteractiveVideoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A7FB22E39448F004F3D42 /* InteractiveVideoContentView.swift */; };
 		6F797A9F2E300B9B00EC16E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F797A9C2E300B9B00EC16E9 /* Assets.xcassets */; };
 		6F797AA02E300B9B00EC16E9 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797A922E300B9B00EC16E9 /* Credentials.swift */; };
 		6F797AA12E300B9B00EC16E9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797A992E300B9B00EC16E9 /* DashboardView.swift */; };
@@ -56,6 +77,27 @@
 
 /* Begin PBXFileReference section */
 		6F2430762E3007F8000F3090 /* KhanTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KhanTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F2A7F712E35D457004F3D42 /* LessonCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCompletionView.swift; sourceTree = "<group>"; };
+		6F2A7F732E35D461004F3D42 /* UserProgressModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgressModels.swift; sourceTree = "<group>"; };
+		6F2A7F7A2E368893004F3D42 /* timeback_logo.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = timeback_logo.svg; sourceTree = "<group>"; };
+		6F2A7F7B2E368893004F3D42 /* timeback_text.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = timeback_text.svg; sourceTree = "<group>"; };
+		6F2A7F812E37CC9F004F3D42 /* algebra_1753715191.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algebra_1753715191.json; sourceTree = "<group>"; };
+		6F2A7F822E37CC9F004F3D42 /* algebra-basics_1753715189.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "algebra-basics_1753715189.json"; sourceTree = "<group>"; };
+		6F2A7F832E37CC9F004F3D42 /* algebra2_1753715193.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algebra2_1753715193.json; sourceTree = "<group>"; };
+		6F2A7F842E37CC9F004F3D42 /* physics_1753715200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = physics_1753715200.json; sourceTree = "<group>"; };
+		6F2A7F852E37CC9F004F3D42 /* physics-essentials_1753715198.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "physics-essentials_1753715198.json"; sourceTree = "<group>"; };
+		6F2A7F862E37CC9F004F3D42 /* pre-algebra_1753715196.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_1753715196.json"; sourceTree = "<group>"; };
+		6F2A7F8E2E37CCB8004F3D42 /* KhanAcademyContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhanAcademyContentProvider.swift; sourceTree = "<group>"; };
+		6F2A7F932E37D515004F3D42 /* algebra_brainlift_1753717870.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algebra_brainlift_1753717870.json; sourceTree = "<group>"; };
+		6F2A7F952E37D515004F3D42 /* algebra-basics_brainlift_1753717867.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "algebra-basics_brainlift_1753717867.json"; sourceTree = "<group>"; };
+		6F2A7F972E37D515004F3D42 /* algebra2_brainlift_1753717874.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algebra2_brainlift_1753717874.json; sourceTree = "<group>"; };
+		6F2A7F992E37D515004F3D42 /* physics_brainlift_1753717878.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = physics_brainlift_1753717878.json; sourceTree = "<group>"; };
+		6F2A7F9C2E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_brainlift_1753717863.json"; sourceTree = "<group>"; };
+		6F2A7FA92E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_deep_authenticated_1753720349.json"; sourceTree = "<group>"; };
+		6F2A7FAA2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753722260.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_deep_authenticated_1753722260.json"; sourceTree = "<group>"; };
+		6F2A7FAD2E38120D004F3D42 /* AEStudioContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEStudioContentProvider.swift; sourceTree = "<group>"; };
+		6F2A7FB02E38137A004F3D42 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		6F2A7FB22E39448F004F3D42 /* InteractiveVideoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveVideoContentView.swift; sourceTree = "<group>"; };
 		6F797A8A2E300B9B00EC16E9 /* AuthTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenResponse.swift; sourceTree = "<group>"; };
 		6F797A8B2E300B9B00EC16E9 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		6F797A8D2E300B9B00EC16E9 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
@@ -117,6 +159,11 @@
 		6F24306D2E3007F8000F3090 = {
 			isa = PBXGroup;
 			children = (
+				6F2A7FB02E38137A004F3D42 /* .swiftlint.yml */,
+				6F2A7F872E37CC9F004F3D42 /* Resources */,
+				6F2A7F7A2E368893004F3D42 /* timeback_logo.svg */,
+				6F2A7F7B2E368893004F3D42 /* timeback_text.svg */,
+				6F2A7F7D2E368893004F3D42 /* tools */,
 				6F797A9E2E300B9B00EC16E9 /* Source */,
 				6F2430772E3007F8000F3090 /* Products */,
 			);
@@ -130,9 +177,44 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6F2A7F7D2E368893004F3D42 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		6F2A7F872E37CC9F004F3D42 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6F2A7F812E37CC9F004F3D42 /* algebra_1753715191.json */,
+				6F2A7F822E37CC9F004F3D42 /* algebra-basics_1753715189.json */,
+				6F2A7F832E37CC9F004F3D42 /* algebra2_1753715193.json */,
+				6F2A7F842E37CC9F004F3D42 /* physics_1753715200.json */,
+				6F2A7F852E37CC9F004F3D42 /* physics-essentials_1753715198.json */,
+				6F2A7F862E37CC9F004F3D42 /* pre-algebra_1753715196.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6F2A7F9D2E37D515004F3D42 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6F2A7FA92E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json */,
+				6F2A7FAA2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753722260.json */,
+				6F2A7F932E37D515004F3D42 /* algebra_brainlift_1753717870.json */,
+				6F2A7F952E37D515004F3D42 /* algebra-basics_brainlift_1753717867.json */,
+				6F2A7F972E37D515004F3D42 /* algebra2_brainlift_1753717874.json */,
+				6F2A7F992E37D515004F3D42 /* physics_brainlift_1753717878.json */,
+				6F2A7F9C2E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		6F797A8C2E300B9B00EC16E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6F2A7F732E35D461004F3D42 /* UserProgressModels.swift */,
 				6FC42ADA2E35BE6E00FE39A8 /* InteractiveLessonModels.swift */,
 				6F96440A2E30500E005A4354 /* SharedModels.swift */,
 				6F9644042E304ED8005A4354 /* CreationModels.swift */,
@@ -181,6 +263,8 @@
 		6F797A9B2E300B9B00EC16E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6F2A7FB22E39448F004F3D42 /* InteractiveVideoContentView.swift */,
+				6F2A7F712E35D457004F3D42 /* LessonCompletionView.swift */,
 				6FC42ADC2E35BE8300FE39A8 /* InteractiveLessonsBrowserView.swift */,
 				6FC42ADD2E35BE8300FE39A8 /* InteractiveLessonView.swift */,
 				6FC42AD82E34445800FE39A8 /* HeroLandingView.swift */,
@@ -198,6 +282,7 @@
 		6F797A9E2E300B9B00EC16E9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6F2A7F9D2E37D515004F3D42 /* Resources */,
 				6FC42ACF2E33260E00FE39A8 /* UI */,
 				6FC42ABA2E328E4600FE39A8 /* Protocols */,
 				6FC42ABC2E328E4600FE39A8 /* Providers */,
@@ -226,6 +311,8 @@
 		6FC42ABC2E328E4600FE39A8 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				6F2A7FAD2E38120D004F3D42 /* AEStudioContentProvider.swift */,
+				6F2A7F8E2E37CCB8004F3D42 /* KhanAcademyContentProvider.swift */,
 				6FC42ABB2E328E4600FE39A8 /* TimeBackContentProvider.swift */,
 			);
 			path = Providers;
@@ -277,6 +364,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F2430812E3007F9000F3090 /* Build configuration list for PBXNativeTarget "KhanTime" */;
 			buildPhases = (
+				6F2A7FAF2E381338004F3D42 /* SwiftLint */,
 				6F2430722E3007F8000F3090 /* Sources */,
 				6F2430732E3007F8000F3090 /* Frameworks */,
 				6F2430742E3007F8000F3090 /* Resources */,
@@ -331,12 +419,50 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F2A7FB12E38138D004F3D42 /* .swiftlint.yml in Resources */,
+				6F2A7F7F2E368893004F3D42 /* timeback_logo.svg in Resources */,
+				6F2A7F802E368893004F3D42 /* timeback_text.svg in Resources */,
+				6F2A7F882E37CC9F004F3D42 /* algebra_1753715191.json in Resources */,
+				6F2A7F892E37CC9F004F3D42 /* algebra2_1753715193.json in Resources */,
+				6F2A7F8A2E37CC9F004F3D42 /* physics-essentials_1753715198.json in Resources */,
+				6F2A7F8B2E37CC9F004F3D42 /* physics_1753715200.json in Resources */,
+				6F2A7F8C2E37CC9F004F3D42 /* pre-algebra_1753715196.json in Resources */,
+				6F2A7F8D2E37CC9F004F3D42 /* algebra-basics_1753715189.json in Resources */,
+				6F2A7FAB2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753722260.json in Resources */,
+				6F2A7FAC2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json in Resources */,
 				6F797A9F2E300B9B00EC16E9 /* Assets.xcassets in Resources */,
+				6F2A7F9E2E37D515004F3D42 /* algebra-basics_brainlift_1753717867.json in Resources */,
+				6F2A7FA02E37D515004F3D42 /* physics_brainlift_1753717878.json in Resources */,
+				6F2A7FA52E37D515004F3D42 /* algebra2_brainlift_1753717874.json in Resources */,
+				6F2A7FA62E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json in Resources */,
+				6F2A7FA82E37D515004F3D42 /* algebra_brainlift_1753717870.json in Resources */,
 				6FC42AC52E328E7900FE39A8 /* Credentials.swift.template in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F2A7FAF2E381338004F3D42 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SWIFTLINT=\"/opt/homebrew/bin/swiftlint\"\nCONFIG=\"${SRCROOT}/KhanTime/.swiftlint.yml\"\nTARGET_DIR=\"${SRCROOT}/KhanTime\"\n\nif [ -f \"$SWIFTLINT\" ]; then\n  \"$SWIFTLINT\" lint --config \"$CONFIG\" \"$TARGET_DIR\" || true\nelse\n  echo \"warning: SwiftLint not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F2430722E3007F8000F3090 /* Sources */ = {
@@ -348,11 +474,13 @@
 				6FC42AD92E34445800FE39A8 /* HeroLandingView.swift in Sources */,
 				6FC42AD22E33260E00FE39A8 /* KidsTheme.swift in Sources */,
 				6FC42AD32E33260E00FE39A8 /* ThemeFactory.swift in Sources */,
+				6F2A7FB32E39448F004F3D42 /* InteractiveVideoContentView.swift in Sources */,
 				6FC42AD42E33260E00FE39A8 /* CourseCard.swift in Sources */,
 				6FC42AD72E33D8B600FE39A8 /* ElementaryTheme.swift in Sources */,
 				6FC42AD52E33260E00FE39A8 /* MiddleTheme.swift in Sources */,
 				6F797AA02E300B9B00EC16E9 /* Credentials.swift in Sources */,
 				6FC42AB52E328E0C00FE39A8 /* APIExplorerView.swift in Sources */,
+				6F2A7F722E35D457004F3D42 /* LessonCompletionView.swift in Sources */,
 				6F797AA12E300B9B00EC16E9 /* DashboardView.swift in Sources */,
 				6F9644092E304EE6005A4354 /* ContentCreationService.swift in Sources */,
 				6F797AA22E300B9B00EC16E9 /* APIService.swift in Sources */,
@@ -376,15 +504,18 @@
 				6F797AB42E302A1600EC16E9 /* SyllabusView.swift in Sources */,
 				6FC42AC32E328E6500FE39A8 /* GraphQLService.swift in Sources */,
 				6F797AB52E302A1600EC16E9 /* QTIView.swift in Sources */,
+				6F2A7F8F2E37CCB8004F3D42 /* KhanAcademyContentProvider.swift in Sources */,
 				6F96440B2E30500E005A4354 /* SharedModels.swift in Sources */,
 				6F797AA92E300B9B00EC16E9 /* AuthService.swift in Sources */,
 				6F797AAA2E300B9B00EC16E9 /* LoginView.swift in Sources */,
+				6F2A7FAE2E38120D004F3D42 /* AEStudioContentProvider.swift in Sources */,
 				6F797AAB2E300B9B00EC16E9 /* ContentView.swift in Sources */,
 				6F797AAC2E300B9B00EC16E9 /* APIConstants.swift in Sources */,
 				6F9644062E304ED8005A4354 /* User.swift in Sources */,
 				6F9644072E304ED8005A4354 /* CreationModels.swift in Sources */,
 				6F797AAD2E300B9B00EC16E9 /* Course.swift in Sources */,
 				6FC42ADE2E35BE8300FE39A8 /* InteractiveLessonsBrowserView.swift in Sources */,
+				6F2A7F742E35D461004F3D42 /* UserProgressModels.swift in Sources */,
 				6FC42ADF2E35BE8300FE39A8 /* InteractiveLessonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
