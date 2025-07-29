@@ -1,0 +1,284 @@
+{
+  "description" : "Scraped from Khan Academy using BrainLift HTML methodology",
+  "id" : "pre-algebra",
+  "scrapedAt" : "2025-07-28T15:06:36Z",
+  "subject" : "pre-algebra",
+  "title" : "Pre-Algebra",
+  "units" : [
+    {
+      "description" : "Arithmetic unit from Pre-Algebra",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_0_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Arithmetic\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "arithmetic"
+          ],
+          "slug" : "arithmetic-practice",
+          "title" : "Arithmetic Practice"
+        }
+      ],
+      "id" : "unit_pre-algebra_0",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_0_0",
+          "slug" : "introduction-to-arithmetic",
+          "title" : "Introduction to Arithmetic",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_0_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_0_1",
+          "slug" : "practice-with-arithmetic",
+          "title" : "Practice with Arithmetic",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_0_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_0_2",
+          "slug" : "advanced-arithmetic",
+          "title" : "Advanced Arithmetic",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_0_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_0_3",
+          "slug" : "review-of-arithmetic",
+          "title" : "Review of Arithmetic",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_0_3"
+        }
+      ],
+      "title" : "Arithmetic"
+    },
+    {
+      "description" : "Fractions unit from Pre-Algebra",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_1_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Fractions\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "fractions"
+          ],
+          "slug" : "fractions-practice",
+          "title" : "Fractions Practice"
+        }
+      ],
+      "id" : "unit_pre-algebra_1",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_1_0",
+          "slug" : "introduction-to-fractions",
+          "title" : "Introduction to Fractions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_1_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_1_1",
+          "slug" : "practice-with-fractions",
+          "title" : "Practice with Fractions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_1_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_1_2",
+          "slug" : "advanced-fractions",
+          "title" : "Advanced Fractions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_1_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_1_3",
+          "slug" : "review-of-fractions",
+          "title" : "Review of Fractions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_1_3"
+        }
+      ],
+      "title" : "Fractions"
+    },
+    {
+      "description" : "Decimals unit from Pre-Algebra",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_2_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Decimals\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "decimals"
+          ],
+          "slug" : "decimals-practice",
+          "title" : "Decimals Practice"
+        }
+      ],
+      "id" : "unit_pre-algebra_2",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_2_0",
+          "slug" : "introduction-to-decimals",
+          "title" : "Introduction to Decimals",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_2_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_2_1",
+          "slug" : "practice-with-decimals",
+          "title" : "Practice with Decimals",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_2_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_2_2",
+          "slug" : "advanced-decimals",
+          "title" : "Advanced Decimals",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_2_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_2_3",
+          "slug" : "review-of-decimals",
+          "title" : "Review of Decimals",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_2_3"
+        }
+      ],
+      "title" : "Decimals"
+    },
+    {
+      "description" : "Negative Numbers unit from Pre-Algebra",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_3_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Negative Numbers\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "negative numbers"
+          ],
+          "slug" : "negative-numbers-practice",
+          "title" : "Negative Numbers Practice"
+        }
+      ],
+      "id" : "unit_pre-algebra_3",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_3_0",
+          "slug" : "introduction-to-negative-numbers",
+          "title" : "Introduction to Negative Numbers",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_3_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_3_1",
+          "slug" : "practice-with-negative-numbers",
+          "title" : "Practice with Negative Numbers",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_3_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_3_2",
+          "slug" : "advanced-negative-numbers",
+          "title" : "Advanced Negative Numbers",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_3_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_3_3",
+          "slug" : "review-of-negative-numbers",
+          "title" : "Review of Negative Numbers",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_3_3"
+        }
+      ],
+      "title" : "Negative Numbers"
+    },
+    {
+      "description" : "Variables & Expressions unit from Pre-Algebra",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_4_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Variables & Expressions\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "variables & expressions"
+          ],
+          "slug" : "variables-&-expressions-practice",
+          "title" : "Variables & Expressions Practice"
+        }
+      ],
+      "id" : "unit_pre-algebra_4",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_4_0",
+          "slug" : "introduction-to-variables-&-expressions",
+          "title" : "Introduction to Variables & Expressions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_4_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_4_1",
+          "slug" : "practice-with-variables-&-expressions",
+          "title" : "Practice with Variables & Expressions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_4_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_4_2",
+          "slug" : "advanced-variables-&-expressions",
+          "title" : "Advanced Variables & Expressions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_4_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_4_3",
+          "slug" : "review-of-variables-&-expressions",
+          "title" : "Review of Variables & Expressions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_4_3"
+        }
+      ],
+      "title" : "Variables & Expressions"
+    }
+  ]
+}

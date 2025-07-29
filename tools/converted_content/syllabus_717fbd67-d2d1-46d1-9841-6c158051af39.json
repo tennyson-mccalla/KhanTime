@@ -1,0 +1,3237 @@
+{
+  "course": {
+    "sourcedId": "3e06081c-cd45-42f6-83d6-de52f897ef08",
+    "title": "Pre-algebra",
+    "grades": [
+      "6-8"
+    ]
+  },
+  "subComponents": [
+    {
+      "sourcedId": "7f52cf05-f617-489d-a777-5698a26faf45",
+      "title": "Factors and multiples",
+      "sortOrder": 0,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "eff64e0f-1f99-4aba-b929-155629c75f2b",
+          "title": "Factors and multiples",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "eff64e0f-1f99-4aba-b929-155629c75f2b",
+            "status": "active",
+            "title": "Factors and multiples",
+            "vendorResourceId": "x88b53972",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x88b53972",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "83ae27a7-93bd-483a-be02-c2520fe994e4",
+          "title": "Factors and multiples: Quiz 1",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "83ae27a7-93bd-483a-be02-c2520fe994e4",
+            "status": "active",
+            "title": "Factors and multiples: Quiz 1",
+            "vendorResourceId": "x0031dc8894fba80c",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x0031dc8894fba80c",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-factors-multiples/pre-algebra-factors-mult/quiz/pre-algebra-factors-multiples-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 11,
+                "upperBound": 14
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-factors-multiples/pre-algebra-factors-mult/quiz/pre-algebra-factors-multiples-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "862641d8-1309-490f-8aab-70c32f758f90",
+          "title": "Prime and composite numbers",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "862641d8-1309-490f-8aab-70c32f758f90",
+            "status": "active",
+            "title": "Prime and composite numbers",
+            "vendorResourceId": "x71ebcf30",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x71ebcf30",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "92299e1f-b372-4464-8e12-b55e3358caa9",
+          "title": "Prime factorization",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "92299e1f-b372-4464-8e12-b55e3358caa9",
+            "status": "active",
+            "title": "Prime factorization",
+            "vendorResourceId": "x6231048e",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x6231048e",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "6ba73d23-4836-4d1e-bb7a-2d2730fbb74c",
+          "title": "Factors and multiples: Quiz 2",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "6ba73d23-4836-4d1e-bb7a-2d2730fbb74c",
+            "status": "active",
+            "title": "Factors and multiples: Quiz 2",
+            "vendorResourceId": "x4235a9c5c2060db4",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x4235a9c5c2060db4",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-factors-multiples/pre-algebra-prime-factorization-prealg/quiz/pre-algebra-factors-multiples-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 14,
+                "upperBound": 18
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-factors-multiples/pre-algebra-prime-factorization-prealg/quiz/pre-algebra-factors-multiples-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "a7b608cd-9444-440b-a3ef-0343200dccc2",
+          "title": "Factors and multiples: Unit test",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "a7b608cd-9444-440b-a3ef-0343200dccc2",
+            "status": "active",
+            "title": "Factors and multiples: Unit test",
+            "vendorResourceId": "xc6f8253b076a1ba4",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "xc6f8253b076a1ba4",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-factors-multiples/pre-algebra-prime-factorization-prealg/test/pre-algebra-factors-multiples-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 20,
+                "upperBound": 25
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-factors-multiples/pre-algebra-prime-factorization-prealg/test/pre-algebra-factors-multiples-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "xa9d6fdff",
+        "originalSlug": "pre-algebra-factors-multiples",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "fe1cb488-3004-46ed-b618-e7b172a64696",
+      "title": "Patterns",
+      "sortOrder": 1,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "13a12798-a069-45df-b2cf-773d4c8ed308",
+          "title": "Math patterns",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "13a12798-a069-45df-b2cf-773d4c8ed308",
+            "status": "active",
+            "title": "Math patterns",
+            "vendorResourceId": "xb431238fedc6c1ed",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xb431238fedc6c1ed",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "a2abffeb-d6cd-4757-a959-42b130f6404a",
+          "title": "Writing expressions",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "a2abffeb-d6cd-4757-a959-42b130f6404a",
+            "status": "active",
+            "title": "Writing expressions",
+            "vendorResourceId": "x486acecfc4266ec5",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x486acecfc4266ec5",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "d3031ab7-9f9c-4bda-b1a7-57052e488678",
+          "title": "Patterns: Quiz 1",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "d3031ab7-9f9c-4bda-b1a7-57052e488678",
+            "status": "active",
+            "title": "Patterns: Quiz 1",
+            "vendorResourceId": "x63366648e33d5b9e",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x63366648e33d5b9e",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:patterns/xb4832e56:writing-expressions/quiz/xb4832e56:patterns-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:patterns/xb4832e56:writing-expressions/quiz/xb4832e56:patterns-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "989dd343-dd97-404a-b38c-de34f90d16fc",
+          "title": "Number patterns",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "989dd343-dd97-404a-b38c-de34f90d16fc",
+            "status": "active",
+            "title": "Number patterns",
+            "vendorResourceId": "xfb6f3ec387afebec",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xfb6f3ec387afebec",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "2b9f6297-7a48-47e2-b75e-262c16548949",
+          "title": "Patterns: Quiz 2",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "2b9f6297-7a48-47e2-b75e-262c16548949",
+            "status": "active",
+            "title": "Patterns: Quiz 2",
+            "vendorResourceId": "x500db012bca78568",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x500db012bca78568",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:patterns/xb4832e56:number-patterns/quiz/xb4832e56:patterns-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:patterns/xb4832e56:number-patterns/quiz/xb4832e56:patterns-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "c5d4bc0f-3d57-4e6f-9d2d-653c754a8aa1",
+          "title": "Patterns: Unit test",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "c5d4bc0f-3d57-4e6f-9d2d-653c754a8aa1",
+            "status": "active",
+            "title": "Patterns: Unit test",
+            "vendorResourceId": "x736d93b63509dfc6",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "x736d93b63509dfc6",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:patterns/xb4832e56:number-patterns/test/xb4832e56:patterns-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 10,
+                "upperBound": 20
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:patterns/xb4832e56:number-patterns/test/xb4832e56:patterns-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "xc624794c56ea8bbf",
+        "originalSlug": "xb4832e56:patterns",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "e56f1ddb-dacb-4dac-b85e-bc9b607c0826",
+      "title": "Ratios and rates",
+      "sortOrder": 2,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "b9b1e7c7-424c-4f76-ab1a-360ab075490d",
+          "title": "Intro to ratios",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "b9b1e7c7-424c-4f76-ab1a-360ab075490d",
+            "status": "active",
+            "title": "Intro to ratios",
+            "vendorResourceId": "x6f3b8aeb",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x6f3b8aeb",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "c81426eb-8b7e-4cf2-830d-686fd6e035dd",
+          "title": "Visualize ratios",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "c81426eb-8b7e-4cf2-830d-686fd6e035dd",
+            "status": "active",
+            "title": "Visualize ratios",
+            "vendorResourceId": "xac82be2da1cb5d62",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xac82be2da1cb5d62",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "31fe57d3-a673-4003-9447-22912520f586",
+          "title": "Ratios and rates: Quiz 1",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "31fe57d3-a673-4003-9447-22912520f586",
+            "status": "active",
+            "title": "Ratios and rates: Quiz 1",
+            "vendorResourceId": "xb00fe50870c1feb2",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xb00fe50870c1feb2",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-ratios-rates/pre-algebra-visualize-ratios/quiz/pre-algebra-ratios-rates-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 12,
+                "upperBound": 16
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-ratios-rates/pre-algebra-visualize-ratios/quiz/pre-algebra-ratios-rates-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "34e47739-4c94-48ac-b492-38a13d4bbcad",
+          "title": "Equivalent ratios",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "34e47739-4c94-48ac-b492-38a13d4bbcad",
+            "status": "active",
+            "title": "Equivalent ratios",
+            "vendorResourceId": "xec263b8031028b68",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xec263b8031028b68",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "534efc19-0b19-487c-8f38-201149ea1513",
+          "title": "Ratios and rates: Quiz 2",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "534efc19-0b19-487c-8f38-201149ea1513",
+            "status": "active",
+            "title": "Ratios and rates: Quiz 2",
+            "vendorResourceId": "xa80423d3e9d6d081",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xa80423d3e9d6d081",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-ratios-rates/xb4832e56:equivalent-ratios/quiz/pre-algebra-ratios-rates-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-ratios-rates/xb4832e56:equivalent-ratios/quiz/pre-algebra-ratios-rates-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "17972f8c-298b-4805-995b-41aff68a9f2b",
+          "title": "Ratio application",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "17972f8c-298b-4805-995b-41aff68a9f2b",
+            "status": "active",
+            "title": "Ratio application",
+            "vendorResourceId": "xb82dd750",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xb82dd750",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "879fe750-a8cf-4b50-824f-39ce067c7ce4",
+          "title": "Ratios and rates: Quiz 3",
+          "sortOrder": 6,
+          "resource": {
+            "sourcedId": "879fe750-a8cf-4b50-824f-39ce067c7ce4",
+            "status": "active",
+            "title": "Ratios and rates: Quiz 3",
+            "vendorResourceId": "x84349605fdf26b86",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x84349605fdf26b86",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-ratios-rates/pre-algebra-ratio-word-problems/quiz/pre-algebra-ratios-rates-quiz-3",
+              "estimatedDuration": {
+                "lowerBound": 17,
+                "upperBound": 22
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-ratios-rates/pre-algebra-ratio-word-problems/quiz/pre-algebra-ratios-rates-quiz-3"
+            }
+          }
+        },
+        {
+          "sourcedId": "d1e57e1e-0815-4d84-a761-1b2095d9c9a6",
+          "title": "Intro to rates",
+          "sortOrder": 7,
+          "resource": {
+            "sourcedId": "d1e57e1e-0815-4d84-a761-1b2095d9c9a6",
+            "status": "active",
+            "title": "Intro to rates",
+            "vendorResourceId": "x6593bc4d",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x6593bc4d",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "9ccf1198-a11f-4d19-b6f8-300b12a7da19",
+          "title": "Ratios and rates: Quiz 4",
+          "sortOrder": 8,
+          "resource": {
+            "sourcedId": "9ccf1198-a11f-4d19-b6f8-300b12a7da19",
+            "status": "active",
+            "title": "Ratios and rates: Quiz 4",
+            "vendorResourceId": "xb054706c307bc150",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xb054706c307bc150",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-ratios-rates/pre-algebra-rates/quiz/pre-algebra-ratios-rates-quiz-4",
+              "estimatedDuration": {
+                "lowerBound": 20,
+                "upperBound": 25
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-ratios-rates/pre-algebra-rates/quiz/pre-algebra-ratios-rates-quiz-4"
+            }
+          }
+        },
+        {
+          "sourcedId": "5e561eec-158d-4bab-8e13-f5da5394cfcf",
+          "title": "Ratios and rates: Unit test",
+          "sortOrder": 9,
+          "resource": {
+            "sourcedId": "5e561eec-158d-4bab-8e13-f5da5394cfcf",
+            "status": "active",
+            "title": "Ratios and rates: Unit test",
+            "vendorResourceId": "x330d97ef7569ebe6",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "x330d97ef7569ebe6",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-ratios-rates/pre-algebra-rates/test/pre-algebra-ratios-rates-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 12,
+                "upperBound": 24
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-ratios-rates/pre-algebra-rates/test/pre-algebra-ratios-rates-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "x17923675",
+        "originalSlug": "pre-algebra-ratios-rates",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "bffed883-1081-49a8-9e5d-69e847609260",
+      "title": "Percentages",
+      "sortOrder": 3,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "0d5771a7-1d76-40a2-84b8-cf62a2a6ff87",
+          "title": "Intro to percents",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "0d5771a7-1d76-40a2-84b8-cf62a2a6ff87",
+            "status": "active",
+            "title": "Intro to percents",
+            "vendorResourceId": "x864f45b8bfc20e5b",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x864f45b8bfc20e5b",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "7fa653f2-5205-480c-8d24-cd9c11120c3d",
+          "title": "Visualize percents",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "7fa653f2-5205-480c-8d24-cd9c11120c3d",
+            "status": "active",
+            "title": "Visualize percents",
+            "vendorResourceId": "xd28c872c88631743",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xd28c872c88631743",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "0e082906-b065-43e6-8011-5a190aab7629",
+          "title": "Percentages: Quiz 1",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "0e082906-b065-43e6-8011-5a190aab7629",
+            "status": "active",
+            "title": "Percentages: Quiz 1",
+            "vendorResourceId": "x1c60d1c60bb20a83",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x1c60d1c60bb20a83",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:percentages/xb4832e56:visualize-percents/quiz/xb4832e56:percentages-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:percentages/xb4832e56:visualize-percents/quiz/xb4832e56:percentages-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "e0f6e673-016e-4815-9536-f910143084af",
+          "title": "Equivalent representations of percent problems",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "e0f6e673-016e-4815-9536-f910143084af",
+            "status": "active",
+            "title": "Equivalent representations of percent problems",
+            "vendorResourceId": "x88e0b45a4b91fdfa",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x88e0b45a4b91fdfa",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "35ff2d6d-1d5d-46df-ac6c-269c6310f3ec",
+          "title": "Percentages: Quiz 2",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "35ff2d6d-1d5d-46df-ac6c-269c6310f3ec",
+            "status": "active",
+            "title": "Percentages: Quiz 2",
+            "vendorResourceId": "x6d1d3d184863151e",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x6d1d3d184863151e",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:percentages/xb4832e56:equivalent-representations-of-percent-problems/quiz/xb4832e56:percentages-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:percentages/xb4832e56:equivalent-representations-of-percent-problems/quiz/xb4832e56:percentages-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "1145c717-aa18-46aa-b694-d5dd3ed6a70c",
+          "title": "Percent problems",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "1145c717-aa18-46aa-b694-d5dd3ed6a70c",
+            "status": "active",
+            "title": "Percent problems",
+            "vendorResourceId": "xe83a764bf30040e5",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xe83a764bf30040e5",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "856c9ef4-00c3-4de9-a4f2-1b5dd8b7b99e",
+          "title": "Percent word problems",
+          "sortOrder": 6,
+          "resource": {
+            "sourcedId": "856c9ef4-00c3-4de9-a4f2-1b5dd8b7b99e",
+            "status": "active",
+            "title": "Percent word problems",
+            "vendorResourceId": "x7c03992be69cbcc5",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x7c03992be69cbcc5",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "3a4f5fdd-41de-4c0a-a54d-a995a5cabccd",
+          "title": "Percentages: Quiz 3",
+          "sortOrder": 7,
+          "resource": {
+            "sourcedId": "3a4f5fdd-41de-4c0a-a54d-a995a5cabccd",
+            "status": "active",
+            "title": "Percentages: Quiz 3",
+            "vendorResourceId": "x232163d118f32396",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x232163d118f32396",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:percentages/xb4832e56:percent-word-problems/quiz/xb4832e56:percentages-quiz-3",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:percentages/xb4832e56:percent-word-problems/quiz/xb4832e56:percentages-quiz-3"
+            }
+          }
+        },
+        {
+          "sourcedId": "5298388c-7a23-43ed-8cb5-80c4bf3569b5",
+          "title": "Percentages: Unit test",
+          "sortOrder": 8,
+          "resource": {
+            "sourcedId": "5298388c-7a23-43ed-8cb5-80c4bf3569b5",
+            "status": "active",
+            "title": "Percentages: Unit test",
+            "vendorResourceId": "xd9cff2a30ca2dc4c",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "xd9cff2a30ca2dc4c",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:percentages/xb4832e56:percent-word-problems/test/xb4832e56:percentages-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 10,
+                "upperBound": 20
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:percentages/xb4832e56:percent-word-problems/test/xb4832e56:percentages-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "xd5b26e1a9a1dc206",
+        "originalSlug": "xb4832e56:percentages",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "aaae788c-46af-42d5-8949-4401a055d12d",
+      "title": "Exponents intro and order of operations",
+      "sortOrder": 4,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "1453619a-ccb4-4d56-95df-c61007a4efdc",
+          "title": "Meaning of exponents",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "1453619a-ccb4-4d56-95df-c61007a4efdc",
+            "status": "active",
+            "title": "Meaning of exponents",
+            "vendorResourceId": "x753386ddee86090e",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x753386ddee86090e",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "779c92f0-51db-409e-8417-f85c0f5b9e68",
+          "title": "Powers of whole numbers",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "779c92f0-51db-409e-8417-f85c0f5b9e68",
+            "status": "active",
+            "title": "Powers of whole numbers",
+            "vendorResourceId": "x74ad3d3ce4adaff5",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x74ad3d3ce4adaff5",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "b07ac77b-3a68-4dc4-bcb4-9bf151054c65",
+          "title": "Powers of fractions and decimals",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "b07ac77b-3a68-4dc4-bcb4-9bf151054c65",
+            "status": "active",
+            "title": "Powers of fractions and decimals",
+            "vendorResourceId": "x6b747e8cca382b86",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x6b747e8cca382b86",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "167f5fa1-2081-4d1e-a04f-c35c33e33d87",
+          "title": "Exponents intro and order of operations: Quiz 1",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "167f5fa1-2081-4d1e-a04f-c35c33e33d87",
+            "status": "active",
+            "title": "Exponents intro and order of operations: Quiz 1",
+            "vendorResourceId": "x62c610b192e5c6f5",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x62c610b192e5c6f5",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:exponents-intro-and-order-of-operations/xb4832e56:powers-of-fractions-and-decimals/quiz/xb4832e56:exponents-intro-and-order-of-operations-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:exponents-intro-and-order-of-operations/xb4832e56:powers-of-fractions-and-decimals/quiz/xb4832e56:exponents-intro-and-order-of-operations-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "3e30eea7-b6d6-4860-b04f-c9520efeb9b0",
+          "title": "Order of operations introduction",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "3e30eea7-b6d6-4860-b04f-c9520efeb9b0",
+            "status": "active",
+            "title": "Order of operations introduction",
+            "vendorResourceId": "x5ba98ee3685ae489",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x5ba98ee3685ae489",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "a0f55840-6488-4872-addc-c4b9895bb49a",
+          "title": "More on order of operations",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "a0f55840-6488-4872-addc-c4b9895bb49a",
+            "status": "active",
+            "title": "More on order of operations",
+            "vendorResourceId": "x294bdc85a1bab163",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x294bdc85a1bab163",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "1b4c439b-a58b-412e-9828-60a9ab627eda",
+          "title": "Exponents intro and order of operations: Quiz 2",
+          "sortOrder": 6,
+          "resource": {
+            "sourcedId": "1b4c439b-a58b-412e-9828-60a9ab627eda",
+            "status": "active",
+            "title": "Exponents intro and order of operations: Quiz 2",
+            "vendorResourceId": "x24b367cb150f9aae",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x24b367cb150f9aae",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:exponents-intro-and-order-of-operations/xb4832e56:more-on-order-of-operations/quiz/xb4832e56:exponents-intro-and-order-of-operations-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:exponents-intro-and-order-of-operations/xb4832e56:more-on-order-of-operations/quiz/xb4832e56:exponents-intro-and-order-of-operations-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "3c7ec50d-5853-4dab-a2ca-92262e7289b1",
+          "title": "Exponents intro and order of operations: Unit test",
+          "sortOrder": 7,
+          "resource": {
+            "sourcedId": "3c7ec50d-5853-4dab-a2ca-92262e7289b1",
+            "status": "active",
+            "title": "Exponents intro and order of operations: Unit test",
+            "vendorResourceId": "x5788a9c977e73c7d",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "x5788a9c977e73c7d",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:exponents-intro-and-order-of-operations/xb4832e56:more-on-order-of-operations/test/xb4832e56:exponents-intro-and-order-of-operations-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 10,
+                "upperBound": 20
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:exponents-intro-and-order-of-operations/xb4832e56:more-on-order-of-operations/test/xb4832e56:exponents-intro-and-order-of-operations-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "x68a67857b65a80f9",
+        "originalSlug": "xb4832e56:exponents-intro-and-order-of-operations",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "a3f7e6d4-dea5-46b9-bb64-b8085b85049d",
+      "title": "Variables & expressions",
+      "sortOrder": 5,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "55692d83-183e-4c2c-903a-507ef1d674d4",
+          "title": "Parts of algebraic expressions",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "55692d83-183e-4c2c-903a-507ef1d674d4",
+            "status": "active",
+            "title": "Parts of algebraic expressions",
+            "vendorResourceId": "xc3841b3e86d35d63",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xc3841b3e86d35d63",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "e3552e18-5cfa-48da-a046-a495f1803f1c",
+          "title": "Substitution & evaluating expressions",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "e3552e18-5cfa-48da-a046-a495f1803f1c",
+            "status": "active",
+            "title": "Substitution & evaluating expressions",
+            "vendorResourceId": "xc34e604ec70b4d17",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xc34e604ec70b4d17",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "ef333d9e-8161-4666-9c69-263f7458ddf9",
+          "title": "Evaluating expressions with multiple variables",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "ef333d9e-8161-4666-9c69-263f7458ddf9",
+            "status": "active",
+            "title": "Evaluating expressions with multiple variables",
+            "vendorResourceId": "x28047dd77bcea942",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x28047dd77bcea942",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "2787a85d-069e-4bb8-8fbe-772df04b9c53",
+          "title": "Variables & expressions: Quiz 1",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "2787a85d-069e-4bb8-8fbe-772df04b9c53",
+            "status": "active",
+            "title": "Variables & expressions: Quiz 1",
+            "vendorResourceId": "xdf758f8ddda5b7fa",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xdf758f8ddda5b7fa",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:variables-expressions/xb4832e56:evaluating-expressions-with-multiple-variables/quiz/xb4832e56:variables-expressions-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:variables-expressions/xb4832e56:evaluating-expressions-with-multiple-variables/quiz/xb4832e56:variables-expressions-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "9d3f7f94-c1e9-4a9a-9f31-8fbcb6b69671",
+          "title": "Expression value intuition",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "9d3f7f94-c1e9-4a9a-9f31-8fbcb6b69671",
+            "status": "active",
+            "title": "Expression value intuition",
+            "vendorResourceId": "x41005a21a6f61c17",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x41005a21a6f61c17",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "171f3c03-f3ef-452f-9b77-2969f32b00a5",
+          "title": "Evaluating expressions word problems",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "171f3c03-f3ef-452f-9b77-2969f32b00a5",
+            "status": "active",
+            "title": "Evaluating expressions word problems",
+            "vendorResourceId": "xcdec803355368afe",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xcdec803355368afe",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "974921cb-e8ad-4ae9-9699-436d70dc9e9c",
+          "title": "Variables & expressions: Quiz 2",
+          "sortOrder": 6,
+          "resource": {
+            "sourcedId": "974921cb-e8ad-4ae9-9699-436d70dc9e9c",
+            "status": "active",
+            "title": "Variables & expressions: Quiz 2",
+            "vendorResourceId": "xb695d22fd0a67aad",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xb695d22fd0a67aad",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:variables-expressions/xb4832e56:evaluating-expressions-word-problems/quiz/xb4832e56:variables-expressions-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:variables-expressions/xb4832e56:evaluating-expressions-word-problems/quiz/xb4832e56:variables-expressions-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "220ceb6b-c460-4796-b0da-e9cc962a052b",
+          "title": "Writing algebraic expressions introduction",
+          "sortOrder": 7,
+          "resource": {
+            "sourcedId": "220ceb6b-c460-4796-b0da-e9cc962a052b",
+            "status": "active",
+            "title": "Writing algebraic expressions introduction",
+            "vendorResourceId": "x1b686451e65a60d7",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x1b686451e65a60d7",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "513cf022-5323-4223-9ba6-c645f06e50b3",
+          "title": "Writing basic algebraic expressions word problems",
+          "sortOrder": 8,
+          "resource": {
+            "sourcedId": "513cf022-5323-4223-9ba6-c645f06e50b3",
+            "status": "active",
+            "title": "Writing basic algebraic expressions word problems",
+            "vendorResourceId": "x2264a5fde06a3d2a",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x2264a5fde06a3d2a",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "3a129e3a-2dfe-4516-a5c3-a65686632388",
+          "title": "Variables & expressions: Quiz 3",
+          "sortOrder": 9,
+          "resource": {
+            "sourcedId": "3a129e3a-2dfe-4516-a5c3-a65686632388",
+            "status": "active",
+            "title": "Variables & expressions: Quiz 3",
+            "vendorResourceId": "x873ab90c873a8047",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x873ab90c873a8047",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:variables-expressions/xb4832e56:writing-basic-algebraic-expressions-word-problems/quiz/xb4832e56:variables-expressions-quiz-3",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:variables-expressions/xb4832e56:writing-basic-algebraic-expressions-word-problems/quiz/xb4832e56:variables-expressions-quiz-3"
+            }
+          }
+        },
+        {
+          "sourcedId": "bc654d5c-a6d1-4c2d-8e94-348d8b8b822a",
+          "title": "Distributive property with variables",
+          "sortOrder": 10,
+          "resource": {
+            "sourcedId": "bc654d5c-a6d1-4c2d-8e94-348d8b8b822a",
+            "status": "active",
+            "title": "Distributive property with variables",
+            "vendorResourceId": "x0a632f18320aa199",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x0a632f18320aa199",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "f64df90f-5f92-4f28-9f7d-43f7b008ded7",
+          "title": "Combining like terms",
+          "sortOrder": 11,
+          "resource": {
+            "sourcedId": "f64df90f-5f92-4f28-9f7d-43f7b008ded7",
+            "status": "active",
+            "title": "Combining like terms",
+            "vendorResourceId": "x75ad4f8234950741",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x75ad4f8234950741",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "db7e1ff7-aa1c-49cd-8895-56c8dd77c1a7",
+          "title": "Equivalent expressions",
+          "sortOrder": 12,
+          "resource": {
+            "sourcedId": "db7e1ff7-aa1c-49cd-8895-56c8dd77c1a7",
+            "status": "active",
+            "title": "Equivalent expressions",
+            "vendorResourceId": "x8e8f2614c26a142f",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x8e8f2614c26a142f",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "c25c0b30-db7e-4a45-a209-c8a2bf27af39",
+          "title": "Variables & expressions: Quiz 4",
+          "sortOrder": 13,
+          "resource": {
+            "sourcedId": "c25c0b30-db7e-4a45-a209-c8a2bf27af39",
+            "status": "active",
+            "title": "Variables & expressions: Quiz 4",
+            "vendorResourceId": "x36f8cf6043e2f75b",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x36f8cf6043e2f75b",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:variables-expressions/xb4832e56:equivalent-expressions/quiz/xb4832e56:variables-expressions-quiz-4",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:variables-expressions/xb4832e56:equivalent-expressions/quiz/xb4832e56:variables-expressions-quiz-4"
+            }
+          }
+        },
+        {
+          "sourcedId": "17abdbb4-6df2-405d-b6b9-87d2be5cabf8",
+          "title": "Variables & expressions: Unit test",
+          "sortOrder": 14,
+          "resource": {
+            "sourcedId": "17abdbb4-6df2-405d-b6b9-87d2be5cabf8",
+            "status": "active",
+            "title": "Variables & expressions: Unit test",
+            "vendorResourceId": "x095aa40278cf03d7",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "x095aa40278cf03d7",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:variables-expressions/xb4832e56:equivalent-expressions/test/xb4832e56:variables-expressions-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 12,
+                "upperBound": 24
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:variables-expressions/xb4832e56:equivalent-expressions/test/xb4832e56:variables-expressions-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "x6dd80fb5226eb320",
+        "originalSlug": "xb4832e56:variables-expressions",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "1a9c1e3a-e376-4ca0-8cec-1efb7edffedf",
+      "title": "Equations & inequalities introduction",
+      "sortOrder": 6,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "cd2663fe-6ed6-4306-afd9-f762704d51eb",
+          "title": "Algebraic equations basics",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "cd2663fe-6ed6-4306-afd9-f762704d51eb",
+            "status": "active",
+            "title": "Algebraic equations basics",
+            "vendorResourceId": "xcfedb063",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xcfedb063",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "daffaa9c-2018-4a8e-b602-1e4a23943a2b",
+          "title": "One-step equations intuition",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "daffaa9c-2018-4a8e-b602-1e4a23943a2b",
+            "status": "active",
+            "title": "One-step equations intuition",
+            "vendorResourceId": "xe62c62cc",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xe62c62cc",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "18957a77-6539-4364-a4c5-2384fdbed0d9",
+          "title": "Equations & inequalities introduction: Quiz 1",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "18957a77-6539-4364-a4c5-2384fdbed0d9",
+            "status": "active",
+            "title": "Equations & inequalities introduction: Quiz 1",
+            "vendorResourceId": "xa8d2267dbfcfb8ed",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xa8d2267dbfcfb8ed",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-equations-expressions/pre-algebra-solving-equations/quiz/pre-algebra-equations-expressions-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 11,
+                "upperBound": 14
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-equations-expressions/pre-algebra-solving-equations/quiz/pre-algebra-equations-expressions-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "0ec0a029-0afa-456b-b3c2-6937eff8f901",
+          "title": "One-step addition & subtraction equations",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "0ec0a029-0afa-456b-b3c2-6937eff8f901",
+            "status": "active",
+            "title": "One-step addition & subtraction equations",
+            "vendorResourceId": "xe920129b",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xe920129b",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "4951b94d-5c3a-4b26-9b81-5f82163720b6",
+          "title": "One-step multiplication and division equations",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "4951b94d-5c3a-4b26-9b81-5f82163720b6",
+            "status": "active",
+            "title": "One-step multiplication and division equations",
+            "vendorResourceId": "xdb126255",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xdb126255",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "ad47f97f-6a44-4a89-960e-a45310e2c620",
+          "title": "Equations & inequalities introduction: Quiz 2",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "ad47f97f-6a44-4a89-960e-a45310e2c620",
+            "status": "active",
+            "title": "Equations & inequalities introduction: Quiz 2",
+            "vendorResourceId": "x22fc4bf38a5d0eac",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x22fc4bf38a5d0eac",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-equations-expressions/pre-algebra-one-step-mult-div-equations/quiz/pre-algebra-equations-expressions-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 12,
+                "upperBound": 15
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-equations-expressions/pre-algebra-one-step-mult-div-equations/quiz/pre-algebra-equations-expressions-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "aa0c7c30-d9b2-4247-8551-0d3074ed39cf",
+          "title": "Finding mistakes in one-step equations",
+          "sortOrder": 6,
+          "resource": {
+            "sourcedId": "aa0c7c30-d9b2-4247-8551-0d3074ed39cf",
+            "status": "active",
+            "title": "Finding mistakes in one-step equations",
+            "vendorResourceId": "xdc7faa619eea0170",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xdc7faa619eea0170",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "69935501-50eb-4722-98f4-e6b2781e0fe7",
+          "title": "One-step equation word problems",
+          "sortOrder": 7,
+          "resource": {
+            "sourcedId": "69935501-50eb-4722-98f4-e6b2781e0fe7",
+            "status": "active",
+            "title": "One-step equation word problems",
+            "vendorResourceId": "x4a782d2a",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x4a782d2a",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "14ff3cab-1c57-44c0-bb84-37f521268854",
+          "title": "Equations & inequalities introduction: Quiz 3",
+          "sortOrder": 8,
+          "resource": {
+            "sourcedId": "14ff3cab-1c57-44c0-bb84-37f521268854",
+            "status": "active",
+            "title": "Equations & inequalities introduction: Quiz 3",
+            "vendorResourceId": "x62906f9c0972b995",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x62906f9c0972b995",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-equations-expressions/pre-algebra-equation-word-problems/quiz/pre-algebra-equations-expressions-quiz-3",
+              "estimatedDuration": {
+                "lowerBound": 17,
+                "upperBound": 22
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-equations-expressions/pre-algebra-equation-word-problems/quiz/pre-algebra-equations-expressions-quiz-3"
+            }
+          }
+        },
+        {
+          "sourcedId": "c487ed1a-4df6-46dd-a001-01d21acc6100",
+          "title": "Intro to inequalities with variables",
+          "sortOrder": 9,
+          "resource": {
+            "sourcedId": "c487ed1a-4df6-46dd-a001-01d21acc6100",
+            "status": "active",
+            "title": "Intro to inequalities with variables",
+            "vendorResourceId": "x33a7063d",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x33a7063d",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "41478623-aab5-4db2-8334-c0924d34621b",
+          "title": "Equations & inequalities introduction: Quiz 4",
+          "sortOrder": 10,
+          "resource": {
+            "sourcedId": "41478623-aab5-4db2-8334-c0924d34621b",
+            "status": "active",
+            "title": "Equations & inequalities introduction: Quiz 4",
+            "vendorResourceId": "xac14fad8c86f14be",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xac14fad8c86f14be",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-equations-expressions/pre-algebra-greater-than-less-than/quiz/pre-algebra-equations-expressions-quiz-4",
+              "estimatedDuration": {
+                "lowerBound": 15,
+                "upperBound": 20
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-equations-expressions/pre-algebra-greater-than-less-than/quiz/pre-algebra-equations-expressions-quiz-4"
+            }
+          }
+        },
+        {
+          "sourcedId": "1457d9de-7c9b-426e-adf3-ec965c295db9",
+          "title": "Dependent and independent variables",
+          "sortOrder": 11,
+          "resource": {
+            "sourcedId": "1457d9de-7c9b-426e-adf3-ec965c295db9",
+            "status": "active",
+            "title": "Dependent and independent variables",
+            "vendorResourceId": "x260e967d1c421180",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x260e967d1c421180",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "a5047360-3ba1-42de-8a38-b5c761d3038f",
+          "title": "Analyzing relationships between variables",
+          "sortOrder": 12,
+          "resource": {
+            "sourcedId": "a5047360-3ba1-42de-8a38-b5c761d3038f",
+            "status": "active",
+            "title": "Analyzing relationships between variables",
+            "vendorResourceId": "xa7addf758c1d917b",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xa7addf758c1d917b",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "d642d15b-da22-4876-98f9-32efc6bb35f3",
+          "title": "Equations & inequalities introduction: Quiz 5",
+          "sortOrder": 13,
+          "resource": {
+            "sourcedId": "d642d15b-da22-4876-98f9-32efc6bb35f3",
+            "status": "active",
+            "title": "Equations & inequalities introduction: Quiz 5",
+            "vendorResourceId": "x19b2bf01d28d4cc2",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x19b2bf01d28d4cc2",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-equations-expressions/xb4832e56:pre-algebra-analyzing-relationships/quiz/pre-algebra-equations-expressions-quiz-5",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-equations-expressions/xb4832e56:pre-algebra-analyzing-relationships/quiz/pre-algebra-equations-expressions-quiz-5"
+            }
+          }
+        },
+        {
+          "sourcedId": "23f5112d-8596-4c31-a6f0-35fadf5eb760",
+          "title": "Equations & inequalities introduction: Unit test",
+          "sortOrder": 14,
+          "resource": {
+            "sourcedId": "23f5112d-8596-4c31-a6f0-35fadf5eb760",
+            "status": "active",
+            "title": "Equations & inequalities introduction: Unit test",
+            "vendorResourceId": "x147288a1589a39e2",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "x147288a1589a39e2",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-equations-expressions/xb4832e56:pre-algebra-analyzing-relationships/test/pre-algebra-equations-expressions-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 20,
+                "upperBound": 40
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-equations-expressions/xb4832e56:pre-algebra-analyzing-relationships/test/pre-algebra-equations-expressions-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "x04908aa2",
+        "originalSlug": "pre-algebra-equations-expressions",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "736918cb-0ec7-4f79-a4a2-fdae5bd135c9",
+      "title": "Percent & rational number word problems",
+      "sortOrder": 7,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "d6d442c4-774e-4b76-9b07-56a83dd4455c",
+          "title": "Percent word problems",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "d6d442c4-774e-4b76-9b07-56a83dd4455c",
+            "status": "active",
+            "title": "Percent word problems",
+            "vendorResourceId": "x81069c9577e49a67",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x81069c9577e49a67",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "9e6e9a36-dce7-492b-88e0-cd098119cdf5",
+          "title": "Rational number word problems",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "9e6e9a36-dce7-492b-88e0-cd098119cdf5",
+            "status": "active",
+            "title": "Rational number word problems",
+            "vendorResourceId": "xa91477cf2bc44f1b",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xa91477cf2bc44f1b",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "dbe3a86d-abb2-4059-8fba-58e94aaeb2ef",
+          "title": "Percent & rational number word problems: Unit test",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "dbe3a86d-abb2-4059-8fba-58e94aaeb2ef",
+            "status": "active",
+            "title": "Percent & rational number word problems: Unit test",
+            "vendorResourceId": "x4ccd214c4a7a1550",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "x4ccd214c4a7a1550",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:percent-rational-number-word-problems/xb4832e56:rational-number-word-problems/test/xb4832e56:percent-rational-number-word-problems-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 10,
+                "upperBound": 20
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:percent-rational-number-word-problems/xb4832e56:rational-number-word-problems/test/xb4832e56:percent-rational-number-word-problems-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "x0160fcd67ce4adf3",
+        "originalSlug": "xb4832e56:percent-rational-number-word-problems",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "b26d90df-4d56-4f13-a20a-2ff74fb85200",
+      "title": "Proportional relationships",
+      "sortOrder": 8,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "13f00774-726e-495c-80cf-7a4a81eb1fda",
+          "title": "Rate problems with fractions",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "13f00774-726e-495c-80cf-7a4a81eb1fda",
+            "status": "active",
+            "title": "Rate problems with fractions",
+            "vendorResourceId": "x5694c1b037dec81f",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x5694c1b037dec81f",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "beef9eb4-0d3d-48ee-afaf-72553b8825a7",
+          "title": "Constant of proportionality",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "beef9eb4-0d3d-48ee-afaf-72553b8825a7",
+            "status": "active",
+            "title": "Constant of proportionality",
+            "vendorResourceId": "x5d5208278d132d3a",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x5d5208278d132d3a",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "af9a5fa2-b7fc-49c1-8c5c-3b3ebc2550c1",
+          "title": "Proportional relationships: Quiz 1",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "af9a5fa2-b7fc-49c1-8c5c-3b3ebc2550c1",
+            "status": "active",
+            "title": "Proportional relationships: Quiz 1",
+            "vendorResourceId": "x82cb2a0b927a814e",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x82cb2a0b927a814e",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:proportional-relationships/xb4832e56:constant-of-proportionality/quiz/xb4832e56:proportional-relationships-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:proportional-relationships/xb4832e56:constant-of-proportionality/quiz/xb4832e56:proportional-relationships-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "b2f99b33-6c00-4510-9a7e-2d496843ad67",
+          "title": "Compare and interpret constants of proportionality",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "b2f99b33-6c00-4510-9a7e-2d496843ad67",
+            "status": "active",
+            "title": "Compare and interpret constants of proportionality",
+            "vendorResourceId": "xf251efef3d235ef8",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xf251efef3d235ef8",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "4da83bab-4d1a-45d8-9419-799ea49da81b",
+          "title": "Proportional relationships: Quiz 2",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "4da83bab-4d1a-45d8-9419-799ea49da81b",
+            "status": "active",
+            "title": "Proportional relationships: Quiz 2",
+            "vendorResourceId": "xea32f2ce88c6b237",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xea32f2ce88c6b237",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:proportional-relationships/xb4832e56:compare-and-interpret-constants-of-proportionality/quiz/xb4832e56:proportional-relationships-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:proportional-relationships/xb4832e56:compare-and-interpret-constants-of-proportionality/quiz/xb4832e56:proportional-relationships-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "75a9b318-101a-4fa3-b312-f7cda928ecf4",
+          "title": "Identifying proportional relationships",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "75a9b318-101a-4fa3-b312-f7cda928ecf4",
+            "status": "active",
+            "title": "Identifying proportional relationships",
+            "vendorResourceId": "x1217fa5136134b1f",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x1217fa5136134b1f",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "4724c5d7-21b2-4c63-8f21-e29c0448850e",
+          "title": "Graphs of proportional relationships",
+          "sortOrder": 6,
+          "resource": {
+            "sourcedId": "4724c5d7-21b2-4c63-8f21-e29c0448850e",
+            "status": "active",
+            "title": "Graphs of proportional relationships",
+            "vendorResourceId": "xa8ba903731da3c4d",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xa8ba903731da3c4d",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "c2d60b4a-5e46-4e7c-abba-5d7d07b5ed32",
+          "title": "Proportional relationships: Quiz 3",
+          "sortOrder": 7,
+          "resource": {
+            "sourcedId": "c2d60b4a-5e46-4e7c-abba-5d7d07b5ed32",
+            "status": "active",
+            "title": "Proportional relationships: Quiz 3",
+            "vendorResourceId": "xc57ec0aa994c1c22",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xc57ec0aa994c1c22",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:proportional-relationships/xb4832e56:graphs-of-proportional-relationships/quiz/xb4832e56:proportional-relationships-quiz-3",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:proportional-relationships/xb4832e56:graphs-of-proportional-relationships/quiz/xb4832e56:proportional-relationships-quiz-3"
+            }
+          }
+        },
+        {
+          "sourcedId": "ad2c550b-9b74-4b3b-b2bf-68b3ba11c25d",
+          "title": "Writing & solving proportions",
+          "sortOrder": 8,
+          "resource": {
+            "sourcedId": "ad2c550b-9b74-4b3b-b2bf-68b3ba11c25d",
+            "status": "active",
+            "title": "Writing & solving proportions",
+            "vendorResourceId": "x190b7bbe5fe2afe2",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x190b7bbe5fe2afe2",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "02866c03-0074-4766-b98d-009755f12b68",
+          "title": "Equations of proportional relationships",
+          "sortOrder": 9,
+          "resource": {
+            "sourcedId": "02866c03-0074-4766-b98d-009755f12b68",
+            "status": "active",
+            "title": "Equations of proportional relationships",
+            "vendorResourceId": "xdb7064ffe6de51d3",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xdb7064ffe6de51d3",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "62c65480-5a58-45b7-ab29-eddc337e46d9",
+          "title": "Proportional relationships: Quiz 4",
+          "sortOrder": 10,
+          "resource": {
+            "sourcedId": "62c65480-5a58-45b7-ab29-eddc337e46d9",
+            "status": "active",
+            "title": "Proportional relationships: Quiz 4",
+            "vendorResourceId": "x4ca66bc7f1f39541",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x4ca66bc7f1f39541",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:proportional-relationships/xb4832e56:equations-of-proportional-relationships/quiz/xb4832e56:proportional-relationships-quiz-4",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:proportional-relationships/xb4832e56:equations-of-proportional-relationships/quiz/xb4832e56:proportional-relationships-quiz-4"
+            }
+          }
+        },
+        {
+          "sourcedId": "0cb0a3bb-b7a9-4178-a185-783b9fe84eed",
+          "title": "Proportional relationships: Unit test",
+          "sortOrder": 11,
+          "resource": {
+            "sourcedId": "0cb0a3bb-b7a9-4178-a185-783b9fe84eed",
+            "status": "active",
+            "title": "Proportional relationships: Unit test",
+            "vendorResourceId": "xc90d900bfdf6048d",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "xc90d900bfdf6048d",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:proportional-relationships/xb4832e56:equations-of-proportional-relationships/test/xb4832e56:proportional-relationships-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 14,
+                "upperBound": 28
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:proportional-relationships/xb4832e56:equations-of-proportional-relationships/test/xb4832e56:proportional-relationships-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "xcb69ec05e2bc8d95",
+        "originalSlug": "xb4832e56:proportional-relationships",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "5e50937f-44f4-4f7e-ac87-b3eb2d3f40a2",
+      "title": "One-step and two-step equations & inequalities",
+      "sortOrder": 9,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "b4c500df-9d1e-426b-a106-0d96e39c34b6",
+          "title": "Combining like terms",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "b4c500df-9d1e-426b-a106-0d96e39c34b6",
+            "status": "active",
+            "title": "Combining like terms",
+            "vendorResourceId": "x40fa11efb759f647",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x40fa11efb759f647",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "65f5c977-a575-49a6-a2db-ea70971f25c1",
+          "title": "The distributive property & equivalent expressions",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "65f5c977-a575-49a6-a2db-ea70971f25c1",
+            "status": "active",
+            "title": "The distributive property & equivalent expressions",
+            "vendorResourceId": "x25a8a10382907cb3",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x25a8a10382907cb3",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "913f6cab-31a8-4a44-8581-770c2edb4f8b",
+          "title": "One-step and two-step equations & inequalities: Quiz 1",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "913f6cab-31a8-4a44-8581-770c2edb4f8b",
+            "status": "active",
+            "title": "One-step and two-step equations & inequalities: Quiz 1",
+            "vendorResourceId": "x34835d89e5d49d20",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x34835d89e5d49d20",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:one-step-and-two-step-equations-inequalities/xb4832e56:the-distributive-property-equivalent-expressions/quiz/xb4832e56:one-step-and-two-step-equations-inequalities-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:one-step-and-two-step-equations-inequalities/xb4832e56:the-distributive-property-equivalent-expressions/quiz/xb4832e56:one-step-and-two-step-equations-inequalities-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "af23aacf-1081-4b3c-ad0f-88ad8a3fcea5",
+          "title": "Interpreting linear expressions",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "af23aacf-1081-4b3c-ad0f-88ad8a3fcea5",
+            "status": "active",
+            "title": "Interpreting linear expressions",
+            "vendorResourceId": "x68bff4375a2554b4",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x68bff4375a2554b4",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "d0675a15-5b17-45e4-8468-1826c63f4585",
+          "title": "One-step and two-step equations & inequalities: Quiz 2",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "d0675a15-5b17-45e4-8468-1826c63f4585",
+            "status": "active",
+            "title": "One-step and two-step equations & inequalities: Quiz 2",
+            "vendorResourceId": "x2bf246bd3ab41423",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x2bf246bd3ab41423",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:one-step-and-two-step-equations-inequalities/xb4832e56:interpreting-linear-expressions/quiz/xb4832e56:one-step-and-two-step-equations-inequalities-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:one-step-and-two-step-equations-inequalities/xb4832e56:interpreting-linear-expressions/quiz/xb4832e56:one-step-and-two-step-equations-inequalities-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "ad3cca06-bb08-4a9a-81b1-9e6b581b738c",
+          "title": "Two-step equations intro",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "ad3cca06-bb08-4a9a-81b1-9e6b581b738c",
+            "status": "active",
+            "title": "Two-step equations intro",
+            "vendorResourceId": "x140f546952205349",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x140f546952205349",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "ddec93ed-e413-461f-ba34-27492af71e3b",
+          "title": "Two-step equations with decimals and fractions",
+          "sortOrder": 6,
+          "resource": {
+            "sourcedId": "ddec93ed-e413-461f-ba34-27492af71e3b",
+            "status": "active",
+            "title": "Two-step equations with decimals and fractions",
+            "vendorResourceId": "x9b21f3c7e1d0b582",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x9b21f3c7e1d0b582",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "d9ed9cbd-cf13-45c4-891f-66fb18f0f131",
+          "title": "Two-step equation word problems",
+          "sortOrder": 7,
+          "resource": {
+            "sourcedId": "d9ed9cbd-cf13-45c4-891f-66fb18f0f131",
+            "status": "active",
+            "title": "Two-step equation word problems",
+            "vendorResourceId": "x0a9e298bd631079b",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x0a9e298bd631079b",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "5a47100a-c45d-4794-b27c-633898916d5a",
+          "title": "One-step and two-step equations & inequalities: Quiz 3",
+          "sortOrder": 8,
+          "resource": {
+            "sourcedId": "5a47100a-c45d-4794-b27c-633898916d5a",
+            "status": "active",
+            "title": "One-step and two-step equations & inequalities: Quiz 3",
+            "vendorResourceId": "xa9239e855f4dada1",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xa9239e855f4dada1",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:one-step-and-two-step-equations-inequalities/xb4832e56:two-step-equation-word-problems/quiz/xb4832e56:one-step-and-two-step-equations-inequalities-quiz-3",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:one-step-and-two-step-equations-inequalities/xb4832e56:two-step-equation-word-problems/quiz/xb4832e56:one-step-and-two-step-equations-inequalities-quiz-3"
+            }
+          }
+        },
+        {
+          "sourcedId": "7013b773-b165-475a-949f-1934851e0f9b",
+          "title": "One-step inequalities",
+          "sortOrder": 9,
+          "resource": {
+            "sourcedId": "7013b773-b165-475a-949f-1934851e0f9b",
+            "status": "active",
+            "title": "One-step inequalities",
+            "vendorResourceId": "x22bb927a38b5ace2",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x22bb927a38b5ace2",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "115186e4-4150-4883-9356-c0e634b511ed",
+          "title": "Two-step inequalities",
+          "sortOrder": 10,
+          "resource": {
+            "sourcedId": "115186e4-4150-4883-9356-c0e634b511ed",
+            "status": "active",
+            "title": "Two-step inequalities",
+            "vendorResourceId": "xc8b689269b7c7674",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xc8b689269b7c7674",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "7db94f43-1166-4ccc-ad23-57cdae42567e",
+          "title": "One-step and two-step equations & inequalities: Quiz 4",
+          "sortOrder": 11,
+          "resource": {
+            "sourcedId": "7db94f43-1166-4ccc-ad23-57cdae42567e",
+            "status": "active",
+            "title": "One-step and two-step equations & inequalities: Quiz 4",
+            "vendorResourceId": "xc0ef7225afdb32c6",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xc0ef7225afdb32c6",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:one-step-and-two-step-equations-inequalities/xb4832e56:two-step-inequalities/quiz/xb4832e56:one-step-and-two-step-equations-inequalities-quiz-4",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:one-step-and-two-step-equations-inequalities/xb4832e56:two-step-inequalities/quiz/xb4832e56:one-step-and-two-step-equations-inequalities-quiz-4"
+            }
+          }
+        },
+        {
+          "sourcedId": "64ac8123-b6bb-41ce-87d0-ac62dd3e3b5c",
+          "title": "One-step and two-step equations & inequalities: Unit test",
+          "sortOrder": 12,
+          "resource": {
+            "sourcedId": "64ac8123-b6bb-41ce-87d0-ac62dd3e3b5c",
+            "status": "active",
+            "title": "One-step and two-step equations & inequalities: Unit test",
+            "vendorResourceId": "x090243e6160185f4",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "x090243e6160185f4",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:one-step-and-two-step-equations-inequalities/xb4832e56:two-step-inequalities/test/xb4832e56:one-step-and-two-step-equations-inequalities-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 12,
+                "upperBound": 24
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:one-step-and-two-step-equations-inequalities/xb4832e56:two-step-inequalities/test/xb4832e56:one-step-and-two-step-equations-inequalities-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "x4a4d9de880b8328b",
+        "originalSlug": "xb4832e56:one-step-and-two-step-equations-inequalities",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "006baf29-dbd1-4401-9ec6-807caa96731b",
+      "title": "Roots, exponents, & scientific notation",
+      "sortOrder": 10,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "7c0a5376-942c-442c-b73a-91042e08d8eb",
+          "title": "Square roots & cube roots",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "7c0a5376-942c-442c-b73a-91042e08d8eb",
+            "status": "active",
+            "title": "Square roots & cube roots",
+            "vendorResourceId": "x93cfcc11",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x93cfcc11",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "efc4218a-d779-4b92-bfa4-a83227e7318e",
+          "title": "Roots, exponents, & scientific notation: Quiz 1",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "efc4218a-d779-4b92-bfa4-a83227e7318e",
+            "status": "active",
+            "title": "Roots, exponents, & scientific notation: Quiz 1",
+            "vendorResourceId": "xe3e2c71af12601db",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xe3e2c71af12601db",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-square-roots/quiz/pre-algebra-exponents-radicals-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-square-roots/quiz/pre-algebra-exponents-radicals-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "bfadbcf6-1b8e-4a57-9d72-a2fc1396168c",
+          "title": "Exponent properties intro",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "bfadbcf6-1b8e-4a57-9d72-a2fc1396168c",
+            "status": "active",
+            "title": "Exponent properties intro",
+            "vendorResourceId": "xf683247c",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xf683247c",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "49960c47-993e-4ba9-8168-d2bae4d04648",
+          "title": "Roots, exponents, & scientific notation: Quiz 2",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "49960c47-993e-4ba9-8168-d2bae4d04648",
+            "status": "active",
+            "title": "Roots, exponents, & scientific notation: Quiz 2",
+            "vendorResourceId": "xf9de41d94a407000",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xf9de41d94a407000",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-exponent-properties/quiz/pre-algebra-exponents-radicals-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 16,
+                "upperBound": 20
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-exponent-properties/quiz/pre-algebra-exponents-radicals-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "cc34bf9f-3ffc-47b1-aa59-56824b550c0b",
+          "title": "Negative exponents",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "cc34bf9f-3ffc-47b1-aa59-56824b550c0b",
+            "status": "active",
+            "title": "Negative exponents",
+            "vendorResourceId": "x47e38cc0",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x47e38cc0",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "0e0b4524-474d-4eeb-a5ee-3f9576b953c7",
+          "title": "Exponent properties (integer exponents)",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "0e0b4524-474d-4eeb-a5ee-3f9576b953c7",
+            "status": "active",
+            "title": "Exponent properties (integer exponents)",
+            "vendorResourceId": "x96633bd0421b2db8",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x96633bd0421b2db8",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "17314ead-37ad-4c94-bdca-6d7410c781d6",
+          "title": "Roots, exponents, & scientific notation: Quiz 3",
+          "sortOrder": 6,
+          "resource": {
+            "sourcedId": "17314ead-37ad-4c94-bdca-6d7410c781d6",
+            "status": "active",
+            "title": "Roots, exponents, & scientific notation: Quiz 3",
+            "vendorResourceId": "x7fcf9dea710701e3",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x7fcf9dea710701e3",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-exponents-radicals/xb4832e56:exponent-properties-integer-exponents/quiz/pre-algebra-exponents-radicals-quiz-3",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/xb4832e56:exponent-properties-integer-exponents/quiz/pre-algebra-exponents-radicals-quiz-3"
+            }
+          }
+        },
+        {
+          "sourcedId": "fa5ada7f-19d3-4831-a713-441a5f8cbae1",
+          "title": "Working with powers of 10",
+          "sortOrder": 7,
+          "resource": {
+            "sourcedId": "fa5ada7f-19d3-4831-a713-441a5f8cbae1",
+            "status": "active",
+            "title": "Working with powers of 10",
+            "vendorResourceId": "xe17ed5d3b4a8c309",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xe17ed5d3b4a8c309",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "4d9a5ed4-58c5-4e55-845d-c31829f00015",
+          "title": "Scientific notation intro",
+          "sortOrder": 8,
+          "resource": {
+            "sourcedId": "4d9a5ed4-58c5-4e55-845d-c31829f00015",
+            "status": "active",
+            "title": "Scientific notation intro",
+            "vendorResourceId": "xb07d52ef",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xb07d52ef",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "a3ed9781-4819-4b1f-9b28-5a26cf65039c",
+          "title": "Roots, exponents, & scientific notation: Quiz 4",
+          "sortOrder": 9,
+          "resource": {
+            "sourcedId": "a3ed9781-4819-4b1f-9b28-5a26cf65039c",
+            "status": "active",
+            "title": "Roots, exponents, & scientific notation: Quiz 4",
+            "vendorResourceId": "x5a71c05a0fae0a51",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x5a71c05a0fae0a51",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-scientific-notation/quiz/pre-algebra-exponents-radicals-quiz-4",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-scientific-notation/quiz/pre-algebra-exponents-radicals-quiz-4"
+            }
+          }
+        },
+        {
+          "sourcedId": "846f59fd-81d7-4bb8-90ba-f25de0569c28",
+          "title": "Arithmetic with numbers in scientific notation",
+          "sortOrder": 10,
+          "resource": {
+            "sourcedId": "846f59fd-81d7-4bb8-90ba-f25de0569c28",
+            "status": "active",
+            "title": "Arithmetic with numbers in scientific notation",
+            "vendorResourceId": "xd91ec176",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xd91ec176",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "84ad80ff-bda6-49a7-b4bf-eb9bd12a6f85",
+          "title": "Scientific notation word problems",
+          "sortOrder": 11,
+          "resource": {
+            "sourcedId": "84ad80ff-bda6-49a7-b4bf-eb9bd12a6f85",
+            "status": "active",
+            "title": "Scientific notation word problems",
+            "vendorResourceId": "xa5676f972a036ddd",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xa5676f972a036ddd",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "fe7e08a3-4e97-4d7f-9776-f7e41d6de17f",
+          "title": "Roots, exponents, & scientific notation: Quiz 5",
+          "sortOrder": 12,
+          "resource": {
+            "sourcedId": "fe7e08a3-4e97-4d7f-9776-f7e41d6de17f",
+            "status": "active",
+            "title": "Roots, exponents, & scientific notation: Quiz 5",
+            "vendorResourceId": "x790cb76ec35341c9",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x790cb76ec35341c9",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-exponents-radicals/xb4832e56:scientific-notation-word-problems/quiz/pre-algebra-exponents-radicals-quiz-5",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/xb4832e56:scientific-notation-word-problems/quiz/pre-algebra-exponents-radicals-quiz-5"
+            }
+          }
+        },
+        {
+          "sourcedId": "5d41a724-96a6-4283-a2e6-7e14f0a78933",
+          "title": "Roots, exponents, & scientific notation: Unit test",
+          "sortOrder": 13,
+          "resource": {
+            "sourcedId": "5d41a724-96a6-4283-a2e6-7e14f0a78933",
+            "status": "active",
+            "title": "Roots, exponents, & scientific notation: Unit test",
+            "vendorResourceId": "x44090df3419922b4",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "x44090df3419922b4",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/pre-algebra-exponents-radicals/xb4832e56:scientific-notation-word-problems/test/pre-algebra-exponents-radicals-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 14,
+                "upperBound": 28
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/xb4832e56:scientific-notation-word-problems/test/pre-algebra-exponents-radicals-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "x2251cb4b",
+        "originalSlug": "pre-algebra-exponents-radicals",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "03bf2dfd-abf0-4b90-be6f-caf45dc701f1",
+      "title": "Multi-step equations",
+      "sortOrder": 11,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "1f0596da-afe3-4e95-8acc-e93de6fda2dd",
+          "title": "Equations with variables on both sides",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "1f0596da-afe3-4e95-8acc-e93de6fda2dd",
+            "status": "active",
+            "title": "Equations with variables on both sides",
+            "vendorResourceId": "xa6ab608945825dbf",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xa6ab608945825dbf",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "38f2c346-b7ad-4689-b33d-695419574ef0",
+          "title": "Equations with parentheses",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "38f2c346-b7ad-4689-b33d-695419574ef0",
+            "status": "active",
+            "title": "Equations with parentheses",
+            "vendorResourceId": "xd05f60e079de6f62",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xd05f60e079de6f62",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "216173a3-a508-4a2c-a72a-8ac9dcc5c4b1",
+          "title": "Multi-step equations: Quiz 1",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "216173a3-a508-4a2c-a72a-8ac9dcc5c4b1",
+            "status": "active",
+            "title": "Multi-step equations: Quiz 1",
+            "vendorResourceId": "xcd486ea834760dd1",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xcd486ea834760dd1",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:multi-step-equations/xb4832e56:equations-with-parentheses/quiz/xb4832e56:multi-step-equations-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:multi-step-equations/xb4832e56:equations-with-parentheses/quiz/xb4832e56:multi-step-equations-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "5bec86af-5f25-4f5c-be1c-d7d58cc52da9",
+          "title": "Number of solutions to equations",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "5bec86af-5f25-4f5c-be1c-d7d58cc52da9",
+            "status": "active",
+            "title": "Number of solutions to equations",
+            "vendorResourceId": "x4a8978712ba8eb0e",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x4a8978712ba8eb0e",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "f58018d9-86e7-4882-803e-95d7ee8f2624",
+          "title": "Equations word problems",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "f58018d9-86e7-4882-803e-95d7ee8f2624",
+            "status": "active",
+            "title": "Equations word problems",
+            "vendorResourceId": "x3dc64954d24f9dc2",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x3dc64954d24f9dc2",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "f925c8b8-7522-42d8-bec2-7b3be17224bf",
+          "title": "Multi-step equations: Quiz 2",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "f925c8b8-7522-42d8-bec2-7b3be17224bf",
+            "status": "active",
+            "title": "Multi-step equations: Quiz 2",
+            "vendorResourceId": "x97af29a45ab3d954",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x97af29a45ab3d954",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:multi-step-equations/xb4832e56:equations-word-problems/quiz/xb4832e56:multi-step-equations-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:multi-step-equations/xb4832e56:equations-word-problems/quiz/xb4832e56:multi-step-equations-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "4435bcce-c467-4417-8e92-9da7a4fe1d47",
+          "title": "Multi-step equations: Unit test",
+          "sortOrder": 6,
+          "resource": {
+            "sourcedId": "4435bcce-c467-4417-8e92-9da7a4fe1d47",
+            "status": "active",
+            "title": "Multi-step equations: Unit test",
+            "vendorResourceId": "xd59d1d9d432122ac",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "xd59d1d9d432122ac",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:multi-step-equations/xb4832e56:equations-word-problems/test/xb4832e56:multi-step-equations-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 10,
+                "upperBound": 20
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:multi-step-equations/xb4832e56:equations-word-problems/test/xb4832e56:multi-step-equations-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "xe82a505e9fd0ef43",
+        "originalSlug": "xb4832e56:multi-step-equations",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "0b67bc83-7b80-4274-a56e-a0e6030ac9d6",
+      "title": "Two-variable equations",
+      "sortOrder": 12,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "9a5887ac-a495-4f16-b497-c0a59ca4bc86",
+          "title": "Graphing proportional relationships",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "9a5887ac-a495-4f16-b497-c0a59ca4bc86",
+            "status": "active",
+            "title": "Graphing proportional relationships",
+            "vendorResourceId": "xebce7f5c4042df53",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xebce7f5c4042df53",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "26d406d9-6378-4f88-945f-90ea33fce759",
+          "title": "Solutions to linear equations",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "26d406d9-6378-4f88-945f-90ea33fce759",
+            "status": "active",
+            "title": "Solutions to linear equations",
+            "vendorResourceId": "x6ca3a38cb4751c5f",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x6ca3a38cb4751c5f",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "47a62c99-1589-4d61-970c-5f19aef11641",
+          "title": "Two-variable equations: Quiz 1",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "47a62c99-1589-4d61-970c-5f19aef11641",
+            "status": "active",
+            "title": "Two-variable equations: Quiz 1",
+            "vendorResourceId": "x5b7716d093d246c0",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x5b7716d093d246c0",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:two-variable-equations/xb4832e56:solutions-to-linear-equations/quiz/xb4832e56:two-variable-equations-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:two-variable-equations/xb4832e56:solutions-to-linear-equations/quiz/xb4832e56:two-variable-equations-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "73620d0b-e95a-41af-b16b-2939c8db4aab",
+          "title": "Intercepts",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "73620d0b-e95a-41af-b16b-2939c8db4aab",
+            "status": "active",
+            "title": "Intercepts",
+            "vendorResourceId": "x71b32de19b043db7",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x71b32de19b043db7",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "429f12cd-3065-4440-95d2-6c56ff03a2b8",
+          "title": "Slope",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "429f12cd-3065-4440-95d2-6c56ff03a2b8",
+            "status": "active",
+            "title": "Slope",
+            "vendorResourceId": "x17ff2bea03baf77d",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x17ff2bea03baf77d",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "86b5dc90-f3d1-470b-ae51-189f1a285480",
+          "title": "Two-variable equations: Quiz 2",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "86b5dc90-f3d1-470b-ae51-189f1a285480",
+            "status": "active",
+            "title": "Two-variable equations: Quiz 2",
+            "vendorResourceId": "xb7118ef5ebdaaf66",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xb7118ef5ebdaaf66",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:two-variable-equations/xb4832e56:slope/quiz/xb4832e56:two-variable-equations-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:two-variable-equations/xb4832e56:slope/quiz/xb4832e56:two-variable-equations-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "50be8d4a-ec16-4779-91d2-1b8ba35f7aa5",
+          "title": "Intro to slope-intercept form",
+          "sortOrder": 6,
+          "resource": {
+            "sourcedId": "50be8d4a-ec16-4779-91d2-1b8ba35f7aa5",
+            "status": "active",
+            "title": "Intro to slope-intercept form",
+            "vendorResourceId": "x85d439ab2d67a43f",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x85d439ab2d67a43f",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "9738dc8f-f5be-4dd1-81b7-36f6ab677173",
+          "title": "Graphing slope-intercept form",
+          "sortOrder": 7,
+          "resource": {
+            "sourcedId": "9738dc8f-f5be-4dd1-81b7-36f6ab677173",
+            "status": "active",
+            "title": "Graphing slope-intercept form",
+            "vendorResourceId": "x89cde8e911133d81",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x89cde8e911133d81",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "f58ab898-d43b-4bfa-a53d-7312d59c081c",
+          "title": "Writing slope-intercept equations",
+          "sortOrder": 8,
+          "resource": {
+            "sourcedId": "f58ab898-d43b-4bfa-a53d-7312d59c081c",
+            "status": "active",
+            "title": "Writing slope-intercept equations",
+            "vendorResourceId": "x50385232e673c35a",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x50385232e673c35a",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "e26e9b04-0526-479a-ac96-32871feadf7e",
+          "title": "Two-variable equations: Quiz 3",
+          "sortOrder": 9,
+          "resource": {
+            "sourcedId": "e26e9b04-0526-479a-ac96-32871feadf7e",
+            "status": "active",
+            "title": "Two-variable equations: Quiz 3",
+            "vendorResourceId": "x6bb783e76ba41903",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x6bb783e76ba41903",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:two-variable-equations/xb4832e56:writing-slope-intercept-equations/quiz/xb4832e56:two-variable-equations-quiz-3",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:two-variable-equations/xb4832e56:writing-slope-intercept-equations/quiz/xb4832e56:two-variable-equations-quiz-3"
+            }
+          }
+        },
+        {
+          "sourcedId": "79128ccc-e9f2-4990-8f29-b32ddef007b4",
+          "title": "Two-variable equations: Unit test",
+          "sortOrder": 10,
+          "resource": {
+            "sourcedId": "79128ccc-e9f2-4990-8f29-b32ddef007b4",
+            "status": "active",
+            "title": "Two-variable equations: Unit test",
+            "vendorResourceId": "x788c867333437876",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "x788c867333437876",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:two-variable-equations/xb4832e56:writing-slope-intercept-equations/test/xb4832e56:two-variable-equations-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 10,
+                "upperBound": 20
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:two-variable-equations/xb4832e56:writing-slope-intercept-equations/test/xb4832e56:two-variable-equations-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "x03bb13320284662e",
+        "originalSlug": "xb4832e56:two-variable-equations",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "ee857e21-42ef-417a-b551-8f7ca9270ce5",
+      "title": "Functions and linear models",
+      "sortOrder": 13,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "5acdeaae-9f66-462e-9a9d-d1e24cb47998",
+          "title": "Functions",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "5acdeaae-9f66-462e-9a9d-d1e24cb47998",
+            "status": "active",
+            "title": "Functions",
+            "vendorResourceId": "x8a5dd24501d08a1d",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x8a5dd24501d08a1d",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "73adf428-1d3a-422a-b3f8-9d64d65bc7ad",
+          "title": "Functions and linear models: Quiz 1",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "73adf428-1d3a-422a-b3f8-9d64d65bc7ad",
+            "status": "active",
+            "title": "Functions and linear models: Quiz 1",
+            "vendorResourceId": "xb5571c987c4d6100",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xb5571c987c4d6100",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:functions-and-linear-models/xb4832e56:functions/quiz/xb4832e56:functions-and-linear-models-quiz-1",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:functions-and-linear-models/xb4832e56:functions/quiz/xb4832e56:functions-and-linear-models-quiz-1"
+            }
+          }
+        },
+        {
+          "sourcedId": "7fe3842f-903c-4c57-abe9-823a83e33305",
+          "title": "Linear models",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "7fe3842f-903c-4c57-abe9-823a83e33305",
+            "status": "active",
+            "title": "Linear models",
+            "vendorResourceId": "xa4812ed355d6e6b7",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xa4812ed355d6e6b7",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "796680c5-d5f0-44a1-83b9-51b5f47ccb8b",
+          "title": "Functions and linear models: Quiz 2",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "796680c5-d5f0-44a1-83b9-51b5f47ccb8b",
+            "status": "active",
+            "title": "Functions and linear models: Quiz 2",
+            "vendorResourceId": "x7a48b32e0e52f058",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x7a48b32e0e52f058",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:functions-and-linear-models/xb4832e56:linear-models/quiz/xb4832e56:functions-and-linear-models-quiz-2",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:functions-and-linear-models/xb4832e56:linear-models/quiz/xb4832e56:functions-and-linear-models-quiz-2"
+            }
+          }
+        },
+        {
+          "sourcedId": "49919b57-8cc4-46e7-9de9-ffd9d89d2136",
+          "title": "Comparing linear functions",
+          "sortOrder": 4,
+          "resource": {
+            "sourcedId": "49919b57-8cc4-46e7-9de9-ffd9d89d2136",
+            "status": "active",
+            "title": "Comparing linear functions",
+            "vendorResourceId": "x32c7b111a74b828f",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x32c7b111a74b828f",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "46ff707a-bf5e-4686-a15c-c7840557f08b",
+          "title": "Constructing linear models for real-world relationships",
+          "sortOrder": 5,
+          "resource": {
+            "sourcedId": "46ff707a-bf5e-4686-a15c-c7840557f08b",
+            "status": "active",
+            "title": "Constructing linear models for real-world relationships",
+            "vendorResourceId": "xeec6cf8c4b2645ab",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xeec6cf8c4b2645ab",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "b89955a3-dfe1-4141-850b-f42de2308f70",
+          "title": "Functions and linear models: Quiz 3",
+          "sortOrder": 6,
+          "resource": {
+            "sourcedId": "b89955a3-dfe1-4141-850b-f42de2308f70",
+            "status": "active",
+            "title": "Functions and linear models: Quiz 3",
+            "vendorResourceId": "xd0ba9b1784c9d470",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "xd0ba9b1784c9d470",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:functions-and-linear-models/xb4832e56:constructing-linear-models-for-real-world-relationships/quiz/xb4832e56:functions-and-linear-models-quiz-3",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:functions-and-linear-models/xb4832e56:constructing-linear-models-for-real-world-relationships/quiz/xb4832e56:functions-and-linear-models-quiz-3"
+            }
+          }
+        },
+        {
+          "sourcedId": "948f3f1e-72af-4c9b-8147-211936499bca",
+          "title": "Recognizing functions",
+          "sortOrder": 7,
+          "resource": {
+            "sourcedId": "948f3f1e-72af-4c9b-8147-211936499bca",
+            "status": "active",
+            "title": "Recognizing functions",
+            "vendorResourceId": "xd3451a9245a20699",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xd3451a9245a20699",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "78671ef6-071e-4443-86f3-0995e6d12f7a",
+          "title": "Linear and nonlinear functions",
+          "sortOrder": 8,
+          "resource": {
+            "sourcedId": "78671ef6-071e-4443-86f3-0995e6d12f7a",
+            "status": "active",
+            "title": "Linear and nonlinear functions",
+            "vendorResourceId": "xbbd6f8171ba0e98a",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xbbd6f8171ba0e98a",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "51f78393-144d-4bab-af3a-b4bfd5ec5b66",
+          "title": "Functions and linear models: Quiz 4",
+          "sortOrder": 9,
+          "resource": {
+            "sourcedId": "51f78393-144d-4bab-af3a-b4bfd5ec5b66",
+            "status": "active",
+            "title": "Functions and linear models: Quiz 4",
+            "vendorResourceId": "x53ddcc415c3ca38b",
+            "metadata": {
+              "originalKhanType": "quiz",
+              "originalKhanId": "x53ddcc415c3ca38b",
+              "description": "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:functions-and-linear-models/xb4832e56:linear-and-nonlinear-functions/quiz/xb4832e56:functions-and-linear-models-quiz-4",
+              "estimatedDuration": {
+                "lowerBound": 5,
+                "upperBound": 10
+              },
+              "type": "qti-assessment",
+              "subType": "qti-quiz",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:functions-and-linear-models/xb4832e56:linear-and-nonlinear-functions/quiz/xb4832e56:functions-and-linear-models-quiz-4"
+            }
+          }
+        },
+        {
+          "sourcedId": "04e6a23f-f024-4bda-a9cb-e7051b59f5e8",
+          "title": "Functions and linear models: Unit test",
+          "sortOrder": 10,
+          "resource": {
+            "sourcedId": "04e6a23f-f024-4bda-a9cb-e7051b59f5e8",
+            "status": "active",
+            "title": "Functions and linear models: Unit test",
+            "vendorResourceId": "xee0b3eb0c4b1e4da",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "xee0b3eb0c4b1e4da",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:functions-and-linear-models/xb4832e56:linear-and-nonlinear-functions/test/xb4832e56:functions-and-linear-models-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 13,
+                "upperBound": 26
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:functions-and-linear-models/xb4832e56:linear-and-nonlinear-functions/test/xb4832e56:functions-and-linear-models-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "x57abfac387592783",
+        "originalSlug": "xb4832e56:functions-and-linear-models",
+        "unitType": "unit"
+      }
+    },
+    {
+      "sourcedId": "0cca3522-df53-4d6a-addb-57a7d3c029c8",
+      "title": "Systems of equations",
+      "sortOrder": 14,
+      "subComponents": [],
+      "componentResources": [
+        {
+          "sourcedId": "79c3d503-dd22-48bf-965d-74a0ff70b1f7",
+          "title": "Intro to systems of equations",
+          "sortOrder": 0,
+          "resource": {
+            "sourcedId": "79c3d503-dd22-48bf-965d-74a0ff70b1f7",
+            "status": "active",
+            "title": "Intro to systems of equations",
+            "vendorResourceId": "xf5dd21e7bca21360",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "xf5dd21e7bca21360",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "1b2256f6-97b7-473d-b49d-bc20739a4398",
+          "title": "Systems of equations with graphing",
+          "sortOrder": 1,
+          "resource": {
+            "sourcedId": "1b2256f6-97b7-473d-b49d-bc20739a4398",
+            "status": "active",
+            "title": "Systems of equations with graphing",
+            "vendorResourceId": "x71346ea734c385f1",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x71346ea734c385f1",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "471757e7-581b-41d4-8f15-833713256c4f",
+          "title": "Solving systems with substitution",
+          "sortOrder": 2,
+          "resource": {
+            "sourcedId": "471757e7-581b-41d4-8f15-833713256c4f",
+            "status": "active",
+            "title": "Solving systems with substitution",
+            "vendorResourceId": "x9c5bb6bb6cc480e9",
+            "metadata": {
+              "originalKhanType": "lesson",
+              "originalKhanId": "x9c5bb6bb6cc480e9",
+              "description": "",
+              "canonicalUrl": "",
+              "type": "text",
+              "subType": "general-content"
+            }
+          }
+        },
+        {
+          "sourcedId": "8dc695ce-bf89-4261-a9f9-6fe56f9f45d9",
+          "title": "Systems of equations: Unit test",
+          "sortOrder": 3,
+          "resource": {
+            "sourcedId": "8dc695ce-bf89-4261-a9f9-6fe56f9f45d9",
+            "status": "active",
+            "title": "Systems of equations: Unit test",
+            "vendorResourceId": "xa77c477bbc762136",
+            "metadata": {
+              "originalKhanType": "unittest",
+              "originalKhanId": "xa77c477bbc762136",
+              "description": "Test your understanding of {unit name}.",
+              "canonicalUrl": "/math/pre-algebra/xb4832e56:systems-of-equations/xb4832e56:solving-systems-with-substitution/test/xb4832e56:systems-of-equations-unit-test",
+              "estimatedDuration": {
+                "lowerBound": 10,
+                "upperBound": 20
+              },
+              "type": "text",
+              "subType": "general-content",
+              "url": "https://www.khanacademy.org/math/pre-algebra/xb4832e56:systems-of-equations/xb4832e56:solving-systems-with-substitution/test/xb4832e56:systems-of-equations-unit-test"
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "originalKhanId": "x1c86dc2eca94ed03",
+        "originalSlug": "xb4832e56:systems-of-equations",
+        "unitType": "unit"
+      }
+    }
+  ]
+}

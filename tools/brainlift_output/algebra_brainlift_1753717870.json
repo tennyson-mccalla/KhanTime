@@ -1,0 +1,1473 @@
+{
+  "description" : "The Algebra 1 course, often taught in the 9th grade, covers Linear equations, inequalities, functions, and graphs; Systems of equations and inequalities; Extension of the concept of a function; Exponential models; and Quadratic equations, functions, and graphs. Khan Academy's Algebra 1 course is built to deliver a comprehensive, illuminating, engaging, and Common Core aligned experience!  \n\n**Teaching this course? Check out our [teacher resources](https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:alg1-ccss-teacher-resources)!** ",
+  "id" : "algebra",
+  "scrapedAt" : "2025-07-28T15:51:10Z",
+  "subject" : "algebra",
+  "title" : "Algebra 1",
+  "units" : [
+    {
+      "description" : "Why did humans invent algebra in the first place? Let's look at the history and beauty of algebra, and review some fundamental ideas and tools we'll use throughout the course.  \n\n **Unit guides are here!**  Power up your classroom with engaging strategies, tools, and activities from Khan Academy’s learning experts. [**PDF**](https:\/\/bit.ly\/40mzAy7)",
+      "exercises" : [
+
+      ],
+      "id" : "x9c23cad6d9661edd",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x50fd24681d6e296e",
+          "slug" : "x2f8bb11595b61c86:algebra-overview-history",
+          "title" : "Overview and history of algebra",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:foundation-algebra\/x2f8bb11595b61c86:algebra-overview-history"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x703ecb9d89ee3646",
+          "slug" : "x2f8bb11595b61c86:intro-variables",
+          "title" : "Introduction to variables",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:foundation-algebra\/x2f8bb11595b61c86:intro-variables"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xf8e021a545eceb84",
+          "slug" : "x2f8bb11595b61c86:substitute-evaluate-expression",
+          "title" : "Substitution and evaluating expressions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:foundation-algebra\/x2f8bb11595b61c86:substitute-evaluate-expression"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xb247c936206179ec",
+          "slug" : "x2f8bb11595b61c86:foundation-algebra-quiz-1",
+          "title" : "Algebra foundations: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x75087471a2284fb1",
+          "slug" : "x2f8bb11595b61c86:combine-like-terms",
+          "title" : "Combining like terms",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:foundation-algebra\/x2f8bb11595b61c86:combine-like-terms"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xbe41aa08ff751e4a",
+          "slug" : "x2f8bb11595b61c86:equivalent-expressions-intro",
+          "title" : "Introduction to equivalent expressions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:foundation-algebra\/x2f8bb11595b61c86:equivalent-expressions-intro"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xe77ce5d6ca812618",
+          "slug" : "x2f8bb11595b61c86:foundation-algebra-quiz-2",
+          "title" : "Algebra foundations: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x0ea9d1d82d238cbb",
+          "slug" : "x2f8bb11595b61c86:division-zero",
+          "title" : "Division by zero",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:foundation-algebra\/x2f8bb11595b61c86:division-zero"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "xd5a0529fb0c19071",
+          "slug" : "x2f8bb11595b61c86:foundation-algebra-unit-test",
+          "title" : "Algebra foundations: Unit test"
+        }
+      ],
+      "title" : "Algebra foundations"
+    },
+    {
+      "description" : "There are lots of strategies we can use to solve equations. Let's explore some different ways to solve equations and inequalities. We'll also see what it takes for an equation to have no solution, or infinite solutions.  \n\n**Unit guides are here!**  Power up your classroom with engaging strategies, tools, and activities from Khan Academy’s learning experts. [**PDF**](https:\/\/bit.ly\/3BWY5b6)",
+      "exercises" : [
+
+      ],
+      "id" : "xe7dfb15f5edad6c9",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x0f4b1383cbb838b3",
+          "slug" : "x2f8bb11595b61c86:linear-equations-variables-both-sides",
+          "title" : "Linear equations with variables on both sides",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:solve-equations-inequalities\/x2f8bb11595b61c86:linear-equations-variables-both-sides"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xa369b267b0c217c1",
+          "slug" : "x2f8bb11595b61c86:linear-equations-parentheses",
+          "title" : "Linear equations with parentheses",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:solve-equations-inequalities\/x2f8bb11595b61c86:linear-equations-parentheses"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x72247ba1c3ab3a8a",
+          "slug" : "x2f8bb11595b61c86:solve-equations-inequalities-quiz-1",
+          "title" : "Solving equations & inequalities: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x7cea08ba3dac8cbc",
+          "slug" : "x2f8bb11595b61c86:num-solutions-linear-equations",
+          "title" : "Analyzing the number of solutions to linear equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:solve-equations-inequalities\/x2f8bb11595b61c86:num-solutions-linear-equations"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x9b7918d872a80d68",
+          "slug" : "x2f8bb11595b61c86:linear-eqns-unknown-coefficients",
+          "title" : "Linear equations with unknown coefficients",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:solve-equations-inequalities\/x2f8bb11595b61c86:linear-eqns-unknown-coefficients"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x1e14094036682a62",
+          "slug" : "x2f8bb11595b61c86:solve-equations-inequalities-quiz-2",
+          "title" : "Solving equations & inequalities: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x243811af60bc77a8",
+          "slug" : "x2f8bb11595b61c86:multistep-inequalities",
+          "title" : "Multi-step inequalities",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:solve-equations-inequalities\/x2f8bb11595b61c86:multistep-inequalities"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x961414cd8033ec90",
+          "slug" : "x2f8bb11595b61c86:compound-inequalities",
+          "title" : "Compound inequalities",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:solve-equations-inequalities\/x2f8bb11595b61c86:compound-inequalities"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x74945e53afd65673",
+          "slug" : "x2f8bb11595b61c86:solve-equations-inequalities-quiz-3",
+          "title" : "Solving equations & inequalities: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x7cef573cb30072d6",
+          "slug" : "x2f8bb11595b61c86:solve-equations-inequalities-unit-test",
+          "title" : "Solving equations & inequalities: Unit test"
+        }
+      ],
+      "title" : "Solving equations & inequalities"
+    },
+    {
+      "description" : "If you are in the United States, you might see a car with a fuel efficiency rating of 50 miles per gallon. Somewhere else, you'd probably see it called 4.7 liters per 100 kilometers. Let's practice solving real world problems like this involving units!  \n\n **Unit guides are here!**  Power up your classroom with engaging strategies, tools, and activities from Khan Academy’s learning experts. [**PDF**](https:\/\/bit.ly\/3YqMuJ6)",
+      "exercises" : [
+
+      ],
+      "id" : "xac480a0beb464c1b",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x181af690dadcf4fe",
+          "slug" : "x2f8bb11595b61c86:rate-conversion",
+          "title" : "Rate conversion",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:working-units\/x2f8bb11595b61c86:rate-conversion"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xabf0c04b883218b5",
+          "slug" : "x2f8bb11595b61c86:appropriate-units",
+          "title" : "Appropriate units",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:working-units\/x2f8bb11595b61c86:appropriate-units"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x9e529ea94cf9dc6c",
+          "slug" : "x2f8bb11595b61c86:word-problems-multiple-units",
+          "title" : "Word problems with multiple units",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:working-units\/x2f8bb11595b61c86:word-problems-multiple-units"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "xfffa6b81a6528bf3",
+          "slug" : "x2f8bb11595b61c86:working-units-unit-test",
+          "title" : "Working with units: Unit test"
+        }
+      ],
+      "title" : "Working with units"
+    },
+    {
+      "description" : "Let's explore different ways to find and visualize slopes and intercepts, and how these concepts can help us solve real-world problems.  \n\n**Unit guides are here!**  Power up your classroom with engaging strategies, tools, and activities from Khan Academy’s learning experts. [**PDF**](https:\/\/bit.ly\/4elou01)",
+      "exercises" : [
+
+      ],
+      "id" : "xc3c3020c46550ed6",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xc78ef352a87ae737",
+          "slug" : "x2f8bb11595b61c86:two-variable-linear-equations-intro",
+          "title" : "Two-variable linear equations intro",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:linear-equations-graphs\/x2f8bb11595b61c86:two-variable-linear-equations-intro"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xf64afb8b64e2dcbc",
+          "slug" : "x2f8bb11595b61c86:slope",
+          "title" : "Slope",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:linear-equations-graphs\/x2f8bb11595b61c86:slope"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x2410a8ecc1bc0e70",
+          "slug" : "x2f8bb11595b61c86:linear-equations-graphs-quiz-1",
+          "title" : "Linear equations & graphs: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xc52cf1879b4a0110",
+          "slug" : "x2f8bb11595b61c86:horizontal-vertical-lines",
+          "title" : "Horizontal & vertical lines",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:linear-equations-graphs\/x2f8bb11595b61c86:horizontal-vertical-lines"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5137e8664ffd69d8",
+          "slug" : "x2f8bb11595b61c86:x-intercepts-and-y-intercepts",
+          "title" : "x-intercepts and y-intercepts",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:linear-equations-graphs\/x2f8bb11595b61c86:x-intercepts-and-y-intercepts"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xb101c62cc9cca933",
+          "slug" : "x2f8bb11595b61c86:linear-equations-graphs-quiz-2",
+          "title" : "Linear equations & graphs: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xc3ebbd959a47b526",
+          "slug" : "x2f8bb11595b61c86:applying-intercepts-and-slope",
+          "title" : "Applying intercepts and slope",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:linear-equations-graphs\/x2f8bb11595b61c86:applying-intercepts-and-slope"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x450b54e3ba7b8b21",
+          "slug" : "x2f8bb11595b61c86:modeling-with-linear-equations-and-inequalities",
+          "title" : "Modeling with linear equations and inequalities",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:linear-equations-graphs\/x2f8bb11595b61c86:modeling-with-linear-equations-and-inequalities"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x2e0f5f70d0518843",
+          "slug" : "x2f8bb11595b61c86:linear-equations-graphs-quiz-3",
+          "title" : "Linear equations & graphs: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "xe1d7d2746648be78",
+          "slug" : "x2f8bb11595b61c86:linear-equations-graphs-unit-test",
+          "title" : "Linear equations & graphs: Unit test"
+        }
+      ],
+      "title" : "Linear equations & graphs"
+    },
+    {
+      "description" : "We can write linear equations in different forms to reveal different features of the scenarios they describe. Let's get clever.  \n\n**Unit guides are here!**  Power up your classroom with engaging strategies, tools, and activities from Khan Academy’s learning experts. [**PDF**](https:\/\/bit.ly\/4e2hWD7)\n",
+      "exercises" : [
+
+      ],
+      "id" : "x75b0106c03631b81",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xd079bb5c5246fe81",
+          "slug" : "x2f8bb11595b61c86:intro-to-slope-intercept-form",
+          "title" : "Intro to slope-intercept form",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:forms-of-linear-equations\/x2f8bb11595b61c86:intro-to-slope-intercept-form"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x2c8d0a6d25986bd7",
+          "slug" : "x2f8bb11595b61c86:graphing-slope-intercept-equations",
+          "title" : "Graphing slope-intercept equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:forms-of-linear-equations\/x2f8bb11595b61c86:graphing-slope-intercept-equations"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xfe3a977e5bb25870",
+          "slug" : "x2f8bb11595b61c86:forms-of-linear-equations-quiz-1",
+          "title" : "Forms of linear equations: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x71fbf1d573fd14aa",
+          "slug" : "x2f8bb11595b61c86:writing-slope-intercept-equations",
+          "title" : "Writing slope-intercept equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:forms-of-linear-equations\/x2f8bb11595b61c86:writing-slope-intercept-equations"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xafdf6c522a9d01bb",
+          "slug" : "x2f8bb11595b61c86:forms-of-linear-equations-quiz-2",
+          "title" : "Forms of linear equations: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x90021ade36bdc644",
+          "slug" : "x2f8bb11595b61c86:point-slope-form",
+          "title" : "Point-slope form",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:forms-of-linear-equations\/x2f8bb11595b61c86:point-slope-form"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x498c8386cd752571",
+          "slug" : "x2f8bb11595b61c86:standard-form",
+          "title" : "Standard form",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:forms-of-linear-equations\/x2f8bb11595b61c86:standard-form"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5aaa37a0e6b6bc20",
+          "slug" : "x2f8bb11595b61c86:summary-forms-of-two-variable-linear-equations",
+          "title" : "Summary: Forms of two-variable linear equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:forms-of-linear-equations\/x2f8bb11595b61c86:summary-forms-of-two-variable-linear-equations"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x9c10901fc24bb37b",
+          "slug" : "x2f8bb11595b61c86:forms-of-linear-equations-quiz-3",
+          "title" : "Forms of linear equations: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x6bbb5efdacf0231d",
+          "slug" : "x2f8bb11595b61c86:forms-of-linear-equations-unit-test",
+          "title" : "Forms of linear equations: Unit test"
+        }
+      ],
+      "title" : "Forms of linear equations"
+    },
+    {
+      "description" : "If one line is useful, let's see what we can do with two lines. In this unit, we learn how to write systems of equations, solve those systems, and interpret what those solutions mean in a real-world context.  \n\n**Unit guides are here!**  Power up your classroom with engaging strategies, tools, and activities from Khan Academy’s learning experts. [**PDF**](https:\/\/bit.ly\/4hrPk9e)\n\n",
+      "exercises" : [
+
+      ],
+      "id" : "xa68ae1e712a48d18",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x8d68df46fd76d377",
+          "slug" : "x2f8bb11595b61c86:introduction-to-systems-of-equations",
+          "title" : "Introduction to systems of equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:systems-of-equations\/x2f8bb11595b61c86:introduction-to-systems-of-equations"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xbf2dae01606cc0f6",
+          "slug" : "x2f8bb11595b61c86:systems-of-equations-quiz-1",
+          "title" : "Systems of equations: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x23e90b1b3ed82189",
+          "slug" : "x2f8bb11595b61c86:solving-systems-of-equations-with-substitution",
+          "title" : "Solving systems of equations with substitution",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:systems-of-equations\/x2f8bb11595b61c86:solving-systems-of-equations-with-substitution"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x9f3cf65f6a46aaa6",
+          "slug" : "x2f8bb11595b61c86:solving-systems-elimination",
+          "title" : "Solving systems of equations with elimination",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:systems-of-equations\/x2f8bb11595b61c86:solving-systems-elimination"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x7b0ec7ab27c04583",
+          "slug" : "x2f8bb11595b61c86:equivalent-systems-equations",
+          "title" : "Equivalent systems of equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:systems-of-equations\/x2f8bb11595b61c86:equivalent-systems-equations"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x7917cf3b9c93c83a",
+          "slug" : "x2f8bb11595b61c86:systems-of-equations-quiz-2",
+          "title" : "Systems of equations: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x3561fe217c3f184b",
+          "slug" : "x2f8bb11595b61c86:number-of-solutions-to-systems-of-equations",
+          "title" : "Number of solutions to systems of equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:systems-of-equations\/x2f8bb11595b61c86:number-of-solutions-to-systems-of-equations"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x601b8204c03a4243",
+          "slug" : "x2f8bb11595b61c86:systems-of-equations-word-problems",
+          "title" : "Systems of equations word problems",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:systems-of-equations\/x2f8bb11595b61c86:systems-of-equations-word-problems"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xee6636d6cb973773",
+          "slug" : "x2f8bb11595b61c86:systems-of-equations-quiz-3",
+          "title" : "Systems of equations: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x33189108ecda7d9a",
+          "slug" : "x2f8bb11595b61c86:systems-of-equations-unit-test",
+          "title" : "Systems of equations: Unit test"
+        }
+      ],
+      "title" : "Systems of equations"
+    },
+    {
+      "description" : "If it takes someone in a cooking competition 30 seconds to chop an onion and 18 seconds to chop a carrot, and their goal is to chop at least 20 of these vegetables in a time limit of 540 seconds, what can they do? Use a system of linear inequalities, of course.  \n\n**Unit guides are here!**  Power up your classroom with engaging strategies, tools, and activities from Khan Academy’s learning experts. [**PDF**](https:\/\/bit.ly\/3NHzqdg)",
+      "exercises" : [
+
+      ],
+      "id" : "x4c62c47c5813dbcb",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xf30e709026373e95",
+          "slug" : "x2f8bb11595b61c86:checking-solutions-of-two-variable-inequalities",
+          "title" : "Checking solutions of two-variable inequalities",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:inequalities-systems-graphs\/x2f8bb11595b61c86:checking-solutions-of-two-variable-inequalities"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x9004b38d5a03a93d",
+          "slug" : "x2f8bb11595b61c86:inequalities-systems-graphs-quiz-1",
+          "title" : "Inequalities (systems & graphs): Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xf5a8c51d05f78bb7",
+          "slug" : "x2f8bb11595b61c86:graphing-two-variable-inequalities",
+          "title" : "Graphing two-variable inequalities",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:inequalities-systems-graphs\/x2f8bb11595b61c86:graphing-two-variable-inequalities"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xff6bec2236b88f98",
+          "slug" : "x2f8bb11595b61c86:inequalities-systems-graphs-quiz-2",
+          "title" : "Inequalities (systems & graphs): Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x614b50e9be3d747f",
+          "slug" : "x2f8bb11595b61c86:modeling-with-linear-inequalities",
+          "title" : "Modeling with linear inequalities",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:inequalities-systems-graphs\/x2f8bb11595b61c86:modeling-with-linear-inequalities"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x809d1b0c5aaab432",
+          "slug" : "x2f8bb11595b61c86:inequalities-systems-graphs-quiz-3",
+          "title" : "Inequalities (systems & graphs): Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x463f67eeb6d4bf8b",
+          "slug" : "x2f8bb11595b61c86:inequalities-systems-graphs-unit-test",
+          "title" : "Inequalities (systems & graphs): Unit test"
+        }
+      ],
+      "title" : "Inequalities (systems & graphs)"
+    },
+    {
+      "description" : "A function is like a machine that takes an input and gives an output. Let's explore how we can graph, analyze, and create different types of functions.  \n\n**Unit guides are here!**  Power up your classroom with engaging strategies, tools, and activities from Khan Academy’s learning experts. [**PDF**](https:\/\/bit.ly\/4fqqpRR)",
+      "exercises" : [
+
+      ],
+      "id" : "x90009cd8ae422e33",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x877255cb0b5ca214",
+          "slug" : "x2f8bb11595b61c86:evaluating-functions",
+          "title" : "Evaluating functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:evaluating-functions"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xb6d5aad6cf012321",
+          "slug" : "x2f8bb11595b61c86:inputs-and-outputs-of-a-function",
+          "title" : "Inputs and outputs of a function",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:inputs-and-outputs-of-a-function"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xe17b4ebc72f58ea3",
+          "slug" : "x2f8bb11595b61c86:functions-quiz-1",
+          "title" : "Functions: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x54015437751fb59c",
+          "slug" : "x2f8bb11595b61c86:functions-and-equations",
+          "title" : "Functions and equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:functions-and-equations"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x6eb9c1d25b7c41a6",
+          "slug" : "x2f8bb11595b61c86:interpreting-function-notation",
+          "title" : "Interpreting function notation",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:interpreting-function-notation"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x2dd8640f3cbaa828",
+          "slug" : "x2f8bb11595b61c86:introduction-to-the-domain-and-range-of-a-function",
+          "title" : "Introduction to the domain and range of a function",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:introduction-to-the-domain-and-range-of-a-function"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x720a4fdc9954f61d",
+          "slug" : "x2f8bb11595b61c86:functions-quiz-2",
+          "title" : "Functions: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xa00a4840755213bf",
+          "slug" : "x2f8bb11595b61c86:determining-the-domain-of-a-function",
+          "title" : "Determining the domain of a function",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:determining-the-domain-of-a-function"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x3ade5074d2061017",
+          "slug" : "x2f8bb11595b61c86:recognizing-functions",
+          "title" : "Recognizing functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:recognizing-functions"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xb3dd44806cf5e91f",
+          "slug" : "x2f8bb11595b61c86:functions-quiz-3",
+          "title" : "Functions: Quiz 3"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x56e555df65062ce8",
+          "slug" : "x2f8bb11595b61c86:maximum-and-minimum-points",
+          "title" : "Maximum and minimum points",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:maximum-and-minimum-points"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x9ffd2bc64e52ebd6",
+          "slug" : "x2f8bb11595b61c86:intervals-where-a-function-is-positive-negative-increasing-or-decreasing",
+          "title" : "Intervals where a function is positive, negative, increasing, or decreasing",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:intervals-where-a-function-is-positive-negative-increasing-or-decreasing"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x124cefcb59543e9e",
+          "slug" : "x2f8bb11595b61c86:interpreting-features-of-graphs",
+          "title" : "Interpreting features of graphs",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:interpreting-features-of-graphs"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x24ad33afc16832af",
+          "slug" : "x2f8bb11595b61c86:functions-quiz-4",
+          "title" : "Functions: Quiz 4"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x22352aecf406115e",
+          "slug" : "x2f8bb11595b61c86:average-rate-of-change",
+          "title" : "Average rate of change",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:average-rate-of-change"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5a48232fee9d3c29",
+          "slug" : "x2f8bb11595b61c86:average-rate-of-change-word-problems",
+          "title" : "Average rate of change word problems",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:average-rate-of-change-word-problems"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xb8b5fff706be558a",
+          "slug" : "x2f8bb11595b61c86:inverse-functions-intro",
+          "title" : "Intro to inverse functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:functions\/x2f8bb11595b61c86:inverse-functions-intro"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xfac1cb2eeaef986b",
+          "slug" : "x2f8bb11595b61c86:functions-quiz-5",
+          "title" : "Functions: Quiz 5"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x6c618b210e8c8d95",
+          "slug" : "x2f8bb11595b61c86:functions-unit-test",
+          "title" : "Functions: Unit test"
+        }
+      ],
+      "title" : "Functions"
+    },
+    {
+      "description" : "Sequences are a special type of function that are useful for describing patterns. In this unit, we'll see how sequences let us jump forwards or backwards in patterns to solve problems.\n\n**Unit guides are here!**  Power up your classroom with engaging strategies, tools, and activities from Khan Academy’s learning experts. [**PDF**](https:\/\/bit.ly\/3AOkrLO)",
+      "exercises" : [
+
+      ],
+      "id" : "xb87efe63dee477ea",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xf640cbc177567ab7",
+          "slug" : "x2f8bb11595b61c86:introduction-to-arithmetic-sequences",
+          "title" : "Introduction to arithmetic sequences",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:sequences\/x2f8bb11595b61c86:introduction-to-arithmetic-sequences"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xf740672aac260d74",
+          "slug" : "x2f8bb11595b61c86:constructing-arithmetic-sequences",
+          "title" : "Constructing arithmetic sequences",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:sequences\/x2f8bb11595b61c86:constructing-arithmetic-sequences"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x4cff769971739887",
+          "slug" : "x2f8bb11595b61c86:sequences-quiz-1",
+          "title" : "Sequences: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5adc102400738e3c",
+          "slug" : "x2f8bb11595b61c86:introduction-to-geometric-sequences",
+          "title" : "Introduction to geometric sequences",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:sequences\/x2f8bb11595b61c86:introduction-to-geometric-sequences"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xbf91b75ea99b486d",
+          "slug" : "x2f8bb11595b61c86:constructing-geometric-sequences",
+          "title" : "Constructing geometric sequences",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:sequences\/x2f8bb11595b61c86:constructing-geometric-sequences"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x9d354d012327cf74",
+          "slug" : "x2f8bb11595b61c86:sequences-quiz-2",
+          "title" : "Sequences: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x330c27a584bbab51",
+          "slug" : "x2f8bb11595b61c86:modeling-with-sequences",
+          "title" : "Modeling with sequences",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:sequences\/x2f8bb11595b61c86:modeling-with-sequences"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xc2b83e225fca0ec2",
+          "slug" : "x2f8bb11595b61c86:general-sequences",
+          "title" : "General sequences",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:sequences\/x2f8bb11595b61c86:general-sequences"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xc9ad5a5df61bea32",
+          "slug" : "x2f8bb11595b61c86:sequences-quiz-3",
+          "title" : "Sequences: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x237ce4f71df6668d",
+          "slug" : "x2f8bb11595b61c86:sequences-unit-test",
+          "title" : "Sequences: Unit test"
+        }
+      ],
+      "title" : "Sequences"
+    },
+    {
+      "description" : "Piecewise functions piece together different functions. Absolute value graphs make a V shape, but why do they do that? Let's explore how to make some new and interesting types of graphs.\n\n**Unit guides are here!**  Power up your classroom with engaging strategies, tools, and activities from Khan Academy’s learning experts. [**PDF**](https:\/\/bit.ly\/48XflJR)",
+      "exercises" : [
+
+      ],
+      "id" : "x5ae1951f49267d10",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x9721e71feb3f6f12",
+          "slug" : "x2f8bb11595b61c86:graphs-of-absolute-value-functions",
+          "title" : "Graphs of absolute value functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:absolute-value-piecewise-functions\/x2f8bb11595b61c86:graphs-of-absolute-value-functions"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x6392c6d3b78470c3",
+          "slug" : "x2f8bb11595b61c86:absolute-value-piecewise-functions-quiz-1",
+          "title" : "Absolute value & piecewise functions: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x8bd48458e56ce477",
+          "slug" : "x2f8bb11595b61c86:piecewise-functions",
+          "title" : "Piecewise functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:absolute-value-piecewise-functions\/x2f8bb11595b61c86:piecewise-functions"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xdddc4a7c43e5833d",
+          "slug" : "x2f8bb11595b61c86:absolute-value-piecewise-functions-quiz-2",
+          "title" : "Absolute value & piecewise functions: Quiz 2"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "xa2f30baff7f52e56",
+          "slug" : "x2f8bb11595b61c86:absolute-value-piecewise-functions-unit-test",
+          "title" : "Absolute value & piecewise functions: Unit test"
+        }
+      ],
+      "title" : "Absolute value & piecewise functions"
+    },
+    {
+      "description" : "Let's review exponent rules and level up what we know about roots. The square root is nice, but let's learn about higher-order roots like the cube root (or 3rd root).",
+      "exercises" : [
+
+      ],
+      "id" : "x50868c0eeb0fc226",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xe602cf9aaf8e0867",
+          "slug" : "x2f8bb11595b61c86:exponent-properties-review",
+          "title" : "Exponent properties review",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:rational-exponents-radicals\/x2f8bb11595b61c86:exponent-properties-review"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x937510b30e07d40e",
+          "slug" : "x2f8bb11595b61c86:rational-exponents-radicals-quiz-1",
+          "title" : "Exponents & radicals: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x8ca40d259ce8c98e",
+          "slug" : "x2f8bb11595b61c86:radicals",
+          "title" : "Radicals",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:rational-exponents-radicals\/x2f8bb11595b61c86:radicals"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x0ab3057cd3fd6c6e",
+          "slug" : "x2f8bb11595b61c86:rational-exponents-radicals-quiz-2",
+          "title" : "Exponents & radicals: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x2c4d4bb4ce02f634",
+          "slug" : "x2f8bb11595b61c86:simplifying-square-roots",
+          "title" : "Simplifying square roots",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:rational-exponents-radicals\/x2f8bb11595b61c86:simplifying-square-roots"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x83c933cab43f11db",
+          "slug" : "x2f8bb11595b61c86:rational-exponents-radicals-quiz-3",
+          "title" : "Exponents & radicals: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x35db88a483ff0156",
+          "slug" : "x2f8bb11595b61c86:rational-exponents-radicals-unit-test",
+          "title" : "Exponents & radicals: Unit test"
+        }
+      ],
+      "title" : "Exponents & radicals"
+    },
+    {
+      "description" : "What does it mean for something to change exponentially? Let's learn about a new family of functions, and use these exponential functions to analyze real-world scenarios.",
+      "exercises" : [
+
+      ],
+      "id" : "x99b99cc8049cbb15",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xfcc80b0830b9197a",
+          "slug" : "x2f8bb11595b61c86:exponential-vs-linear-growth",
+          "title" : "Exponential vs. linear growth",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:exponential-growth-decay\/x2f8bb11595b61c86:exponential-vs-linear-growth"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x0e79f92a9108844f",
+          "slug" : "x2f8bb11595b61c86:exponential-expressions",
+          "title" : "Exponential expressions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:exponential-growth-decay\/x2f8bb11595b61c86:exponential-expressions"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x30010e71dfe059fb",
+          "slug" : "x2f8bb11595b61c86:exponential-growth-decay-quiz-1",
+          "title" : "Exponential growth & decay: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xcb46c9ca181ac999",
+          "slug" : "x2f8bb11595b61c86:graphs-of-exponential-growth",
+          "title" : "Graphs of exponential growth",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:exponential-growth-decay\/x2f8bb11595b61c86:graphs-of-exponential-growth"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x3e0fdcf0a4cfa746",
+          "slug" : "x2f8bb11595b61c86:exponential-vs-linear-growth-over-time",
+          "title" : "Exponential vs. linear growth over time",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:exponential-growth-decay\/x2f8bb11595b61c86:exponential-vs-linear-growth-over-time"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x948e615d1a11b6cf",
+          "slug" : "x2f8bb11595b61c86:exponential-decay",
+          "title" : "Exponential growth & decay",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:exponential-growth-decay\/x2f8bb11595b61c86:exponential-decay"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xa0562528f440c981",
+          "slug" : "x2f8bb11595b61c86:exponential-growth-decay-quiz-2",
+          "title" : "Exponential growth & decay: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x463f59ea4ded2dd8",
+          "slug" : "x2f8bb11595b61c86:exponential-functions-from-tables-graphs",
+          "title" : "Exponential functions from tables & graphs",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:exponential-growth-decay\/x2f8bb11595b61c86:exponential-functions-from-tables-graphs"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x690a73ca468e7447",
+          "slug" : "x2f8bb11595b61c86:exponential-vs-linear-models",
+          "title" : "Exponential vs. linear models",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:exponential-growth-decay\/x2f8bb11595b61c86:exponential-vs-linear-models"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x20dfaafcd67a270a",
+          "slug" : "x2f8bb11595b61c86:exponential-growth-decay-quiz-3",
+          "title" : "Exponential growth & decay: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "xb2072f448937f5d3",
+          "slug" : "x2f8bb11595b61c86:exponential-growth-decay-unit-test",
+          "title" : "Exponential growth & decay: Unit test"
+        }
+      ],
+      "title" : "Exponential growth & decay"
+    },
+    {
+      "description" : "We can factor numbers like 24 into 2x12, or 3x8, or 4x6...But how can we factor algebraic expressions? We'll see that it's a lot like a puzzle.",
+      "exercises" : [
+
+      ],
+      "id" : "x74fe17fcb435bd8c",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x309b73126b9bc674",
+          "slug" : "x2f8bb11595b61c86:multiply-monomial-polynomial",
+          "title" : "Multiplying monomials by polynomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratics-multiplying-factoring\/x2f8bb11595b61c86:multiply-monomial-polynomial"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5a625ce49adcc33d",
+          "slug" : "x2f8bb11595b61c86:multiply-binomial",
+          "title" : "Multiplying binomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratics-multiplying-factoring\/x2f8bb11595b61c86:multiply-binomial"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x7680061986cc7a23",
+          "slug" : "x2f8bb11595b61c86:quadratics-multiplying-factoring-quiz-1",
+          "title" : "Quadratics: Multiplying & factoring: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x575f63a27b30c48a",
+          "slug" : "x2f8bb11595b61c86:special-product-binomials",
+          "title" : "Special products of binomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratics-multiplying-factoring\/x2f8bb11595b61c86:special-product-binomials"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xe06ad492193da5ad",
+          "slug" : "x2f8bb11595b61c86:intro-factoring",
+          "title" : "Introduction to factoring",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratics-multiplying-factoring\/x2f8bb11595b61c86:intro-factoring"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x27b977e12819fceb",
+          "slug" : "x2f8bb11595b61c86:factor-quadratics-intro",
+          "title" : "Factoring quadratics intro",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratics-multiplying-factoring\/x2f8bb11595b61c86:factor-quadratics-intro"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x717d2f9c442a3bd8",
+          "slug" : "x2f8bb11595b61c86:quadratics-multiplying-factoring-quiz-2",
+          "title" : "Quadratics: Multiplying & factoring: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x81a6922bf4cfe74f",
+          "slug" : "x2f8bb11595b61c86:factor-quadratics-grouping",
+          "title" : "Factoring quadratics by grouping",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratics-multiplying-factoring\/x2f8bb11595b61c86:factor-quadratics-grouping"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x43f4386b35b42a53",
+          "slug" : "x2f8bb11595b61c86:factor-difference-squares",
+          "title" : "Factoring quadratics with difference of squares",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratics-multiplying-factoring\/x2f8bb11595b61c86:factor-difference-squares"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xccbbb7c835552a5b",
+          "slug" : "x2f8bb11595b61c86:factor-perfect-squares",
+          "title" : "Factoring quadratics with perfect squares",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratics-multiplying-factoring\/x2f8bb11595b61c86:factor-perfect-squares"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xeb997b3f0b8e1726",
+          "slug" : "x2f8bb11595b61c86:quadratics-multiplying-factoring-quiz-3",
+          "title" : "Quadratics: Multiplying & factoring: Quiz 3"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x6f8f7307e858b6d5",
+          "slug" : "x2f8bb11595b61c86:factor-quadratics-strategy",
+          "title" : "Strategy in factoring quadratics",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratics-multiplying-factoring\/x2f8bb11595b61c86:factor-quadratics-strategy"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x7f101e8ce0ea0fae",
+          "slug" : "x2f8bb11595b61c86:quadratics-multiplying-factoring-unit-test",
+          "title" : "Quadratics: Multiplying & factoring: Unit test"
+        }
+      ],
+      "title" : "Quadratics: Multiplying & factoring"
+    },
+    {
+      "description" : "We've seen linear and exponential functions, and now we're ready for quadratic functions. We'll explore how these functions and the parabolas they produce can be used to solve real-world problems.",
+      "exercises" : [
+
+      ],
+      "id" : "xb7469257365b8042",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xb9641027b84051ca",
+          "slug" : "x2f8bb11595b61c86:intro-parabolas",
+          "title" : "Intro to parabolas",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:intro-parabolas"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x764141d56dea7d2b",
+          "slug" : "x2f8bb11595b61c86:factored-form-quadratics",
+          "title" : "Solving and graphing with factored form",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:factored-form-quadratics"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xb44433b8c49a1155",
+          "slug" : "x2f8bb11595b61c86:quadratic-functions-equations-quiz-1",
+          "title" : "Quadratic functions & equations: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x1c7ae843b699c6f9",
+          "slug" : "x2f8bb11595b61c86:untitled-1082",
+          "title" : "Solving by taking the square root",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:untitled-1082"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x4f41315e615efea6",
+          "slug" : "x2f8bb11595b61c86:vertex-form",
+          "title" : "Vertex form",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:vertex-form"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x2c8f94a892b49387",
+          "slug" : "x2f8bb11595b61c86:quadratic-functions-equations-quiz-2",
+          "title" : "Quadratic functions & equations: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x3af5fc560aad2a10",
+          "slug" : "x2f8bb11595b61c86:quadratics-solve-factoring",
+          "title" : "Solving quadratics by factoring",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:quadratics-solve-factoring"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xa5852cbcfef50c3f",
+          "slug" : "x2f8bb11595b61c86:quadratic-formula-a1",
+          "title" : "The quadratic formula",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:quadratic-formula-a1"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xe1735e561f2dc624",
+          "slug" : "x2f8bb11595b61c86:quadratic-functions-equations-quiz-3",
+          "title" : "Quadratic functions & equations: Quiz 3"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xf5fe26441d826536",
+          "slug" : "x2f8bb11595b61c86:completing-square-quadratics",
+          "title" : "Completing the square intro",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:completing-square-quadratics"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5eddbdda1d56c3a6",
+          "slug" : "x2f8bb11595b61c86:more-on-completing-square",
+          "title" : "More on completing the square",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:more-on-completing-square"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x9a88555146687fc2",
+          "slug" : "x2f8bb11595b61c86:strategizing-to-solve-quadratics",
+          "title" : "Strategizing to solve quadratic equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:strategizing-to-solve-quadratics"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x9f891df028f3a6cf",
+          "slug" : "x2f8bb11595b61c86:quadratic-functions-equations-quiz-4",
+          "title" : "Quadratic functions & equations: Quiz 4"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xd90475b2ab200794",
+          "slug" : "x2f8bb11595b61c86:standard-form-quadratic",
+          "title" : "Quadratic standard form",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:standard-form-quadratic"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x650299eb257c5698",
+          "slug" : "x2f8bb11595b61c86:quadratic-forms-features",
+          "title" : "Features & forms of quadratic functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:quadratic-forms-features"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xbbbf265fc77c35c6",
+          "slug" : "x2f8bb11595b61c86:quadratic-functions-equations-quiz-5",
+          "title" : "Quadratic functions & equations: Quiz 5"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x304719133cceceec",
+          "slug" : "x2f8bb11595b61c86:graphing-and-comparing-quadratics",
+          "title" : "Comparing quadratic functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:graphing-and-comparing-quadratics"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xc943805eab3e5c16",
+          "slug" : "x2f8bb11595b61c86:transform-quadratic-functions",
+          "title" : "Transforming quadratic functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:quadratic-functions-equations\/x2f8bb11595b61c86:transform-quadratic-functions"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x6d091f5a17a2db27",
+          "slug" : "x2f8bb11595b61c86:quadratic-functions-equations-quiz-6",
+          "title" : "Quadratic functions & equations: Quiz 6"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x353dfbf2b889da3f",
+          "slug" : "x2f8bb11595b61c86:quadratic-functions-equations-unit-test",
+          "title" : "Quadratic functions & equations: Unit test"
+        }
+      ],
+      "title" : "Quadratic functions & equations"
+    },
+    {
+      "description" : "What does it mean for a number to be irrational? Let's find out. The answer may surprise you. ",
+      "exercises" : [
+
+      ],
+      "id" : "xb1630cb98ec4bae2",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xa44e8a448185d7a5",
+          "slug" : "x2f8bb11595b61c86:irrational-numbers-intro",
+          "title" : "Irrational numbers",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:irrational-numbers\/x2f8bb11595b61c86:irrational-numbers-intro"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xc8343618d97f90ee",
+          "slug" : "x2f8bb11595b61c86:sums-and-products-of-rational-and-irrational-numbers",
+          "title" : "Sums and products of rational and irrational numbers",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:irrational-numbers\/x2f8bb11595b61c86:sums-and-products-of-rational-and-irrational-numbers"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x884c6716b509f997",
+          "slug" : "x2f8bb11595b61c86:proofs-concerning-irrational-numbers",
+          "title" : "Proofs concerning irrational numbers",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:irrational-numbers\/x2f8bb11595b61c86:proofs-concerning-irrational-numbers"
+        }
+      ],
+      "title" : "Irrational numbers"
+    },
+    {
+      "description" : "We sat down with some experts to ask them questions like, \"Why is creativity important in algebra?\" Let's see what they had to say!",
+      "exercises" : [
+
+      ],
+      "id" : "x2c0c84751418b3d0",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x1e33113e75ff62b9",
+          "slug" : "x2f8bb11595b61c86:creativity-in-algebra",
+          "title" : "Creativity in algebra",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:algebra-creativity\/x2f8bb11595b61c86:creativity-in-algebra"
+        }
+      ],
+      "title" : "Creativity in algebra"
+    },
+    {
+      "description" : "Getting ready to teach Algebra 1? You’ll want Khan Academy’s unit guides in your toolkit. Developed by our learning experts, each guide includes student misconceptions, top teaching strategies, and step-by-step suggestions to help you support your students’ success.",
+      "exercises" : [
+
+      ],
+      "id" : "xd971d175265b8b45",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x185fd64246558a60",
+          "slug" : "x2f8bb11595b61c86:alg1-ccss-welcome-to-teacher-resources",
+          "title" : "Welcome to teacher resources",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra\/x2f8bb11595b61c86:alg1-ccss-teacher-resources\/x2f8bb11595b61c86:alg1-ccss-welcome-to-teacher-resources"
+        }
+      ],
+      "title" : "Teacher resources"
+    }
+  ]
+}

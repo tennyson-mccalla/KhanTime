@@ -1,0 +1,284 @@
+{
+  "description" : "Scraped from Khan Academy using BrainLift HTML methodology",
+  "id" : "algebra2",
+  "scrapedAt" : "2025-07-28T15:06:33Z",
+  "subject" : "algebra2",
+  "title" : "Algebra 2",
+  "units" : [
+    {
+      "description" : "Complex Numbers unit from Algebra 2",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_0_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Complex Numbers\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "complex numbers"
+          ],
+          "slug" : "complex-numbers-practice",
+          "title" : "Complex Numbers Practice"
+        }
+      ],
+      "id" : "unit_algebra2_0",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_0_0",
+          "slug" : "introduction-to-complex-numbers",
+          "title" : "Introduction to Complex Numbers",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_0_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_0_1",
+          "slug" : "practice-with-complex-numbers",
+          "title" : "Practice with Complex Numbers",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_0_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_0_2",
+          "slug" : "advanced-complex-numbers",
+          "title" : "Advanced Complex Numbers",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_0_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_0_3",
+          "slug" : "review-of-complex-numbers",
+          "title" : "Review of Complex Numbers",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_0_3"
+        }
+      ],
+      "title" : "Complex Numbers"
+    },
+    {
+      "description" : "Polynomial Functions unit from Algebra 2",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_1_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Polynomial Functions\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "polynomial functions"
+          ],
+          "slug" : "polynomial-functions-practice",
+          "title" : "Polynomial Functions Practice"
+        }
+      ],
+      "id" : "unit_algebra2_1",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_1_0",
+          "slug" : "introduction-to-polynomial-functions",
+          "title" : "Introduction to Polynomial Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_1_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_1_1",
+          "slug" : "practice-with-polynomial-functions",
+          "title" : "Practice with Polynomial Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_1_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_1_2",
+          "slug" : "advanced-polynomial-functions",
+          "title" : "Advanced Polynomial Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_1_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_1_3",
+          "slug" : "review-of-polynomial-functions",
+          "title" : "Review of Polynomial Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_1_3"
+        }
+      ],
+      "title" : "Polynomial Functions"
+    },
+    {
+      "description" : "Rational Functions unit from Algebra 2",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_2_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Rational Functions\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "rational functions"
+          ],
+          "slug" : "rational-functions-practice",
+          "title" : "Rational Functions Practice"
+        }
+      ],
+      "id" : "unit_algebra2_2",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_2_0",
+          "slug" : "introduction-to-rational-functions",
+          "title" : "Introduction to Rational Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_2_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_2_1",
+          "slug" : "practice-with-rational-functions",
+          "title" : "Practice with Rational Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_2_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_2_2",
+          "slug" : "advanced-rational-functions",
+          "title" : "Advanced Rational Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_2_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_2_3",
+          "slug" : "review-of-rational-functions",
+          "title" : "Review of Rational Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_2_3"
+        }
+      ],
+      "title" : "Rational Functions"
+    },
+    {
+      "description" : "Exponential & Logarithmic unit from Algebra 2",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_3_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Exponential & Logarithmic\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "exponential & logarithmic"
+          ],
+          "slug" : "exponential-&-logarithmic-practice",
+          "title" : "Exponential & Logarithmic Practice"
+        }
+      ],
+      "id" : "unit_algebra2_3",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_3_0",
+          "slug" : "introduction-to-exponential-&-logarithmic",
+          "title" : "Introduction to Exponential & Logarithmic",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_3_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_3_1",
+          "slug" : "practice-with-exponential-&-logarithmic",
+          "title" : "Practice with Exponential & Logarithmic",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_3_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_3_2",
+          "slug" : "advanced-exponential-&-logarithmic",
+          "title" : "Advanced Exponential & Logarithmic",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_3_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_3_3",
+          "slug" : "review-of-exponential-&-logarithmic",
+          "title" : "Review of Exponential & Logarithmic",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_3_3"
+        }
+      ],
+      "title" : "Exponential & Logarithmic"
+    },
+    {
+      "description" : "Trigonometry unit from Algebra 2",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_4_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Trigonometry\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "trigonometry"
+          ],
+          "slug" : "trigonometry-practice",
+          "title" : "Trigonometry Practice"
+        }
+      ],
+      "id" : "unit_algebra2_4",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_4_0",
+          "slug" : "introduction-to-trigonometry",
+          "title" : "Introduction to Trigonometry",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_4_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_4_1",
+          "slug" : "practice-with-trigonometry",
+          "title" : "Practice with Trigonometry",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_4_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_4_2",
+          "slug" : "advanced-trigonometry",
+          "title" : "Advanced Trigonometry",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_4_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_4_3",
+          "slug" : "review-of-trigonometry",
+          "title" : "Review of Trigonometry",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_4_3"
+        }
+      ],
+      "title" : "Trigonometry"
+    }
+  ]
+}

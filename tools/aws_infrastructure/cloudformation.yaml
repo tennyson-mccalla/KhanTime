@@ -1,0 +1,255 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: TimeBack Khan Academy Content Hosting Infrastructure
+Parameters:
+  Environment:
+    Type: String
+    Default: dev
+    AllowedValues:
+    - dev
+    - staging
+    - prod
+    Description: Environment name
+Resources:
+  ContentBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName:
+        Ref: AWS::NoValue
+      VersioningConfiguration:
+        Status: Enabled
+      CorsConfiguration:
+        CorsRules:
+        - AllowedHeaders:
+          - '*'
+          AllowedMethods:
+          - GET
+          - HEAD
+          AllowedOrigins:
+          - '*'
+          MaxAge: 3600
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+        RestrictPublicBuckets: false
+  ContentBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket:
+        Ref: ContentBucket
+      PolicyDocument:
+        Statement:
+        - Sid: PublicReadGetObject
+          Effect: Allow
+          Principal: '*'
+          Action: s3:GetObject
+          Resource:
+            Fn::Sub: ${ContentBucket}/*
+  ContentMetadataTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName:
+        Fn::Sub: ${AWS::StackName}-content-metadata
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+      - AttributeName: sourcedId
+        AttributeType: S
+      - AttributeName: type
+        AttributeType: S
+      KeySchema:
+      - AttributeName: sourcedId
+        KeyType: HASH
+      GlobalSecondaryIndexes:
+      - IndexName: TypeIndex
+        KeySchema:
+        - AttributeName: type
+          KeyType: HASH
+        Projection:
+          ProjectionType: ALL
+      StreamSpecification:
+        StreamViewType: NEW_AND_OLD_IMAGES
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service: lambda.amazonaws.com
+          Action: sts:AssumeRole
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+      - PolicyName: TimeBackContentAccess
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Action:
+            - s3:GetObject
+            - s3:PutObject
+            - s3:DeleteObject
+            Resource:
+              Fn::Sub: ${ContentBucket}/*
+          - Effect: Allow
+            Action:
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:Query
+            - dynamodb:Scan
+            Resource:
+            - Fn::GetAtt:
+              - ContentMetadataTable
+              - Arn
+            - Fn::Sub: ${ContentMetadataTable}/index/*
+  TimeBackAPIFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName:
+        Fn::Sub: ${AWS::StackName}-api
+      Runtime: python3.11
+      Handler: index.lambda_handler
+      Role:
+        Fn::GetAtt:
+        - LambdaExecutionRole
+        - Arn
+      Environment:
+        Variables:
+          CONTENT_BUCKET:
+            Ref: ContentBucket
+          METADATA_TABLE:
+            Ref: ContentMetadataTable
+      Code:
+        ZipFile:
+          Fn::Sub: "\nimport json\nimport boto3\nimport os\nfrom datetime import datetime\n\
+            \ns3 = boto3.client('s3')\ndynamodb = boto3.resource('dynamodb')\n\nCONTENT_BUCKET\
+            \ = os.environ['CONTENT_BUCKET']\nMETADATA_TABLE = os.environ['METADATA_TABLE']\n\
+            \ndef lambda_handler(event, context):\n    \"\"\"Handle TimeBack API requests\"\
+            \"\"\n    \n    path = event.get('path', '')\n    method = event.get('httpMethod',\
+            \ 'GET')\n    \n    try:\n        # Parse OneRoster API paths\n      \
+            \  if path.startswith('/orgs'):\n            return handle_organizations(event)\n\
+            \        elif path.startswith('/courses'):\n            return handle_courses(event)\n\
+            \        elif path.startswith('/powerpath/syllabus'):\n            return\
+            \ handle_syllabus(event)\n        elif path.startswith('/health'):\n \
+            \           return {\n                'statusCode': 200,\n           \
+            \     'body': json.dumps({'status': 'healthy', 'timestamp': datetime.utcnow().isoformat()})\n\
+            \            }\n        else:\n            return {\n                'statusCode':\
+            \ 404,\n                'body': json.dumps({'error': 'Not found'})\n \
+            \           }\n            \n    except Exception as e:\n        return\
+            \ {\n            'statusCode': 500,\n            'body': json.dumps({'error':\
+            \ str(e)})\n        }\n\ndef handle_organizations(event):\n    \"\"\"\
+            Handle organization endpoints\"\"\"\n    return {\n        'statusCode':\
+            \ 200,\n        'body': json.dumps({\n            'orgs': [{\n       \
+            \         'sourcedId': 'khan-academy-converted',\n                'name':\
+            \ 'Khan Academy Converted Content',\n                'type': 'national',\n\
+            \                'status': 'active'\n            }]\n        })\n    }\n\
+            \ndef handle_courses(event):\n    \"\"\"Handle course endpoints\"\"\"\n\
+            \    path_params = event.get('pathParameters', {})\n    \n    if not path_params\
+            \ or not path_params.get('courseId'):\n        # List all courses\n  \
+            \      return list_courses()\n    else:\n        # Get specific course\n\
+            \        course_id = path_params['courseId']\n        return get_course(course_id)\n\
+            \ndef handle_syllabus(event):\n    \"\"\"Handle syllabus endpoints\"\"\
+            \"\n    path_params = event.get('pathParameters', {})\n    course_id =\
+            \ path_params.get('courseId')\n    \n    if not course_id:\n        return\
+            \ {\n            'statusCode': 400,\n            'body': json.dumps({'error':\
+            \ 'Course ID required'})\n        }\n    \n    return get_syllabus(course_id)\n\
+            \ndef list_courses():\n    \"\"\"List all available courses\"\"\"\n  \
+            \  # In a full implementation, this would query DynamoDB\n    # For now,\
+            \ return hardcoded Khan Academy converted courses\n    return {\n    \
+            \    'statusCode': 200,\n        'body': json.dumps({\n            'courses':\
+            \ [{\n                'sourcedId': 'pre-algebra-converted',\n        \
+            \        'title': 'Pre-algebra (Khan Academy)',\n                'courseCode':\
+            \ 'KHAN_PRE-ALGEBRA',\n                'grades': ['6-8'],\n          \
+            \      'subjects': ['mathematics'],\n                'status': 'active'\n\
+            \            }]\n        })\n    }\n\ndef get_course(course_id):\n   \
+            \ \"\"\"Get specific course details\"\"\"\n    try:\n        # Try to\
+            \ load course from S3\n        response = s3.get_object(\n           \
+            \ Bucket=CONTENT_BUCKET,\n            Key=f'courses/{course_id}.json'\n\
+            \        )\n        course_data = json.loads(response['Body'].read())\n\
+            \        \n        return {\n            'statusCode': 200,\n        \
+            \    'body': json.dumps(course_data)\n        }\n    except s3.exceptions.NoSuchKey:\n\
+            \        return {\n            'statusCode': 404,\n            'body':\
+            \ json.dumps({'error': 'Course not found'})\n        }\n\ndef get_syllabus(course_id):\n\
+            \    \"\"\"Get course syllabus\"\"\"\n    try:\n        # Try to load\
+            \ syllabus from S3\n        response = s3.get_object(\n            Bucket=CONTENT_BUCKET,\n\
+            \            Key=f'syllabi/{course_id}.json'\n        )\n        syllabus_data\
+            \ = json.loads(response['Body'].read())\n        \n        return {\n\
+            \            'statusCode': 200,\n            'body': json.dumps({'syllabus':\
+            \ syllabus_data})\n        }\n    except s3.exceptions.NoSuchKey:\n  \
+            \      return {\n            'statusCode': 404,\n            'body': json.dumps({'error':\
+            \ 'Syllabus not found'})\n        }\n"
+      Timeout: 30
+  TimeBackAPI:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name:
+        Fn::Sub: ${AWS::StackName}-api
+      Description: TimeBack Khan Academy Content API
+      EndpointConfiguration:
+        Types:
+        - REGIONAL
+  ContentDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Origins:
+        - Id: S3Origin
+          DomainName:
+            Fn::GetAtt:
+            - ContentBucket
+            - DomainName
+          S3OriginConfig:
+            OriginAccessIdentity: ''
+        DefaultCacheBehavior:
+          TargetOriginId: S3Origin
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods:
+          - GET
+          - HEAD
+          - OPTIONS
+          CachedMethods:
+          - GET
+          - HEAD
+          ForwardedValues:
+            QueryString: false
+            Cookies:
+              Forward: none
+          MinTTL: 0
+          DefaultTTL: 86400
+          MaxTTL: 31536000
+        Enabled: true
+        Comment: TimeBack Khan Academy Content CDN
+Outputs:
+  ContentBucketName:
+    Description: Name of the S3 bucket for content
+    Value:
+      Ref: ContentBucket
+    Export:
+      Name:
+        Fn::Sub: ${AWS::StackName}-ContentBucket
+  APIEndpoint:
+    Description: API Gateway endpoint URL
+    Value:
+      Fn::Sub: https://${TimeBackAPI}.execute-api.${AWS::Region}.amazonaws.com/v1
+    Export:
+      Name:
+        Fn::Sub: ${AWS::StackName}-APIEndpoint
+  CDNEndpoint:
+    Description: CloudFront distribution endpoint
+    Value:
+      Fn::GetAtt:
+      - ContentDistribution
+      - DomainName
+    Export:
+      Name:
+        Fn::Sub: ${AWS::StackName}-CDNEndpoint
+  MetadataTableName:
+    Description: DynamoDB table for content metadata
+    Value:
+      Ref: ContentMetadataTable
+    Export:
+      Name:
+        Fn::Sub: ${AWS::StackName}-MetadataTable

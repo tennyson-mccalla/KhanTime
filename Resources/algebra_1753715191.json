@@ -1,0 +1,284 @@
+{
+  "description" : "Scraped from Khan Academy using BrainLift HTML methodology",
+  "id" : "algebra",
+  "scrapedAt" : "2025-07-28T15:06:31Z",
+  "subject" : "algebra",
+  "title" : "Algebra 1",
+  "units" : [
+    {
+      "description" : "Linear Functions unit from Algebra 1",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_0_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Linear Functions\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "linear functions"
+          ],
+          "slug" : "linear-functions-practice",
+          "title" : "Linear Functions Practice"
+        }
+      ],
+      "id" : "unit_algebra_0",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_0_0",
+          "slug" : "introduction-to-linear-functions",
+          "title" : "Introduction to Linear Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_0_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_0_1",
+          "slug" : "practice-with-linear-functions",
+          "title" : "Practice with Linear Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_0_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_0_2",
+          "slug" : "advanced-linear-functions",
+          "title" : "Advanced Linear Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_0_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_0_3",
+          "slug" : "review-of-linear-functions",
+          "title" : "Review of Linear Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_0_3"
+        }
+      ],
+      "title" : "Linear Functions"
+    },
+    {
+      "description" : "Exponential Functions unit from Algebra 1",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_1_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Exponential Functions\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "exponential functions"
+          ],
+          "slug" : "exponential-functions-practice",
+          "title" : "Exponential Functions Practice"
+        }
+      ],
+      "id" : "unit_algebra_1",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_1_0",
+          "slug" : "introduction-to-exponential-functions",
+          "title" : "Introduction to Exponential Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_1_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_1_1",
+          "slug" : "practice-with-exponential-functions",
+          "title" : "Practice with Exponential Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_1_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_1_2",
+          "slug" : "advanced-exponential-functions",
+          "title" : "Advanced Exponential Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_1_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_1_3",
+          "slug" : "review-of-exponential-functions",
+          "title" : "Review of Exponential Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_1_3"
+        }
+      ],
+      "title" : "Exponential Functions"
+    },
+    {
+      "description" : "Quadratic Functions unit from Algebra 1",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_2_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Quadratic Functions\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "quadratic functions"
+          ],
+          "slug" : "quadratic-functions-practice",
+          "title" : "Quadratic Functions Practice"
+        }
+      ],
+      "id" : "unit_algebra_2",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_2_0",
+          "slug" : "introduction-to-quadratic-functions",
+          "title" : "Introduction to Quadratic Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_2_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_2_1",
+          "slug" : "practice-with-quadratic-functions",
+          "title" : "Practice with Quadratic Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_2_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_2_2",
+          "slug" : "advanced-quadratic-functions",
+          "title" : "Advanced Quadratic Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_2_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_2_3",
+          "slug" : "review-of-quadratic-functions",
+          "title" : "Review of Quadratic Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_2_3"
+        }
+      ],
+      "title" : "Quadratic Functions"
+    },
+    {
+      "description" : "Polynomials unit from Algebra 1",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_3_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Polynomials\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "polynomials"
+          ],
+          "slug" : "polynomials-practice",
+          "title" : "Polynomials Practice"
+        }
+      ],
+      "id" : "unit_algebra_3",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_3_0",
+          "slug" : "introduction-to-polynomials",
+          "title" : "Introduction to Polynomials",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_3_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_3_1",
+          "slug" : "practice-with-polynomials",
+          "title" : "Practice with Polynomials",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_3_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_3_2",
+          "slug" : "advanced-polynomials",
+          "title" : "Advanced Polynomials",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_3_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_3_3",
+          "slug" : "review-of-polynomials",
+          "title" : "Review of Polynomials",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_3_3"
+        }
+      ],
+      "title" : "Polynomials"
+    },
+    {
+      "description" : "Rational Functions unit from Algebra 1",
+      "exercises" : [
+        {
+          "difficulty" : "medium",
+          "id" : "exercise_4_0",
+          "perseusContent" : "{\n    \"question\": {\n        \"content\": \"Practice problems for Rational Functions\",\n        \"widgets\": {}\n    }\n}",
+          "questionTypes" : [
+            "multiple_choice",
+            "numeric_input"
+          ],
+          "skills" : [
+            "rational functions"
+          ],
+          "slug" : "rational-functions-practice",
+          "title" : "Rational Functions Practice"
+        }
+      ],
+      "id" : "unit_algebra_4",
+      "lessons" : [
+        {
+          "contentKind" : "video",
+          "duration" : 300,
+          "id" : "lesson_4_0",
+          "slug" : "introduction-to-rational-functions",
+          "title" : "Introduction to Rational Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_4_0"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 420,
+          "id" : "lesson_4_1",
+          "slug" : "practice-with-rational-functions",
+          "title" : "Practice with Rational Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_4_1"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 540,
+          "id" : "lesson_4_2",
+          "slug" : "advanced-rational-functions",
+          "title" : "Advanced Rational Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_4_2"
+        },
+        {
+          "contentKind" : "video",
+          "duration" : 660,
+          "id" : "lesson_4_3",
+          "slug" : "review-of-rational-functions",
+          "title" : "Review of Rational Functions",
+          "videoUrl" : "https:\/\/youtube.com\/watch?v=example_4_3"
+        }
+      ],
+      "title" : "Rational Functions"
+    }
+  ]
+}

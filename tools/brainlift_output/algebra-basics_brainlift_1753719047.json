@@ -1,0 +1,824 @@
+{
+  "description" : "Learn the basics of algebra—focused on common mathematical relationships, such as linear relationships.",
+  "id" : "algebra-basics",
+  "scrapedAt" : "2025-07-28T16:10:21Z",
+  "subject" : "algebra-basics",
+  "title" : "Algebra basics",
+  "units" : [
+    {
+      "description" : "This topic isn't algebra, but it is a survey of all of the most important pre-algebra skills you need to really digest algebra.  These skills also tend to be pretty important in life in general!",
+      "exercises" : [
+
+      ],
+      "id" : "xbe49b507",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x80141162",
+          "slug" : "alg-basics-negative-numbers",
+          "title" : "Negative numbers",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/basic-alg-foundations\/alg-basics-negative-numbers"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xd7129782",
+          "slug" : "alg-basics-absolute-value-new",
+          "title" : "Absolute value",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/basic-alg-foundations\/alg-basics-absolute-value-new"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xe9acebfa6d960c0c",
+          "slug" : "basic-alg-foundations-quiz-1",
+          "title" : "Foundations: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x0d1912bd",
+          "slug" : "alg-basics-exponents",
+          "title" : "Exponents",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/basic-alg-foundations\/alg-basics-exponents"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x69c70cfb",
+          "slug" : "alg-basics-roots",
+          "title" : "Square roots",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/basic-alg-foundations\/alg-basics-roots"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x0575ccd6f4e2e7d6",
+          "slug" : "basic-alg-foundations-quiz-2",
+          "title" : "Foundations: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xc2dc2082",
+          "slug" : "alg-basics-order-of-operations",
+          "title" : "Order of operations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/basic-alg-foundations\/alg-basics-order-of-operations"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x664223c9",
+          "slug" : "alg-basics-fractions",
+          "title" : "Fractions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/basic-alg-foundations\/alg-basics-fractions"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xf2c04ca9ccef0fbc",
+          "slug" : "basic-alg-foundations-quiz-3",
+          "title" : "Foundations: Quiz 3"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x2b7aa3bb",
+          "slug" : "alg-basics-decimals",
+          "title" : "Decimals, fractions and percentages",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/basic-alg-foundations\/alg-basics-decimals"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x51acf3b81ff18711",
+          "slug" : "basic-alg-foundations-quiz-4",
+          "title" : "Foundations: Quiz 4"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5c2f1bc5",
+          "slug" : "alg-basics-operations-with-decimals",
+          "title" : "Operations with decimals",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/basic-alg-foundations\/alg-basics-operations-with-decimals"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xfb6198811e92b36a",
+          "slug" : "basic-alg-foundations-quiz-5",
+          "title" : "Foundations: Quiz 5"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x0bd0973e",
+          "slug" : "alg-basics-area-triangle",
+          "title" : "Area of triangles",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/basic-alg-foundations\/alg-basics-area-triangle"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xb082adeb",
+          "slug" : "alg-basics-circles",
+          "title" : "Circumference and area of circles",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/basic-alg-foundations\/alg-basics-circles"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x1bc577c6d22a77f0",
+          "slug" : "basic-alg-foundations-quiz-6",
+          "title" : "Foundations: Quiz 6"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "xcb4adef81a9f8f66",
+          "slug" : "basic-alg-foundations-unit-test",
+          "title" : "Foundations: Unit test"
+        }
+      ],
+      "title" : "Foundations"
+    },
+    {
+      "description" : "The core idea in algebra is using letters to represent relationships between numbers without specifying what those numbers are! Let's explore the basics of communicating in algebraic expressions.",
+      "exercises" : [
+
+      ],
+      "id" : "x93c46285",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x3c72fc31",
+          "slug" : "alg-basics-intro-to-variables",
+          "title" : "Introduction to variables",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-algebraic-expressions\/alg-basics-intro-to-variables"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x28aa57bb",
+          "slug" : "alg-basics-substitution",
+          "title" : "Substitution & evaluating expressions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-algebraic-expressions\/alg-basics-substitution"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x37656044",
+          "slug" : "alg-basics-writing-expressions",
+          "title" : "Writing algebraic expressions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-algebraic-expressions\/alg-basics-writing-expressions"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xce9d888abf212f93",
+          "slug" : "alg-basics-algebraic-expressions-quiz-1",
+          "title" : "Algebraic expressions: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xb9bbece4",
+          "slug" : "alg-basics-combining-like-terms",
+          "title" : "Combining like terms",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-algebraic-expressions\/alg-basics-combining-like-terms"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x48113d75",
+          "slug" : "alg-basics-distributive-property",
+          "title" : "Distributive property",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-algebraic-expressions\/alg-basics-distributive-property"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x9364151b",
+          "slug" : "alg-basics-equivalent-expressions",
+          "title" : "Equivalent algebraic expressions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-algebraic-expressions\/alg-basics-equivalent-expressions"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x7e1f5ccd",
+          "slug" : "alg-basics-nested-fractions",
+          "title" : "Nested fractions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-algebraic-expressions\/alg-basics-nested-fractions"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xd9c38e873f6eceac",
+          "slug" : "alg-basics-algebraic-expressions-quiz-2",
+          "title" : "Algebraic expressions: Quiz 2"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x56b499e7e7c43958",
+          "slug" : "alg-basics-algebraic-expressions-unit-test",
+          "title" : "Algebraic expressions: Unit test"
+        }
+      ],
+      "title" : "Algebraic expressions"
+    },
+    {
+      "description" : "We will now equate two algebraic expressions and think about how it might constrain what value the variables can take on.  The algebraic manipulation you learn here really is the heart of algebra.",
+      "exercises" : [
+
+      ],
+      "id" : "x649777e8",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x8c345638",
+          "slug" : "alg-basics-one-step-add-sub-equations",
+          "title" : "One-step equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-linear-equations-and-inequalities\/alg-basics-one-step-add-sub-equations"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x692018fa",
+          "slug" : "alg-basics-two-steps-equations-intro",
+          "title" : "Two-steps equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-linear-equations-and-inequalities\/alg-basics-two-steps-equations-intro"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xf7f518df",
+          "slug" : "alg-basics-variables-on-both-sides",
+          "title" : "Multi-step equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-linear-equations-and-inequalities\/alg-basics-variables-on-both-sides"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x8e73ece00285db31",
+          "slug" : "alg-basics-linear-equations-and-inequalities-quiz-1",
+          "title" : "Linear equations and inequalities: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x4906a73d",
+          "slug" : "alg-basics-one-step-inequalities",
+          "title" : "One-step inequalities",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-linear-equations-and-inequalities\/alg-basics-one-step-inequalities"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xd34b5bf4",
+          "slug" : "alg-basics-two-step-inequalities",
+          "title" : "Two-step inequalities",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-linear-equations-and-inequalities\/alg-basics-two-step-inequalities"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x4f0a8aef",
+          "slug" : "alg-basics-multi-step-inequalities",
+          "title" : "Multi-step inequalities",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-linear-equations-and-inequalities\/alg-basics-multi-step-inequalities"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xf086bef4c7147206",
+          "slug" : "alg-basics-linear-equations-and-inequalities-quiz-2",
+          "title" : "Linear equations and inequalities: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xa2d573f4",
+          "slug" : "alg-basics-write-and-solve-proportions",
+          "title" : "Writing & solving proportions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-linear-equations-and-inequalities\/alg-basics-write-and-solve-proportions"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xb49ee546b0dc05f6",
+          "slug" : "alg-basics-linear-equations-and-inequalities-quiz-3",
+          "title" : "Linear equations and inequalities: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x2516f997859adc48",
+          "slug" : "alg-basics-linear-equations-and-inequalities-unit-test",
+          "title" : "Linear equations and inequalities: Unit test"
+        }
+      ],
+      "title" : "Linear equations and inequalities"
+    },
+    {
+      "description" : "Use the power of algebra to understand and interpret points and lines (something we typically do in geometry).  Topics you'll explore include the slope and the equation of a line.",
+      "exercises" : [
+
+      ],
+      "id" : "x1df8fb3e",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xb21ca6f7",
+          "slug" : "alg-basics-coordinate-planee",
+          "title" : "Coordinate plane",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-graphing-lines-and-slope\/alg-basics-coordinate-planee"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xc7fdf87d",
+          "slug" : "alg-basics-solutions-to-two-var-equations",
+          "title" : "Solutions to two-variable linear equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-graphing-lines-and-slope\/alg-basics-solutions-to-two-var-equations"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xee5afd4c",
+          "slug" : "alg-basics-x-and-y-intercepts",
+          "title" : "x-intercepts and y-intercepts",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-graphing-lines-and-slope\/alg-basics-x-and-y-intercepts"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x644f5f59c50936a9",
+          "slug" : "alg-basics-graphing-lines-and-slope-quiz-1",
+          "title" : "Graphing lines and slope: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xad6803a3",
+          "slug" : "alg-basics-slope",
+          "title" : "Slope",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-graphing-lines-and-slope\/alg-basics-slope"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x48af2c6c48c7c792",
+          "slug" : "hor-and-ver-lines-alg-basics",
+          "title" : "Horizontal & vertical lines",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-graphing-lines-and-slope\/hor-and-ver-lines-alg-basics"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x9516e4dfdaa207ab",
+          "slug" : "alg-basics-graphing-lines-and-slope-quiz-2",
+          "title" : "Graphing lines and slope: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xd52d4992",
+          "slug" : "alg-basics-slope-intercept-form",
+          "title" : "Slope-intercept form intro",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-graphing-lines-and-slope\/alg-basics-slope-intercept-form"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xdc6f0c01",
+          "slug" : "alg-basics-writing-slope-intercept",
+          "title" : "Writing slope-intercept equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-graphing-lines-and-slope\/alg-basics-writing-slope-intercept"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x96244b98",
+          "slug" : "alg-basics-graphing-inequalities",
+          "title" : "Graphing two-variable inequalities",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-graphing-lines-and-slope\/alg-basics-graphing-inequalities"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x39eb1cc305ad6566",
+          "slug" : "alg-basics-graphing-lines-and-slope-quiz-3",
+          "title" : "Graphing lines and slope: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x65cd424fd1ffb654",
+          "slug" : "alg-basics-graphing-lines-and-slope-unit-test",
+          "title" : "Graphing lines and slope: Unit test"
+        }
+      ],
+      "title" : "Graphing lines and slope"
+    },
+    {
+      "description" : "How can you use clues from two algebraic expressions to figure out the value of a variable? In this unit, you'll learn how to solve a system of equations or inequalities in two variables by elimination, substitution, and graphing.",
+      "exercises" : [
+
+      ],
+      "id" : "x17e6e850",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xd93e8cc4",
+          "slug" : "alg-basics-intro-to-systems-of-equations",
+          "title" : "Systems of equations intro",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-systems-of-equations\/alg-basics-intro-to-systems-of-equations"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x16c2ab98",
+          "slug" : "alg-basics-elimination-method-systems",
+          "title" : "Elimination method for systems of equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-systems-of-equations\/alg-basics-elimination-method-systems"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x95ef9f12",
+          "slug" : "alg-basics-solving-systems-with-substitution",
+          "title" : "Substitution method for systems of equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-systems-of-equations\/alg-basics-solving-systems-with-substitution"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x513094ccf32ef786",
+          "slug" : "alg-basics-systems-of-equations-quiz-1",
+          "title" : "Systems of equations: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x1a854bdb639c4b20",
+          "slug" : "alg-basics-systems-number-of-solutions",
+          "title" : "Number of solutions to systems of equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-systems-of-equations\/alg-basics-systems-number-of-solutions"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xea4f34f6ba304f76",
+          "slug" : "alg-basics-systems-of-equations-quiz-2",
+          "title" : "Systems of equations: Quiz 2"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "xf30a3a9c62b17983",
+          "slug" : "alg-basics-systems-of-equations-unit-test",
+          "title" : "Systems of equations: Unit test"
+        }
+      ],
+      "title" : "Systems of equations"
+    },
+    {
+      "description" : "Expand your algebra superpowers by introducing exponents! Let's build our toolkit that allows us to manipulate exponents algebraically.",
+      "exercises" : [
+
+      ],
+      "id" : "x25c03557",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xec1dedefce7801d0",
+          "slug" : "alg-basics-exponent-properties-intro",
+          "title" : "Exponent properties intro ",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-expressions-with-exponents\/alg-basics-exponent-properties-intro"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x74277923b9d5c5ab",
+          "slug" : "alg-basics-expressions-with-exponents-quiz-1",
+          "title" : "Expressions with exponents: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x341b0d74",
+          "slug" : "alg-basics-pos-neg-exponents",
+          "title" : "Negative exponents",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-expressions-with-exponents\/alg-basics-pos-neg-exponents"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x7fee16aa",
+          "slug" : "alg-basics-exponent-properties",
+          "title" : "Exponent properties (integer exponents) ",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-expressions-with-exponents\/alg-basics-exponent-properties"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xf4aa09f136af4229",
+          "slug" : "alg-basics-expressions-with-exponents-quiz-2",
+          "title" : "Expressions with exponents: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xd20e0928",
+          "slug" : "alg-basics-scientific-notation",
+          "title" : "Scientific notation intro",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-expressions-with-exponents\/alg-basics-scientific-notation"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5783c070",
+          "slug" : "alg-basics-scientific-notation-word-problems",
+          "title" : "Scientific notation word problems",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-expressions-with-exponents\/alg-basics-scientific-notation-word-problems"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x24154af381de6091",
+          "slug" : "alg-basics-expressions-with-exponents-quiz-3",
+          "title" : "Expressions with exponents: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "xe91204f29be723fb",
+          "slug" : "alg-basics-expressions-with-exponents-unit-test",
+          "title" : "Expressions with exponents: Unit test"
+        }
+      ],
+      "title" : "Expressions with exponents"
+    },
+    {
+      "description" : "We'll now progress beyond the world of purely linear expressions and equations and enter the world of quadratics (and more generally polynomials).  Learn to factor expressions that have powers of 2 in them and solve quadratic equations.  We'll also learn to manipulate more general polynomial expressions.",
+      "exercises" : [
+
+      ],
+      "id" : "x95928316",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x651686cb",
+          "slug" : "alg-basics-adding-and-subtracting-polynomials",
+          "title" : "Adding & subtracting polynomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-quadratics-and-polynomials\/alg-basics-adding-and-subtracting-polynomials"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xfcd05afd",
+          "slug" : "alg-basics-multiplying-binomials",
+          "title" : "Multiplying binomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-quadratics-and-polynomials\/alg-basics-multiplying-binomials"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x490fca64",
+          "slug" : "alg-basics-special-products-of-polynomials",
+          "title" : "Special products of binomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-quadratics-and-polynomials\/alg-basics-special-products-of-polynomials"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x6f7ff6bb3c93f743",
+          "slug" : "alg-basics-quadratics-and-polynomials-quiz-1",
+          "title" : "Quadratics and polynomials: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x07551a86",
+          "slug" : "alg-basics-factoring-polynomials-1-common-factors",
+          "title" : "Factoring polynomials by taking common factors",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-quadratics-and-polynomials\/alg-basics-factoring-polynomials-1-common-factors"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x9d038a47",
+          "slug" : "alg-basics-factoring-quadratics-1",
+          "title" : "Factoring quadratics 1",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-quadratics-and-polynomials\/alg-basics-factoring-quadratics-1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x44b3c0e7",
+          "slug" : "alg-basics-factoring-quadratics-2",
+          "title" : "Factoring quadratics 2",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-quadratics-and-polynomials\/alg-basics-factoring-quadratics-2"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x475717e8bd538be2",
+          "slug" : "alg-basics-quadratics-and-polynomials-quiz-2",
+          "title" : "Quadratics and polynomials: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xd3b2734e",
+          "slug" : "alg-basics-factoring-diff-of-squares",
+          "title" : "Factoring quadratics: Difference of squares",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-quadratics-and-polynomials\/alg-basics-factoring-diff-of-squares"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xa9bafadc",
+          "slug" : "alg-basics-factoring-perfect-squares",
+          "title" : "Factoring quadratics: Perfect squares",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-quadratics-and-polynomials\/alg-basics-factoring-perfect-squares"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xfe29f1b8",
+          "slug" : "alg-basics-solving-quadratics-by-factoring",
+          "title" : "Solving quadratic equations by factoring",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-quadratics-and-polynomials\/alg-basics-solving-quadratics-by-factoring"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x56558079b18ddad1",
+          "slug" : "alg-basics-quadratics-and-polynomials-quiz-3",
+          "title" : "Quadratics and polynomials: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x26a7b9748e2b81a2",
+          "slug" : "alg-basics-quadratics-and-polynomials-unit-test",
+          "title" : "Quadratics and polynomials: Unit test"
+        }
+      ],
+      "title" : "Quadratics and polynomials"
+    },
+    {
+      "description" : "Algebra can be applied to angles and shapes as well! In this unit, you'll investigate how algebra can be useful when solving geometrical problems.",
+      "exercises" : [
+
+      ],
+      "id" : "x305b9738",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x7914ab6f942455b4",
+          "slug" : "equations-geometry",
+          "title" : "Equations & geometry",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-equations-and-geometry\/equations-geometry"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x3ccd8a89",
+          "slug" : "alg-basics-triangle-angles",
+          "title" : "Triangle angles",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-equations-and-geometry\/alg-basics-triangle-angles"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xf55cb33e",
+          "slug" : "alg-basics-pythagorean-theorem",
+          "title" : "Pythagorean theorem",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-equations-and-geometry\/alg-basics-pythagorean-theorem"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x0369553a",
+          "slug" : "alg-basics-intro-to-triangle-similarity",
+          "title" : "Triangle similarity intro",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-equations-and-geometry\/alg-basics-intro-to-triangle-similarity"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xa3633acb",
+          "slug" : "alg-basics-solving-similar-triangles",
+          "title" : "Solving similar triangles",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra-basics\/alg-basics-equations-and-geometry\/alg-basics-solving-similar-triangles"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x2378e6f97a54b275",
+          "slug" : "alg-basics-equations-and-geometry-unit-test",
+          "title" : "Equations and geometry: Unit test"
+        }
+      ],
+      "title" : "Equations and geometry"
+    }
+  ]
+}

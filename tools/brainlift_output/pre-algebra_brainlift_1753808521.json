@@ -1,0 +1,226 @@
+{
+  "description" : "Learn pre-algebra—all of the basic arithmetic and geometry skills needed for algebra.",
+  "id" : "pre-algebra",
+  "scrapedAt" : "2025-07-29T17:01:53Z",
+  "subject" : "pre-algebra",
+  "title" : "Pre-algebra",
+  "units" : [
+    {
+      "description" : "Understanding and finding factors and multiples. After these videos, you'll be ready for fractions.",
+      "exercises" : [
+
+      ],
+      "id" : "xa9d6fdff",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x88b53972",
+          "slug" : "pre-algebra-factors-mult",
+          "title" : "Factors and multiples",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/pre-algebra\/pre-algebra-factors-multiples\/pre-algebra-factors-mult"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x0031dc8894fba80c",
+          "slug" : "pre-algebra-factors-multiples-quiz-1",
+          "title" : "Factors and multiples: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x71ebcf30",
+          "slug" : "pre-algebra-prime-numbers",
+          "title" : "Prime and composite numbers",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/pre-algebra\/pre-algebra-factors-multiples\/pre-algebra-prime-numbers"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x6231048e",
+          "slug" : "pre-algebra-prime-factorization-prealg",
+          "title" : "Prime factorization",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/pre-algebra\/pre-algebra-factors-multiples\/pre-algebra-prime-factorization-prealg"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x4235a9c5c2060db4",
+          "slug" : "pre-algebra-factors-multiples-quiz-2",
+          "title" : "Factors and multiples: Quiz 2"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "xc6f8253b076a1ba4",
+          "slug" : "pre-algebra-factors-multiples-unit-test",
+          "title" : "Factors and multiples: Unit test"
+        }
+      ],
+      "title" : "Factors and multiples"
+    },
+    {
+      "description" : "",
+      "exercises" : [
+
+      ],
+      "id" : "xc624794c56ea8bbf",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xb431238fedc6c1ed",
+          "slug" : "xb4832e56:math-patterns",
+          "title" : "Math patterns",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/pre-algebra\/xb4832e56:patterns\/xb4832e56:math-patterns"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x486acecfc4266ec5",
+          "slug" : "xb4832e56:writing-expressions",
+          "title" : "Writing expressions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/pre-algebra\/xb4832e56:patterns\/xb4832e56:writing-expressions"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x63366648e33d5b9e",
+          "slug" : "xb4832e56:patterns-quiz-1",
+          "title" : "Patterns: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xfb6f3ec387afebec",
+          "slug" : "xb4832e56:number-patterns",
+          "title" : "Number patterns",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/pre-algebra\/xb4832e56:patterns\/xb4832e56:number-patterns"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x500db012bca78568",
+          "slug" : "xb4832e56:patterns-quiz-2",
+          "title" : "Patterns: Quiz 2"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x736d93b63509dfc6",
+          "slug" : "xb4832e56:patterns-unit-test",
+          "title" : "Patterns: Unit test"
+        }
+      ],
+      "title" : "Patterns"
+    },
+    {
+      "description" : "Learn all about proportional relationships. How are they connected to ratios and rates? What do their graphs look like? What types of word problems can we solve with proportions?",
+      "exercises" : [
+
+      ],
+      "id" : "x17923675",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x6f3b8aeb",
+          "slug" : "pre-algebra-ratios-intro",
+          "title" : "Intro to ratios",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/pre-algebra\/pre-algebra-ratios-rates\/pre-algebra-ratios-intro"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xac82be2da1cb5d62",
+          "slug" : "pre-algebra-visualize-ratios",
+          "title" : "Visualize ratios",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/pre-algebra\/pre-algebra-ratios-rates\/pre-algebra-visualize-ratios"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xb00fe50870c1feb2",
+          "slug" : "pre-algebra-ratios-rates-quiz-1",
+          "title" : "Ratios and rates: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xec263b8031028b68",
+          "slug" : "xb4832e56:equivalent-ratios",
+          "title" : "Equivalent ratios",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/pre-algebra\/pre-algebra-ratios-rates\/xb4832e56:equivalent-ratios"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xa80423d3e9d6d081",
+          "slug" : "pre-algebra-ratios-rates-quiz-2",
+          "title" : "Ratios and rates: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xb82dd750",
+          "slug" : "pre-algebra-ratio-word-problems",
+          "title" : "Ratio application",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/pre-algebra\/pre-algebra-ratios-rates\/pre-algebra-ratio-word-problems"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x84349605fdf26b86",
+          "slug" : "pre-algebra-ratios-rates-quiz-3",
+          "title" : "Ratios and rates: Quiz 3"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x6593bc4d",
+          "slug" : "pre-algebra-rates",
+          "title" : "Intro to rates",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/pre-algebra\/pre-algebra-ratios-rates\/pre-algebra-rates"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xb054706c307bc150",
+          "slug" : "pre-algebra-ratios-rates-quiz-4",
+          "title" : "Ratios and rates: Quiz 4"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x330d97ef7569ebe6",
+          "slug" : "pre-algebra-ratios-rates-unit-test",
+          "title" : "Ratios and rates: Unit test"
+        }
+      ],
+      "title" : "Ratios and rates"
+    }
+  ]
+}
