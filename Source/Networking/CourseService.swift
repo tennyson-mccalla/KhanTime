@@ -8,18 +8,16 @@ class CourseService {
         self.apiService = apiService
     }
 
-            /// Fetches all courses from the OneRoster API.
+            /// Fetches all courses from the OneRoster API with robust error handling
     func fetchAllCourses() async throws -> [Course] {
-        // Try to fetch all courses, starting with smaller batches
-        var allCourses: [Course] = []
         let limits = [100, 500, 1000, 3000] // Try progressively larger limits
+        var lastError: Error?
 
         for limit in limits {
             do {
-                print("🔍 Trying to fetch \(limit) courses...")
+                print("🔍 Trying to fetch \(limit) courses with robust parsing...")
                 let endpoint = "/ims/oneroster/rostering/v1p2/courses?limit=\(limit)"
 
-                // First, let's see what the raw response looks like
                 let url = URL(string: APIConstants.apiBaseURL + endpoint)!
                 var request = URLRequest(url: url)
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -32,67 +30,38 @@ class CourseService {
 
                 guard let httpResponse = httpResponse as? HTTPURLResponse,
                       (200...299).contains(httpResponse.statusCode) else {
-                    print("❌ HTTP error for limit \(limit)")
+                    let statusCode = (httpResponse as? HTTPURLResponse)?.statusCode ?? -1
+                    print("❌ HTTP error \(statusCode) for limit \(limit)")
                     continue
                 }
 
-                // Try to decode, but handle errors gracefully
-                let decoder = JSONDecoder()
-
-                // First try normal decoding
-                if let response = try? decoder.decode(CourseListResponse.self, from: data) {
-                    print("✅ Successfully decoded \(response.courses.count) courses")
-                    return response.courses
+                // Use robust parsing that handles malformed data gracefully
+                let courses = RobustDataParser.parseCourses(from: data)
+                
+                if !courses.isEmpty {
+                    print("✅ Successfully parsed \(courses.count) courses using robust parser")
+                    return courses
                 } else {
-                    // If that fails, log the error and try to parse what we can
-                    print("⚠️ Decoding failed, attempting manual parsing...")
-
-                    if let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
-                       let coursesArray = json["courses"] as? [[String: Any]] {
-
-                        // Manually parse courses, skipping ones with bad data
-                        for courseDict in coursesArray {
-                            if let sourcedId = courseDict["sourcedId"] as? String,
-                               let title = courseDict["title"] as? String,
-                               let dateLastModified = courseDict["dateLastModified"] as? String,
-                               let orgDict = courseDict["org"] as? [String: String],
-                               let orgSourcedId = orgDict["sourcedId"] {
-
-                                // Create a minimal course object
-                                let course = Course(
-                                    sourcedId: sourcedId,
-                                    title: title,
-                                    courseCode: courseDict["courseCode"] as? String,
-                                    grades: nil, // Skip grades to avoid validation issues
-                                    dateLastModified: dateLastModified,
-                                    org: OrgRef(sourcedId: orgSourcedId)
-                                )
-                                allCourses.append(course)
-                            }
-                        }
-
-                        if !allCourses.isEmpty {
-                            print("✅ Manually parsed \(allCourses.count) courses")
-                            return allCourses
-                        }
-                    }
+                    print("⚠️ Robust parser returned no courses for limit \(limit)")
                 }
+
             } catch {
                 print("❌ Failed to fetch \(limit) courses: \(error)")
-                if limit == 100 && allCourses.isEmpty {
-                    // If even 100 fails, something is seriously wrong
-                    throw error
+                lastError = error
+                
+                if limit == 100 {
+                    // If even 100 fails, log more details but continue trying
+                    print("⚠️ Smallest batch size failed - API may have serious issues")
                 }
             }
         }
 
-        // Return whatever we got, even if it's partial
-        if !allCourses.isEmpty {
-            return allCourses
+        // If all attempts failed, throw the last error
+        if let error = lastError {
+            throw APIError.custom("Unable to fetch courses after trying multiple batch sizes. Last error: \(error.localizedDescription)")
+        } else {
+            throw APIError.custom("No courses could be fetched - API may be returning empty results")
         }
-
-        // If we got nothing, throw an error
-        throw APIError.custom("Unable to fetch courses. The API may have data validation issues.")
     }
 
     /// Fetches a specific course by ID from the OneRoster API.
