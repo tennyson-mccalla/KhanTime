@@ -1,0 +1,158 @@
+{
+  "description" : "Learn pre-algebra—all of the basic arithmetic and geometry skills needed for algebra.",
+  "id" : "pre-algebra",
+  "scrapedAt" : "2025-07-30T00:53:43Z",
+  "subject" : "pre-algebra",
+  "title" : "Pre-algebra",
+  "units" : [
+    {
+      "description" : "Understanding and finding factors and multiples. After these videos, you'll be ready for fractions.",
+      "exercises" : [
+
+      ],
+      "id" : "xa9d6fdff",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x88b53972",
+          "lessonSteps" : [
+            {
+              "description" : "Use multiplication and an understanding of area to identify factor pairs for 6 and 16.",
+              "id" : "x0775563f039594d4",
+              "title" : "Understanding factor pairs",
+              "type" : "video",
+              "youtubeUrl" : "https:\/\/www.youtube.com\/embed\/KcKOM7Degu0"
+            },
+            {
+              "description" : "Practice finding factor pairs for whole numbers.",
+              "id" : "xe84a4d8f",
+              "title" : "Factor pairs",
+              "type" : "exercise"
+            },
+            {
+              "description" : "Sal finds the factors of 120.",
+              "id" : "2600703",
+              "title" : "Finding factors of a number",
+              "type" : "video",
+              "youtubeUrl" : "https:\/\/www.youtube.com\/embed\/vcn2ruTOwFo"
+            },
+            {
+              "description" : "Find all the factors of a number within 100.",
+              "id" : "x3a424895366179a2",
+              "title" : "Identify factors",
+              "type" : "exercise"
+            },
+            {
+              "description" : "Use the equation 3x5=15 to understand the relationship between factors and multiples.",
+              "id" : "x6cf07b5dab8b8803",
+              "title" : "Reasoning about factors and multiples",
+              "type" : "video",
+              "youtubeUrl" : "https:\/\/www.youtube.com\/embed\/g805f4HlV1Y"
+            },
+            {
+              "description" : "Sal uses divisibility rules to determine if numbers are factors of 154 and then finds multiples of 14.",
+              "id" : "xb863d3f2",
+              "title" : "Finding factors and multiples",
+              "type" : "video",
+              "youtubeUrl" : "https:\/\/www.youtube.com\/embed\/5xe-6GPR_qQ"
+            },
+            {
+              "description" : "Demonstrate understanding of factors and multiples.",
+              "id" : "x84edaea8",
+              "title" : "Relate factors and multiples",
+              "type" : "exercise"
+            },
+            {
+              "description" : "Use skip counting and division to identify multiples of 9.",
+              "id" : "x1a766ffd661cae5e",
+              "title" : "Identifying multiples",
+              "type" : "video",
+              "youtubeUrl" : "https:\/\/www.youtube.com\/embed\/U5L_aaQ6pYQ"
+            },
+            {
+              "description" : "Practice using skip counting and division to identify multiples of a given number.",
+              "id" : "x7cd3d561bb588d68",
+              "title" : "Identify multiples",
+              "type" : "exercise"
+            },
+            {
+              "description" : "Learn about factors and multiples and how they relate to each other.",
+              "id" : "x539f3263",
+              "title" : "Factors and multiples",
+              "type" : "other"
+            }
+          ],
+          "slug" : "pre-algebra-factors-mult",
+          "title" : "Factors and multiples",
+          "videoUrl" : "https:\/\/www.youtube.com\/embed\/KcKOM7Degu0"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x0031dc8894fba80c",
+          "slug" : "pre-algebra-factors-multiples-quiz-1",
+          "title" : "Factors and multiples: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x71ebcf30",
+          "lessonSteps" : [
+            {
+              "description" : "Prime numbers are numbers that have only 2 factors: 1 and themselves. For example, the first 5 prime numbers are 2, 3, 5, 7, and 11. By contrast, numbers with more than 2 factors are call composite numbers.",
+              "id" : "85595310",
+              "title" : "Prime numbers",
+              "type" : "video",
+              "youtubeUrl" : "https:\/\/www.youtube.com\/embed\/mIStB5X4U8M"
+            },
+            {
+              "description" : "Can you recognize the prime numbers in this group of numbers? Which are prime, composite, or neither?",
+              "id" : "158925083",
+              "title" : "Recognizing prime and composite numbers",
+              "type" : "video",
+              "youtubeUrl" : "https:\/\/www.youtube.com\/embed\/3h4UK62Qrbo"
+            },
+            {
+              "description" : "Learn about prime and composite numbers and practice identifying them.",
+              "id" : "x6a16f152",
+              "title" : "Prime and composite numbers intro",
+              "type" : "other"
+            },
+            {
+              "description" : "Identify prime numbers less than 100.",
+              "id" : "3849070",
+              "title" : "Identify prime numbers",
+              "type" : "exercise"
+            },
+            {
+              "description" : "Identify composite numbers less than 100.",
+              "id" : "702484106",
+              "title" : "Identify composite numbers",
+              "type" : "exercise"
+            },
+            {
+              "description" : "Practice identifying prime and composite numbers.",
+              "id" : "x872e38a7c474f779",
+              "title" : "Prime and composite numbers",
+              "type" : "exercise"
+            },
+            {
+              "description" : "Review prime and composite numbers, and try some practice problems.",
+              "id" : "x239bfdbe",
+              "title" : "Prime and composite numbers review",
+              "type" : "other"
+            }
+          ],
+          "slug" : "pre-algebra-prime-numbers",
+          "title" : "Prime and composite numbers",
+          "videoUrl" : "https:\/\/www.youtube.com\/embed\/mIStB5X4U8M"
+        }
+      ],
+      "title" : "Factors and multiples"
+    }
+  ]
+}

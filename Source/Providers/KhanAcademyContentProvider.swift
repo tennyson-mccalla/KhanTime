@@ -38,14 +38,14 @@ class KhanAcademyContentProvider {
                 let transcript: String?
                 // Multi-step lesson structure from BrainLift scraper
                 let lessonSteps: [ScrapedLessonStep]?
-            }
-            
-            struct ScrapedLessonStep: Codable {
-                let id: String
-                let title: String
-                let description: String?
-                let type: String
-                let youtubeUrl: String?
+                
+                struct ScrapedLessonStep: Codable {
+                    let id: String
+                    let title: String
+                    let description: String?
+                    let type: String
+                    let youtubeUrl: String?
+                }
             }
             
             struct ScrapedExercise: Codable {
@@ -312,7 +312,7 @@ class KhanAcademyContentProvider {
     
     // MARK: - Multi-Step Lesson Support
     
-    private static func createMultiStepLessonSteps(from scrapedSteps: [ScrapedLessonStep], baseId: String, lessonTitle: String) -> [LessonStep] {
+    private static func createMultiStepLessonSteps(from scrapedSteps: [ScrapedSubjectContent.ScrapedUnit.ScrapedLesson.ScrapedLessonStep], baseId: String, lessonTitle: String) -> [LessonStep] {
         return scrapedSteps.enumerated().map { (index, scrapedStep) in
             let stepId = "\(baseId)-step-\(index)"
             
@@ -382,7 +382,7 @@ class KhanAcademyContentProvider {
         }
     }
     
-    private static func createExerciseFromStep(_ step: ScrapedLessonStep, stepId: String) -> InteractiveQuestion {
+    private static func createExerciseFromStep(_ step: ScrapedSubjectContent.ScrapedUnit.ScrapedLesson.ScrapedLessonStep, stepId: String) -> InteractiveQuestion {
         // Create a practice question based on the exercise step
         // This is a simplified implementation - real implementation would parse Khan Academy exercise data
         
