@@ -36,6 +36,16 @@ class KhanAcademyContentProvider {
                 let youtubeId: String?
                 let directVideoUrl: String?
                 let transcript: String?
+                // Multi-step lesson structure from BrainLift scraper
+                let lessonSteps: [ScrapedLessonStep]?
+            }
+            
+            struct ScrapedLessonStep: Codable {
+                let id: String
+                let title: String
+                let description: String?
+                let type: String
+                let youtubeUrl: String?
             }
             
             struct ScrapedExercise: Codable {
@@ -84,8 +94,8 @@ class KhanAcademyContentProvider {
     static func loadTimeBackKhanAcademyLessons() async throws -> [InteractiveLesson] {
         print("🔍 FALLBACK: Loading Khan Academy Pre-algebra from local scraped data (staging API unreliable)...")
         
-        // Load enhanced authenticated Khan Academy content with metadata
-        guard let scrapedContent = loadScrapedContent(filename: "pre-algebra_brainlift_1753717863") else {
+        // Load enhanced authenticated Khan Academy content with metadata  
+        guard let scrapedContent = loadScrapedContent(filename: "pre-algebra_brainlift_1753836853") else {
             print("❌ Could not load local Khan Academy scraped content")
             throw NSError(domain: "LoadError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to load local Khan Academy content"])
         }
@@ -206,11 +216,19 @@ class KhanAcademyContentProvider {
     }
     
     private static func createLessonSteps(from lessons: [ScrapedSubjectContent.ScrapedUnit.ScrapedLesson], unitIndex: Int) -> [LessonStep] {
-        return lessons.enumerated().compactMap { (index, lesson) in
+        var allSteps: [LessonStep] = []
+        
+        for (index, lesson) in lessons.enumerated() {
             let stepId = "lesson-\(unitIndex)-\(index)"
             
-            // Handle "lesson" content kind (video lessons)
-            if lesson.contentKind == "lesson", let videoUrl = lesson.videoUrl {
+            // PRIORITY: Use multi-step lesson structure if available from BrainLift scraper
+            if lesson.contentKind == "lesson", let lessonSteps = lesson.lessonSteps {
+                let multiSteps = createMultiStepLessonSteps(from: lessonSteps, baseId: stepId, lessonTitle: lesson.title)
+                allSteps.append(contentsOf: multiSteps)
+                continue
+            }
+            // FALLBACK: Handle single-video lesson content kind
+            else if lesson.contentKind == "lesson", let videoUrl = lesson.videoUrl {
                 var hints = ["Watch the video to understand the concept", "Take notes on key concepts"]
                 if let difficulty = lesson.difficulty {
                     hints.append("This is a \(difficulty) level topic")
@@ -224,7 +242,7 @@ class KhanAcademyContentProvider {
                 
                 if actualVideoUrl.contains("youtube.com/embed/") {
                     // We have a real YouTube URL
-                    return LessonStep(
+                    allSteps.append(LessonStep(
                         id: stepId,
                         type: .example,
                         title: lesson.title,
@@ -235,10 +253,10 @@ class KhanAcademyContentProvider {
                         )),
                         hints: hints,
                         explanation: "This video explains the core concepts of \(lesson.title)"
-                    )
+                    ))
                 } else {
                     // Fall back to text content with link
-                    return LessonStep(
+                    allSteps.append(LessonStep(
                         id: stepId,
                         type: .example,
                         title: lesson.title,
@@ -248,11 +266,11 @@ class KhanAcademyContentProvider {
                         )),
                         hints: hints,
                         explanation: "This lesson covers the core concepts of \(lesson.title) through Khan Academy video content"
-                    )
+                    ))
                 }
             }
             // Handle "Quiz" content kind (practice problems)
-            else if lesson.contentKind == "Quiz" {
+            else if lesson.contentKind == "quiz" {
                 var hints = ["Take your time to think through each problem", "Show your work step by step"]
                 if let difficulty = lesson.difficulty {
                     hints.append("This is a \(difficulty) level quiz")
@@ -264,18 +282,18 @@ class KhanAcademyContentProvider {
                 // Create an actual interactive question based on the lesson title/topic
                 let quizQuestion = createQuizQuestionFromLesson(lesson, stepId: stepId)
                 
-                return LessonStep(
+                allSteps.append(LessonStep(
                     id: stepId,
                     type: .practice,
                     title: lesson.title,
                     content: .interactiveQuestion(quizQuestion),
                     hints: hints,
                     explanation: "Practice quiz to reinforce learning from \(lesson.title)"
-                )
+                ))
             }
             // Handle article content or other text-based lessons
             else if let articleContent = lesson.articleContent {
-                return LessonStep(
+                allSteps.append(LessonStep(
                     id: stepId,
                     type: .example,
                     title: lesson.title,
@@ -285,10 +303,139 @@ class KhanAcademyContentProvider {
                     )),
                     hints: ["Read carefully and understand each step"],
                     explanation: nil
+                ))
+            }
+        }
+        
+        return allSteps
+    }
+    
+    // MARK: - Multi-Step Lesson Support
+    
+    private static func createMultiStepLessonSteps(from scrapedSteps: [ScrapedLessonStep], baseId: String, lessonTitle: String) -> [LessonStep] {
+        return scrapedSteps.enumerated().map { (index, scrapedStep) in
+            let stepId = "\(baseId)-step-\(index)"
+            
+            switch scrapedStep.type.lowercased() {
+            case "video":
+                if let youtubeUrl = scrapedStep.youtubeUrl {
+                    return LessonStep(
+                        id: stepId,
+                        type: .example,
+                        title: scrapedStep.title,
+                        content: .videoContent(InteractiveVideoContent(
+                            videoURL: youtubeUrl,
+                            thumbnailURL: "",
+                            transcript: nil
+                        )),
+                        hints: [
+                            "🎥 Real Khan Academy video content",
+                            "Watch carefully and take notes",
+                            "Part of the \(lessonTitle) lesson series"
+                        ],
+                        explanation: scrapedStep.description ?? "This video step teaches \(scrapedStep.title)"
+                    )
+                } else {
+                    // Video step without URL - create text placeholder
+                    return LessonStep(
+                        id: stepId,
+                        type: .example,
+                        title: scrapedStep.title,
+                        content: .textContent(TextContent(
+                            text: "🎥 **\(scrapedStep.title)**\n\n\(scrapedStep.description ?? "Video content from Khan Academy")\n\n*This would normally show the Khan Academy video player.*",
+                            images: []
+                        )),
+                        hints: ["Video content from Khan Academy", "Part of \(lessonTitle)"],
+                        explanation: scrapedStep.description
+                    )
+                }
+                
+            case "exercise":
+                // Create interactive exercise placeholder
+                let exerciseQuestion = createExerciseFromStep(scrapedStep, stepId: stepId)
+                return LessonStep(
+                    id: stepId,
+                    type: .practice,
+                    title: scrapedStep.title,
+                    content: .interactiveQuestion(exerciseQuestion),
+                    hints: [
+                        "🧮 Practice exercise from Khan Academy",
+                        "Work through this step by step",
+                        "Part of the \(lessonTitle) lesson series"
+                    ],
+                    explanation: scrapedStep.description ?? "Practice exercise for \(scrapedStep.title)"
+                )
+                
+            default: // "other" or unknown types
+                return LessonStep(
+                    id: stepId,
+                    type: .introduction,
+                    title: scrapedStep.title,
+                    content: .textContent(TextContent(
+                        text: "📖 **\(scrapedStep.title)**\n\n\(scrapedStep.description ?? "Additional content from Khan Academy")\n\n*This lesson step provides supplementary information and context.*",
+                        images: []
+                    )),
+                    hints: ["Read through this content carefully", "Part of \(lessonTitle)"],
+                    explanation: scrapedStep.description
                 )
             }
-            
-            return nil
+        }
+    }
+    
+    private static func createExerciseFromStep(_ step: ScrapedLessonStep, stepId: String) -> InteractiveQuestion {
+        // Create a practice question based on the exercise step
+        // This is a simplified implementation - real implementation would parse Khan Academy exercise data
+        
+        let (question, answer) = generateQuestionFromTitle(step.title)
+        
+        return InteractiveQuestion(
+            id: "exercise-\(step.id)",
+            question: question,
+            type: .fillInBlank,
+            correctAnswer: answer,
+            options: nil,
+            validation: ValidationRule(
+                acceptableAnswers: [answer],
+                tolerance: 0.01,
+                caseSensitive: false
+            ),
+            feedback: QuestionFeedback(
+                correct: "Excellent! You've mastered \(step.title).",
+                incorrect: "Not quite right. Review the concepts and try again.",
+                hint: "Think about the key principles from \(step.title)",
+                explanation: step.description ?? "This exercise tests your understanding of \(step.title)"
+            ),
+            points: 100
+        )
+    }
+    
+    private static func generateQuestionFromTitle(_ title: String) -> (String, AnswerValue) {
+        let titleLower = title.lowercased()
+        
+        if titleLower.contains("factor pairs") {
+            let number = [12, 18, 24, 30].randomElement()!
+            let factors = getFactors(of: number)
+            return ("List one factor pair for \(number) (format: a×b)", .text("\(factors[1])×\(number/factors[1])"))
+        } else if titleLower.contains("identify factors") {
+            let number = [16, 20, 28, 32].randomElement()!
+            return ("How many factors does \(number) have?", .number(Double(getFactors(of: number).count)))
+        } else if titleLower.contains("multiples") {
+            let base = [3, 4, 5, 6].randomElement()!
+            let multiple = base * [3, 4, 5].randomElement()!
+            return ("Is \(multiple) a multiple of \(base)? (yes/no)", .text("yes"))
+        } else if titleLower.contains("prime") {
+            let primes = [7, 11, 13, 17]
+            let prime = primes.randomElement()!
+            return ("Is \(prime) a prime number? (yes/no)", .text("yes"))
+        } else if titleLower.contains("composite") {
+            let composites = [8, 9, 10, 12]
+            let composite = composites.randomElement()!
+            return ("Is \(composite) a composite number? (yes/no)", .text("yes"))
+        } else {
+            // Generic math question
+            let a = Int.random(in: 2...10)
+            let b = Int.random(in: 2...10)
+            return ("What is \(a) × \(b)?", .number(Double(a * b)))
         }
     }
     
@@ -505,12 +652,39 @@ class KhanAcademyContentProvider {
         // Map known Khan Academy lessons to their actual YouTube IDs
         let titleLower = title.lowercased()
         
+        // Unit 1: Factors and multiples
         if titleLower.contains("factors and multiples") || originalUrl.contains("factors-mult") {
             return "https://www.youtube.com/embed/KcKOM7Degu0" // Understanding factor pairs
         }
         
+        if titleLower.contains("prime and composite") || titleLower.contains("prime numbers") || originalUrl.contains("prime-numbers") {
+            return "https://www.youtube.com/embed/GvTcpfSnOMQ" // Prime numbers
+        }
+        
+        if titleLower.contains("prime factorization") || originalUrl.contains("prime-factorization") {
+            return "https://www.youtube.com/embed/6PDtgHhpCHo" // Prime factorization
+        }
+        
+        // Unit 2: Patterns  
+        if titleLower.contains("math patterns") || titleLower.contains("patterns") {
+            return "https://www.youtube.com/embed/0pEEIafWCUA" // Math patterns
+        }
+        
+        if titleLower.contains("writing expressions") || titleLower.contains("expressions") {
+            return "https://www.youtube.com/embed/6q5P2k_zxTE" // Writing expressions
+        }
+        
+        if titleLower.contains("distributive property") || originalUrl.contains("distributive") {
+            return "https://www.youtube.com/embed/YHF_RZyKiII" // Distributive property
+        }
+        
+        // Unit 3: Ratios and rates
+        if titleLower.contains("intro to ratios") || titleLower.contains("ratios intro") {
+            return "https://www.youtube.com/embed/ZFGPLNPZUeY" // Intro to ratios
+        }
+        
         // Add more mappings as we discover them
-        // TODO: Expand this mapping with more Khan Academy videos
+        print("⚠️ No YouTube mapping found for: '\(title)' -> falling back to: \(originalUrl)")
         
         return originalUrl // Return original URL if no mapping found
     }

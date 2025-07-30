@@ -22,6 +22,7 @@
 		6F2A7FA02E37D515004F3D42 /* physics_brainlift_1753717878.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F992E37D515004F3D42 /* physics_brainlift_1753717878.json */; };
 		6F2A7FA52E37D515004F3D42 /* algebra2_brainlift_1753717874.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F972E37D515004F3D42 /* algebra2_brainlift_1753717874.json */; };
 		6F2A7FA62E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F9C2E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json */; };
+		6F2A7FC02E39AB01004F3D42 /* pre-algebra_brainlift_1753836853.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FBF2E39AB01004F3D42 /* pre-algebra_brainlift_1753836853.json */; };
 		6F2A7FA82E37D515004F3D42 /* algebra_brainlift_1753717870.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F932E37D515004F3D42 /* algebra_brainlift_1753717870.json */; };
 		6F2A7FAB2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753722260.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FAA2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753722260.json */; };
 		6F2A7FAC2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FA92E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json */; };
@@ -93,6 +94,7 @@
 		6F2A7F972E37D515004F3D42 /* algebra2_brainlift_1753717874.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algebra2_brainlift_1753717874.json; sourceTree = "<group>"; };
 		6F2A7F992E37D515004F3D42 /* physics_brainlift_1753717878.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = physics_brainlift_1753717878.json; sourceTree = "<group>"; };
 		6F2A7F9C2E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_brainlift_1753717863.json"; sourceTree = "<group>"; };
+		6F2A7FBF2E39AB01004F3D42 /* pre-algebra_brainlift_1753836853.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_brainlift_1753836853.json"; sourceTree = "<group>"; };
 		6F2A7FA92E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_deep_authenticated_1753720349.json"; sourceTree = "<group>"; };
 		6F2A7FAA2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753722260.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_deep_authenticated_1753722260.json"; sourceTree = "<group>"; };
 		6F2A7FAD2E38120D004F3D42 /* AEStudioContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEStudioContentProvider.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				6F2A7F972E37D515004F3D42 /* algebra2_brainlift_1753717874.json */,
 				6F2A7F992E37D515004F3D42 /* physics_brainlift_1753717878.json */,
 				6F2A7F9C2E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json */,
+				6F2A7FBF2E39AB01004F3D42 /* pre-algebra_brainlift_1753836853.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				6F2A7FA02E37D515004F3D42 /* physics_brainlift_1753717878.json in Resources */,
 				6F2A7FA52E37D515004F3D42 /* algebra2_brainlift_1753717874.json in Resources */,
 				6F2A7FA62E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json in Resources */,
+				6F2A7FC02E39AB01004F3D42 /* pre-algebra_brainlift_1753836853.json in Resources */,
 				6F2A7FA82E37D515004F3D42 /* algebra_brainlift_1753717870.json in Resources */,
 				6FC42AC52E328E7900FE39A8 /* Credentials.swift.template in Resources */,
 			);
