@@ -22,13 +22,14 @@
 		6F2A7FA02E37D515004F3D42 /* physics_brainlift_1753717878.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F992E37D515004F3D42 /* physics_brainlift_1753717878.json */; };
 		6F2A7FA52E37D515004F3D42 /* algebra2_brainlift_1753717874.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F972E37D515004F3D42 /* algebra2_brainlift_1753717874.json */; };
 		6F2A7FA62E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F9C2E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json */; };
-		6F2A7FC02E39AB01004F3D42 /* pre-algebra_brainlift_1753836853.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FBF2E39AB01004F3D42 /* pre-algebra_brainlift_1753836853.json */; };
 		6F2A7FA82E37D515004F3D42 /* algebra_brainlift_1753717870.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7F932E37D515004F3D42 /* algebra_brainlift_1753717870.json */; };
 		6F2A7FAB2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753722260.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FAA2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753722260.json */; };
 		6F2A7FAC2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FA92E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json */; };
 		6F2A7FAE2E38120D004F3D42 /* AEStudioContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A7FAD2E38120D004F3D42 /* AEStudioContentProvider.swift */; };
 		6F2A7FB12E38138D004F3D42 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FB02E38137A004F3D42 /* .swiftlint.yml */; };
 		6F2A7FB32E39448F004F3D42 /* InteractiveVideoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A7FB22E39448F004F3D42 /* InteractiveVideoContentView.swift */; };
+		6F2A7FB52E39A82A004F3D42 /* pre-algebra_brainlift_1753836853.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FB42E39A82A004F3D42 /* pre-algebra_brainlift_1753836853.json */; };
+		6F2A7FB92E3A7A65004F3D42 /* UnitSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A7FB82E3A7A65004F3D42 /* UnitSectionView.swift */; };
 		6F797A9F2E300B9B00EC16E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F797A9C2E300B9B00EC16E9 /* Assets.xcassets */; };
 		6F797AA02E300B9B00EC16E9 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797A922E300B9B00EC16E9 /* Credentials.swift */; };
 		6F797AA12E300B9B00EC16E9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797A992E300B9B00EC16E9 /* DashboardView.swift */; };
@@ -94,12 +95,13 @@
 		6F2A7F972E37D515004F3D42 /* algebra2_brainlift_1753717874.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = algebra2_brainlift_1753717874.json; sourceTree = "<group>"; };
 		6F2A7F992E37D515004F3D42 /* physics_brainlift_1753717878.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = physics_brainlift_1753717878.json; sourceTree = "<group>"; };
 		6F2A7F9C2E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_brainlift_1753717863.json"; sourceTree = "<group>"; };
-		6F2A7FBF2E39AB01004F3D42 /* pre-algebra_brainlift_1753836853.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_brainlift_1753836853.json"; sourceTree = "<group>"; };
 		6F2A7FA92E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_deep_authenticated_1753720349.json"; sourceTree = "<group>"; };
 		6F2A7FAA2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753722260.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_deep_authenticated_1753722260.json"; sourceTree = "<group>"; };
 		6F2A7FAD2E38120D004F3D42 /* AEStudioContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEStudioContentProvider.swift; sourceTree = "<group>"; };
 		6F2A7FB02E38137A004F3D42 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		6F2A7FB22E39448F004F3D42 /* InteractiveVideoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveVideoContentView.swift; sourceTree = "<group>"; };
+		6F2A7FB42E39A82A004F3D42 /* pre-algebra_brainlift_1753836853.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_brainlift_1753836853.json"; sourceTree = "<group>"; };
+		6F2A7FB82E3A7A65004F3D42 /* UnitSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitSectionView.swift; sourceTree = "<group>"; };
 		6F797A8A2E300B9B00EC16E9 /* AuthTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenResponse.swift; sourceTree = "<group>"; };
 		6F797A8B2E300B9B00EC16E9 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		6F797A8D2E300B9B00EC16E9 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		6F2A7F9D2E37D515004F3D42 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6F2A7FB42E39A82A004F3D42 /* pre-algebra_brainlift_1753836853.json */,
 				6F2A7FA92E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json */,
 				6F2A7FAA2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753722260.json */,
 				6F2A7F932E37D515004F3D42 /* algebra_brainlift_1753717870.json */,
@@ -209,7 +212,6 @@
 				6F2A7F972E37D515004F3D42 /* algebra2_brainlift_1753717874.json */,
 				6F2A7F992E37D515004F3D42 /* physics_brainlift_1753717878.json */,
 				6F2A7F9C2E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json */,
-				6F2A7FBF2E39AB01004F3D42 /* pre-algebra_brainlift_1753836853.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -266,6 +268,7 @@
 		6F797A9B2E300B9B00EC16E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6F2A7FB82E3A7A65004F3D42 /* UnitSectionView.swift */,
 				6F2A7FB22E39448F004F3D42 /* InteractiveVideoContentView.swift */,
 				6F2A7F712E35D457004F3D42 /* LessonCompletionView.swift */,
 				6FC42ADC2E35BE8300FE39A8 /* InteractiveLessonsBrowserView.swift */,
@@ -435,10 +438,10 @@
 				6F2A7FAC2E37E75C004F3D42 /* pre-algebra_deep_authenticated_1753720349.json in Resources */,
 				6F797A9F2E300B9B00EC16E9 /* Assets.xcassets in Resources */,
 				6F2A7F9E2E37D515004F3D42 /* algebra-basics_brainlift_1753717867.json in Resources */,
+				6F2A7FB52E39A82A004F3D42 /* pre-algebra_brainlift_1753836853.json in Resources */,
 				6F2A7FA02E37D515004F3D42 /* physics_brainlift_1753717878.json in Resources */,
 				6F2A7FA52E37D515004F3D42 /* algebra2_brainlift_1753717874.json in Resources */,
 				6F2A7FA62E37D515004F3D42 /* pre-algebra_brainlift_1753717863.json in Resources */,
-				6F2A7FC02E39AB01004F3D42 /* pre-algebra_brainlift_1753836853.json in Resources */,
 				6F2A7FA82E37D515004F3D42 /* algebra_brainlift_1753717870.json in Resources */,
 				6FC42AC52E328E7900FE39A8 /* Credentials.swift.template in Resources */,
 			);
@@ -492,6 +495,7 @@
 				6FC42ADB2E35BE6E00FE39A8 /* InteractiveLessonModels.swift in Sources */,
 				6F797AA42E300B9B00EC16E9 /* KhanTimeApp.swift in Sources */,
 				6FC42ABD2E328E4600FE39A8 /* SharedProtocolTypes.swift in Sources */,
+				6F2A7FB92E3A7A65004F3D42 /* UnitSectionView.swift in Sources */,
 				6FC42ABE2E328E4600FE39A8 /* ThemeProvider.swift in Sources */,
 				6FC42ABF2E328E4600FE39A8 /* ContentProvider.swift in Sources */,
 				6FC42AC02E328E4600FE39A8 /* TimeBackContentProvider.swift in Sources */,

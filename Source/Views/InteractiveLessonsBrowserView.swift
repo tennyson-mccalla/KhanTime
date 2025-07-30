@@ -4,11 +4,12 @@ struct InteractiveLessonsBrowserView: View {
     @Environment(\.theme) var theme
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var themePreference: ThemePreference
-    @State private var selectedSubject: InteractiveLesson.Subject = .algebra
+    @State private var selectedSubject: Subject.SubjectType = .preAlgebra
     @State private var selectedLesson: InteractiveLesson?
     @State private var showLessonView = false
     @State private var lessonToPresent: InteractiveLesson?
     @State private var allLessons: [InteractiveLesson] = []
+    @State private var khanAcademySubjects: [Subject] = []
     @State private var isLoadingTimeBack = false
     @State private var timeBackError: String?
     
@@ -64,17 +65,10 @@ struct InteractiveLessonsBrowserView: View {
     private var lessonsList: some View {
         ScrollView {
             LazyVStack(spacing: theme?.standardSpacing ?? 16) {
-                ForEach(filteredLessons) { lesson in
-                    LessonPreviewCard(lesson: lesson) {
-                        // Immediate haptic feedback for responsiveness
-                        let impactFeedback = UIImpactFeedbackGenerator(style: .light)
-                        impactFeedback.impactOccurred()
-                        
-                        let _ = print("🎯 Selected lesson: \(lesson.title)")
-                        let _ = print("🎯 Setting lessonToPresent to: \(lesson.title)")
-                        lessonToPresent = lesson
-                        let _ = print("🎯 lessonToPresent set successfully")
-                    }
+                if hasHierarchicalContent {
+                    hierarchicalContentView
+                } else {
+                    flatLessonListView
                 }
             }
             .padding(theme?.standardSpacing ?? 16)
@@ -82,12 +76,50 @@ struct InteractiveLessonsBrowserView: View {
         .background(theme?.backgroundColor ?? Color(.systemGroupedBackground))
     }
     
+    // MARK: - Hierarchical Content View (Subject > Unit > Lesson)
+    private var hierarchicalContentView: some View {
+        Group {
+            if let subject = filteredSubject {
+                ForEach(subject.units) { unit in
+                    UnitSectionView(unit: unit) { lesson in
+                        selectLesson(lesson)
+                    }
+                }
+            }
+        }
+    }
+    
+    // MARK: - Flat Lesson List View (fallback for non-hierarchical content)
+    private var flatLessonListView: some View {
+        Group {
+            // Show demo lessons for backward compatibility
+            let demoLessons = EducationalContentManager.getOriginalDemoLessons()
+            ForEach(demoLessons) { lesson in
+                LessonPreviewCard(lesson: lesson) {
+                    selectLesson(lesson)
+                }
+            }
+        }
+    }
+    
+    // MARK: - Lesson Selection
+    private func selectLesson(_ lesson: InteractiveLesson) {
+        // Immediate haptic feedback for responsiveness
+        let impactFeedback = UIImpactFeedbackGenerator(style: .light)
+        impactFeedback.impactOccurred()
+        
+        print("🎯 Selected lesson: \(lesson.title)")
+        print("🎯 Setting lessonToPresent to: \(lesson.title)")
+        lessonToPresent = lesson
+        print("🎯 lessonToPresent set successfully")
+    }
+    
     
     // MARK: - Subject Selector
     private var subjectSelector: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: theme?.smallSpacing ?? 12) {
-                ForEach(InteractiveLesson.Subject.allCases, id: \.self) { subject in
+                ForEach(Subject.SubjectType.allCases, id: \.self) { subject in
                     Button(action: {
                         selectedSubject = subject
                     }) {
@@ -182,44 +214,62 @@ struct InteractiveLessonsBrowserView: View {
         timeBackError = nil
         
         Task {
-            do {
-                print("📡 Loading lessons from local content (TimeBack API bypassed)...")
-                
-                // Load static lessons first
-                var lessons = LessonProvider.getOriginalDemoLessons()
-                lessons.append(contentsOf: KhanAcademyContentProvider.loadKhanAcademyLessons())
-                
-                // Load Khan Academy pre-algebra content from local fallback (no API calls)
-                let khanLessons = try await KhanAcademyContentProvider.loadTimeBackKhanAcademyLessons()
-                lessons.append(contentsOf: khanLessons)
-                
-                // Skip ae.studio content loading - TimeBack API is unreliable
-                // let aeStudioLessons = try await aeProvider.loadAEStudioLessons()
-                // lessons.append(contentsOf: aeStudioLessons)
-                
-                await MainActor.run {
-                    self.allLessons = lessons
-                    self.isLoadingTimeBack = false
-                    print("✅ Loaded \(lessons.count) lessons from local content (TimeBack bypassed)")
+            print("📡 Loading lessons from local content (TimeBack API bypassed)...")
+            
+            // Load static lessons first
+            var lessons = EducationalContentManager.getOriginalDemoLessons()
+            lessons.append(contentsOf: KhanAcademyContentProvider.loadKhanAcademyLessons())
+            
+            // Load Khan Academy subjects using new hierarchy approach
+            let khanSubjects = KhanAcademyContentProvider.loadKhanAcademySubjects()
+            
+            // Note: Descriptions could be enhanced with scraped content from external tools
+            
+            // DON'T flatten Khan Academy content - preserve hierarchy for proper UI display
+            print("📊 Khan Academy hierarchy: \(khanSubjects.count) subjects, \(khanSubjects.flatMap { $0.units }.count) units")
+            
+            // Debug: Print hierarchical structure
+            for subject in khanSubjects {
+                print("🔍 Subject: '\(subject.title)' (\(subject.units.count) units)")
+                for unit in subject.units {
+                    print("  📁 Unit: '\(unit.title)' (\(unit.lessons.count) lessons)")
                 }
-            } catch {
-                await MainActor.run {
-                    self.timeBackError = "Error loading local content: \(error.localizedDescription)"
-                    self.isLoadingTimeBack = false
-                    print("❌ Local content loading failed: \(error)")
-                    
-                    // Emergency fallback to just static content
-                    var lessons = LessonProvider.getOriginalDemoLessons()
-                    lessons.append(contentsOf: KhanAcademyContentProvider.loadKhanAcademyLessons())
-                    self.allLessons = lessons
-                }
+            }
+            
+            // Skip ae.studio content loading - TimeBack API is unreliable
+            // let aeStudioLessons = try await aeProvider.loadAEStudioLessons()
+            // lessons.append(contentsOf: aeStudioLessons)
+            
+            await MainActor.run {
+                self.allLessons = lessons
+                self.khanAcademySubjects = khanSubjects
+                self.isLoadingTimeBack = false
+                print("✅ Loaded \(lessons.count) lessons from local content (TimeBack bypassed)")
             }
         }
     }
     
-    // MARK: - Filtered Lessons
-    private var filteredLessons: [InteractiveLesson] {
-        allLessons.filter { $0.subject == selectedSubject }
+    // MARK: - Filtered Content
+    private var filteredSubject: Subject? {
+        guard !khanAcademySubjects.isEmpty else { return nil }
+        
+        // Find the selected subject
+        return khanAcademySubjects.first { subject in
+            switch selectedSubject {
+            case .preAlgebra:
+                return subject.id == "pre-algebra"
+            case .algebra:
+                return subject.id == "algebra-basics" || subject.id == "algebra" || subject.id == "algebra2"
+            case .physics:
+                return subject.id == "physics"
+            default:
+                return false
+            }
+        }
+    }
+    
+    private var hasHierarchicalContent: Bool {
+        filteredSubject != nil
     }
 }
 
@@ -232,95 +282,118 @@ struct LessonPreviewCard: View {
     var body: some View {
         Button(action: onTap) {
             VStack(alignment: .leading, spacing: theme?.standardSpacing ?? 12) {
-                // Header with subject and duration
-                HStack {
-                    Text(lesson.subject.rawValue)
+                headerSection
+                titleSection
+                learningObjectivesSection
+                footerSection
+            }
+            .padding(theme?.standardSpacing ?? 16)
+            .background(backgroundView)
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
+    
+    private var headerSection: some View {
+        HStack {
+            subjectBadge
+            Spacer()
+            durationInfo
+        }
+    }
+    
+    private var subjectBadge: some View {
+        Text("Interactive Lesson") // TODO: Get subject from parent hierarchy
+            .font(theme?.captionFont ?? .caption)
+            .foregroundColor(theme?.accentColor ?? .blue)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 4)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill((theme?.accentColor ?? .blue).opacity(0.1))
+            )
+    }
+    
+    private var durationInfo: some View {
+        HStack(spacing: 4) {
+            Image(systemName: "clock")
+                .font(.caption)
+            Text(formatDuration(lesson.estimatedDuration))
+                .font(theme?.captionFont ?? .caption)
+        }
+        .foregroundColor(theme?.secondaryColor ?? .secondary)
+    }
+    
+    private var titleSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(lesson.title)
+                .font(theme?.titleFont ?? .title2)
+                .foregroundColor(theme?.primaryColor ?? .primary)
+                .multilineTextAlignment(.leading)
+            
+            Text(lesson.description)
+                .font(theme?.bodyFont ?? .body)
+                .foregroundColor(theme?.secondaryColor ?? .secondary)
+                .multilineTextAlignment(.leading)
+                .lineLimit(3)
+        }
+    }
+    
+    private var learningObjectivesSection: some View {
+        Group {
+            if !lesson.learningObjectives.isEmpty {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("You'll learn:")
                         .font(theme?.captionFont ?? .caption)
-                        .foregroundColor(theme?.accentColor ?? .blue)
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 4)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill((theme?.accentColor ?? .blue).opacity(0.1))
-                        )
+                        .foregroundColor(theme?.secondaryColor ?? .secondary)
+                        .fontWeight(.medium)
                     
-                    Spacer()
-                    
-                    HStack(spacing: 4) {
-                        Image(systemName: "clock")
-                            .font(.caption)
-                        Text(formatDuration(lesson.estimatedDuration))
-                            .font(theme?.captionFont ?? .caption)
-                    }
-                    .foregroundColor(theme?.secondaryColor ?? .secondary)
-                }
-                
-                // Title and description
-                Text(lesson.title)
-                    .font(theme?.titleFont ?? .title2)
-                    .foregroundColor(theme?.primaryColor ?? .primary)
-                    .multilineTextAlignment(.leading)
-                
-                Text(lesson.description)
-                    .font(theme?.bodyFont ?? .body)
-                    .foregroundColor(theme?.secondaryColor ?? .secondary)
-                    .multilineTextAlignment(.leading)
-                    .lineLimit(3)
-                
-                // Learning objectives
-                if !lesson.learningObjectives.isEmpty {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("You'll learn:")
-                            .font(theme?.captionFont ?? .caption)
-                            .foregroundColor(theme?.secondaryColor ?? .secondary)
-                            .fontWeight(.medium)
-                        
-                        ForEach(Array(lesson.learningObjectives.prefix(3).enumerated()), id: \.offset) { index, objective in
-                            HStack(alignment: .top, spacing: 8) {
-                                Text("•")
-                                    .foregroundColor(theme?.accentColor ?? .blue)
-                                    .fontWeight(.bold)
-                                
-                                Text(objective)
-                                    .font(theme?.captionFont ?? .caption)
-                                    .foregroundColor(theme?.secondaryColor ?? .secondary)
-                                    .multilineTextAlignment(.leading)
-                            }
+                    ForEach(Array(lesson.learningObjectives.prefix(3).enumerated()), id: \.offset) { index, objective in
+                        HStack(alignment: .top, spacing: 8) {
+                            Text("•")
+                                .foregroundColor(theme?.accentColor ?? .blue)
+                                .fontWeight(.bold)
+                            
+                            Text(objective)
+                                .font(theme?.captionFont ?? .caption)
+                                .foregroundColor(theme?.secondaryColor ?? .secondary)
+                                .multilineTextAlignment(.leading)
                         }
                     }
                 }
-                
-                // Footer with grade level and content count
-                HStack {
-                    HStack(spacing: 4) {
-                        Image(systemName: "person.fill")
-                            .font(.caption)
-                        Text("Grade \(lesson.gradeLevel.displayName)")
-                            .font(theme?.captionFont ?? .caption)
-                    }
-                    .foregroundColor(theme?.secondaryColor ?? .secondary)
-                    
-                    Spacer()
-                    
-                    HStack(spacing: 4) {
-                        Image(systemName: "list.bullet")
-                            .font(.caption)
-                        Text("\(lesson.content.count) steps")
-                            .font(theme?.captionFont ?? .caption)
-                    }
-                    .foregroundColor(theme?.secondaryColor ?? .secondary)
-                    
-                    Image(systemName: "chevron.right")
-                        .font(.caption)
-                        .foregroundColor(theme?.accentColor ?? .blue)
-                }
             }
-            .padding(theme?.standardSpacing ?? 16)
-            .background(theme?.surfaceColor ?? Color(.systemBackground))
-            .cornerRadius(theme?.cardCornerRadius ?? 12)
-            .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
         }
-        .buttonStyle(PlainButtonStyle())
+    }
+    
+    private var footerSection: some View {
+        HStack {
+            HStack(spacing: 4) {
+                Image(systemName: "clock")
+                    .font(.caption)
+                Text(formatDuration(lesson.estimatedDuration))
+                    .font(theme?.captionFont ?? .caption)
+            }
+            .foregroundColor(theme?.secondaryColor ?? .secondary)
+            
+            Spacer()
+            
+            HStack(spacing: 4) {
+                Image(systemName: "list.bullet")
+                    .font(.caption)
+                Text("\(lesson.content.count) steps")
+                    .font(theme?.captionFont ?? .caption)
+            }
+            .foregroundColor(theme?.secondaryColor ?? .secondary)
+            
+            Image(systemName: "chevron.right")
+                .font(.caption)
+                .foregroundColor(theme?.accentColor ?? .blue)
+        }
+    }
+    
+    private var backgroundView: some View {
+        RoundedRectangle(cornerRadius: theme?.cardCornerRadius ?? 12)
+            .fill(theme?.surfaceColor ?? Color(.systemBackground))
+            .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
     }
     
     private func formatDuration(_ duration: TimeInterval) -> String {
