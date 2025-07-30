@@ -161,7 +161,7 @@ struct UserLessonRecord: Codable, Identifiable {
         self.id = UUID().uuidString
         self.lessonId = lesson.id
         self.lessonTitle = lesson.title
-        self.subject = lesson.subject.rawValue
+        self.subject = "General" // TODO: Get subject from parent hierarchy
         self.completedDate = Date()
         self.score = score
         self.totalPossible = totalPossible

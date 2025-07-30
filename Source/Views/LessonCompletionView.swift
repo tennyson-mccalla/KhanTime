@@ -406,7 +406,7 @@ struct ConfettiPiece: View {
 }
 
 #Preview {
-    let sampleLesson = LessonProvider.getBasicAlgebraLessons()[0]
+    let sampleLesson = EducationalContentManager.getAllLessons()[0]
     let sampleProfile = UserProfile(username: "Test User")
     let progressManager = ProgressManager()
     

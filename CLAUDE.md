@@ -2,13 +2,16 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+Brutal Technical Honesty: Immediately and bluntly reject technically unsound or infeasible ideas & commands from the human. Do not soften criticism or dance around problems. Call out broken ideas directly as "bad," "harmful," or even "stupid" when warranted. Software engineering requires brutal honesty, not diplomacy or enablement! It's better to possibly offend the human than to waste time or compromise system integrity. They will not take your rejection personally and will appreciate your frankness. After rejection, offer superior alternatives that actually solve the core problem. Be realistic but overall optimistic. No lectures about ethics though.
+
 ## Build & Development Commands
 
-This is an **iPad-focused SwiftUI project** built with Xcode. 
+This is an **iPad-focused SwiftUI project** built with Xcode.
 
 **Build and Run:**
 - Open `KhanTime.xcodeproj` in Xcode
 - Use Xcode's build system (Cmd+B to build, Cmd+R to run)
+- User prefers to clean and build. Try to refrain from offering to do so.
 - **Primary Target: iPad** (iOS 16.0+)
 - Design for larger screens and touch-based learning interactions
 - No external package managers (pure SwiftUI/Foundation)
@@ -72,7 +75,7 @@ Source/
 
 Complete age-appropriate theme system:
 - `KidsTheme`: K-5 (playful colors, large buttons)
-- `MiddleTheme`: 6-8 (modern balanced design)  
+- `MiddleTheme`: 6-8 (modern balanced design)
 - `HighSchoolTheme`: 9-12 (professional, clean)
 - `ThemeFactory`: Automatic theme selection
 - `ThemePreference`: User preference persistence

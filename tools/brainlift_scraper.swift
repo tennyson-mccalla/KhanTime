@@ -268,13 +268,13 @@ class BrainLiftKhanScraper {
         var enhancedUnits: [ScrapedKhanContent.ScrapedUnit] = []
         
         for (unitIndex, unit) in content.units.enumerated() {
-            if unitIndex >= 1 { break } // Only process first 1 unit for testing
+            // Process ALL units for complete coverage
             print("      📖 Unit \(unitIndex + 1): \(unit.title)")
             
             // Enhance lessons with real video URLs and content
             var enhancedLessons: [ScrapedKhanContent.ScrapedUnit.ScrapedLesson] = []
             for (lessonIndex, lesson) in unit.lessons.enumerated() {
-                if lessonIndex >= 3 { break } // Process first 3 lessons to test multiple videos
+                // Process ALL lessons for complete coverage
                 print("        🎥 Lesson \(lessonIndex + 1): \(lesson.title)")
                 let enhancedLesson = try await enhanceLesson(lesson)
                 enhancedLessons.append(enhancedLesson)
@@ -286,16 +286,13 @@ class BrainLiftKhanScraper {
             // Enhance exercises with real Perseus content
             var enhancedExercises: [ScrapedKhanContent.ScrapedUnit.ScrapedExercise] = []
             for (exerciseIndex, exercise) in unit.exercises.enumerated() {
-                if exerciseIndex < 1 { // Only scrape first exercise per unit for testing
-                    print("        📝 Exercise \(exerciseIndex + 1): \(exercise.title)")
-                    let enhancedExercise = try await enhanceExercise(exercise)
-                    enhancedExercises.append(enhancedExercise)
-                    
-                    // Rate limiting between exercises
-                    try await Task.sleep(nanoseconds: 2_000_000_000) // 2 seconds
-                } else {
-                    enhancedExercises.append(exercise)
-                }
+                // Process ALL exercises for complete coverage
+                print("        📝 Exercise \(exerciseIndex + 1): \(exercise.title)")
+                let enhancedExercise = try await enhanceExercise(exercise)
+                enhancedExercises.append(enhancedExercise)
+                
+                // Rate limiting between exercises
+                try await Task.sleep(nanoseconds: 2_000_000_000) // 2 seconds
             }
             
             let enhancedUnit = ScrapedKhanContent.ScrapedUnit(

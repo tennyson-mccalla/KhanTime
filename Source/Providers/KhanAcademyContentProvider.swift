@@ -24,25 +24,26 @@ class KhanAcademyContentProvider {
             struct ScrapedLesson: Codable {
                 let id: String
                 let title: String
-                let slug: String
+                let description: String
                 let contentKind: String
+                let duration: Int?
+                // Multi-step lesson structure from complete scraper
+                let lessonSteps: [ScrapedLessonStep]
+                // Optional fields for backward compatibility
+                let slug: String?
                 let videoUrl: String?
                 let articleContent: String?
                 let thumbnailUrl: String?
-                let duration: Int?
-                // Enhanced fields from authenticated scraper
                 let difficulty: String?
                 let prerequisites: [String]?
                 let youtubeId: String?
                 let directVideoUrl: String?
                 let transcript: String?
-                // Multi-step lesson structure from BrainLift scraper
-                let lessonSteps: [ScrapedLessonStep]?
                 
                 struct ScrapedLessonStep: Codable {
                     let id: String
                     let title: String
-                    let description: String?
+                    let description: String
                     let type: String
                     let youtubeUrl: String?
                 }
@@ -64,16 +65,46 @@ class KhanAcademyContentProvider {
     }
     
     // MARK: - Public Interface
+    
+    static func loadKhanAcademySubjects() -> [Subject] {
+        var subjects: [Subject] = []
+        
+        // Load enhanced authenticated Khan Academy content with metadata
+        let resourceFiles = [
+            "pre-algebra": ("pre-algebra_units_1_3_complete", Subject.SubjectType.preAlgebra, AgeGroup.g35),
+            "algebra-basics": ("algebra-basics_brainlift_1753717867", Subject.SubjectType.algebra, AgeGroup.g68),
+            "algebra": ("algebra_brainlift_1753717870", Subject.SubjectType.algebra, AgeGroup.g912),
+            "algebra2": ("algebra2_brainlift_1753717874", Subject.SubjectType.algebra, AgeGroup.g912),
+            "physics": ("physics_brainlift_1753717878", Subject.SubjectType.physics, AgeGroup.g912)
+        ]
+        
+        for (subjectId, (filename, subjectType, gradeLevel)) in resourceFiles {
+            if let scrapedContent = loadScrapedContent(filename: filename) {
+                let subject = convertToSubject(
+                    scrapedContent: scrapedContent,
+                    subjectId: subjectId,
+                    subjectType: subjectType,
+                    gradeLevel: gradeLevel
+                )
+                subjects.append(subject)
+            }
+        }
+        
+        return subjects
+    }
+    
+    
+    // Legacy method for backward compatibility
     static func loadKhanAcademyLessons() -> [InteractiveLesson] {
         // Load static content as fallback for other subjects
         var lessons: [InteractiveLesson] = []
         
         // Load enhanced authenticated Khan Academy content with metadata (non-pre-algebra subjects)
         let resourceFiles = [
-            "algebra-basics": ("algebra-basics_brainlift_1753717867", InteractiveLesson.Subject.algebra, AgeGroup.g68),
-            "algebra": ("algebra_brainlift_1753717870", InteractiveLesson.Subject.algebra, AgeGroup.g912),
-            "algebra2": ("algebra2_brainlift_1753717874", InteractiveLesson.Subject.algebra, AgeGroup.g912),
-            "physics": ("physics_brainlift_1753717878", InteractiveLesson.Subject.physics, AgeGroup.g912)
+            "algebra-basics": ("algebra-basics_brainlift_1753717867", Subject.SubjectType.algebra, AgeGroup.g68),
+            "algebra": ("algebra_brainlift_1753717870", Subject.SubjectType.algebra, AgeGroup.g912),
+            "algebra2": ("algebra2_brainlift_1753717874", Subject.SubjectType.algebra, AgeGroup.g912),
+            "physics": ("physics_brainlift_1753717878", Subject.SubjectType.physics, AgeGroup.g912)
         ]
         
         for (_, (filename, subject, gradeLevel)) in resourceFiles {
@@ -95,7 +126,7 @@ class KhanAcademyContentProvider {
         print("🔍 FALLBACK: Loading Khan Academy Pre-algebra from local scraped data (staging API unreliable)...")
         
         // Load enhanced authenticated Khan Academy content with metadata  
-        guard let scrapedContent = loadScrapedContent(filename: "pre-algebra_brainlift_1753836853") else {
+        guard let scrapedContent = loadScrapedContent(filename: "pre-algebra_units_1_3_complete") else {
             print("❌ Could not load local Khan Academy scraped content")
             throw NSError(domain: "LoadError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to load local Khan Academy content"])
         }
@@ -104,7 +135,7 @@ class KhanAcademyContentProvider {
         
         let lessons = convertToInteractiveLessons(
             scrapedContent: scrapedContent,
-            subject: .preAlgebra,
+            subject: Subject.SubjectType.preAlgebra,
             gradeLevel: .g35
         )
         
@@ -133,8 +164,6 @@ class KhanAcademyContentProvider {
                 id: lesson.id,
                 title: lesson.title,
                 description: "📚 **Authentic Khan Academy Pre-Algebra Content**\n\n\(lesson.description)\n\n*Loaded from real Khan Academy scraped data with video links and exercises.*",
-                subject: lesson.subject,
-                gradeLevel: lesson.gradeLevel,
                 estimatedDuration: lesson.estimatedDuration,
                 prerequisites: lesson.prerequisites,
                 learningObjectives: lesson.learningObjectives,
@@ -165,9 +194,150 @@ class KhanAcademyContentProvider {
         }
     }
     
+    private static func convertToSubject(
+        scrapedContent: ScrapedSubjectContent,
+        subjectId: String,
+        subjectType: Subject.SubjectType,
+        gradeLevel: AgeGroup
+    ) -> Subject {
+        let units = scrapedContent.units.map { unit in
+            convertToUnit(unit: unit, unitIndex: 0)
+        }
+        
+        return Subject(
+            id: subjectId,
+            title: scrapedContent.title,
+            description: scrapedContent.description,
+            gradeLevel: gradeLevel,
+            units: units
+        )
+    }
+    
+    private static func convertToUnit(unit: ScrapedSubjectContent.ScrapedUnit, unitIndex: Int) -> Unit {
+        // Create one InteractiveLesson per Khan Academy lesson (not per unit!)
+        let lessons = unit.lessons.enumerated().compactMap { (lessonIndex, lesson) -> InteractiveLesson? in
+            // Skip quiz content for now
+            guard lesson.contentKind == "lesson" else { return nil }
+            
+            return convertToInteractiveLesson(
+                lesson: lesson,
+                unit: unit,
+                lessonIndex: lessonIndex
+            )
+        }
+        
+        return Unit(
+            id: unit.id,
+            title: unit.title,
+            description: unit.description ?? "Learn \(unit.title) with Khan Academy content",
+            estimatedDuration: estimateDuration(for: unit),
+            lessons: lessons
+        )
+    }
+    
+    private static func convertToInteractiveLesson(
+        lesson: ScrapedSubjectContent.ScrapedUnit.ScrapedLesson,
+        unit: ScrapedSubjectContent.ScrapedUnit,
+        lessonIndex: Int
+    ) -> InteractiveLesson {
+        // Create lesson steps - prioritize multi-step if available
+        var lessonSteps: [LessonStep] = []
+        
+        // Add introduction step
+        lessonSteps.append(createIntroductionStep(for: lesson, unit: unit))
+        
+        // PRIORITY: Use multi-step lesson structure from complete scraper
+        if !lesson.lessonSteps.isEmpty {
+            lessonSteps.append(contentsOf: createMultiStepLessonSteps(
+                from: lesson.lessonSteps,
+                baseId: "lesson-\(lessonIndex)",
+                lessonTitle: lesson.title
+            ))
+        } else {
+            // FALLBACK: Create single video step if no multi-step data
+            if lesson.videoUrl != nil {
+                lessonSteps.append(createSingleVideoStep(from: lesson, stepId: "video-\(lessonIndex)"))
+            }
+        }
+        
+        return InteractiveLesson(
+            id: lesson.id,
+            title: lesson.title,
+            description: lesson.articleContent ?? "Learn \(lesson.title) with Khan Academy content",
+            estimatedDuration: TimeInterval(lesson.duration ?? 300),
+            prerequisites: generatePrerequisites(for: unit, subjectType: Subject.SubjectType.preAlgebra),
+            learningObjectives: generateLearningObjectives(for: unit),
+            content: lessonSteps
+        )
+    }
+    
+    private static func createIntroductionStep(for lesson: ScrapedSubjectContent.ScrapedUnit.ScrapedLesson, unit: ScrapedSubjectContent.ScrapedUnit? = nil) -> LessonStep {
+        // Try to use real Khan Academy description if available
+        let introText: String
+        
+        if let articleContent = lesson.articleContent, !articleContent.isEmpty {
+            // Use existing article content if available
+            introText = articleContent
+        } else {
+            // Create introduction text with option to enhance with scraped content later
+            let baseText = "Welcome to \(lesson.title)! This Khan Academy lesson will guide you through understanding \(lesson.title.lowercased()) step by step."
+            
+            // Add unit context if available
+            if let unit = unit, let unitDescription = unit.description, !unitDescription.isEmpty {
+                introText = "\(baseText)\n\n**About this unit:** \(unitDescription)"
+            } else {
+                introText = baseText
+            }
+        }
+        
+        return LessonStep(
+            id: "intro-\(lesson.id)",
+            type: .introduction,
+            title: "Introduction to \(lesson.title)",
+            content: .textContent(TextContent(
+                text: introText,
+                images: []
+            )),
+            hints: [],
+            explanation: nil
+        )
+    }
+    
+    private static func createSingleVideoStep(from lesson: ScrapedSubjectContent.ScrapedUnit.ScrapedLesson, stepId: String) -> LessonStep {
+        let actualVideoUrl = mapToYouTubeUrl(lesson.title, originalUrl: lesson.videoUrl ?? "")
+        
+        if actualVideoUrl.contains("youtube.com/embed/") {
+            return LessonStep(
+                id: stepId,
+                type: .example,
+                title: lesson.title,
+                content: .videoContent(InteractiveVideoContent(
+                    videoURL: actualVideoUrl,
+                    thumbnailURL: lesson.thumbnailUrl ?? "",
+                    transcript: nil
+                )),
+                hints: ["Watch the video to understand the concept", "Take notes on key concepts"],
+                explanation: "This video explains the core concepts of \(lesson.title)"
+            )
+        } else {
+            return LessonStep(
+                id: stepId,
+                type: .example,
+                title: lesson.title,
+                content: .textContent(TextContent(
+                    text: "🎥 **\(lesson.title)**\n\nThis lesson contains Khan Academy video content covering key concepts and examples.",
+                    images: []
+                )),
+                hints: ["Video content from Khan Academy"],
+                explanation: nil
+            )
+        }
+    }
+    
+    // Legacy method for backward compatibility
     private static func convertToInteractiveLessons(
         scrapedContent: ScrapedSubjectContent,
-        subject: InteractiveLesson.Subject,
+        subject: Subject.SubjectType,
         gradeLevel: AgeGroup
     ) -> [InteractiveLesson] {
         
@@ -191,10 +361,8 @@ class KhanAcademyContentProvider {
                 id: lessonId,
                 title: unit.title,
                 description: unit.description ?? "Learn \(unit.title) with Khan Academy content",
-                subject: subject,
-                gradeLevel: gradeLevel,
                 estimatedDuration: estimateDuration(for: unit),
-                prerequisites: generatePrerequisites(for: unit, subject: subject),
+                prerequisites: generatePrerequisites(for: unit, subjectType: subject),
                 learningObjectives: generateLearningObjectives(for: unit),
                 content: lessonSteps
             )
@@ -221,9 +389,9 @@ class KhanAcademyContentProvider {
         for (index, lesson) in lessons.enumerated() {
             let stepId = "lesson-\(unitIndex)-\(index)"
             
-            // PRIORITY: Use multi-step lesson structure if available from BrainLift scraper
-            if lesson.contentKind == "lesson", let lessonSteps = lesson.lessonSteps {
-                let multiSteps = createMultiStepLessonSteps(from: lessonSteps, baseId: stepId, lessonTitle: lesson.title)
+            // PRIORITY: Use multi-step lesson structure from complete scraper
+            if lesson.contentKind == "lesson", !lesson.lessonSteps.isEmpty {
+                let multiSteps = createMultiStepLessonSteps(from: lesson.lessonSteps, baseId: stepId, lessonTitle: lesson.title)
                 allSteps.append(contentsOf: multiSteps)
                 continue
             }
@@ -333,7 +501,7 @@ class KhanAcademyContentProvider {
                             "Watch carefully and take notes",
                             "Part of the \(lessonTitle) lesson series"
                         ],
-                        explanation: scrapedStep.description ?? "This video step teaches \(scrapedStep.title)"
+                        explanation: scrapedStep.description.isEmpty ? "This video step teaches \(scrapedStep.title)" : scrapedStep.description
                     )
                 } else {
                     // Video step without URL - create text placeholder
@@ -342,7 +510,7 @@ class KhanAcademyContentProvider {
                         type: .example,
                         title: scrapedStep.title,
                         content: .textContent(TextContent(
-                            text: "🎥 **\(scrapedStep.title)**\n\n\(scrapedStep.description ?? "Video content from Khan Academy")\n\n*This would normally show the Khan Academy video player.*",
+                            text: "🎥 **\(scrapedStep.title)**\n\n\(scrapedStep.description.isEmpty ? "Video content from Khan Academy" : scrapedStep.description)\n\n*This would normally show the Khan Academy video player.*",
                             images: []
                         )),
                         hints: ["Video content from Khan Academy", "Part of \(lessonTitle)"],
@@ -363,7 +531,7 @@ class KhanAcademyContentProvider {
                         "Work through this step by step",
                         "Part of the \(lessonTitle) lesson series"
                     ],
-                    explanation: scrapedStep.description ?? "Practice exercise for \(scrapedStep.title)"
+                    explanation: scrapedStep.description.isEmpty ? "Practice exercise for \(scrapedStep.title)" : scrapedStep.description
                 )
                 
             default: // "other" or unknown types
@@ -372,7 +540,7 @@ class KhanAcademyContentProvider {
                     type: .introduction,
                     title: scrapedStep.title,
                     content: .textContent(TextContent(
-                        text: "📖 **\(scrapedStep.title)**\n\n\(scrapedStep.description ?? "Additional content from Khan Academy")\n\n*This lesson step provides supplementary information and context.*",
+                        text: "📖 **\(scrapedStep.title)**\n\n\(scrapedStep.description.isEmpty ? "Additional content from Khan Academy" : scrapedStep.description)\n\n*This lesson step provides supplementary information and context.*",
                         images: []
                     )),
                     hints: ["Read through this content carefully", "Part of \(lessonTitle)"],
@@ -403,7 +571,7 @@ class KhanAcademyContentProvider {
                 correct: "Excellent! You've mastered \(step.title).",
                 incorrect: "Not quite right. Review the concepts and try again.",
                 hint: "Think about the key principles from \(step.title)",
-                explanation: step.description ?? "This exercise tests your understanding of \(step.title)"
+                explanation: step.description.isEmpty ? "This exercise tests your understanding of \(step.title)" : step.description
             ),
             points: 100
         )
@@ -619,7 +787,7 @@ class KhanAcademyContentProvider {
         return lessonTime + exerciseTime + 300 // +5 minutes for introduction
     }
     
-    private static func generatePrerequisites(for unit: ScrapedSubjectContent.ScrapedUnit, subject: InteractiveLesson.Subject) -> [String] {
+    private static func generatePrerequisites(for unit: ScrapedSubjectContent.ScrapedUnit, subjectType: Subject.SubjectType) -> [String] {
         // Use enhanced prerequisites from authenticated scraper if available
         if let firstLesson = unit.lessons.first,
            let prerequisites = firstLesson.prerequisites,
@@ -628,7 +796,7 @@ class KhanAcademyContentProvider {
         }
         
         // Fallback to subject-based defaults
-        switch subject {
+        switch subjectType {
         case .algebra:
             return ["Basic arithmetic", "Understanding variables", "Order of operations"]
         case .physics:

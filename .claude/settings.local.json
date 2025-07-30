@@ -7,7 +7,12 @@
       "Bash(grep:*)",
       "Bash(swift:*)",
       "Bash(python3:*)",
-      "WebFetch(domain:api.alpha-1edtech.com)"
+      "WebFetch(domain:api.alpha-1edtech.com)",
+      "Bash(./brainlift_scraper.swift)",
+      "WebFetch(domain:www.khanacademy.org)",
+      "Bash(curl:*)",
+      "Bash(find:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }

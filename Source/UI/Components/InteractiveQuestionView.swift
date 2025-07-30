@@ -43,6 +43,10 @@ struct InteractiveQuestionView: View {
         .cornerRadius(theme?.cardCornerRadius ?? 12)
         .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
         .onAppear {
+            print("🎯 InteractiveQuestionView appeared with question: '\(question.question)'")
+            print("🎯 Question type: \(question.type)")
+            print("🎯 Expected answer: \(question.correctAnswer)")
+            
             // Auto-focus text fields for immediate typing
             if question.type == .fillInBlank || question.type == .equation {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {

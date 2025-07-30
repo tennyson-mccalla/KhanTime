@@ -1,20 +1,16 @@
 import Foundation
 
-// MARK: - Interactive Lesson Data Models
-// Mock Khan Academy-style content structure
+// MARK: - Educational Content Hierarchy Models
+// Subject > Unit > Lesson structure matching Khan Academy
 
-struct InteractiveLesson: Identifiable, Codable {
+struct Subject: Identifiable, Codable {
     let id: String
-    let title: String
+    let title: String        // "Pre-Algebra", "Algebra", etc.
     let description: String
-    let subject: Subject
     let gradeLevel: AgeGroup
-    let estimatedDuration: TimeInterval // In seconds for 2-hour tracking
-    let prerequisites: [String]
-    let learningObjectives: [String]
-    let content: [LessonStep]
+    let units: [Unit]
     
-    enum Subject: String, CaseIterable, Codable {
+    enum SubjectType: String, CaseIterable, Codable {
         case preAlgebra = "Pre-Algebra"
         case algebra = "Algebra"
         case geometry = "Geometry"
@@ -24,6 +20,29 @@ struct InteractiveLesson: Identifiable, Codable {
         case chemistry = "Chemistry"
         case english = "English"
     }
+}
+
+struct Unit: Identifiable, Codable {
+    let id: String
+    let title: String        // "Factors and multiples", "Patterns", etc.
+    let description: String
+    let estimatedDuration: TimeInterval // Total duration for all lessons
+    let lessons: [InteractiveLesson]     // Individual Khan Academy lessons
+}
+
+// MARK: - Interactive Lesson Data Models  
+// Individual lesson within a unit
+
+struct InteractiveLesson: Identifiable, Codable {
+    let id: String
+    let title: String
+    let description: String
+    let estimatedDuration: TimeInterval // In seconds for 2-hour tracking  
+    let prerequisites: [String]
+    let learningObjectives: [String]
+    let content: [LessonStep]
+    
+    // Note: Subject and Unit context provided by parent containers
 }
 
 struct LessonStep: Identifiable, Codable {
@@ -107,28 +126,61 @@ struct MultiStepProblem: Identifiable, Codable {
     let finalAnswer: AnswerValue
 }
 
-// MARK: - Lesson Provider
-class LessonProvider {
+// MARK: - Educational Content Manager
+class EducationalContentManager {
+    static func getAllSubjects() -> [Subject] {
+        var subjects: [Subject] = []
+        
+        // Add Khan Academy content with proper Subject > Unit > Lesson hierarchy
+        subjects.append(contentsOf: KhanAcademyContentProvider.loadKhanAcademySubjects())
+        
+        // Add demo algebra content
+        subjects.append(createDemoAlgebraSubject())
+        
+        return subjects
+    }
+    
+    // Legacy method for backward compatibility - flattens all lessons
     static func getAllLessons() -> [InteractiveLesson] {
-        var allLessons: [InteractiveLesson] = []
-        
-        // Add original demo lesson (keep as requested)
-        allLessons.append(contentsOf: getOriginalDemoLessons())
-        
-        // Add Khan Academy scraped content (as backup/additional content)
-        allLessons.append(contentsOf: KhanAcademyContentProvider.loadKhanAcademyLessons())
-        
-        // Note: ae.studio content is now loaded asynchronously in InteractiveLessonsBrowserView
-        
-        return allLessons
+        return getAllSubjects().flatMap { subject in
+            subject.units.flatMap { unit in
+                unit.lessons
+            }
+        }
+    }
+    
+    static func createDemoAlgebraSubject() -> Subject {
+        return Subject(
+            id: "demo-algebra",
+            title: "Algebra (Demo)",
+            description: "Demo algebra content with interactive lessons",
+            gradeLevel: .g912,
+            units: [
+                Unit(
+                    id: "linear-equations-unit",
+                    title: "Linear Equations",
+                    description: "Learn to solve linear equations and systems",
+                    estimatedDuration: 7200, // 2 hours total
+                    lessons: [
+                        createSolvingLinearEquationsLesson(),
+                        createSystemsOfEquationsLesson()
+                    ]
+                ),
+                Unit(
+                    id: "quadratic-equations-unit", 
+                    title: "Quadratic Equations",
+                    description: "Introduction to quadratic equations",
+                    estimatedDuration: 2400, // 40 minutes
+                    lessons: [
+                        createQuadraticEquationsLesson()
+                    ]
+                )
+            ]
+        )
     }
     
     static func getOriginalDemoLessons() -> [InteractiveLesson] {
-        return [
-            createSolvingLinearEquationsLesson(),
-            createQuadraticEquationsLesson(),
-            createSystemsOfEquationsLesson()
-        ]
+        return createDemoAlgebraSubject().units.flatMap { $0.lessons }
     }
     
     // Legacy method for backward compatibility
@@ -142,8 +194,6 @@ class LessonProvider {
             id: "linear-equations-101",
             title: "Solving Linear Equations",
             description: "Learn to solve linear equations with one variable using algebraic methods",
-            subject: .algebra,
-            gradeLevel: .g68,
             estimatedDuration: 1800, // 30 minutes
             prerequisites: ["Basic arithmetic", "Understanding variables"],
             learningObjectives: [
@@ -270,8 +320,6 @@ class LessonProvider {
             id: "quadratic-equations-101",
             title: "Introduction to Quadratic Equations",
             description: "Learn to identify and solve simple quadratic equations",
-            subject: .algebra,
-            gradeLevel: .g912,
             estimatedDuration: 2400, // 40 minutes
             prerequisites: ["Linear equations", "FOIL method", "Square roots"],
             learningObjectives: [
@@ -327,8 +375,6 @@ class LessonProvider {
             id: "systems-equations-101",
             title: "Systems of Linear Equations",
             description: "Learn to solve systems of equations using substitution and elimination",
-            subject: .algebra,
-            gradeLevel: .g912,
             estimatedDuration: 2700, // 45 minutes
             prerequisites: ["Linear equations", "Graphing lines"],
             learningObjectives: [

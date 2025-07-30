@@ -463,7 +463,7 @@ class LessonProgressManager: ObservableObject {
 }
 
 #Preview {
-    let sampleLesson = LessonProvider.getBasicAlgebraLessons()[0]
+    let sampleLesson = EducationalContentManager.getAllLessons()[0]
     
     InteractiveLessonView(lesson: sampleLesson)
         .environmentObject(ThemePreference())

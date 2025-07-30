@@ -87,8 +87,6 @@ class AEStudioContentProvider {
                 description: isKhanAcademy ? 
                     "Khan Academy Pre-algebra: \(component.title)" : 
                     "3rd Grade Language lesson from ae.studio: \(component.title)",
-                subject: isKhanAcademy ? .algebra : .english,
-                gradeLevel: isKhanAcademy ? .g68 : .g35,
                 estimatedDuration: estimateDuration(for: component),
                 prerequisites: isKhanAcademy ? 
                     ["Basic arithmetic", "Understanding variables"] : 

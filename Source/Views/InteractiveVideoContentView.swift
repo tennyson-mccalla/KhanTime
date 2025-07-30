@@ -30,67 +30,73 @@ struct InteractiveVideoContentView: View {
                 .font(theme?.headingFont ?? .headline)
                 .foregroundColor(theme?.primaryColor ?? .primary)
             
-            // YouTube Video Player
-            ZStack {
-                if !videoModel.hasInitialized {
-                    Rectangle()
-                        .fill(Color.black)
-                        .frame(height: 250)
+            // YouTube Video Player - Centered
+            HStack {
+                Spacer()
+                ZStack {
+                    if !videoModel.hasInitialized {
+                        Rectangle()
+                            .fill(Color.black)
+                            .aspectRatio(16/9, contentMode: .fit)
+                            .frame(maxHeight: 400)
+                            .cornerRadius(theme?.cardCornerRadius ?? 12)
+                            .overlay(
+                                VStack {
+                                    ProgressView()
+                                        .scaleEffect(1.2)
+                                    Text("Initializing video player...")
+                                        .font(theme?.captionFont ?? .caption)
+                                        .foregroundColor(.white)
+                                }
+                            )
+                            .onAppear {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    videoModel.hasInitialized = true
+                                }
+                            }
+                    } else {
+                        YouTubePlayerView(videoURL: videoModel.content.videoURL) { loading, error in
+                            DispatchQueue.main.async {
+                                videoModel.isLoading = loading
+                                videoModel.hasError = error
+                            }
+                        }
+                        .aspectRatio(16/9, contentMode: .fit) // YouTube standard 16:9 aspect ratio
+                        .frame(maxHeight: 400) // Maximum height constraint
                         .cornerRadius(theme?.cardCornerRadius ?? 12)
-                        .overlay(
-                            VStack {
-                                ProgressView()
-                                    .scaleEffect(1.2)
-                                Text("Initializing video player...")
-                                    .font(theme?.captionFont ?? .caption)
-                                    .foregroundColor(.white)
-                            }
-                        )
-                        .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                videoModel.hasInitialized = true
-                            }
+                        .id("youtube-player-\(videoModel.content.videoURL.hashValue)") // Stable ID
+                    }
+                    
+                    // Loading/Error Overlay
+                    if videoModel.isLoading {
+                        VStack(spacing: 12) {
+                            ProgressView()
+                                .scaleEffect(1.2)
+                            Text("Loading Khan Academy video...")
+                                .font(theme?.captionFont ?? .caption)
+                                .foregroundColor(theme?.secondaryColor ?? .secondary)
                         }
-                } else {
-                    YouTubePlayerView(videoURL: videoModel.content.videoURL) { loading, error in
-                        DispatchQueue.main.async {
-                            videoModel.isLoading = loading
-                            videoModel.hasError = error
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Color.black.opacity(0.7))
+                        .cornerRadius(theme?.cardCornerRadius ?? 12)
+                    } else if videoModel.hasError {
+                        VStack(spacing: 12) {
+                            Image(systemName: "exclamationmark.triangle")
+                                .font(.system(size: 32))
+                                .foregroundColor(.orange)
+                            Text("Unable to load video")
+                                .font(theme?.bodyFont ?? .body)
+                                .foregroundColor(theme?.primaryColor ?? .primary)
+                            Text("Please check your internet connection")
+                                .font(theme?.captionFont ?? .caption)
+                                .foregroundColor(theme?.secondaryColor ?? .secondary)
                         }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(theme?.surfaceColor ?? Color(.systemBackground))
+                        .cornerRadius(theme?.cardCornerRadius ?? 12)
                     }
-                    .frame(height: 250)
-                    .cornerRadius(theme?.cardCornerRadius ?? 12)
-                    .id("youtube-player-\(videoModel.content.videoURL.hashValue)") // Stable ID
                 }
-                
-                // Loading/Error Overlay
-                if videoModel.isLoading {
-                    VStack(spacing: 12) {
-                        ProgressView()
-                            .scaleEffect(1.2)
-                        Text("Loading Khan Academy video...")
-                            .font(theme?.captionFont ?? .caption)
-                            .foregroundColor(theme?.secondaryColor ?? .secondary)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.black.opacity(0.7))
-                    .cornerRadius(theme?.cardCornerRadius ?? 12)
-                } else if videoModel.hasError {
-                    VStack(spacing: 12) {
-                        Image(systemName: "exclamationmark.triangle")
-                            .font(.system(size: 32))
-                            .foregroundColor(.orange)
-                        Text("Unable to load video")
-                            .font(theme?.bodyFont ?? .body)
-                            .foregroundColor(theme?.primaryColor ?? .primary)
-                        Text("Please check your internet connection")
-                            .font(theme?.captionFont ?? .caption)
-                            .foregroundColor(theme?.secondaryColor ?? .secondary)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(theme?.surfaceColor ?? Color(.systemBackground))
-                    .cornerRadius(theme?.cardCornerRadius ?? 12)
-                }
+                Spacer()
             }
             
             // Video Information
@@ -135,6 +141,10 @@ struct YouTubePlayerView: UIViewRepresentable {
         configuration.allowsAirPlayForMediaPlayback = true
         configuration.allowsPictureInPictureMediaPlayback = true
         
+        // Enable fullscreen video support
+        configuration.preferences.setValue(true, forKey: "fullScreenEnabled")
+        configuration.preferences.setValue(true, forKey: "allowFileAccessFromFileURLs")
+        
         // Add user content controller for better iframe support
         let userContentController = WKUserContentController()
         configuration.userContentController = userContentController
@@ -146,54 +156,79 @@ struct YouTubePlayerView: UIViewRepresentable {
         webView.scrollView.isScrollEnabled = false
         webView.scrollView.bounces = false
         
-        // Removed excessive logging
+        // Enable fullscreen gestures
+        if #available(iOS 14.0, *) {
+            webView.configuration.defaultWebpagePreferences.allowsContentJavaScript = true
+        }
         
         return webView
     }
     
     func updateUIView(_ webView: WKWebView, context: Context) {
-        // Only load once to prevent infinite reloading
-        if webView.url == nil {
+        // Check if we need to load a new video URL
+        let shouldLoadNewVideo = webView.url == nil || context.coordinator.lastLoadedURL != videoURL
+        
+        if shouldLoadNewVideo {
+            context.coordinator.lastLoadedURL = videoURL
             // Create embedded YouTube player HTML
             let embedHTML = """
         <!DOCTYPE html>
         <html>
         <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
             <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
             <style>
-                body { 
+                * {
+                    box-sizing: border-box;
+                }
+                html, body { 
                     margin: 0; 
                     padding: 0; 
+                    width: 100%;
+                    height: 100%;
                     background-color: #000;
+                    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+                    overflow: hidden;
+                }
+                .video-container {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    height: 100vh;
-                    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
                 }
                 iframe { 
                     width: 100%; 
                     height: 100%; 
                     border: none;
                     border-radius: 8px;
+                    background-color: #000;
                 }
                 .loading {
                     color: white;
                     text-align: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
             </style>
         </head>
         <body>
-            <div class="loading" id="loading">Loading Khan Academy video...</div>
-            <iframe id="videoFrame" 
-                    src="\(videoURL)?autoplay=0&controls=1&modestbranding=1&rel=0&showinfo=0&origin=\(Bundle.main.bundleIdentifier ?? "com.khantime.app")" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen
-                    style="display:none;"
-                    onload="document.getElementById('loading').style.display='none'; this.style.display='block';">
-            </iframe>
+            <div class="video-container">
+                <div class="loading" id="loading">Loading Khan Academy video...</div>
+                <iframe id="videoFrame" 
+                        src="\(videoURL)?autoplay=0&controls=1&modestbranding=1&rel=0&showinfo=0&fs=1&origin=\(Bundle.main.bundleIdentifier ?? "com.khantime.app")" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen; web-share" 
+                        allowfullscreen
+                        webkitallowfullscreen
+                        mozallowfullscreen
+                        style="display:none;"
+                        onload="document.getElementById('loading').style.display='none'; this.style.display='block';">
+                </iframe>
+            </div>
         </body>
         </html>
         """
@@ -209,6 +244,7 @@ struct YouTubePlayerView: UIViewRepresentable {
     
     class Coordinator: NSObject, WKNavigationDelegate {
         let parent: YouTubePlayerView
+        var lastLoadedURL: String = ""
         
         init(_ parent: YouTubePlayerView) {
             self.parent = parent
