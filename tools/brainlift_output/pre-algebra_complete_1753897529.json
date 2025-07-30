@@ -1,0 +1,174 @@
+{
+  "units" : [
+    {
+      "description" : "Understanding and finding factors and multiples. After these videos, you'll be ready for fractions.",
+      "title" : "Factors and multiples",
+      "exercises" : [
+
+      ],
+      "lessons" : [
+
+      ],
+      "id" : "xa9d6fdff"
+    },
+    {
+      "title" : "Patterns",
+      "description" : "",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "xc624794c56ea8bbf"
+    },
+    {
+      "title" : "Ratios and rates",
+      "description" : "Learn all about proportional relationships. How are they connected to ratios and rates? What do their graphs look like? What types of word problems can we solve with proportions?",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "x17923675"
+    },
+    {
+      "title" : "Percentages",
+      "description" : "",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "xd5b26e1a9a1dc206"
+    },
+    {
+      "title" : "Exponents intro and order of operations",
+      "description" : "",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "x68a67857b65a80f9"
+    },
+    {
+      "title" : "Variables & expressions",
+      "description" : "",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "x6dd80fb5226eb320"
+    },
+    {
+      "title" : "Equations & inequalities introduction",
+      "description" : "In this topic, we will look at 1- and 2-step equations, as well as expressions and inequalities.",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "x04908aa2"
+    },
+    {
+      "title" : "Percent & rational number word problems",
+      "description" : "",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "x0160fcd67ce4adf3"
+    },
+    {
+      "title" : "Proportional relationships",
+      "description" : "",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "xcb69ec05e2bc8d95"
+    },
+    {
+      "title" : "One-step and two-step equations & inequalities",
+      "description" : "",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "x4a4d9de880b8328b"
+    },
+    {
+      "title" : "Roots, exponents, & scientific notation",
+      "description" : "Understanding and solving exponents, radicals, and scientific notation without algebra.",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "x2251cb4b"
+    },
+    {
+      "title" : "Multi-step equations",
+      "description" : "",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "xe82a505e9fd0ef43"
+    },
+    {
+      "title" : "Two-variable equations",
+      "description" : "",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "x03bb13320284662e"
+    },
+    {
+      "title" : "Functions and linear models",
+      "description" : "",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "x57abfac387592783"
+    },
+    {
+      "title" : "Systems of equations",
+      "description" : "",
+      "lessons" : [
+
+      ],
+      "exercises" : [
+
+      ],
+      "id" : "x1c86dc2eca94ed03"
+    }
+  ],
+  "subject" : "pre-algebra",
+  "title" : "Pre-algebra",
+  "description" : "Learn pre-algebra—all of the basic arithmetic and geometry skills needed for algebra.",
+  "id" : "pre-algebra",
+  "scrapedAt" : "2025-07-30T17:45:29Z"
+}

@@ -27,6 +27,7 @@
 		6F2A7FB32E39448F004F3D42 /* InteractiveVideoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A7FB22E39448F004F3D42 /* InteractiveVideoContentView.swift */; };
 		6F2A7FB92E3A7A65004F3D42 /* UnitSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A7FB82E3A7A65004F3D42 /* UnitSectionView.swift */; };
 		6F2A7FBF2E3AB8C7004F3D42 /* pre-algebra_units_1_3_complete.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FBE2E3AB8C7004F3D42 /* pre-algebra_units_1_3_complete.json */; };
+		6F2A7FC12E3AC700004F3D42 /* pre-algebra_complete_15_units.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F2A7FC02E3AC700004F3D42 /* pre-algebra_complete_15_units.json */; };
 		6F797A9F2E300B9B00EC16E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F797A9C2E300B9B00EC16E9 /* Assets.xcassets */; };
 		6F797AA02E300B9B00EC16E9 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797A922E300B9B00EC16E9 /* Credentials.swift */; };
 		6F797AA12E300B9B00EC16E9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F797A992E300B9B00EC16E9 /* DashboardView.swift */; };
@@ -96,6 +97,7 @@
 		6F2A7FB22E39448F004F3D42 /* InteractiveVideoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveVideoContentView.swift; sourceTree = "<group>"; };
 		6F2A7FB82E3A7A65004F3D42 /* UnitSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitSectionView.swift; sourceTree = "<group>"; };
 		6F2A7FBE2E3AB8C7004F3D42 /* pre-algebra_units_1_3_complete.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_units_1_3_complete.json"; sourceTree = "<group>"; };
+		6F2A7FC02E3AC700004F3D42 /* pre-algebra_complete_15_units.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pre-algebra_complete_15_units.json"; sourceTree = "<group>"; };
 		6F797A8A2E300B9B00EC16E9 /* AuthTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenResponse.swift; sourceTree = "<group>"; };
 		6F797A8B2E300B9B00EC16E9 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		6F797A8D2E300B9B00EC16E9 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		6F2A7F9D2E37D515004F3D42 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6F2A7FC02E3AC700004F3D42 /* pre-algebra_complete_15_units.json */,
 				6F2A7FBE2E3AB8C7004F3D42 /* pre-algebra_units_1_3_complete.json */,
 				6F2A7F932E37D515004F3D42 /* algebra_brainlift_1753717870.json */,
 				6F2A7F952E37D515004F3D42 /* algebra-basics_brainlift_1753717867.json */,
@@ -423,6 +426,7 @@
 				6F2A7F882E37CC9F004F3D42 /* algebra_1753715191.json in Resources */,
 				6F2A7F892E37CC9F004F3D42 /* algebra2_1753715193.json in Resources */,
 				6F2A7F8A2E37CC9F004F3D42 /* physics-essentials_1753715198.json in Resources */,
+				6F2A7FC12E3AC700004F3D42 /* pre-algebra_complete_15_units.json in Resources */,
 				6F2A7F8B2E37CC9F004F3D42 /* physics_1753715200.json in Resources */,
 				6F2A7F8C2E37CC9F004F3D42 /* pre-algebra_1753715196.json in Resources */,
 				6F2A7F8D2E37CC9F004F3D42 /* algebra-basics_1753715189.json in Resources */,

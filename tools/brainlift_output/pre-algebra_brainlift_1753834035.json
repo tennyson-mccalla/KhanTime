@@ -1,0 +1,28 @@
+{
+  "description" : "Learn pre-algebra—all of the basic arithmetic and geometry skills needed for algebra.",
+  "id" : "pre-algebra",
+  "scrapedAt" : "2025-07-30T00:07:12Z",
+  "subject" : "pre-algebra",
+  "title" : "Pre-algebra",
+  "units" : [
+    {
+      "description" : "Understanding and finding factors and multiples. After these videos, you'll be ready for fractions.",
+      "exercises" : [
+
+      ],
+      "id" : "xa9d6fdff",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x88b53972",
+          "slug" : "pre-algebra-factors-mult",
+          "title" : "Factors and multiples",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/pre-algebra\/pre-algebra-factors-multiples\/pre-algebra-factors-mult"
+        }
+      ],
+      "title" : "Factors and multiples"
+    }
+  ]
+}

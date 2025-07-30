@@ -71,7 +71,7 @@ class KhanAcademyContentProvider {
         
         // Load enhanced authenticated Khan Academy content with metadata
         let resourceFiles = [
-            "pre-algebra": ("pre-algebra_units_1_3_complete", Subject.SubjectType.preAlgebra, AgeGroup.g35),
+            "pre-algebra": ("pre-algebra_complete_15_units", Subject.SubjectType.preAlgebra, AgeGroup.g35),
             "algebra-basics": ("algebra-basics_brainlift_1753717867", Subject.SubjectType.algebra, AgeGroup.g68),
             "algebra": ("algebra_brainlift_1753717870", Subject.SubjectType.algebra, AgeGroup.g912),
             "algebra2": ("algebra2_brainlift_1753717874", Subject.SubjectType.algebra, AgeGroup.g912),

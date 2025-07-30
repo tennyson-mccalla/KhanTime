@@ -12,7 +12,8 @@
       "WebFetch(domain:www.khanacademy.org)",
       "Bash(curl:*)",
       "Bash(find:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(jq:*)"
     ],
     "deny": []
   }
