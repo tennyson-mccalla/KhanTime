@@ -61,11 +61,32 @@ struct KidsTheme: ThemeProvider {
         AnyTextFieldStyle(KidsTextFieldStyle(theme: self))
     }
 
+    // MARK: - Dynamic Colors
+    func dynamicPrimaryColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.4, green: 0.7, blue: 1.0) : primaryColor
+    }
+    
+    func dynamicSecondaryColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.8, green: 0.5, blue: 0.8) : secondaryColor
+    }
+    
+    func dynamicAccentColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 1.0, green: 0.7, blue: 0.4) : accentColor
+    }
+    
+    func dynamicBackgroundColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.1, green: 0.1, blue: 0.15) : backgroundColor
+    }
+    
+    func dynamicSurfaceColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.15, green: 0.15, blue: 0.2) : surfaceColor
+    }
+
     // MARK: - Theme Metadata
     var themeName: String { "Kids Theme (K-5)" }
     var targetAgeGroup: AgeGroup { .k2 }  // Using K-2 as starting point for K-5
     var supportsHighContrast: Bool { true }
-    var supportsDarkMode: Bool { false }  // Kids theme is always bright
+    var supportsDarkMode: Bool { true }
 }
 
 // MARK: - Kids Button Style

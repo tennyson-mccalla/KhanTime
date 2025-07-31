@@ -1,0 +1,257 @@
+{
+  "description" : "Physics the study of matter, motion, energy, and force.",
+  "id" : "physics",
+  "scrapedAt" : "2025-07-28T15:51:18Z",
+  "subject" : "physics",
+  "title" : "Physics archive",
+  "units" : [
+    {
+      "description" : "For our most up-to-date, mastery-enabled courses, check out [High School Physics](https:\/\/www.khanacademy.org\/science\/highschool-physics), [AP Physics 1](https:\/\/www.khanacademy.org\/science\/ap-college-physics-1), and [AP Physics 2](https:\/\/www.khanacademy.org\/science\/ap-physics-2)!",
+      "exercises" : [
+
+      ],
+      "id" : "x85860e19",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x282c4fdd",
+          "slug" : "newtons-laws-of-motion",
+          "title" : "Newton's laws of motion",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/forces-newtons-laws\/newtons-laws-of-motion"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x680147df",
+          "slug" : "normal-contact-force",
+          "title" : "Normal force and contact force",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/forces-newtons-laws\/normal-contact-force"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5296131a",
+          "slug" : "inclined-planes-friction",
+          "title" : "Inclined planes and friction",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/forces-newtons-laws\/inclined-planes-friction"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x539e2d76",
+          "slug" : "tension-tutorial",
+          "title" : "Tension",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/forces-newtons-laws\/tension-tutorial"
+        }
+      ],
+      "title" : "Forces and Newton's laws of motion"
+    },
+    {
+      "description" : "For our most up-to-date, mastery-enabled courses, check out [High School Physics](https:\/\/www.khanacademy.org\/science\/highschool-physics), [AP Physics 1](https:\/\/www.khanacademy.org\/science\/ap-college-physics-1), and [AP Physics 2](https:\/\/www.khanacademy.org\/science\/ap-physics-2)!",
+      "exercises" : [
+
+      ],
+      "id" : "x67fd0677",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xac0cb604",
+          "slug" : "centripetal-acceleration-tutoria",
+          "title" : "Circular motion",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/centripetal-force-and-gravitation\/centripetal-acceleration-tutoria"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x8c2c3627",
+          "slug" : "gravity-newtonian",
+          "title" : "Newton's law of gravitation",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/centripetal-force-and-gravitation\/gravity-newtonian"
+        }
+      ],
+      "title" : "Centripetal force and gravitation"
+    },
+    {
+      "description" : "For our most up-to-date, mastery-enabled courses, check out [High School Physics](https:\/\/www.khanacademy.org\/science\/highschool-physics), [AP Physics 1](https:\/\/www.khanacademy.org\/science\/ap-college-physics-1), and [AP Physics 2](https:\/\/www.khanacademy.org\/science\/ap-physics-2)!",
+      "exercises" : [
+
+      ],
+      "id" : "xbb0e99c9",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5db497e8",
+          "slug" : "work-and-energy-tutorial",
+          "title" : "Work and energy",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/work-and-energy\/work-and-energy-tutorial"
+        }
+      ],
+      "title" : "Work and energy"
+    },
+    {
+      "description" : "For our most up-to-date, mastery-enabled courses, check out [High School Physics](https:\/\/www.khanacademy.org\/science\/highschool-physics), [AP Physics 1](https:\/\/www.khanacademy.org\/science\/ap-college-physics-1), and [AP Physics 2](https:\/\/www.khanacademy.org\/science\/ap-physics-2)!",
+      "exercises" : [
+
+      ],
+      "id" : "x9e83de9f",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x63b2a61b",
+          "slug" : "mechanical-waves",
+          "title" : "Introduction to mechanical waves",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/mechanical-waves-and-sound\/mechanical-waves"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x1044af3f",
+          "slug" : "sound-topic",
+          "title" : "Sound",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/mechanical-waves-and-sound\/sound-topic"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x222e72c5",
+          "slug" : "doppler-effect",
+          "title" : "The Doppler effect",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/mechanical-waves-and-sound\/doppler-effect"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xbce5d380",
+          "slug" : "standing-waves",
+          "title" : "Wave interference",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/mechanical-waves-and-sound\/standing-waves"
+        }
+      ],
+      "title" : "Waves"
+    },
+    {
+      "description" : "For our most up-to-date, mastery-enabled courses, check out [High School Physics](https:\/\/www.khanacademy.org\/science\/highschool-physics), [AP Physics 1](https:\/\/www.khanacademy.org\/science\/ap-college-physics-1), and [AP Physics 2](https:\/\/www.khanacademy.org\/science\/ap-physics-2)!",
+      "exercises" : [
+
+      ],
+      "id" : "xf830622e",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xcf68efd5",
+          "slug" : "magnetism",
+          "title" : "Discovery of magnetism",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/discoveries\/magnetism"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xb185bc17",
+          "slug" : "magnetic-fields",
+          "title" : "Discovery of magnetic fields",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/discoveries\/magnetic-fields"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x4742f4bf",
+          "slug" : "measure-magnets",
+          "title" : "Measuring magnetic fields",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/discoveries\/measure-magnets"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x0e9c6822",
+          "slug" : "batteries",
+          "title" : "Discovery of batteries",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/discoveries\/batteries"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xef5bd47f",
+          "slug" : "electromagnet",
+          "title" : "Discovery of electromagnetism",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/discoveries\/electromagnet"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x181efea9",
+          "slug" : "resistance",
+          "title" : "Discovery of resistors",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/discoveries\/resistance"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x3d4fdccc",
+          "slug" : "electric-motor",
+          "title" : "Electric motor",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/discoveries\/electric-motor"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x1065b901",
+          "slug" : "electrostatics",
+          "title" : "Electrostatics",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/discoveries\/electrostatics"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xa34a0a49",
+          "slug" : "projectile-launcher",
+          "title" : "Projectile launcher",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/discoveries\/projectile-launcher"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x61d0199b",
+          "slug" : "thermo-can",
+          "title" : "Thermo can",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/discoveries\/thermo-can"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x3083cbfa",
+          "slug" : "simple-machines-explorations",
+          "title" : "Simple machines explorations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/science\/physics\/discoveries\/simple-machines-explorations"
+        }
+      ],
+      "title" : "Discoveries and projects"
+    }
+  ]
+}

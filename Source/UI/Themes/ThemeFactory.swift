@@ -1,5 +1,6 @@
 import SwiftUI
 
+
 /// Factory for creating age-appropriate themes
 enum ThemeFactory {
     /// Returns the appropriate theme for a given age group
@@ -64,15 +65,18 @@ class ThemePreference: ObservableObject {
     @Published var currentTheme: ThemeProvider
 
     init() {
-        // Load saved preference or default to K-2
+        // Load saved age group preference or default to K-2
+        let initialAgeGroup: AgeGroup
         if let savedAgeGroup = UserDefaults.standard.string(forKey: "selectedAgeGroup"),
            let ageGroup = AgeGroup(rawValue: savedAgeGroup) {
-            self.selectedAgeGroup = ageGroup
-            self.currentTheme = ThemeFactory.theme(for: ageGroup)
+            initialAgeGroup = ageGroup
         } else {
-            self.selectedAgeGroup = .k2
-            self.currentTheme = KidsTheme()
+            initialAgeGroup = .k2
         }
+        
+        // Initialize all properties
+        self.selectedAgeGroup = initialAgeGroup
+        self.currentTheme = ThemeFactory.theme(for: initialAgeGroup)
     }
 
     /// Updates the theme based on age group
@@ -85,6 +89,33 @@ class ThemePreference: ObservableObject {
     func updateTheme(for grade: String) {
         let ageGroup = ThemeFactory.ageGroup(for: grade)
         updateTheme(for: ageGroup)
+    }
+}
+
+// MARK: - Theme Dynamic Color Extensions
+extension ThemeProvider {
+    // MARK: - Light Mode Colors (defaults to existing static colors)
+    var lightPrimaryColor: Color { primaryColor }
+    var lightSecondaryColor: Color { secondaryColor }
+    var lightAccentColor: Color { accentColor }
+    var lightBackgroundColor: Color { backgroundColor }
+    var lightSurfaceColor: Color { surfaceColor }
+    
+    // MARK: - Dark Mode Colors (basic defaults - should be overridden by individual theme extensions)
+    var darkPrimaryColor: Color { 
+        lightPrimaryColor.opacity(0.9)
+    }
+    var darkSecondaryColor: Color { 
+        lightSecondaryColor.opacity(0.8)
+    }
+    var darkAccentColor: Color { 
+        lightAccentColor
+    }
+    var darkBackgroundColor: Color { 
+        Color(red: 0.1, green: 0.1, blue: 0.12)
+    }
+    var darkSurfaceColor: Color { 
+        Color(red: 0.15, green: 0.15, blue: 0.18)
     }
 }
 

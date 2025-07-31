@@ -62,6 +62,27 @@ struct MiddleTheme: ThemeProvider {
         AnyTextFieldStyle(MiddleTextFieldStyle(theme: self))
     }
 
+    // MARK: - Dynamic Colors
+    func dynamicPrimaryColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.4, green: 0.6, blue: 1.0) : primaryColor
+    }
+    
+    func dynamicSecondaryColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.7, green: 0.5, blue: 0.9) : secondaryColor
+    }
+    
+    func dynamicAccentColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 1.0, green: 0.6, blue: 0.5) : accentColor
+    }
+    
+    func dynamicBackgroundColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.06, green: 0.06, blue: 0.08) : backgroundColor
+    }
+    
+    func dynamicSurfaceColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.1, green: 0.1, blue: 0.12) : surfaceColor
+    }
+
     // MARK: - Theme Metadata
     var themeName: String { "Middle School Theme (6-8)" }
     var targetAgeGroup: AgeGroup { .g68 }
