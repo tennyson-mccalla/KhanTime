@@ -187,6 +187,18 @@ struct InteractiveLessonView: View {
                 lessonProgressManager.completeMultiStepProblem(totalScore: totalScore)
             }
             .themed(with: theme!)
+            
+        case .qtiExercise(let qtiExercise):
+            QTIExerciseStepView(exercise: qtiExercise) { isCorrect in
+                // Handle exercise completion similar to interactive questions
+                lessonProgressManager.answerQuestion(
+                    answer: isCorrect ? .text("correct") : .text("incorrect"), 
+                    isCorrect: isCorrect, 
+                    points: isCorrect ? 100 : 0
+                )
+            }
+            .id("\(qtiExercise.exerciseId)-\(lessonProgressManager.currentStepIndex)")
+            .themed(with: theme!)
         }
     }
     

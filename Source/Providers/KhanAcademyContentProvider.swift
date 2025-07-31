@@ -24,11 +24,11 @@ class KhanAcademyContentProvider {
             struct ScrapedLesson: Codable {
                 let id: String
                 let title: String
-                let description: String
+                let description: String?
                 let contentKind: String
                 let duration: Int?
-                // Multi-step lesson structure from complete scraper
-                let lessonSteps: [ScrapedLessonStep]
+                // Multi-step lesson structure from complete scraper (optional for backward compatibility)
+                let lessonSteps: [ScrapedLessonStep]?
                 // Optional fields for backward compatibility
                 let slug: String?
                 let videoUrl: String?
@@ -43,7 +43,7 @@ class KhanAcademyContentProvider {
                 struct ScrapedLessonStep: Codable {
                     let id: String
                     let title: String
-                    let description: String
+                    let description: String?
                     let type: String
                     let youtubeUrl: String?
                 }
@@ -247,9 +247,9 @@ class KhanAcademyContentProvider {
         lessonSteps.append(createIntroductionStep(for: lesson, unit: unit))
         
         // PRIORITY: Use multi-step lesson structure from complete scraper
-        if !lesson.lessonSteps.isEmpty {
+        if let lessonStepsArray = lesson.lessonSteps, !lessonStepsArray.isEmpty {
             lessonSteps.append(contentsOf: createMultiStepLessonSteps(
-                from: lesson.lessonSteps,
+                from: lessonStepsArray,
                 baseId: "lesson-\(lessonIndex)",
                 lessonTitle: lesson.title
             ))
@@ -390,8 +390,8 @@ class KhanAcademyContentProvider {
             let stepId = "lesson-\(unitIndex)-\(index)"
             
             // PRIORITY: Use multi-step lesson structure from complete scraper
-            if lesson.contentKind == "lesson", !lesson.lessonSteps.isEmpty {
-                let multiSteps = createMultiStepLessonSteps(from: lesson.lessonSteps, baseId: stepId, lessonTitle: lesson.title)
+            if lesson.contentKind == "lesson", let lessonStepsArray = lesson.lessonSteps, !lessonStepsArray.isEmpty {
+                let multiSteps = createMultiStepLessonSteps(from: lessonStepsArray, baseId: stepId, lessonTitle: lesson.title)
                 allSteps.append(contentsOf: multiSteps)
                 continue
             }
@@ -501,7 +501,7 @@ class KhanAcademyContentProvider {
                             "Watch carefully and take notes",
                             "Part of the \(lessonTitle) lesson series"
                         ],
-                        explanation: scrapedStep.description.isEmpty ? "This video step teaches \(scrapedStep.title)" : scrapedStep.description
+                        explanation: (scrapedStep.description?.isEmpty ?? true) ? "This video step teaches \(scrapedStep.title)" : (scrapedStep.description ?? "")
                     )
                 } else {
                     // Video step without URL - create text placeholder
@@ -510,29 +510,94 @@ class KhanAcademyContentProvider {
                         type: .example,
                         title: scrapedStep.title,
                         content: .textContent(TextContent(
-                            text: "🎥 **\(scrapedStep.title)**\n\n\(scrapedStep.description.isEmpty ? "Video content from Khan Academy" : scrapedStep.description)\n\n*This would normally show the Khan Academy video player.*",
+                            text: "🎥 **\(scrapedStep.title)**\n\n\((scrapedStep.description?.isEmpty ?? true) ? "Video content from Khan Academy" : (scrapedStep.description ?? ""))\n\n*This would normally show the Khan Academy video player.*",
                             images: []
                         )),
                         hints: ["Video content from Khan Academy", "Part of \(lessonTitle)"],
-                        explanation: scrapedStep.description
+                        explanation: scrapedStep.description ?? "Video content from Khan Academy"
                     )
                 }
                 
             case "exercise":
-                // Create interactive exercise placeholder
-                let exerciseQuestion = createExerciseFromStep(scrapedStep, stepId: stepId)
-                return LessonStep(
-                    id: stepId,
-                    type: .practice,
-                    title: scrapedStep.title,
-                    content: .interactiveQuestion(exerciseQuestion),
-                    hints: [
-                        "🧮 Practice exercise from Khan Academy",
-                        "Work through this step by step",
-                        "Part of the \(lessonTitle) lesson series"
-                    ],
-                    explanation: scrapedStep.description.isEmpty ? "Practice exercise for \(scrapedStep.title)" : scrapedStep.description
-                )
+                // REPLACE with QTI exercises for multiple types
+                let titleLower = scrapedStep.title.lowercased()
+                
+                if titleLower.contains("factor pairs") {
+                    let qtiExercise = createFactorPairsQTIExercise()
+                    return LessonStep(
+                        id: stepId,
+                        type: .practice,
+                        title: "📚 Khan Academy Exercise",
+                        content: .qtiExercise(qtiExercise),
+                        hints: ["These are authentic Khan Academy exercises converted to QTI format"],
+                        explanation: "Practice with real Khan Academy factor pairs problems"
+                    )
+                } else if titleLower.contains("identify factors") {
+                    let qtiExercise = createIdentifyFactorsQTIExercise()
+                    return LessonStep(
+                        id: stepId,
+                        type: .practice,
+                        title: "📚 Khan Academy Exercise",
+                        content: .qtiExercise(qtiExercise),
+                        hints: ["Count all the factors of the given number"],
+                        explanation: "Practice identifying all factors of a number"
+                    )
+                } else if titleLower.contains("multiples") {
+                    let qtiExercise = createMultiplesQTIExercise()
+                    return LessonStep(
+                        id: stepId,
+                        type: .practice,
+                        title: "📚 Khan Academy Exercise", 
+                        content: .qtiExercise(qtiExercise),
+                        hints: ["Think about division: is the first number divisible by the second?"],
+                        explanation: "Practice identifying multiples"
+                    )
+                } else if titleLower.contains("prime") {
+                    let qtiExercise = createPrimeNumbersQTIExercise()
+                    return LessonStep(
+                        id: stepId,
+                        type: .practice,
+                        title: "📚 Khan Academy Exercise",
+                        content: .qtiExercise(qtiExercise),
+                        hints: ["Prime numbers have exactly 2 factors: 1 and themselves"],
+                        explanation: "Practice identifying prime numbers"
+                    )
+                } else if titleLower.contains("composite") {
+                    let qtiExercise = createCompositeNumbersQTIExercise()
+                    return LessonStep(
+                        id: stepId,
+                        type: .practice,
+                        title: "📚 Khan Academy Exercise",
+                        content: .qtiExercise(qtiExercise),
+                        hints: ["Composite numbers have more than 2 factors"],
+                        explanation: "Practice identifying composite numbers"
+                    )
+                } else if titleLower.contains("relate") && titleLower.contains("factor") && titleLower.contains("multiple") {
+                    let qtiExercise = createRelateFactorsMultiplesQTIExercise()
+                    return LessonStep(
+                        id: stepId,
+                        type: .practice,
+                        title: "📚 Khan Academy Exercise",
+                        content: .qtiExercise(qtiExercise),
+                        hints: ["If a number is a factor of another, then the second is a multiple of the first"],
+                        explanation: "Practice understanding the relationship between factors and multiples"
+                    )
+                } else {
+                    // Create interactive exercise placeholder for other exercises
+                    let exerciseQuestion = createExerciseFromStep(scrapedStep, stepId: stepId)
+                    return LessonStep(
+                        id: stepId,
+                        type: .practice,
+                        title: scrapedStep.title,
+                        content: .interactiveQuestion(exerciseQuestion),
+                        hints: [
+                            "🧮 Practice exercise from Khan Academy",
+                            "Work through this step by step",
+                            "Part of the \(lessonTitle) lesson series"
+                        ],
+                        explanation: (scrapedStep.description?.isEmpty ?? true) ? "Practice exercise for \(scrapedStep.title)" : (scrapedStep.description ?? "")
+                    )
+                }
                 
             default: // "other" or unknown types
                 return LessonStep(
@@ -540,11 +605,11 @@ class KhanAcademyContentProvider {
                     type: .introduction,
                     title: scrapedStep.title,
                     content: .textContent(TextContent(
-                        text: "📖 **\(scrapedStep.title)**\n\n\(scrapedStep.description.isEmpty ? "Additional content from Khan Academy" : scrapedStep.description)\n\n*This lesson step provides supplementary information and context.*",
+                        text: "📖 **\(scrapedStep.title)**\n\n\((scrapedStep.description?.isEmpty ?? true) ? "Additional content from Khan Academy" : (scrapedStep.description ?? ""))\n\n*This lesson step provides supplementary information and context.*",
                         images: []
                     )),
                     hints: ["Read through this content carefully", "Part of \(lessonTitle)"],
-                    explanation: scrapedStep.description
+                    explanation: scrapedStep.description ?? "Additional content from Khan Academy"
                 )
             }
         }
@@ -571,7 +636,7 @@ class KhanAcademyContentProvider {
                 correct: "Excellent! You've mastered \(step.title).",
                 incorrect: "Not quite right. Review the concepts and try again.",
                 hint: "Think about the key principles from \(step.title)",
-                explanation: step.description.isEmpty ? "This exercise tests your understanding of \(step.title)" : step.description
+                explanation: (step.description?.isEmpty != false) ? "This exercise tests your understanding of \(step.title)" : step.description!
             ),
             points: 100
         )
@@ -608,7 +673,13 @@ class KhanAcademyContentProvider {
     }
     
     private static func createPracticeSteps(from exercises: [ScrapedSubjectContent.ScrapedUnit.ScrapedExercise], unitIndex: Int) -> [LessonStep] {
-        return exercises.enumerated().map { (index, exercise) in
+        var practiceSteps: [LessonStep] = []
+        
+        // QTI exercises are handled individually in the step conversion process
+        // No bulk replacement needed - each exercise step is converted individually
+        
+        // Add regular exercise steps for other units
+        let regularSteps = exercises.enumerated().map { (index, exercise) in
             // Use enhanced hints if available, otherwise use defaults
             var hints = [
                 "Read the question carefully",
@@ -639,7 +710,505 @@ class KhanAcademyContentProvider {
                 explanation: "Practice problem based on Khan Academy exercises"
             )
         }
+        
+        practiceSteps.append(contentsOf: regularSteps)
+        return practiceSteps
     }
+    
+    private static func createFactorPairsQTIExercise() -> QTIExerciseContent {
+        // Load REAL Perseus data and convert to QTI
+        if let realPerseusData = loadRealPerseusData() {
+            return convertPerseusToQTI(realPerseusData)
+        }
+        
+        // Fallback to enhanced placeholder if Perseus data not available
+        return QTIExerciseContent(
+            exerciseId: "xe84a4d8f",
+            exerciseTitle: "Factor pairs",
+            items: [
+                QTIExerciseItem(
+                    id: "x6f16acaa06809dbc",
+                    title: "Factor pairs - Tyler's Toy Cars",
+                    questionText: "Tyler is cleaning up his 36 toy cars. He wants to put every car in a toy bin, and he wants each bin to have the same number of cars.\n\nUse what you know about factor pairs to complete the table.\n\nNumber of bins | Cars per bin\n:-: | :-:\n1 | 36\n2 | ___\n___ | 12\n4 | ___\n6 | 6",
+                    type: .fillInBlank,
+                    choices: [],
+                    expectedInputs: ["input_0", "input_1", "input_2"],
+                    correctAnswers: ["18", "3", "9"],
+                    maxChoices: 0,
+                    hints: [
+                        "We know there are 36 total cars. Number of bins × Number of cars per bin = Total number of cars",
+                        "2 × ? = 36, so 2 × 18 = 36. If there are 2 bins, there will be 18 cars in each bin",
+                        "? × 12 = 36, so 3 × 12 = 36. If there are 3 bins, there will be 12 cars in each bin",
+                        "4 × ? = 36, so 4 × 9 = 36. If there are 4 bins, there will be 9 cars in each bin"
+                    ]
+                ),
+                QTIExerciseItem(
+                    id: "x8d8303e4db09c251",
+                    title: "Factor pairs for 16",
+                    questionText: "Which of the following are factor pairs for 16?\n\n(Select all that apply)",
+                    type: .multipleChoice,
+                    choices: [
+                        QTIExerciseChoice(id: "choice_0", content: "1 and 16", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_1", content: "2 and 8", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_2", content: "2 and 16", isCorrect: false),
+                        QTIExerciseChoice(id: "choice_3", content: "3 and 6", isCorrect: false),
+                        QTIExerciseChoice(id: "choice_4", content: "4 and 4", isCorrect: true)
+                    ],
+                    expectedInputs: [],
+                    correctAnswers: ["choice_0", "choice_1", "choice_4"],
+                    maxChoices: 3,
+                    hints: [
+                        "A factor pair is 2 whole numbers that can be multiplied to get a certain product. In this case, we are looking for pairs that have a product of 16.",
+                        "1 × 16 = 16, 2 × 16 = 32, 2 × 8 = 16, 3 × 6 = 18, 4 × 4 = 16",
+                        "The factor pairs for 16 are: 1 and 16, 2 and 8, 4 and 4"
+                    ]
+                )
+            ]
+        )
+    }
+    
+    private static func loadRealPerseusData() -> [String: Any]? {
+        // Load the extracted Perseus data from the JSON file
+        guard let path = Bundle.main.path(forResource: "unit1_perseus_exercises_1753915042", ofType: "json"),
+              let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
+              let json = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]],
+              let firstExercise = json.first else {
+            print("⚠️ Could not load Perseus data - using fallback")
+            return nil
+        }
+        
+        return firstExercise
+    }
+    
+    private static func convertPerseusToQTI(_ perseusData: [String: Any]) -> QTIExerciseContent {
+        guard let exerciseId = perseusData["exerciseId"] as? String,
+              let exerciseTitle = perseusData["exerciseTitle"] as? String,
+              let perseusItems = perseusData["perseusItems"] as? [[String: Any]] else {
+            print("⚠️ Invalid Perseus data structure")
+            return createFallbackFactorPairsQTI()
+        }
+        
+        var qtiItems: [QTIExerciseItem] = []
+        
+        for perseusItem in perseusItems {
+            if let qtiItem = convertPerseusItemToQTI(perseusItem) {
+                qtiItems.append(qtiItem)
+            }
+        }
+        
+        return QTIExerciseContent(
+            exerciseId: exerciseId,
+            exerciseTitle: exerciseTitle,
+            items: qtiItems
+        )
+    }
+    
+    private static func convertPerseusItemToQTI(_ perseusItem: [String: Any]) -> QTIExerciseItem? {
+        guard let itemId = perseusItem["itemId"] as? String,
+              let problemType = perseusItem["problemType"] as? String,
+              let perseusData = perseusItem["perseusData"] as? [String: Any],
+              let question = perseusData["question"] as? [String: Any],
+              let content = question["content"] as? String,
+              let widgets = question["widgets"] as? [String: Any] else {
+            return nil
+        }
+        
+        // Extract hints from Perseus data
+        var hints: [String] = []
+        if let perseusHints = perseusData["hints"] as? [[String: Any]] {
+            hints = perseusHints.compactMap { hint in
+                if let hintContent = hint["content"] as? String {
+                    return cleanPerseusContent(hintContent)
+                }
+                return nil
+            }
+        }
+        
+        // Process content to remove Perseus syntax
+        let cleanContent = cleanPerseusContent(content)
+        
+        // Determine type and create appropriate QTI item
+        if widgets.values.contains(where: { widget in
+            guard let w = widget as? [String: Any] else { return false }
+            return w["type"] as? String == "numeric-input"
+        }) {
+            // Numeric input (fill in blank)
+            var correctAnswers: [String] = []
+            var expectedInputs: [String] = []
+            
+            for (_, widgetData) in widgets {
+                if let widget = widgetData as? [String: Any],
+                   widget["type"] as? String == "numeric-input",
+                   let options = widget["options"] as? [String: Any],
+                   let answers = options["answers"] as? [[String: Any]] {
+                    
+                    for answer in answers {
+                        if let value = answer["value"] as? Double {
+                            correctAnswers.append(String(Int(value)))
+                            expectedInputs.append("input_\(expectedInputs.count)")
+                        }
+                    }
+                }
+            }
+            
+            return QTIExerciseItem(
+                id: itemId,
+                title: problemType,
+                questionText: cleanContent,
+                type: .fillInBlank,
+                choices: [],
+                expectedInputs: expectedInputs,
+                correctAnswers: correctAnswers,
+                maxChoices: 0,
+                hints: hints
+            )
+            
+        } else if widgets.values.contains(where: { widget in
+            guard let w = widget as? [String: Any] else { return false }
+            return w["type"] as? String == "radio"
+        }) {
+            // Radio/multiple choice
+            var choices: [QTIExerciseChoice] = []
+            var correctAnswers: [String] = []
+            
+            for (_, widgetData) in widgets {
+                if let widget = widgetData as? [String: Any],
+                   widget["type"] as? String == "radio",
+                   let options = widget["options"] as? [String: Any],
+                   let choiceList = options["choices"] as? [[String: Any]] {
+                    
+                    for (index, choice) in choiceList.enumerated() {
+                        if let choiceContent = choice["content"] as? String,
+                           let isCorrect = choice["correct"] as? Bool {
+                            
+                            let choiceId = "choice_\(index)"
+                            let cleanChoiceContent = cleanPerseusContent(choiceContent)
+                            
+                            choices.append(QTIExerciseChoice(
+                                id: choiceId,
+                                content: cleanChoiceContent,
+                                isCorrect: isCorrect
+                            ))
+                            
+                            if isCorrect {
+                                correctAnswers.append(choiceId)
+                            }
+                        }
+                    }
+                    break // Only process first radio widget
+                }
+            }
+            
+            return QTIExerciseItem(
+                id: itemId,
+                title: problemType,
+                questionText: cleanContent,
+                type: .multipleChoice,
+                choices: choices,
+                expectedInputs: [],
+                correctAnswers: correctAnswers,
+                maxChoices: correctAnswers.count,
+                hints: hints
+            )
+        }
+        
+        return nil
+    }
+    
+    private static func cleanPerseusContent(_ content: String) -> String {
+        var cleaned = content
+        
+        // Remove Perseus widget placeholders
+        cleaned = cleaned.replacingOccurrences(of: "[[☃ numeric-input 1]]", with: "___")
+        cleaned = cleaned.replacingOccurrences(of: "[[☃ numeric-input 2]]", with: "___")
+        cleaned = cleaned.replacingOccurrences(of: "[[☃ numeric-input 3]]", with: "___")
+        cleaned = cleaned.replacingOccurrences(of: "[[☃ radio 1]]", with: "\n\n(Select all that apply)")
+        
+        // Clean up LaTeX notation for better readability
+        cleaned = cleaned.replacingOccurrences(of: "$", with: "")
+        
+        // Clean up formatting
+        cleaned = cleaned.replacingOccurrences(of: "**", with: "")
+        cleaned = cleaned.replacingOccurrences(of: "\\n\\n", with: "\n\n")
+        cleaned = cleaned.replacingOccurrences(of: "\\n", with: "\n")
+        
+        // Clean up Perseus color codes for better readability
+        cleaned = cleaned.replacingOccurrences(of: "\\green{", with: "")
+        cleaned = cleaned.replacingOccurrences(of: "\\redD{", with: "")
+        cleaned = cleaned.replacingOccurrences(of: "\\blueD{", with: "")
+        cleaned = cleaned.replacingOccurrences(of: "\\greenD{", with: "")
+        cleaned = cleaned.replacingOccurrences(of: "}", with: "")
+        cleaned = cleaned.replacingOccurrences(of: "\\times", with: "×")
+        cleaned = cleaned.replacingOccurrences(of: "\\text{", with: "")
+        
+        return cleaned.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    private static func createFallbackFactorPairsQTI() -> QTIExerciseContent {
+        // Enhanced fallback with real Khan Academy styling
+        return QTIExerciseContent(
+            exerciseId: "xe84a4d8f_fallback",
+            exerciseTitle: "Factor pairs (Enhanced)",
+            items: [
+                QTIExerciseItem(
+                    id: "fallback_1",
+                    title: "Factor pairs practice",
+                    questionText: "Complete the factor pairs for 24:\n\n1 × ___ = 24\n2 × ___ = 24\n3 × ___ = 24",
+                    type: .fillInBlank,
+                    choices: [],
+                    expectedInputs: ["input_0", "input_1", "input_2"],
+                    correctAnswers: ["24", "12", "8"],
+                    maxChoices: 0,
+                    hints: [
+                        "Factor pairs multiply together to make the target number",
+                        "24 ÷ 1 = 24",
+                        "24 ÷ 2 = 12",
+                        "24 ÷ 3 = 8"
+                    ]
+                )
+            ]
+        )
+    }
+    
+    private static func createIdentifyFactorsQTIExercise() -> QTIExerciseContent {
+        return QTIExerciseContent(
+            exerciseId: "x3a424895366179a2",
+            exerciseTitle: "Identify factors",
+            items: [
+                QTIExerciseItem(
+                    id: "identify_factors_20",
+                    title: "Identify factors of 20",
+                    questionText: "Which of the following are factors of 20?\n\n(Select all that apply)",
+                    type: .multipleChoice,
+                    choices: [
+                        QTIExerciseChoice(id: "choice_0", content: "1", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_1", content: "2", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_2", content: "3", isCorrect: false),
+                        QTIExerciseChoice(id: "choice_3", content: "4", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_4", content: "5", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_5", content: "6", isCorrect: false),
+                        QTIExerciseChoice(id: "choice_6", content: "10", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_7", content: "20", isCorrect: true)
+                    ],
+                    expectedInputs: [],
+                    correctAnswers: ["choice_0", "choice_1", "choice_3", "choice_4", "choice_6", "choice_7"],
+                    maxChoices: 6,
+                    hints: [
+                        "A factor of 20 is a number that divides into 20 evenly (with no remainder)",
+                        "Try dividing 20 by each number: 20 ÷ 1 = 20, 20 ÷ 2 = 10, 20 ÷ 4 = 5, etc.",
+                        "The factors of 20 are: 1, 2, 4, 5, 10, 20"
+                    ]
+                ),
+                QTIExerciseItem(
+                    id: "count_factors_18",
+                    title: "Count factors of 18",
+                    questionText: "How many factors does 18 have?\n\n(List all the numbers that divide evenly into 18, then count them)",
+                    type: .fillInBlank,
+                    choices: [],
+                    expectedInputs: ["input_0"],
+                    correctAnswers: ["6"],
+                    maxChoices: 0,
+                    hints: [
+                        "Find all numbers that divide into 18: start with 1 and work your way up",
+                        "1 × 18 = 18, so 1 and 18 are factors",
+                        "2 × 9 = 18, so 2 and 9 are factors", 
+                        "3 × 6 = 18, so 3 and 6 are factors",
+                        "The factors are: 1, 2, 3, 6, 9, 18. Count them: 6 factors"
+                    ]
+                )
+            ]
+        )
+    }
+    
+    private static func createMultiplesQTIExercise() -> QTIExerciseContent {
+        return QTIExerciseContent(
+            exerciseId: "x7cd3d561bb588d68",
+            exerciseTitle: "Identify multiples", 
+            items: [
+                QTIExerciseItem(
+                    id: "multiples_of_6",
+                    title: "Multiples of 6",
+                    questionText: "Which of the following are multiples of 6?\n\n(Select all that apply)",
+                    type: .multipleChoice,
+                    choices: [
+                        QTIExerciseChoice(id: "choice_0", content: "12", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_1", content: "15", isCorrect: false),
+                        QTIExerciseChoice(id: "choice_2", content: "18", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_3", content: "20", isCorrect: false),
+                        QTIExerciseChoice(id: "choice_4", content: "24", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_5", content: "30", isCorrect: true)
+                    ],
+                    expectedInputs: [],
+                    correctAnswers: ["choice_0", "choice_2", "choice_4", "choice_5"],
+                    maxChoices: 4,
+                    hints: [
+                        "A multiple of 6 is a number you get when you multiply 6 by a whole number",
+                        "The multiples of 6 are: 6, 12, 18, 24, 30, 36, 42...",
+                        "Check: 6 × 2 = 12, 6 × 3 = 18, 6 × 4 = 24, 6 × 5 = 30"
+                    ]
+                ),
+                QTIExerciseItem(
+                    id: "complete_multiples",
+                    title: "Complete the pattern",
+                    questionText: "Complete the pattern of multiples of 4:\n\n4, 8, 12, ___, ___, 24",
+                    type: .fillInBlank,
+                    choices: [],
+                    expectedInputs: ["input_0", "input_1"],
+                    correctAnswers: ["16", "20"],
+                    maxChoices: 0,
+                    hints: [
+                        "Multiples of 4: add 4 each time",
+                        "4, 8, 12, ? → 12 + 4 = 16",
+                        "4, 8, 12, 16, ? → 16 + 4 = 20"
+                    ]
+                )
+            ]
+        )
+    }
+    
+    private static func createRelateFactorsMultiplesQTIExercise() -> QTIExerciseContent {
+        return QTIExerciseContent(
+            exerciseId: "x84edaea8",
+            exerciseTitle: "Relate factors and multiples",
+            items: [
+                QTIExerciseItem(
+                    id: "factors_multiples_connection",
+                    title: "Factors and multiples connection",
+                    questionText: "If 3 and 8 are factors of 24, then 24 is a multiple of which numbers?\n\n(Select all that apply)",
+                    type: .multipleChoice,
+                    choices: [
+                        QTIExerciseChoice(id: "choice_0", content: "3", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_1", content: "8", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_2", content: "5", isCorrect: false),
+                        QTIExerciseChoice(id: "choice_3", content: "1", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_4", content: "24", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_5", content: "7", isCorrect: false)
+                    ],
+                    expectedInputs: [],
+                    correctAnswers: ["choice_0", "choice_1", "choice_3", "choice_4"],
+                    maxChoices: 4,
+                    hints: [
+                        "If a number is a factor of 24, then 24 is a multiple of that number",
+                        "The factors of 24 are: 1, 2, 3, 4, 6, 8, 12, 24",
+                        "So 24 is a multiple of all its factors: 1, 2, 3, 4, 6, 8, 12, 24"
+                    ]
+                ),
+                QTIExerciseItem(
+                    id: "factor_multiple_fill",
+                    title: "Factor and multiple relationship",
+                    questionText: "Fill in the blanks:\n\nSince 7 × 9 = 63, we know that:\n• 7 and 9 are _____ of 63\n• 63 is a _____ of 7 and 9",
+                    type: .fillInBlank,
+                    choices: [],
+                    expectedInputs: ["input_0", "input_1"],
+                    correctAnswers: ["factors", "multiple"],
+                    maxChoices: 0,
+                    hints: [
+                        "When two numbers multiply to make a third number, the first two are factors of the third",
+                        "The third number is a multiple of the first two",
+                        "7 × 9 = 63, so 7 and 9 are factors of 63, and 63 is a multiple of 7 and 9"
+                    ]
+                )
+            ]
+        )
+    }
+    
+    private static func createPrimeNumbersQTIExercise() -> QTIExerciseContent {
+        return QTIExerciseContent(
+            exerciseId: "3849070",
+            exerciseTitle: "Identify prime numbers",
+            items: [
+                QTIExerciseItem(
+                    id: "prime_identification",
+                    title: "Prime number identification",
+                    questionText: "Which of the following are prime numbers?\n\n(Select all that apply)\n\nRemember: A prime number has exactly 2 factors - 1 and itself.",
+                    type: .multipleChoice,
+                    choices: [
+                        QTIExerciseChoice(id: "choice_0", content: "7", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_1", content: "9", isCorrect: false),
+                        QTIExerciseChoice(id: "choice_2", content: "11", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_3", content: "15", isCorrect: false),
+                        QTIExerciseChoice(id: "choice_4", content: "13", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_5", content: "21", isCorrect: false)
+                    ],
+                    expectedInputs: [],
+                    correctAnswers: ["choice_0", "choice_2", "choice_4"],
+                    maxChoices: 3,
+                    hints: [
+                        "Check each number: does it have exactly 2 factors?",
+                        "7: factors are 1, 7 → prime. 9: factors are 1, 3, 9 → not prime",
+                        "11: factors are 1, 11 → prime. 13: factors are 1, 13 → prime",
+                        "15: factors are 1, 3, 5, 15 → not prime. 21: factors are 1, 3, 7, 21 → not prime"
+                    ]
+                ),
+                QTIExerciseItem(
+                    id: "prime_true_false",
+                    title: "Is 17 prime?",
+                    questionText: "Is 17 a prime number?\n\n(Check if 17 has exactly 2 factors)",
+                    type: .multipleChoice,
+                    choices: [
+                        QTIExerciseChoice(id: "choice_yes", content: "Yes, 17 is prime", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_no", content: "No, 17 is not prime", isCorrect: false)
+                    ],
+                    expectedInputs: [],
+                    correctAnswers: ["choice_yes"],
+                    maxChoices: 1,
+                    hints: [
+                        "List all factors of 17: what numbers divide into 17 evenly?",
+                        "Try dividing 17 by 2, 3, 4, 5... up to 16",
+                        "Only 1 and 17 divide into 17 evenly, so 17 has exactly 2 factors → prime"
+                    ]
+                )
+            ]
+        )
+    }
+    
+    private static func createCompositeNumbersQTIExercise() -> QTIExerciseContent {
+        return QTIExerciseContent(
+            exerciseId: "702484106",
+            exerciseTitle: "Identify composite numbers",
+            items: [
+                QTIExerciseItem(
+                    id: "composite_identification",
+                    title: "Composite number identification",
+                    questionText: "Which of the following are composite numbers?\n\n(Select all that apply)\n\nRemember: A composite number has more than 2 factors.",
+                    type: .multipleChoice,
+                    choices: [
+                        QTIExerciseChoice(id: "choice_0", content: "4", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_1", content: "7", isCorrect: false),
+                        QTIExerciseChoice(id: "choice_2", content: "9", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_3", content: "11", isCorrect: false),
+                        QTIExerciseChoice(id: "choice_4", content: "12", isCorrect: true),
+                        QTIExerciseChoice(id: "choice_5", content: "1", isCorrect: false)
+                    ],
+                    expectedInputs: [],
+                    correctAnswers: ["choice_0", "choice_2", "choice_4"],
+                    maxChoices: 3,
+                    hints: [
+                        "Count the factors of each number. More than 2 factors = composite",
+                        "4: factors are 1, 2, 4 → composite. 7: factors are 1, 7 → prime",
+                        "9: factors are 1, 3, 9 → composite. 12: factors are 1, 2, 3, 4, 6, 12 → composite",
+                        "Note: 1 is neither prime nor composite (it has only 1 factor)"
+                    ]
+                ),
+                QTIExerciseItem(
+                    id: "prime_composite_classification",
+                    title: "Prime or composite?",
+                    questionText: "Fill in the blank:\n\nThe number 14 is _____ because it has the factors: 1, 2, 7, 14",
+                    type: .fillInBlank,
+                    choices: [],
+                    expectedInputs: ["input_0"],
+                    correctAnswers: ["composite"],
+                    maxChoices: 0,
+                    hints: [
+                        "Count the factors: 1, 2, 7, 14. How many is that?",
+                        "14 has 4 factors, which is more than 2",
+                        "Numbers with more than 2 factors are called composite"
+                    ]
+                )
+            ]
+        )
+    }
+    
     
     private static func createQuizQuestionFromLesson(_ lesson: ScrapedSubjectContent.ScrapedUnit.ScrapedLesson, stepId: String) -> InteractiveQuestion {
         // Create topic-specific quiz questions based on lesson title

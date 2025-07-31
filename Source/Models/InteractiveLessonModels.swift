@@ -66,6 +66,7 @@ enum StepContent: Codable {
     case videoContent(InteractiveVideoContent)
     case interactiveQuestion(InteractiveQuestion)
     case multiStepProblem(MultiStepProblem)
+    case qtiExercise(QTIExerciseContent)
 }
 
 struct TextContent: Codable {
@@ -424,4 +425,43 @@ class EducationalContentManager {
             ]
         )
     }
+}
+
+// MARK: - QTI Exercise Content Models
+// Khan Academy exercises converted from Perseus to QTI 3.0
+
+struct QTIExerciseContent: Codable {
+    let exerciseId: String
+    let exerciseTitle: String
+    let items: [QTIExerciseItem]
+    var currentItemIndex: Int = 0
+    
+    var currentItem: QTIExerciseItem? {
+        guard currentItemIndex >= 0 && currentItemIndex < items.count else { return nil }
+        return items[currentItemIndex]
+    }
+}
+
+struct QTIExerciseItem: Identifiable, Codable {
+    let id: String
+    let title: String
+    let questionText: String
+    let type: QTIExerciseType
+    let choices: [QTIExerciseChoice]
+    let expectedInputs: [String]
+    let correctAnswers: [String]
+    let maxChoices: Int
+    let hints: [String]
+}
+
+struct QTIExerciseChoice: Identifiable, Codable {
+    let id: String
+    let content: String
+    let isCorrect: Bool
+}
+
+enum QTIExerciseType: String, Codable {
+    case multipleChoice = "multiple_choice"
+    case fillInBlank = "fill_in_blank"
+    case textEntry = "text_entry"
 }
