@@ -3,7 +3,7 @@ import SwiftUI
 /// Protocol defining the contract for all themes
 /// This allows us to create age-appropriate UI experiences
 protocol ThemeProvider {
-    // MARK: - Colors
+    // MARK: - Colors (Legacy - for fallback only)
     var primaryColor: Color { get }
     var secondaryColor: Color { get }
     var accentColor: Color { get }
@@ -12,6 +12,13 @@ protocol ThemeProvider {
     var errorColor: Color { get }
     var successColor: Color { get }
     var warningColor: Color { get }
+    
+    // MARK: - Dynamic Colors (Primary Interface)
+    func dynamicPrimaryColor(for colorScheme: ColorScheme) -> Color
+    func dynamicSecondaryColor(for colorScheme: ColorScheme) -> Color
+    func dynamicAccentColor(for colorScheme: ColorScheme) -> Color
+    func dynamicBackgroundColor(for colorScheme: ColorScheme) -> Color
+    func dynamicSurfaceColor(for colorScheme: ColorScheme) -> Color
 
     // MARK: - Typography
     var titleFont: Font { get }
@@ -106,12 +113,14 @@ extension EnvironmentValues {
 // MARK: - View modifier for theme application
 struct ThemedView: ViewModifier {
     let theme: ThemeProvider
+    @Environment(\.colorScheme) var colorScheme
 
     func body(content: Content) -> some View {
         content
             .environment(\.theme, theme)
-            .accentColor(theme.accentColor)
+            .accentColor(theme.dynamicAccentColor(for: colorScheme))
             .font(theme.bodyFont)
+            .background(theme.dynamicBackgroundColor(for: colorScheme))
     }
 }
 

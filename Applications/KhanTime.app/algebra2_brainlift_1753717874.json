@@ -1,0 +1,1038 @@
+{
+  "description" : "The Algebra 2 course, often taught in the 11th grade, covers Polynomials; Complex Numbers; Rational Exponents; Exponential and Logarithmic Functions; Trigonometric Functions; Transformations of Functions; Rational Functions; and continuing the work with Equations and Modeling from previous grades. Khan Academy's Algebra 2 course is built to deliver a comprehensive, illuminating, engaging, and Common Core aligned experience!",
+  "id" : "algebra2",
+  "scrapedAt" : "2025-07-28T15:51:14Z",
+  "subject" : "algebra2",
+  "title" : "Algebra 2",
+  "units" : [
+    {
+      "description" : "We'll explore the connection between polynomials and the integers, through adding, subtracting, and multiplying polynomials. This prepares us for factoring and dividing polynomials, and paves the way for complex modeling in fields like physics, engineering, and finance.",
+      "exercises" : [
+
+      ],
+      "id" : "xbc1ac6a3b5dc07bc",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xb4021052beefffb2",
+          "slug" : "x2ec2f6f830c9fb89:poly-intro",
+          "title" : "Intro to polynomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-arithmetic\/x2ec2f6f830c9fb89:poly-intro"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x33050a3b6ef20fcb",
+          "slug" : "x2ec2f6f830c9fb89:poly-avg-rate",
+          "title" : "Average rate of change of polynomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-arithmetic\/x2ec2f6f830c9fb89:poly-avg-rate"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x2a3bbc655fcd0736",
+          "slug" : "x2ec2f6f830c9fb89:poly-add-sub",
+          "title" : "Adding and subtracting polynomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-arithmetic\/x2ec2f6f830c9fb89:poly-add-sub"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xad5b52cdaa35f7ab",
+          "slug" : "x2ec2f6f830c9fb89:poly-arithmetic-quiz-1",
+          "title" : "Polynomial arithmetic: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x6aa543f2012d6f78",
+          "slug" : "x2ec2f6f830c9fb89:mono-by-poly",
+          "title" : "Multiplying monomials by polynomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-arithmetic\/x2ec2f6f830c9fb89:mono-by-poly"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x3bea609f8b921e97",
+          "slug" : "x2ec2f6f830c9fb89:poly-arithmetic-quiz-2",
+          "title" : "Polynomial arithmetic: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x255f0f8b5ef63fa4",
+          "slug" : "x2ec2f6f830c9fb89:bi-by-poly",
+          "title" : "Multiplying binomials by polynomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-arithmetic\/x2ec2f6f830c9fb89:bi-by-poly"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x577b43a246c70b9c",
+          "slug" : "x2ec2f6f830c9fb89:special-products",
+          "title" : "Special products of polynomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-arithmetic\/x2ec2f6f830c9fb89:special-products"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x66a4056c589f43c7",
+          "slug" : "x2ec2f6f830c9fb89:poly-arithmetic-quiz-3",
+          "title" : "Polynomial arithmetic: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x700dc24f6070f756",
+          "slug" : "x2ec2f6f830c9fb89:poly-arithmetic-unit-test",
+          "title" : "Polynomial arithmetic: Unit test"
+        }
+      ],
+      "title" : "Polynomial arithmetic"
+    },
+    {
+      "description" : "Welcome to the world of imaginary and complex numbers. We'll learn what imaginary and complex numbers are, how to perform arithmetic operations with them, represent them graphically on the complex plane, and apply these concepts to solve quadratic equations in new ways.",
+      "exercises" : [
+
+      ],
+      "id" : "xdaca582eeb00c1eb",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x91657b80eb13f277",
+          "slug" : "x2ec2f6f830c9fb89:imaginary",
+          "title" : "The imaginary unit i",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:complex\/x2ec2f6f830c9fb89:imaginary"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x4fb1e67b2f331ee8",
+          "slug" : "x2ec2f6f830c9fb89:complex-num",
+          "title" : "Complex numbers introduction",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:complex\/x2ec2f6f830c9fb89:complex-num"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xf237c879ec77082f",
+          "slug" : "x2ec2f6f830c9fb89:complex-plane",
+          "title" : "The complex plane",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:complex\/x2ec2f6f830c9fb89:complex-plane"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x5ab18778c35987e7",
+          "slug" : "x2ec2f6f830c9fb89:complex-quiz-1",
+          "title" : "Complex numbers: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x828a43749645dce6",
+          "slug" : "x2ec2f6f830c9fb89:complex-add-sub",
+          "title" : "Adding and subtracting complex numbers",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:complex\/x2ec2f6f830c9fb89:complex-add-sub"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x3fa7f99c7c96240d",
+          "slug" : "x2ec2f6f830c9fb89:complex-mul",
+          "title" : "Multiplying complex numbers",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:complex\/x2ec2f6f830c9fb89:complex-mul"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x2cde58164e1fd335",
+          "slug" : "x2ec2f6f830c9fb89:complex-eq",
+          "title" : "Quadratic equations with complex solutions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:complex\/x2ec2f6f830c9fb89:complex-eq"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xfdbd7511f7c1752b",
+          "slug" : "x2ec2f6f830c9fb89:complex-quiz-2",
+          "title" : "Complex numbers: Quiz 2"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x2236e4abbc142ed4",
+          "slug" : "x2ec2f6f830c9fb89:complex-unit-test",
+          "title" : "Complex numbers: Unit test"
+        }
+      ],
+      "title" : "Complex numbers"
+    },
+    {
+      "description" : "Let's get equipped with a variety of key strategies for breaking down higher degree polynomials. From taking out common factors to using special products, we'll build a strong foundation to help us investigate polynomial functions and prove identities.",
+      "exercises" : [
+
+      ],
+      "id" : "x314ac65fc1757b57",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x189870123b471e5b",
+          "slug" : "x2ec2f6f830c9fb89:mono-factor",
+          "title" : "Factoring monomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-factor\/x2ec2f6f830c9fb89:mono-factor"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x1363ad19fdb12424",
+          "slug" : "x2ec2f6f830c9fb89:gcf",
+          "title" : "Greatest common factor",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-factor\/x2ec2f6f830c9fb89:gcf"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x4062e21bfdad02f7",
+          "slug" : "x2ec2f6f830c9fb89:common-factor",
+          "title" : "Taking common factors",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-factor\/x2ec2f6f830c9fb89:common-factor"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5ac4bf64a19b878b",
+          "slug" : "x2ec2f6f830c9fb89:factor-high-deg",
+          "title" : "Factoring higher degree polynomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-factor\/x2ec2f6f830c9fb89:factor-high-deg"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x81f54ff867ae2d4f",
+          "slug" : "x2ec2f6f830c9fb89:poly-factor-quiz-1",
+          "title" : "Polynomial factorization: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xde4be36e447032a6",
+          "slug" : "x2ec2f6f830c9fb89:factor-w-structure",
+          "title" : "Factoring using structure",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-factor\/x2ec2f6f830c9fb89:factor-w-structure"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xb6001878b1ac664e",
+          "slug" : "x2ec2f6f830c9fb89:poly-factor-quiz-2",
+          "title" : "Polynomial factorization: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xca94f08cbcbf5336",
+          "slug" : "x2ec2f6f830c9fb89:poly-identities",
+          "title" : "Polynomial identities",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-factor\/x2ec2f6f830c9fb89:poly-identities"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xbd4c60fd84c352d6",
+          "slug" : "x2ec2f6f830c9fb89:geo-series",
+          "title" : "Geometric series",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-factor\/x2ec2f6f830c9fb89:geo-series"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xd616aa38f7cac115",
+          "slug" : "x2ec2f6f830c9fb89:poly-factor-quiz-3",
+          "title" : "Polynomial factorization: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x1368a82f3da3e79b",
+          "slug" : "x2ec2f6f830c9fb89:poly-factor-unit-test",
+          "title" : "Polynomial factorization: Unit test"
+        }
+      ],
+      "title" : "Polynomial factorization"
+    },
+    {
+      "description" : "After we have added, subtracted, and multiplied polynomials, it's time to divide them! This will prove to be a little bit more sophisticated. It turns out that not every polynomial division results in a polynomial. When it doesn't, we end up with a remainder (just like with integer division!).",
+      "exercises" : [
+
+      ],
+      "id" : "xa050f0299770c96c",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x607d29d92b490314",
+          "slug" : "x2ec2f6f830c9fb89:poly-div-by-x",
+          "title" : "Dividing polynomials by x",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-div\/x2ec2f6f830c9fb89:poly-div-by-x"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x85b210f7bd1af203",
+          "slug" : "x2ec2f6f830c9fb89:quad-div-by-linear",
+          "title" : "Dividing quadratics by linear factors",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-div\/x2ec2f6f830c9fb89:quad-div-by-linear"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x6085106cec96d121",
+          "slug" : "x2ec2f6f830c9fb89:poly-div-quiz-1",
+          "title" : "Polynomial division: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xee11e758eb6ece08",
+          "slug" : "x2ec2f6f830c9fb89:poly-div-by-linear",
+          "title" : "Dividing polynomials by linear factors",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-div\/x2ec2f6f830c9fb89:poly-div-by-linear"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5cd738d6283c5357",
+          "slug" : "x2ec2f6f830c9fb89:remainder-theorem",
+          "title" : "Polynomial Remainder Theorem",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-div\/x2ec2f6f830c9fb89:remainder-theorem"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xea221c4205412e3c",
+          "slug" : "x2ec2f6f830c9fb89:poly-div-quiz-2",
+          "title" : "Polynomial division: Quiz 2"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x4839920953d2e574",
+          "slug" : "x2ec2f6f830c9fb89:poly-div-unit-test",
+          "title" : "Polynomial division: Unit test"
+        }
+      ],
+      "title" : "Polynomial division"
+    },
+    {
+      "description" : "In this unit, we will use everything that we know about polynomials in order to analyze their graphical behavior. Specifically, we will find polynomials' zeros (i.e., x-intercepts) and analyze how they behave as the x-values become infinitely positive or infinitely negative (i.e., end-behavior).",
+      "exercises" : [
+
+      ],
+      "id" : "x835a28c20041d5ae",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xe7165ce40a30e0b6",
+          "slug" : "x2ec2f6f830c9fb89:poly-zeros",
+          "title" : "Zeros of polynomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-graphs\/x2ec2f6f830c9fb89:poly-zeros"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x1f905dd2838c6dd8",
+          "slug" : "x2ec2f6f830c9fb89:poly-intervals",
+          "title" : "Positive and negative intervals of polynomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-graphs\/x2ec2f6f830c9fb89:poly-intervals"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x13e7920e42d7f9d4",
+          "slug" : "x2ec2f6f830c9fb89:poly-end-behavior",
+          "title" : "End behavior of polynomials",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-graphs\/x2ec2f6f830c9fb89:poly-end-behavior"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x30d26b704d222d31",
+          "slug" : "x2ec2f6f830c9fb89:poly-graphs-together",
+          "title" : "Putting it all together",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:poly-graphs\/x2ec2f6f830c9fb89:poly-graphs-together"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x6d487bcc7ec2fd0c",
+          "slug" : "x2ec2f6f830c9fb89:poly-graphs-unit-test",
+          "title" : "Polynomial graphs: Unit test"
+        }
+      ],
+      "title" : "Polynomial graphs"
+    },
+    {
+      "description" : "We previously learned about integer powers—first positive and then also negative. But what does it mean to raise a number to the 2.5 power? In Algebra 2, we extend previous concepts to include rational powers. We'll define how they work, and use them to rewrite exponential expressions in various ways.",
+      "exercises" : [
+
+      ],
+      "id" : "xd967cd7277c855c9",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x8abd554f6c55edf6",
+          "slug" : "x2ec2f6f830c9fb89:rational-exp",
+          "title" : "Rational exponents",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:exp\/x2ec2f6f830c9fb89:rational-exp"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x7fd6eaf7202d11d5",
+          "slug" : "x2ec2f6f830c9fb89:exp-properties",
+          "title" : "Properties of exponents (rational exponents)",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:exp\/x2ec2f6f830c9fb89:exp-properties"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xf0544b8ab02e5357",
+          "slug" : "x2ec2f6f830c9fb89:exp-quiz-1",
+          "title" : "Rational exponents and radicals: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x1b3266a0546c2ea3",
+          "slug" : "x2ec2f6f830c9fb89:eval-exp-rad",
+          "title" : "Evaluating exponents & radicals",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:exp\/x2ec2f6f830c9fb89:eval-exp-rad"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xffdb422c9ef595bf",
+          "slug" : "x2ec2f6f830c9fb89:equivalent-exp",
+          "title" : "Equivalent forms of exponential expressions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:exp\/x2ec2f6f830c9fb89:equivalent-exp"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x80c6dba5f49cbb19",
+          "slug" : "x2ec2f6f830c9fb89:exp-eq-prop",
+          "title" : "Solving exponential equations using properties of exponents",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:exp\/x2ec2f6f830c9fb89:exp-eq-prop"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x0c28361cd2ef61b4",
+          "slug" : "x2ec2f6f830c9fb89:exp-quiz-2",
+          "title" : "Rational exponents and radicals: Quiz 2"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x2105cd65a5cc3e95",
+          "slug" : "x2ec2f6f830c9fb89:exp-unit-test",
+          "title" : "Rational exponents and radicals: Unit test"
+        }
+      ],
+      "title" : "Rational exponents and radicals"
+    },
+    {
+      "description" : "Let's revisit exponential growth and decay. We'll learn how to construct, interpret, and apply exponential functions to model a variety of real-world contexts, from modeling population growth and radioactive decay to interpreting interest rates.",
+      "exercises" : [
+
+      ],
+      "id" : "x0c845901f30a6647",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5ce63b6b3180d38b",
+          "slug" : "x2ec2f6f830c9fb89:exp-change",
+          "title" : "Interpreting the rate of change of exponential models",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:exp-model\/x2ec2f6f830c9fb89:exp-change"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x7c4bf1c24e70c3ae",
+          "slug" : "x2ec2f6f830c9fb89:construct-exp",
+          "title" : "Constructing exponential models according to rate of change",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:exp-model\/x2ec2f6f830c9fb89:construct-exp"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x454554870c8c9fe0",
+          "slug" : "x2ec2f6f830c9fb89:interpret-exp",
+          "title" : "Advanced interpretation of exponential models",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:exp-model\/x2ec2f6f830c9fb89:interpret-exp"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x64024c7b43d62d55",
+          "slug" : "x2ec2f6f830c9fb89:exp-model-unit-test",
+          "title" : "Exponential models: Unit test"
+        }
+      ],
+      "title" : "Exponential models"
+    },
+    {
+      "description" : "Logarithms are the inverses of exponents. They allow us to solve challenging exponential equations, and they are a good excuse to dive deeper into the relationship between a function and its inverse.",
+      "exercises" : [
+
+      ],
+      "id" : "x8b9f8cb2c51b39b3",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x12e4ef478bff0f0d",
+          "slug" : "x2ec2f6f830c9fb89:log-intro",
+          "title" : "Introduction to logarithms",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:logs\/x2ec2f6f830c9fb89:log-intro"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xfb81ff3cf785f87c",
+          "slug" : "x2ec2f6f830c9fb89:e",
+          "title" : "The constant e and the natural logarithm",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:logs\/x2ec2f6f830c9fb89:e"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xe173a7eb986aa6ee",
+          "slug" : "x2ec2f6f830c9fb89:log-prop",
+          "title" : "Properties of logarithms",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:logs\/x2ec2f6f830c9fb89:log-prop"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x75274f222a5be065",
+          "slug" : "x2ec2f6f830c9fb89:logs-quiz-1",
+          "title" : "Logarithms: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x946bd96b3afdd55e",
+          "slug" : "x2ec2f6f830c9fb89:change-of-base",
+          "title" : "The change of base formula for logarithms",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:logs\/x2ec2f6f830c9fb89:change-of-base"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xa43818c1400b5ba0",
+          "slug" : "x2ec2f6f830c9fb89:exp-eq-log",
+          "title" : "Solving exponential equations with logarithms",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:logs\/x2ec2f6f830c9fb89:exp-eq-log"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x855e61cd60ca36c4",
+          "slug" : "x2ec2f6f830c9fb89:exp-models",
+          "title" : "Solving exponential models",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:logs\/x2ec2f6f830c9fb89:exp-models"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xfce495e2e0cb6691",
+          "slug" : "x2ec2f6f830c9fb89:logs-quiz-2",
+          "title" : "Logarithms: Quiz 2"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "xac65ced68f075e29",
+          "slug" : "x2ec2f6f830c9fb89:logs-unit-test",
+          "title" : "Logarithms: Unit test"
+        }
+      ],
+      "title" : "Logarithms"
+    },
+    {
+      "description" : "We can think graphs of absolute value and quadratic functions as transformations of the parent functions |x| and x². Importantly, we can extend this idea to include transformations of any function whatsoever! This fascinating concept allows us to graph many other types of functions, like square\/cube root, exponential and logarithmic functions.",
+      "exercises" : [
+
+      ],
+      "id" : "xb0d69a1fe3040ad2",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x73c831c8a8b50df6",
+          "slug" : "x2ec2f6f830c9fb89:shift",
+          "title" : "Shifting functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:transformations\/x2ec2f6f830c9fb89:shift"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xadefc618485cfc6e",
+          "slug" : "x2ec2f6f830c9fb89:reflect",
+          "title" : "Reflecting functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:transformations\/x2ec2f6f830c9fb89:reflect"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x087a6ef05cd3972b",
+          "slug" : "x2ec2f6f830c9fb89:symmetry",
+          "title" : "Symmetry of functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:transformations\/x2ec2f6f830c9fb89:symmetry"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xd8ef091d5b1a1b8c",
+          "slug" : "x2ec2f6f830c9fb89:transformations-quiz-1",
+          "title" : "Transformations of functions: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x1702fbbb4ae1f32f",
+          "slug" : "x2ec2f6f830c9fb89:scale",
+          "title" : "Scaling functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:transformations\/x2ec2f6f830c9fb89:scale"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5b7be466924cb496",
+          "slug" : "x2ec2f6f830c9fb89:trans-all-together",
+          "title" : "Putting it all together",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:transformations\/x2ec2f6f830c9fb89:trans-all-together"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x68adbcccc421b1ce",
+          "slug" : "x2ec2f6f830c9fb89:transformations-quiz-2",
+          "title" : "Transformations of functions: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xa02a5406b55c1479",
+          "slug" : "x2ec2f6f830c9fb89:radical-graphs",
+          "title" : "Graphs of square and cube root functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:transformations\/x2ec2f6f830c9fb89:radical-graphs"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xbfcdf2ab3a4fca3c",
+          "slug" : "x2ec2f6f830c9fb89:exp-graphs",
+          "title" : "Graphs of exponential functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:transformations\/x2ec2f6f830c9fb89:exp-graphs"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xc0072c8fe246eaf0",
+          "slug" : "x2ec2f6f830c9fb89:log-graphs",
+          "title" : "Graphs of logarithmic functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:transformations\/x2ec2f6f830c9fb89:log-graphs"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x6afda2dcac263830",
+          "slug" : "x2ec2f6f830c9fb89:transformations-quiz-3",
+          "title" : "Transformations of functions: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x209b0849a2ce80aa",
+          "slug" : "x2ec2f6f830c9fb89:transformations-unit-test",
+          "title" : "Transformations of functions: Unit test"
+        }
+      ],
+      "title" : "Transformations of functions"
+    },
+    {
+      "description" : "Let's tackle a greater variety of equations, like rational and radical equations. We'll see that sometimes, we get solutions that aren't really solutions at all, called extraneous solutions. We'll also solve more advanced systems, and learn how we can use graphs to estimate a solution for any kind of equation!",
+      "exercises" : [
+
+      ],
+      "id" : "x0fc738fa9166acfa",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xec133732e17eb05d",
+          "slug" : "x2ec2f6f830c9fb89:rational-eq",
+          "title" : "Rational equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:eq\/x2ec2f6f830c9fb89:rational-eq"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xe4cd01ee40cd4990",
+          "slug" : "x2ec2f6f830c9fb89:sqrt-eq",
+          "title" : "Square-root equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:eq\/x2ec2f6f830c9fb89:sqrt-eq"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x05602462a6bd2f23",
+          "slug" : "x2ec2f6f830c9fb89:extraneous-sol",
+          "title" : "Extraneous solutions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:eq\/x2ec2f6f830c9fb89:extraneous-sol"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xee86ad4517f51975",
+          "slug" : "x2ec2f6f830c9fb89:cbrt-eq",
+          "title" : "Cube-root equations",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:eq\/x2ec2f6f830c9fb89:cbrt-eq"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x2968eebcdba4a98f",
+          "slug" : "x2ec2f6f830c9fb89:eq-quiz-1",
+          "title" : "Equations: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x422322bfd341f54d",
+          "slug" : "x2ec2f6f830c9fb89:quad-sys",
+          "title" : "Quadratic systems",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:eq\/x2ec2f6f830c9fb89:quad-sys"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xb4c8eeeaa6e986df",
+          "slug" : "x2ec2f6f830c9fb89:sol-eq-graph",
+          "title" : "Solving equations by graphing",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:eq\/x2ec2f6f830c9fb89:sol-eq-graph"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x9ba843140e0f6704",
+          "slug" : "x2ec2f6f830c9fb89:eq-quiz-2",
+          "title" : "Equations: Quiz 2"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x36e1f003704bbd15",
+          "slug" : "x2ec2f6f830c9fb89:eq-unit-test",
+          "title" : "Equations: Unit test"
+        }
+      ],
+      "title" : "Equations"
+    },
+    {
+      "description" : "Let's extend trigonometric ratios sine, cosine, and tangent into functions that are defined for all real numbers. You might be surprised at how we can use the behavior of those functions to model real-world situations involving carnival rides and planetary distances.",
+      "exercises" : [
+
+      ],
+      "id" : "x2f2d4cfb7bc655d8",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xfb8811c1fbf001de",
+          "slug" : "x2ec2f6f830c9fb89:unit-circle",
+          "title" : "Unit circle introduction",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:trig\/x2ec2f6f830c9fb89:unit-circle"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xd5b38954696d8e7b",
+          "slug" : "x2ec2f6f830c9fb89:radians",
+          "title" : "Radians",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:trig\/x2ec2f6f830c9fb89:radians"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x837bf459ebd92c6f",
+          "slug" : "x2ec2f6f830c9fb89:pythagorean-id",
+          "title" : "The Pythagorean identity",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:trig\/x2ec2f6f830c9fb89:pythagorean-id"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x5564eb78ba0ae065",
+          "slug" : "x2ec2f6f830c9fb89:special-angles",
+          "title" : "Trigonometric values of special angles",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:trig\/x2ec2f6f830c9fb89:special-angles"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x0f00b5816a3fa144",
+          "slug" : "x2ec2f6f830c9fb89:trig-quiz-1",
+          "title" : "Trigonometry: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xe77e628213fc62b4",
+          "slug" : "x2ec2f6f830c9fb89:trig-graphs",
+          "title" : "Graphs of sin(x), cos(x), and tan(x)",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:trig\/x2ec2f6f830c9fb89:trig-graphs"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xb934ed5cea91895d",
+          "slug" : "x2ec2f6f830c9fb89:amp-mid-period",
+          "title" : "Amplitude, midline and period",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:trig\/x2ec2f6f830c9fb89:amp-mid-period"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x32e9f1c86b07a4ac",
+          "slug" : "x2ec2f6f830c9fb89:period",
+          "title" : "Transforming sinusoidal graphs",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:trig\/x2ec2f6f830c9fb89:period"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x9910013789cf2bd6",
+          "slug" : "x2ec2f6f830c9fb89:trig-quiz-2",
+          "title" : "Trigonometry: Quiz 2"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x15cf111d08915568",
+          "slug" : "x2ec2f6f830c9fb89:graphing-sinusoid",
+          "title" : "Graphing sinusoidal functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:trig\/x2ec2f6f830c9fb89:graphing-sinusoid"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x96151f17c1131443",
+          "slug" : "x2ec2f6f830c9fb89:sinusoidal-models",
+          "title" : "Sinusoidal models",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:trig\/x2ec2f6f830c9fb89:sinusoidal-models"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xb380f8b2b8cb5b8e",
+          "slug" : "x2ec2f6f830c9fb89:trig-quiz-3",
+          "title" : "Trigonometry: Quiz 3"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x815c8e471348d4d4",
+          "slug" : "x2ec2f6f830c9fb89:trig-unit-test",
+          "title" : "Trigonometry: Unit test"
+        }
+      ],
+      "title" : "Trigonometry"
+    },
+    {
+      "description" : "Let's dive even deeper into the world of modeling. We'll take our knowledge about all the different function types we were exposed to so far, and use it to model and analyze various phenomena, from heart rates to business profits.",
+      "exercises" : [
+
+      ],
+      "id" : "x73663255d45f4fbe",
+      "lessons" : [
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x9ff5a1fb9fadf96f",
+          "slug" : "x2ec2f6f830c9fb89:model-comb",
+          "title" : "Modeling with function combination",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:modeling\/x2ec2f6f830c9fb89:model-comb"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x422eb9fc8ca1ccb9",
+          "slug" : "x2ec2f6f830c9fb89:interpreting-features",
+          "title" : "Interpreting features of functions",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:modeling\/x2ec2f6f830c9fb89:interpreting-features"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "xf14b5a80d947fe0d",
+          "slug" : "x2ec2f6f830c9fb89:manipulating-formulas",
+          "title" : "Manipulating formulas",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:modeling\/x2ec2f6f830c9fb89:manipulating-formulas"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "x030247658e94779c",
+          "slug" : "x2ec2f6f830c9fb89:modeling-quiz-1",
+          "title" : "Modeling: Quiz 1"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x19d0e73dfca626c7",
+          "slug" : "x2ec2f6f830c9fb89:eq-ineq-models",
+          "title" : "Modeling with two variables",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:modeling\/x2ec2f6f830c9fb89:eq-ineq-models"
+        },
+        {
+          "articleContent" : "",
+          "contentKind" : "lesson",
+          "duration" : 300,
+          "id" : "x6466cee0cd91ee6f",
+          "slug" : "x2ec2f6f830c9fb89:modeling-with-multiple-variables",
+          "title" : "Modeling with multiple variables",
+          "videoUrl" : "https:\/\/www.khanacademy.org\/math\/algebra2\/x2ec2f6f830c9fb89:modeling\/x2ec2f6f830c9fb89:modeling-with-multiple-variables"
+        },
+        {
+          "articleContent" : "Review the following recommended lessons to help you learn: {list of lessons covered by quiz}",
+          "contentKind" : "quiz",
+          "duration" : 300,
+          "id" : "xa25acb6fa24b2957",
+          "slug" : "x2ec2f6f830c9fb89:modeling-quiz-2",
+          "title" : "Modeling: Quiz 2"
+        },
+        {
+          "articleContent" : "Test your understanding of {unit name}.",
+          "contentKind" : "unittest",
+          "duration" : 300,
+          "id" : "x76ff9bdeb689af7b",
+          "slug" : "x2ec2f6f830c9fb89:modeling-unit-test",
+          "title" : "Modeling: Unit test"
+        }
+      ],
+      "title" : "Modeling"
+    }
+  ]
+}

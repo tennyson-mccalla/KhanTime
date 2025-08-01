@@ -59,6 +59,27 @@ struct HighSchoolTheme: ThemeProvider {
         AnyTextFieldStyle(HighSchoolTextFieldStyle(theme: self))
     }
 
+    // MARK: - Dynamic Colors
+    func dynamicPrimaryColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.25, green: 0.5, blue: 1.0) : primaryColor
+    }
+    
+    func dynamicSecondaryColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.7, green: 0.7, blue: 0.7) : secondaryColor
+    }
+    
+    func dynamicAccentColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.2, green: 0.9, blue: 1.0) : accentColor
+    }
+    
+    func dynamicBackgroundColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.05, green: 0.05, blue: 0.05) : backgroundColor
+    }
+    
+    func dynamicSurfaceColor(for colorScheme: ColorScheme) -> Color {
+        colorScheme == .dark ? Color(red: 0.08, green: 0.08, blue: 0.08) : surfaceColor
+    }
+
     // MARK: - Theme Metadata
     var themeName: String { "High School Theme (9-12)" }
     var targetAgeGroup: AgeGroup { .g912 }

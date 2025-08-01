@@ -5,6 +5,7 @@ import SwiftUI
 struct CourseCard: View {
     let course: Course
     @Environment(\.theme) var theme
+    @Environment(\.colorScheme) var colorScheme
     @State private var isPressed = false
 
     var body: some View {
@@ -22,7 +23,7 @@ struct CourseCard: View {
             // Course Title
             Text(course.title)
                 .font(theme.headingFont)
-                .foregroundColor(theme.primaryColor)
+                .foregroundColor(theme.dynamicPrimaryColor(for: colorScheme))
                 .lineLimit(2)
                 .multilineTextAlignment(.leading)
 
@@ -30,7 +31,7 @@ struct CourseCard: View {
             if let courseCode = course.courseCode {
                 Text(courseCode)
                     .font(theme.captionFont)
-                    .foregroundColor(theme.secondaryColor.opacity(0.7))
+                    .foregroundColor(theme.dynamicSecondaryColor(for: colorScheme).opacity(0.7))
             }
 
             // Grades
@@ -38,11 +39,11 @@ struct CourseCard: View {
                 HStack(spacing: 4) {
                     Image(systemName: "graduationcap.fill")
                         .font(.system(size: 12))
-                        .foregroundColor(theme.accentColor)
+                        .foregroundColor(theme.dynamicAccentColor(for: colorScheme))
 
                     Text("Grades: \(grades.joined(separator: ", "))")
                         .font(theme.captionFont)
-                        .foregroundColor(theme.secondaryColor)
+                        .foregroundColor(theme.dynamicSecondaryColor(for: colorScheme))
                 }
             }
 
@@ -55,9 +56,9 @@ struct CourseCard: View {
         .frame(maxWidth: .infinity, minHeight: 140)
         .background(
             RoundedRectangle(cornerRadius: theme.cardCornerRadius)
-                .fill(theme.surfaceColor)
+                .fill(theme.dynamicSurfaceColor(for: colorScheme))
                 .shadow(
-                    color: theme.primaryColor.opacity(0.1),
+                    color: colorScheme == .dark ? Color.black.opacity(0.3) : theme.dynamicPrimaryColor(for: colorScheme).opacity(0.1),
                     radius: isPressed ? 2 : 8,
                     x: 0,
                     y: isPressed ? 1 : 4
@@ -76,14 +77,14 @@ struct CourseCard: View {
             ZStack(alignment: .leading) {
                 // Background
                 RoundedRectangle(cornerRadius: 4)
-                    .fill(theme.primaryColor.opacity(0.1))
+                    .fill(theme.dynamicPrimaryColor(for: colorScheme).opacity(0.1))
                     .frame(height: 8)
 
                 // Progress
                 RoundedRectangle(cornerRadius: 4)
                     .fill(
                         LinearGradient(
-                            colors: [theme.primaryColor, theme.accentColor],
+                            colors: [theme.dynamicPrimaryColor(for: colorScheme), theme.dynamicAccentColor(for: colorScheme)],
                             startPoint: .leading,
                             endPoint: .trailing
                         )

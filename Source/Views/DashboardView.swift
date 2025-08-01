@@ -4,6 +4,7 @@ struct DashboardView: View {
     @StateObject private var viewModel = DashboardViewModel()
     @EnvironmentObject var themePreference: ThemePreference
     @Environment(\.theme) var theme
+    @Environment(\.colorScheme) var colorScheme
     @State private var showThemeSettings = false
     @State private var showInteractiveLessons = false
 
@@ -97,12 +98,12 @@ struct DashboardView: View {
                         loadingIndicator(for: theme)
                         Text("Loading Courses...")
                             .font(theme.bodyFont)
-                            .foregroundColor(theme.primaryColor)
+                            .foregroundColor(theme.dynamicPrimaryColor(for: colorScheme))
                             .padding(.top, theme.smallSpacing)
                         
                         Text("TimeBack staging API is slow...")
                             .font(theme.captionFont)
-                            .foregroundColor(theme.secondaryColor)
+                            .foregroundColor(theme.dynamicSecondaryColor(for: colorScheme))
                             .padding(.top, 4)
                         
                         // Bypass button to go directly to Interactive Lessons
@@ -117,7 +118,7 @@ struct DashboardView: View {
                             .foregroundColor(.white)
                             .padding(.horizontal, 20)
                             .padding(.vertical, 12)
-                            .background(theme.accentColor)
+                            .background(theme.dynamicAccentColor(for: colorScheme))
                             .cornerRadius(theme.buttonCornerRadius)
                         }
                         .padding(.top, theme.standardSpacing)
@@ -210,7 +211,7 @@ struct DashboardView: View {
                     }
                     .padding(theme?.standardSpacing ?? 16)
                 }
-                .background(theme?.backgroundColor ?? Color(.systemBackground))
+                .background(theme?.dynamicBackgroundColor(for: colorScheme) ?? Color(.systemBackground))
                 .refreshable {
                     viewModel.loadCourses()
                 }
@@ -229,7 +230,7 @@ struct DashboardView: View {
                         HStack {
                             Image(systemName: "brain.head.profile")
                                 .font(.title2)
-                                .foregroundColor(theme?.accentColor ?? .blue)
+                                .foregroundColor(theme?.dynamicAccentColor(for: colorScheme) ?? .blue)
                             
                             Text("NEW")
                                 .font(theme?.captionFont ?? .caption)
@@ -239,18 +240,18 @@ struct DashboardView: View {
                                 .padding(.vertical, 2)
                                 .background(
                                     RoundedRectangle(cornerRadius: 8)
-                                        .fill(theme?.accentColor ?? .blue)
+                                        .fill(theme?.dynamicAccentColor(for: colorScheme) ?? .blue)
                                 )
                         }
                         
                         Text("Interactive Lessons")
                             .font(theme?.titleFont ?? .largeTitle)
                             .fontWeight(.bold)
-                            .foregroundColor(theme?.primaryColor ?? .primary)
+                            .foregroundColor(theme?.dynamicPrimaryColor(for: colorScheme) ?? .primary)
                         
                         Text("Khan Academy-style lessons with step-by-step practice problems")
                             .font(theme?.bodyFont ?? .body)
-                            .foregroundColor(theme?.secondaryColor ?? .secondary)
+                            .foregroundColor(theme?.dynamicSecondaryColor(for: colorScheme) ?? .secondary)
                             .multilineTextAlignment(.leading)
                         
                         HStack(spacing: 16) {
@@ -260,7 +261,7 @@ struct DashboardView: View {
                                 Text("3 Lessons")
                                     .font(theme?.captionFont ?? .caption)
                             }
-                            .foregroundColor(theme?.secondaryColor ?? .secondary)
+                            .foregroundColor(theme?.dynamicSecondaryColor(for: colorScheme) ?? .secondary)
                             
                             HStack(spacing: 4) {
                                 Image(systemName: "clock.fill")
@@ -268,7 +269,7 @@ struct DashboardView: View {
                                 Text("30-45 min each")
                                     .font(theme?.captionFont ?? .caption)
                             }
-                            .foregroundColor(theme?.secondaryColor ?? .secondary)
+                            .foregroundColor(theme?.dynamicSecondaryColor(for: colorScheme) ?? .secondary)
                         }
                     }
                     
@@ -277,7 +278,7 @@ struct DashboardView: View {
                     VStack {
                         Image(systemName: "chevron.right.circle.fill")
                             .font(.system(size: 32))
-                            .foregroundColor(theme?.accentColor ?? .blue)
+                            .foregroundColor(theme?.dynamicAccentColor(for: colorScheme) ?? .blue)
                         
                         Spacer()
                     }
@@ -287,8 +288,8 @@ struct DashboardView: View {
             .background(
                 LinearGradient(
                     colors: [
-                        (theme?.accentColor ?? .blue).opacity(0.1),
-                        (theme?.surfaceColor ?? Color(.systemBackground))
+                        (theme?.dynamicAccentColor(for: colorScheme) ?? .blue).opacity(0.1),
+                        (theme?.dynamicSurfaceColor(for: colorScheme) ?? Color(.systemBackground))
                     ],
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing
@@ -297,7 +298,7 @@ struct DashboardView: View {
             .cornerRadius(theme?.cardCornerRadius ?? 16)
             .overlay(
                 RoundedRectangle(cornerRadius: theme?.cardCornerRadius ?? 16)
-                    .stroke((theme?.accentColor ?? .blue).opacity(0.3), lineWidth: 1)
+                    .stroke((theme?.dynamicAccentColor(for: colorScheme) ?? .blue).opacity(0.3), lineWidth: 1)
             )
             .shadow(color: .black.opacity(0.1), radius: 8, x: 0, y: 4)
         }
